@@ -1,0 +1,3 @@
+Sever component
+
+[:summary]

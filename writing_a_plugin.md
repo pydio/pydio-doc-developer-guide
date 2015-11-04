@@ -1,0 +1,3 @@
+As you may now understand, the manifest.xml file is a central piece of each plugin. Its grammar is entirely described in the **plugins/core.ajaxplorer/ajxp_registry.xsd** XML Schema, thus it is very recommanded to use an XML editor supporting schemas. The tags and elements should be generally self explaining, and we try to document the schema, but here we will go through some specifc elements that are part of the day-to-day life of a plugin developer.
+
+[:summary]
