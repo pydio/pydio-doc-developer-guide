@@ -3,3 +3,4 @@ language: und
 menu: "Understanding XML Registry"
 weight: 2
 menu_name: menu-developer-guide
+abstract: "Pydio internals is based on a shared XML registry that gather all the data of all the active plugins. Learn how to use this registry."

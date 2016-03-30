@@ -3,3 +3,4 @@ language: und
 menu: "Web Application"
 weight: 2
 menu_name: menu-developer-guide
+abstract: "Digging web application"

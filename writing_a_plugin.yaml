@@ -3,3 +3,4 @@ language: und
 menu: "Writing a plugin"
 weight: 4
 menu_name: menu-developer-guide
+abstract: "Write your first plugin by following an example."

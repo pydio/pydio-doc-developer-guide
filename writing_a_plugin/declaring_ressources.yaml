@@ -3,3 +3,4 @@ language: und
 menu: "Declaring resources"
 weight: 1
 menu_name: menu-developer-guide
+abstract: "Declaring specific resources that must be loaded client-side when a plugin is active."

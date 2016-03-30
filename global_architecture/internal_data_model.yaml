@@ -3,3 +3,4 @@ language: und
 menu: "Internal Data Model"
 weight: 3
 menu_name: menu-developer-guide
+abstract: "This section describes how the pydio internal data (authentication, configurations) are managed"

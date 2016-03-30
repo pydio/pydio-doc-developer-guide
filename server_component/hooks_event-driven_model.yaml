@@ -3,3 +3,4 @@ language: und
 menu: "Hooks: event-driven model"
 weight: 1
 menu_name: menu-developer-guide
+abstract: "How plugins are glued together through an event-driven system."

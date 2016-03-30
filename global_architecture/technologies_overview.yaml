@@ -3,3 +3,4 @@ language: und
 menu: "Technologies overview"
 weight: 0
 menu_name: menu-developer-guide
+abstract: "Brief overview of the technologies powering Pydio on both the server and the client side."

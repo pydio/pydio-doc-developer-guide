@@ -3,3 +3,4 @@ language: und
 menu: "Manifest.xml overview"
 weight: 0
 menu_name: menu-developer-guide
+abstract: "Presentation of the manifest.xml file, the self-declarative description of a plugin."

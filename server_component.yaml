@@ -3,3 +3,4 @@ language: und
 menu: "Server component"
 weight: 2
 menu_name: menu-developer-guide
+abstract: "Going deeper into the pydio server components."
