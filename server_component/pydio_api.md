@@ -1,4 +1,4 @@
-As explained in the Global Architecture chapter, each Pydio plugin is contributing to the framework via its manifest.xml declaration. Most important contributions are what we call "actions", that are defined inside the XML via the `<action name="action_name">` XML element.
+As explained in the Global Architecture chapter, each Pydio plugin is contributing to the framework via its manifest.xml declaration. Most important contributions are what we call "actions", that are defined inside the XML via the `&lt;action name="action_name"&gt;` XML element.
 
 This action_name parameter is our main identifier for triggering this command, whatever the API you are using. 
 
