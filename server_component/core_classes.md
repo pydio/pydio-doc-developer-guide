@@ -29,4 +29,4 @@ The classes described here are mainly used by the internal framework to propagat
 + **AJXP_Safe** Encapsulate credentials in a session, in an encrypted fashion.
 + dibi.compat.php Necessary if you want to speak SQL (database abstraction layer, see http://dibiphp.com)
 + **AuthService** All operations on users & groups, and a register of the currently logged user (AuthService::getUserLogged() )
-+ **ConfService** Speaks with the configs backend, to a load all AjaXplorer internal data, but also the actual user implementations.
++ **ConfService** Speaks with the configs backend, to a load all Pydio internal data, but also the actual user implementations.

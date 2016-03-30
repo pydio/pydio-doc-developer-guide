@@ -1,6 +1,6 @@
 ## Plugins
 ### Overview
-For those familiar with the Eclipse architecture, AjaXplorer is based on the same approach : all features provided by the application are packed as “plugins”. Even the GUI itself is a plugin. This allow a huge modularity in creating features, overriding them, creating dependencies between them, etc. Some plugin will implement a given interface or abstract PHP class to give a precise set of features that are “understood” by the core of the application (like the Authentification plugins for example), other can add purely custom features to access a given set of data, manipulate it, add a specific “hello world” button somewhere in the application, etc…
+For those familiar with the Eclipse architecture, Pydio is based on the same approach : all features provided by the application are packed as “plugins”. Even the GUI itself is a plugin. This allow a huge modularity in creating features, overriding them, creating dependencies between them, etc. Some plugin will implement a given interface or abstract PHP class to give a precise set of features that are “understood” by the core of the application (like the Authentification plugins for example), other can add purely custom features to access a given set of data, manipulate it, add a specific “hello world” button somewhere in the application, etc…
 
 Below, you can see the organisation of some of the plugins that are embedded in the core application, and that may be used for all the “internal data” management: configuration storage, authentication drivers, logs, etc.
 

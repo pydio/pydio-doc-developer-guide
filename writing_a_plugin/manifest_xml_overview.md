@@ -15,4 +15,4 @@ The first-level of children of the root element will be generally the following:
 + `<registry_contributions>` All the actions, hooks and other tags that will be dynamically concatenated to create the XML registry.
 + `<dependencies>` Add a dependency to another active plugin, so that if it’s not active this one cannot activate, and/or trigger the load of another plugin resources (php class, or js/css resources).
 
-The parameters described in server_settings follow a syntax that can be used in a free manner to build forms, along with a set of Javascript tools to parse them, build the forms, and send the result. See the “AjaXplorer Forms” section.
+The parameters described in server_settings follow a syntax that can be used in a free manner to build forms, along with a set of Javascript tools to parse them, build the forms, and send the result. See the “Pydio Forms” section.
