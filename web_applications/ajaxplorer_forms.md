@@ -61,7 +61,7 @@ Once the form is defined, either as XML or JavaScript structure, you must use th
 
 	var f = new FormManager();
 	/* We know that the form parameters are available at a certain place in the XML registry */
-	var params = f.parseParameters(ajaxplorer.getXmlRegistry(), "/path/to/the/params");
+	var params = f.parseParameters(pydio.getXmlRegistry(), "/path/to/the/params");
 	/*
 	We want to create the form inside a div element already stored in myDiv variable.
 	See the createParametersInputs signature for more infor about the additional parameters
