@@ -1,0 +1,1 @@
+This API is composed by the following plugins : access.fs, index.*, meta.*, editor.*, action.share, action.powerfs

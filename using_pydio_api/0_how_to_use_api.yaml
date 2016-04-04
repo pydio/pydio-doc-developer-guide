@@ -1,0 +1,6 @@
+title: "Introduction to Pydio APIs"
+language: und
+menu: "Introduction to Pydio APIs"
+weight: 0
+menu_name: menu-developer-guide
+abstract: "How-to concretely consume the APIs, via the REST protocol, PHP Command line or ready-to-use SOAP clients."
