@@ -1,6 +1,6 @@
 title: "Global Architecture"
 language: und
 menu: "Global Architecture"
-weight: 2
+weight: 3
 menu_name: menu-developer-guide
 abstract: "Overview of the Pydio architecture, from server to web application."
