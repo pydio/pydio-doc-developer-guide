@@ -1,6 +1,6 @@
-title: "Global Architecture"
+title: "Going Deeper"
 language: und
-menu: "Global Architecture"
+menu: "Going Deeper"
 weight: 3
 menu_name: menu-developer-guide
-abstract: "Overview of the Pydio architecture, from server to web application."
+abstract: "Going deeper inside the Pydio architecture, from server to web application, and start hacking!"

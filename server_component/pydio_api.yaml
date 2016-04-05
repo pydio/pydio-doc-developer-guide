@@ -1,6 +1,0 @@
-title: "Using Pydio API"
-language: und
-menu: "Using Pydio API"
-weight: 2
-menu_name: menu-developer-guide
-abstract: "Using Pydio API either via session-based access, command line php or REST api."
