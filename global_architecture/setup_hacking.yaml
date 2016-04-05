@@ -1,0 +1,6 @@
+title: "Setting up your dev environment"
+language: und
+menu: "Setting up dev environment"
+weight: 4
+menu_name: menu-developer-guide
+abstract: "Getting ready to hack Pydio : setup your development environment."
