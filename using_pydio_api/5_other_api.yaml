@@ -1,6 +1,6 @@
-title: "Misc. API"
+title: "Other plugins API"
 language: und
-menu: "Miscalleneous API"
+menu: "Misc. API"
 weight: 5
 menu_name: menu-developer-guide
 abstract: "All other plugins."
