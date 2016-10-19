@@ -2,5 +2,5 @@ title: "Writing a plugin"
 language: und
 menu: "Writing a plugin"
 weight: 2
-menu_name: menu-developer-guide
+menu_name: menu-dev-guide-v7
 abstract: "Write your first plugin by following an example."
