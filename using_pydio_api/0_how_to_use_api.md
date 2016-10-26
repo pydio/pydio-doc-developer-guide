@@ -37,7 +37,8 @@ one or many plugins may be active, and as actions are always contributed by plug
 depending on this current "workspace" state as well.
 
 For this reason, every call to the REST api will be built as follow:  
-`/api/workspace_id_or_alias/action_name/{paramValue1}/{paramValue2}/...`
+
+    /api/workspace_id_or_alias/action_name/{paramValue1}/{paramValue2}/...
 
 This is important to keep in mind. In our generated API documentation, we will generally use {default} as the workspace alias, but
 **you will have to replace it with your own**. For specific actions like users/groups provisioning, you must be working on the Admin Panel
@@ -67,7 +68,7 @@ via the Command Line. For that, we provide a cmd.php script a the root of the Py
 
 Similarly to building the REST URL to call, you would build the command with the following system: 
 
-`php cmd.php -u=USERNAME -p=PASSWORD -r=WORKSPACE_ID -a=ACTION --param1=value1 --param2=value2`
+    php cmd.php -u=USERNAME -p=PASSWORD -r=WORKSPACE_ID -a=ACTION --param1=value1 --param2=value2
 
 Where the four first parameters are mandatory, and the following ones will depend on the ACTION called. Beware that -u, -p, -r, -a take a single
 dash whereas any additional parameter takes a double-dash (--).
@@ -81,7 +82,7 @@ session and this makes requests faster to load.
 
 To call an action defined by the API directly through this endpoint, you would call the following
 
-`https://yourpydio.com/index.php?get_action=ACTION_NAME&secure_token=SECURE_TOKEN&param1=value1&param2=value2`
+    https://yourpydio.com/index.php?get_action=ACTION_NAME&secure_token=SECURE_TOKEN&param1=value1&param2=value2
 
 This request expects **a valid PHP Session ID passed through the Cookie Headers**. SECURE_TOKEN is **NOT** the PHP session ID, 
 it is an additional token added for CSRF protection. 

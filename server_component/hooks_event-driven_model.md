@@ -11,7 +11,7 @@ In Pydio, hooks are declared as needed directly in the PHP code, by simply calli
 To register a listener to a given hook, a plugin will add a callback inside the **<hooks>** element of its manifest.xml, declaring a method of the plugin class. For example :
 
 	<hooks>
-	<serverCallback hookName="node.info" methodName="loadNodeInfo"/>
+    	<serverCallback hookName="node.info" methodName="loadNodeInfo"/>
 	</hooks>
 
 The serverCallback will take an optional **defer** attribute, that would apply the node at the very end of the script, after all output is sent to the user.

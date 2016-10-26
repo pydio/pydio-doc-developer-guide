@@ -1,14 +1,17 @@
 Better than thousand chapters, lets study the editor.audio plugin. It takes a good picture of the abilities of the plugins : XML extensions, actions, javascript code and PHP callbacks, post/pre processing… Open the audio.editor/manifest.xml file.
 
 ### Basic definition
+
 	<editor id="editor.audio" openable="false" className="AudioPreviewer" mimes="mp3">
-	<class_definition filename="plugins/editor.audio/class.AudioPreviewer.php" classname="AudioPreviewer"/>
-	<resources>
-	<js file="plugins/editor.audio/class.AudioPreviewer.js" className="AudioPreviewer"/>
-	</resources>
-	<dependencies>
-	<activePlugin pluginName="access.fs|access.ftp|access.demo|access.remote_fs"/>
-	</dependencies>
+        <class_definition filename="plugins/editor.audio/class.AudioPreviewer.php" classname="AudioPreviewer"/>
+        <resources>
+            <js file="plugins/editor.audio/class.AudioPreviewer.js" className="AudioPreviewer"/>
+        </resources>
+        <dependencies>
+            <activePlugin pluginName="access.fs|access.ftp|access.demo|access.remote_fs"/>
+        </dependencies>
+    ....
+        
 
 What we find here determines some bases of this plugin. First the <editor> node gives this plugin an id, a type (name of the node), and then two editor specific properties : openable (whether it can indeed open an editor, or if not just be used as a preview manager for the given mime type), mimes (a set of mimes comma-separated that will be supported), and className (that would be the class called by Javascript if the editor was openable).
 

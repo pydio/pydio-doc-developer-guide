@@ -2,7 +2,7 @@
 
 Pydio code is available on Github. Clone our main repository on your local machine, and set up apache (or any web server running on your machine to server the core/src/ folder as the DocumentRoot.
  
- `git clone https://github.com/pydio/pydio-core.git`
+    git clone https://github.com/pydio/pydio-core.git
  
 Of course, your machine should have PHP5.4+ installed, and a Database server (MySQL/PostGreSQL) as well.
 
@@ -11,16 +11,16 @@ Of course, your machine should have PHP5.4+ installed, and a Database server (My
 If you plan to modify the interface, you will probably have to modify either Javascript or CSS files. If not already done, you should first read the **Web Application > Architecture** section. 
 Install NPM (the Node Package Manager) globally on your machine. For example, on Ubuntu this would give :
 
-`sudo apt-get install nodejs nodejs-dev npm`
+    sudo apt-get install nodejs nodejs-dev npm
 
 This will allow you to recompile UI resources by running the following command inside each plugin that contains a **Gruntfile.js** file: 
 
-`npm install`
-`grunt`
+    npm install
+    grunt
 
 The Less compiler will also be required to compile the CSS files.
 
-`npm install less`
+    npm install less
 
 ## Other Useful tools
 
