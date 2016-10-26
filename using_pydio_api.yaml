@@ -1,6 +1,6 @@
-title: "Using Pydio API"
+title: "Pydio API v1"
 language: und
-menu: "Using Pydio API"
-weight: 1
+menu: "Pydio API v1"
+weight: 2
 menu_name: menu-dev-guide-v7
-abstract: "How-to consume the Pydio server APIs."
+abstract: "How to consume the standard Pydio server API (v1)."

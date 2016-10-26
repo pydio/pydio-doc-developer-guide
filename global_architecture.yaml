@@ -1,6 +1,6 @@
 title: "Going Deeper"
 language: und
 menu: "Going Deeper"
-weight: 3
+weight: 4
 menu_name: menu-dev-guide-v7
 abstract: "Going deeper inside the Pydio architecture, from server to web application, and start hacking!"
