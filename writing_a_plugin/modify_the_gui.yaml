@@ -2,5 +2,5 @@ title: "Modify the GUI"
 language: und
 menu: "Modify the GUI"
 weight: 3
-menu_name: menu-dev-guide-v7
+menu_name: menu-developer-guide
 abstract: "Tips on how to add a custom header and footer via a sample plugin."

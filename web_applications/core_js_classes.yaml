@@ -2,5 +2,5 @@ title: "Core JS Classes"
 language: und
 menu: "Core JS Classes"
 weight: 1
-menu_name: menu-dev-guide-v7
+menu_name: menu-developer-guide
 abstract: "Description of the main JavaScript classes used by Pydio interface : core components, PrototypeJS UI and ReactJS UI."

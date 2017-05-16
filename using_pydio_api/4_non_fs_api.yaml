@@ -2,5 +2,5 @@ title: "Other Access Drivers"
 language: und
 menu: "Other Access Drivers"
 weight: 4
-menu_name: menu-dev-guide-v7
+menu_name: menu-developer-guide
 abstract: "Non-filesystem-based access drivers (like MySQL, Imap, etc)."

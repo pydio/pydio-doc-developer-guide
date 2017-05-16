@@ -2,5 +2,5 @@ title: "Provisioning API"
 language: und
 menu: "Provisioning API"
 weight: 2
-menu_name: menu-dev-guide-v7
+menu_name: menu-developer-guide
 abstract: "This API provides actions for manipulating users, roles, and workspaces, from an admin point of view."

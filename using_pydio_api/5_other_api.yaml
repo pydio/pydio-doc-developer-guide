@@ -2,5 +2,5 @@ title: "Other plugins API"
 language: und
 menu: "Misc. API"
 weight: 5
-menu_name: menu-dev-guide-v7
+menu_name: menu-developer-guide
 abstract: "All other plugins."

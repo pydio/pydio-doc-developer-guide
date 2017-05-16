@@ -2,5 +2,5 @@ title: "Server component"
 language: und
 menu: "Server component"
 weight: 5
-menu_name: menu-dev-guide-v7
+menu_name: menu-developer-guide
 abstract: "Going deeper into the pydio server components."

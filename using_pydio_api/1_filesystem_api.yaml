@@ -2,5 +2,5 @@ title: "FileSystem API"
 language: und
 menu: "FileSystem API"
 weight: 1
-menu_name: menu-dev-guide-v7
+menu_name: menu-developer-guide
 abstract: "This API provides action for manipulating files and folders, sharing them, and manipulating their metadata."
