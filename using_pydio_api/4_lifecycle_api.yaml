@@ -1,6 +1,6 @@
 title: "Lifecycle API (v1)"
 language: und
 menu: "Lifecycle API (v1)"
-weight: 3
+weight: 4
 menu_name: menu-developer-guide
 abstract: "This API provides various hooks in the application lifecycle, e.g. to grab some info about a user."
