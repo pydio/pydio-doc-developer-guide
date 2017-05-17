@@ -10,8 +10,7 @@ In this second diagram, you can see the plugins implied in all the actual busine
 
 [:image-popup:global_architecture/plugin_architecture/PLUGINS-Workspaces.png]
 
- 
-The keypoint here, is that **whatever feature you want to develop, you should create your own plugin**: it will be encapsulated, upgrade-proof, and should always demonstrate the flexibility of the system.
+ The keypoint here, is that **whatever feature you want to develop, you should create your own plugin**: it will be encapsulated, upgrade-proof, and should always demonstrate the flexibility of the system.
 
 ### Manifest.xml
 A plug-in is “auto-declarative” via a specific XML file, called `manifest.xml`. This file contains all information needed to understand how it should be initialized and used, it’s declaring all necessary files and resources used by this plugin, and it will be able to have an impact on server and/or the client side. If the manifest.xml is present inside the plugin folder and its syntax is ok, the plugin can be activated.
