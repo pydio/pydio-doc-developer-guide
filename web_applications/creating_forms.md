@@ -80,7 +80,7 @@ Here is an example below, used in the Profile panel
         );
     }
 
-You can either manually define a full javascript object for fields definition, using the same attributes as the ones defined in the XML \<param\> tag. Or the Manager class from the same library can be useful if you want to parse XML located at a given location in the registry
+You can either manually define a full javascript object for fields definition, using the same attributes as the ones defined in the XML <param> tag. Or the Manager class from the same library can be useful if you want to parse XML located at a given location in the registry
 
     import Pydio from 'pydio'
     const {Manager} = Pydio.requireLib('form')

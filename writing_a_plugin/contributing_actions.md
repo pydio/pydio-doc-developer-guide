@@ -8,11 +8,11 @@ This is not mandatory (if you want to simply declare a service on the API side, 
 
 + Button label and description: **text** & **title** attributes, referring to an i18n library key.
 + Button icon: **iconSrc** is a css class name for a font icon.
-+ **\<context\>**: in what context will this action appear in the GUI? Whether it’s linked to something being selected (selection), or if not the case, is it only inside a directory (dir), or inside the recycle. Where does it appear : define the toolbar (actionBar) and to which group it belongs (actionbarGroup), and if it appears in the context menu.
-+ **\<selectionContext\>**: if the context refers to a selection, you’ll be able to narrow here the type of selection concerned, files or folder, one or multiple, and even limit to a given set of mime types.
++ **<context>**: in what context will this action appear in the GUI? Whether it’s linked to something being selected (selection), or if not the case, is it only inside a directory (dir), or inside the recycle. Where does it appear : define the toolbar (actionBar) and to which group it belongs (actionbarGroup), and if it appears in the context menu.
++ **<selectionContext>**: if the context refers to a selection, you’ll be able to narrow here the type of selection concerned, files or folder, one or multiple, and even limit to a given set of mime types.
 
 ## Rights
-With the **\<rightsContext\>** element, you can decide some specific restrictions to activate the action or not:
+With the **<rightsContext>** element, you can decide some specific restrictions to activate the action or not:
 
 + **noUser** [true|false]: does it appear if the whole user system is disabled?
 + **userLogged** [only]: if set, it appears only if a user is logged
@@ -20,7 +20,7 @@ With the **\<rightsContext\>** element, you can decide some specific restriction
 + **adminOnly** [true|false] : does the action appear only for admin?
 
 ## Client side code snippet
-Once your action is correctly appearing at the place you want, you are able to write a code snippet that will be triggered when the action is fired. Use **\<processing>\<clientCallback>** element.
+Once your action is correctly appearing at the place you want, you are able to write a code snippet that will be triggered when the action is fired. Use **<processing><clientCallback>** element.
 
 In previous version, clientCallback tag would directly declare a javascript code snippet inside a CDATA section. This is now deprecated, and instead the clientCallback will point to a static function of any pydio javascript library.
 
@@ -32,8 +32,8 @@ If you declare a **<processing><serverCallback>** , you point to a method of you
 
 You can define submenus for your action, in either
 
-+ a static mode: submenu elements are defined directly in the XML. Use the **\<dynamicItems>** element, and add **\<item1>**, **\<item2>** elements with an **actionId** attribute referring to other already defined actions.
-+ or a dynamic mode: you refer to specific javascript code to dynamically populate the menu at load time. Use a \<dynamicBuilder> element that contains a javascript snippet which will be called at launch time. Inside this snippet, you can access a window.builderContext object, inside wich you can add a key builderMenuItems that must be a PrototypeJS array. 
++ a static mode: submenu elements are defined directly in the XML. Use the **<dynamicItems>** element, and add **<item1>**, **<item2>** elements with an **actionId** attribute referring to other already defined actions.
++ or a dynamic mode: you refer to specific javascript code to dynamically populate the menu at load time. Use a <dynamicBuilder> element that contains a javascript snippet which will be called at launch time. Inside this snippet, you can access a window.builderContext object, inside wich you can add a key builderMenuItems that must be a PrototypeJS array. 
 E.G. you will do:
 
 
