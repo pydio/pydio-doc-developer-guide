@@ -6,7 +6,7 @@ Instead, the first plugin will trigger an event (here, a hook), that will be han
 On the other side, any plugin can register to the central manager, to be informed of whenever this event is triggered. That way, Plugin A actually triggers a function inside Plugin B (and / or plugin C, D, etc), without knowing anything about the existence of plugin B.
 
 ## Hooks
-In Pydio, hooks are declared as needed directly in the PHP code, by simply calling the **AJXP_Controller::applyHook()** method. Thus, the available hooks list is gathered by a script that does some code introspection. The result is visible in the Settings panel, under **Developer Resources > Hooks Definitions**. Currently, there are 3 types of hooks : node.* (informing a change on a data node), user.* (informing about users creation/deletion), and msg.* (used for transporting any specific messages, generally in an “instant” manner).
+In Pydio, hooks are declared as needed directly in the PHP code, by simply calling the **Controller::applyHook()** method. Thus, the available hooks list is gathered by a script that does some code introspection. The result is visible in the Settings panel, under **Developer Resources > Hooks Definitions**. Currently, there are 3 types of hooks : node.* (informing a change on a data node), user.* (informing about users creation/deletion), and msg.* (used for transporting any specific messages, generally in an “instant” manner).
 
 To register a listener to a given hook, a plugin will add a callback inside the **<hooks>** element of its manifest.xml, declaring a method of the plugin class. For example :
 

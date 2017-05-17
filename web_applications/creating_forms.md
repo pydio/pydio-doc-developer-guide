@@ -55,36 +55,40 @@ The definition of a set of form fields is generally done via XML, through a set 
         </xs:complexType>
 	</xs:element>
 
-##Handling the form
-Once the form is defined, either as XML or JavaScript structure, you must use the FormManager class to handle the parameters and construct an HTML form. Instanciate the class to use its utilitary methods, as follow:
+## Handling the form
 
+Once the form is defined, either as XML or JavaScript structure, the "PydioForm" UI library contains all the necessary tools to generate a proper form to the user. The FormPanel react component is a "controlled" component: it takes a map of fields definition, an object of values, and changes are reflected through the "onChange" react "prop".
 
-	var f = new FormManager();
-	/* We know that the form parameters are available at a certain place in the XML registry */
-	var params = f.parseParameters(pydio.getXmlRegistry(), "/path/to/the/params");
-	/*
-	We want to create the form inside a div element already stored in myDiv variable.
-	See the createParametersInputs signature for more infor about the additional parameters
-	*/
-	f.createParametersInputs(myDiv, params);
+Here is an example below, used in the Profile panel
 
-Afterward, you’ll want to submit the form to the server. For that, we use the same FormManager class, through the method serializeParametersInputs. You can use the same class instance, but it’s not mandatory, it is not specially linked to a field.
+    import Pydio from 'pydio'
+    const {FormPanel} = Pydio.requireLib('form')
 
+    onFormChange: function(newValues, dirty, removeValues){
+        // Do something with the new values
+    }
+        
+    render(){
+        return (
+            <FormPanel
+                className="current-user-edit"
+                parameters={definitions}
+                values={values}
+                binary_context={"user_id="+this.props.pydio.user.id}
+                onChange={this.onFormChange}
+            />
+        );
+    }
 
-	var f = new FormManager();
-	/* Create an empty Hash to store the values */
-	var params = $H();
-	/* Call the method with optional prefix */
-	f.serializeParametersInputs(myDiv, params, 'PARAMS_PREFIX');
-	
-If you set a prefix, it will be prepended to all query fields names.
+You can either manually define a full javascript object for fields definition, using the same attributes as the ones defined in the XML \<param\> tag. Or the Manager class from the same library can be useful if you want to parse XML located at a given location in the registry
 
-And finally, you’ll have to parse these data to use them on the server side. Using the PHP method provided by AJXP_Utils parseStandardFormParameters, you’ll transform the data POSTed by your form to a usable associative array.
-
-    /* Create an array to be fed by the function. We admin you are in a callback where the http query parameters are passed through the $httpVars variable */
-    $formValues = array();
-    /* You can pass the logged user to eventually store uploaded binaries inside the correct container (see binary context parameter as well) */
-    AJXP_Utils::parseStandardFormParameters($httpVars, $formValues, AuthService::getLoggedUser(), "PARAMS_PREFIX");
-    /* Now your $formValues should contain usable data, and $httpVars is reduced from all the specific standard forms parameters. */    
-    // Do something with the data.
+    import Pydio from 'pydio'
+    const {Manager} = Pydio.requireLib('form')
     
+    // Use XPath query to find all parameters that are defined to be displayed in the user profile panel
+    const {pydio} = this.props;
+    const definitions = Manager.parseParameters(pydio.getXmlRegistry(), "user/preferences/pref[@exposed='true']|//param[contains(@scope,'user') and @expose='true']");
+    // ... now use it for FormPanel
+
+Finally, you’ll want to submit the form to the server. If you have stored the values in the state of your component, and you can do whatever you want, using the api client to post data as key/value parameters, or eventually using `JSON.stringify()` to post whole values as a bunch.
+ 

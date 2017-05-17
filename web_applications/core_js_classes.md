@@ -6,100 +6,105 @@ This document correspond to Pydio 6.4.0 release.
 
 ES6 classes that build the core of the interface. They contain no UX component, just datamodels, controllers, http clients, etc. Generally-speaking, unless for debugging purpose, you should NOT touch this part.
 
-Folder: plugins/gui.ajax/res/js/es6  
-Transpiled to: plugins/gui.ajax/res/js/core
+Folder: plugins/gui.ajax/res/js/core  
 
-+ **Pydio.es6** Main class. Handles registry, plugins, widgets instanciations, etc.. Singleton instance accessible as “pydio” global variable.
++ **Pydio** Main class. Handles registry, plugins, widgets instanciations, etc.. Singleton instance accessible as “pydio” global variable.
++ **PydioBootstrap** Lighter class that can be loaded in the html page and will load Pydio.
 + model/
-  + **Action.es6** Abstraction of a Pydio Action as defined in our XML registry.
-  + **AjxpNode.es6** Basic representation of a node, Tree model used by all files/folders lists
-  + **BackgroundTasksManager.es6** Singleton registering / launching background tasks
-  + **Controller.es6** Main controller, parsing the XML registry to create Action classes, receiving events from the datamodel to enable/disable actions based on the context.
-  + **EmptyNodeProvider.es6** INodeProvider doing nothing.
-  + **PydioDataModel.es6** Main container for a set of nodes and their children, sending events when DM is changing.
-  + **Registry.es6** Abstraction of the XML registry
-  + **RemoteNodeProvider.es6** INodeProvider talking to get_action=ls by default, can be configured at startup.
-  + **Repository.es6** Abstraction of a Workspace object.
-  + **User.es6** Abstraction of the currently logged user object.
+  + **Action** Abstraction of a Pydio Action as defined in our XML registry.
+  + **AjxpNode** Basic representation of a node, Tree model used by all files/folders lists
+  + **BackgroundTasksManager** Singleton registering / launching background tasks
+  + **Controller** Main controller, parsing the XML registry to create Action classes, receiving events from the datamodel to enable/disable actions based on the context.
+  + **EmptyNodeProvider** INodeProvider doing nothing.
+  + **PydioDataModel** Main container for a set of nodes and their children, sending events when DM is changing.
+  + **Registry** Abstraction of the XML registry
+  + **RemoteNodeProvider** INodeProvider talking to get_action=ls by default, can be configured at startup.
+  + **Repository** Abstraction of a Workspace object.
+  + **User** Abstraction of the currently logged user object.
 + lang/
-  + **Logger.es6** Utilitary to log data to console.
-  + **Observable.es6** Interface that can be added as mixin to implement pub/sub pattern on an object.
+  + **Logger** Utilitary to log data to console.
+  + **Observable** Interface that can be added as mixin to implement pub/sub pattern on an object.
 + util/
-  + **CookiesManager.es6** Read/write from navigator cookies.
-  + **HasherUtils.es6** MD5 computer
-  + **LangUtils.es6** Utils methods on arrays and objects. Provides translation from/to PrototypeJS structures (Hash, Array).
-  + **PassUtils.es6** Utils methods to compute a password complexity.
-  + **PathUtils.es6** Utils methods to manipulate file paths (dirname, basename, etc..).
-  + **XMLUtils.es6** Utils methods to query an XML doc.
+  + **CookiesManager** Read/write from navigator cookies.
+  + **HasherUtils** MD5 computer
+  + **LangUtils** Utils methods on arrays and objects. Provides translation from/to PrototypeJS structures (Hash, Array).
+  + **PassUtils** Utils methods to compute a password complexity.
+  + **PathUtils** Utils methods to manipulate file paths (dirname, basename, etc..).
+  + **XMLUtils** Utils XPath methods to query an XML doc.
+  + **ActivityMonitor** Helper for handling detection of activity on screen.
+  + **DOMUtils** Some functions that are generally provided by other framework to get info about window size, observe resize events, etc.
+  + **FuncUtils** Find functions in a context
+  + **PeriodicalExecuter** Wrapper for setInterval()
+
 + http/
-  + **PydioApi.es6** Can be seen as the SDK to communicate with server.
-  + **PydioUsersApi.es6** Extension of previous class providing methods to list users.
-  + **ResourcesManager.es6** Dependency manager that parses the XML registry and dynamically load JS/CSS files on-demand. Could be replaced by a CommonJS or similar system at one point.
+  + **Connexion** Wraps all network calls, since Pydio 8 it is encapsulating the window.fetch API.
+  + **PydioApi** Can be seen as the SDK to communicate with server.
+  + **PydioUsersApi** Extension of previous class providing methods to list users.
+  + **ResourcesManager** Dependency manager that parses the XML registry and dynamically load JS/CSS files on-demand. Could be replaced by a CommonJS or similar system at one point.
+  + **MetaCacheManager** Helper to cache data in memory to avoid too many server calls.
   
-## PrototypeJS UI Components
-
-Folder: plugins/gui.ajax/res/js/ui/prototype
-
-+ **class.PydioUI.js** Main class building the whole GUI based on the XML registry. Instance accessible globally via **pydio.UI**
-+ **class.AjxpBootstrap.js** Lightweight class in charge of starting the framework, and loading the Pydio main class.
-
-+ **ajxp_utils.js** Lot of utilitary methods. Kept for legacy purpose, most of them are now alias to the XXXUtils of the Core.
-+ **class.ActivityMonitor.js** A background thread to ping the server on a regularly basis, and eventually disconnect client if no action detected after a given time.
-+ **class.AbstractEditor.js** A parent class for all editors.
-+ **class.AjxpDraggable.js** Scriptaculous Draggable extended for Pydio
-+ **class.PreviewFactory.js** Utilitary to generate a thumbnail display of an AjxpNode, looking for editors able to generate a specific thumbnail for this node mime.
-+ **class.FormManager.js** Utils to parse and submit the standard Pydio forms.
-+ **class.Modal.js** Global “modal” singleton, provides method to open modal dialogs in various contexts.
-+ **class.ActionsToolbar.js** Display a given group of actions in a toolbar.
-+ **class.AjxpAutoCompleter.js** Extension of the scriptaculous auto completer
-+ **class.AjxpPane.js** Generic widget, from wich most widgets extend
-+ **class.AjxpSimpleTabs.js** A simple set of tabs, used in the Users/Roles/Groups editors. Should probably be merged with AjxpTabulator
-+ **class.AjxpSortable.js** A sortable table
-+ **class.AjxpTabulator.js** Set of tabs, as used in the left-hand panel (Files / Shared / Bookmarks)
-+ **class.AjxpUsersCompleter.js** [deprecated] AutoCompleter talking to the list_authorized_users action to provide a users & groups autocomplete field. Now replaced by a ReactJS component.
-+ **class.BookmarksBar.js** [deprecated] Previously, managed the bookmarks button.
-+ **class.Breadcrumb.js** Display a clickable path to the current node
-+ **class.DataModelIPropery.js** Simple component that can be configured to listen to a given datamodel and display some information dynamically.
-+ **class.FetchedResultPane.js** An simplified version of the FilesList, as used in the Shared and Bookmarks pane, as well as in the Search Results pane.
-+ **class.FilesList.js** The monster! Central nodes list, with various renderer for the nodes (details, list, thumbnails).
-+ **class.FoldersTree.js** Left-hand TreeView
-+ **class.HeaderResizer.js** Tool for resizing a table-like list
-+ **class.InfoPanel.js** Right-hand panel displaying info about the currently selected node.
-+ **class.LocationBar.js** [deprecated] Editable version of the current path
-+ **class.LogoWidget.js** Utilitary to handle the top-left logo
-+ **class.MultiDownloader.js** When zip is not available, selecting multiple files for download opens a dialog with a clickable list.
-+ **class.PropertyPanel.js** Display a list of parameters
-+ **class.RemoteNodeProvider.js** Implementation of the INodeProvider interface, speaking with the server to list the nodes
-+ **class.RepositorySelect.js** Drop-down selector for the workspaces
-+ **class.RepositorySimpleLabel.js** Auto-resizeable label for the current workspace
-+ **class.SearchEngine.js** Standard search engine, can be either local or remote
-+ **class.SliderInput.js** A slider widget, used to change the thumbnails size
-+ **class.TreeSelector.js** Open another TreeFolder inside a modal dialog
-+ **class.UserWidget.js** The top-right user widget, can take some menus.
-+ **class.VisibilityToggler.js** Show/hide a linked component.
-
 ## ReactJS UI Components
 
-Folder: plugins/gui.ajax/res/js/ui/reactjs/jsx  
-Transpiled to : plugins/gui.ajax/res/js/ui/reactjs/build
+Pydio UI components are distributed into various libraries. Most of them are located under gui.ajax plugin, but beware that many of them will also be provided by plugins, and loaded dynamically by the interface. Below, we list the main libraries provided by gui.ajax, see the Admin Dashboard for more info about every classes.
 
-+ **LeftNavigation.js**
-+ **ReactFormComponents.js**
-+ **ReactPydioComponents.js**
-+ **UsersCompleter.js**
+Folder: plugins/gui.ajax/res/js/ui/ 
+ 
+ Each library currently provides a global namespace starting with Pydio and lib folder name (like PydioReactUI, PydioComponents, etc), but you should avoid using that access as it may be deprecated in the future.
 
-## Additional Dependencies
+### ReactUI 
+Contains the core of the reactJs UI. 
 
-Folder: plugins/gui.ajax/res/js/vendor
+Example: 
 
-+ backbone/ BackboneJS framework used for the Router
-+ chosen/ Enhanced SelectBox
-+ es6/ Polyfills for ES6 support on old browsers.
-+ jquery/ JQuery
-+ leightbox/ Legacy stuff for modal and overlay.
-+ modernizr/ Well-known tool to detect Javascript features support.
-+ nodejs/ Core "export.js" script used by browserify to gather all dependencies and package them.
-+ prototype/ PrototypeJS library and additional components.
-+ scriptaculous/ PrototypeJS-based animation library.
-+ webfx/ Legacy component used for the TreeView.
-+ xpath-polyfill/ Polyfill for IE to use XPath on XML Document.
+    import Pydio from 'pydio'
+    const {Loader} = Pydio.requireLib('boot')
+    
+### Components
+ 
+Contains many generic components should be easily reused, like lists, tree views, menu, etc..
+ 
+Example:
+
+    import Pydio from 'pydio'
+    const {ClipboardTextField} = Pydio.requireLib('components')
+    
+### HOCs
+ 
+React High Order Components are "wrapping" classes that are used everywhere in the application. It helps programming generic behaviours that can be applied to any other component.
+ 
+Example: 
+
+    import Pydio from 'pydio'
+    const {withContextMenu} = Pydio.requireLib('hoc')
+    
+### Workspaces
+ 
+Contains higher level components that are generally more specific to workspaces, like full dashboard with many components, enriched files list, etc.
+ 
+Example:
+
+    import Pydio from 'pydio'
+    const {FSTemplate} = Pydio.requireLib('workspaces')
+    
+### Form
+ 
+Contains helpers and UI components for rendering forms
+ 
+Example:
+
+    import Pydio from 'pydio'
+    const {FormPanel} = Pydio.requireLib('form')
+    
+### CoreActions
+
+Static callbacks for many actions, that can be used in the XML registry declaration via the "component" tag.
+
+Example:
+
+    <action>
+        [.....]
+        <processing>
+            <clientCallback module="PydioCoreActions.Navigation.up"/>
+        </processing>
+    </action>
+    

@@ -1,32 +1,193 @@
-We will briefly describe here the core classes provided by the framework. From a developer point of view, the most important ones should be AJXP_Plugin (from which your own plugin will extend), and eventually the AJXP_Utils, AJXP_XMLWriter, HTMLWriter classes, that provides a wide bunch of static “utilitary” functions.
+We will briefly describe here the core classes provided by the framework. From a developer point of view, the most important ones should be **PluginsFramework\Plugin** (from which your own plugin will extend), and all the **Services\\*** classes that gives you quick access to the application state.
 
-## Internals
-The classes described here are mainly used by the internal framework to propagate the requests, handle the plugins registry, or manage low-level features. You generally don’t access them directly
+Main Namespace is \Pydio, it should be prefixed inside all classes below.
 
-+ **AbstractTest** an abstract class from wich all start-up tests must inherit
-+ **AJXP_Controller** the main “Controller” (in the sense of an MVC pattern), applying the user-defined callbacks on webservice calls.
-+ **AJXP_JSPacker** Utilitary tool to compile all JavaScripts into one more performant script
-+ **UnixProcess** Used to launch tasks in background using php CLI
-+ **AJXP_VarsFilter** : in charge of actually applying the declared filters
+## Controller
 
-## Tools
-+ **AJXP_Utils**: lot of static methods, check the code
-+ **AJXP_XMLWriter** static methods to manipulate XML output
-+ **HTMLWriter** static methods to manipulate HTML output
-+ **HttpClient** Object to send requests from the server to a remote http server. See also the http_class/ library (alternative client)
-+ **UserSelection** Parse a query sent by the WebApp with the standard file, file_0, file_1 parameters
-+ **SystemTextEncoding** Useful methods to transcode something not-UTF8 to UTF8 and vice versa
-+ **AJXP_Cache** Generic object used by the various editors to cache the thumbnails or other objects generated.
+This package contains the main Controller class (C of MVC) plus various alternative tools to run pydio action, either on command line or after the connection is closed.
 
-## Application Objects
-+ **AJXP_Node** The very basic bit of data extracted from a repository, i.e. generally a file or a folder. Contains the metadata. The main method, loadNodeInfo(), will trigger a “node.info” hook that can be listened to enrich the node metadata at load time.
-+ **AJXP_Role** (warning the class AjxpRole is deprecated) Define a set of Permissions, disabled actions and plugin parameters value that can be mapped to a user, a group, or a role.
-+ **Repository** The representation of a workspace (= repository, same same).
+ - Controller\CliRunner
+ - Controller\Controller
+ - Controller\HTMLWriter
+ - Controller\ProgressBarCLI
+ - Controller\ShutdownScheduler
+ - Controller\UnixProcess
+ 
+## Exception
 
-## Useful Services
-+ **AJXP_PluginsService** Manages all enabled / active plugins, can be queried to find a plugin
-+ **AJXP_ShutdownScheduler** You can register some tasks to be performed after shutdown
-+ **AJXP_Safe** Encapsulate credentials in a session, in an encrypted fashion.
-+ dibi.compat.php Necessary if you want to speak SQL (database abstraction layer, see http://dibiphp.com)
-+ **AuthService** All operations on users & groups, and a register of the currently logged user (AuthService::getUserLogged() )
-+ **ConfService** Speaks with the configs backend, to a load all Pydio internal data, but also the actual user implementations.
+Pydio specific exceptions
+
+ - Exception\ActionNotFoundException
+ - Exception\AuthRequiredException
+ - Exception\DBConnectionException
+ - Exception\ForbiddenCharacterException
+ - Exception\LoggingException
+ - Exception\LoginException
+ - Exception\NoActiveWorkspaceException
+ - Exception\PydioException
+ - Exception\PydioPromptException
+ - Exception\PydioUserAlertException
+ - Exception\RepositoryLoadException
+ - Exception\ResponseEmissionException
+ - Exception\RouteNotFoundException
+ - Exception\UserInterruptException
+ - Exception\UserNotFoundException
+ - Exception\WorkspaceAuthRequired
+ - Exception\WorkspaceForbiddenException
+ - Exception\WorkspaceNotFoundException
+ 
+ 
+## Http
+
+This package handles all the communication to\from server. This is entirely based on PSR-7 interfaces (ServerRequestInterface, ResponseInterface), using the Zend\Diactoros implementation (loaded via Composer).
+Additionally, the Router is based on FastRoute package (loaded via composer as well).
+
+ - Http\**Base** : A static class in charge of boot the Server object.
+ - Http\**Cli** : a specific "server" that encapsulates pydio middlewares when running via Command Line.
+ 
+     - Http\Cli\AuthCliMiddleware
+     - Http\Cli\CliMiddleware
+     - Http\Cli\CliServer
+     - Http\Cli\Command
+     - Http\Cli\FreeArgvOptions
+     - Http\Cli\FreeDefOptions
+     
+ - Http\**Dav** : dedicated server for serving workspace data via WebDAV.
+ 
+     - Http\Dav\AuthBackendBasic
+     - Http\Dav\AuthBackendDigest
+     - Http\Dav\BrowserPlugin
+     - Http\Dav\Collection
+     - Http\Dav\DAVResponse
+     - Http\Dav\DAVServer
+     - Http\Dav\Node
+     - Http\Dav\NodeLeaf
+     - Http\Dav\RootCollection
+ - Http\**Message** : Various classes encapsulating specific response messages
+ 
+     - Http\Message\ExternalUploadedFile
+     - Http\Message\JsActionTrigger
+     - Http\Message\LoggingResult
+     - Http\Message\Message
+     - Http\Message\RegistryMessage
+     - Http\Message\ReloadMessage
+     - Http\Message\ReloadRepoListMessage
+     - Http\Message\UserMessage
+     - Http\Message\XMLDocMessage
+     - Http\Message\XMLMessage
+     
+ - Http\**Middleware** : Main middleware stacked when calling a request from server
+     - Http\Middleware\AuthMiddleware
+     - Http\Middleware\ITopLevelMiddleware
+     - Http\Middleware\SapiMiddleware
+     - Http\Middleware\SecureTokenMiddleware
+     - Http\Middleware\SessionMiddleware
+     - Http\Middleware\SessionRepositoryMiddleware
+     - Http\Middleware\WorkspaceAuthMiddleware
+     
+ - Http\**Response** : Special response objects that can be easily serialized to a given format (namely XML or JSON)
+ 
+     - Http\Response\AsyncResponseStream
+     - Http\Response\CLISerializableResponseChunk
+     - Http\Response\FileReaderResponse
+     - Http\Response\JSONSerializableResponseChunk
+     - Http\Response\SerializableResponseChunk
+     - Http\Response\SerializableResponseStream
+     - Http\Response\XMLDocSerializableResponseChunk
+     - Http\Response\XMLSerializableResponseChunk
+     
+ - Http\**Rest** : Specific middlewares when accessing via REST
+     - Http\Rest\ApiRouter
+     - Http\Rest\RestApiMiddleware
+     - Http\Rest\RestApiServer
+     - Http\Rest\RestAuthMiddleware
+ - Http\**Server** : the base class of our PSR-7 server
+ - Http\**SimpleRestResourceRouter**: Simpel router for rest resources
+ - Http\**TopLevelRouter** : Top level router using plugins\core.ajaxplorer\routes\*.json files to load into FastRoute
+ - Http\**Wopi** : Specific middlewares for serving files via the Wopi protocol (used for Collabora)
+     - Http\Wopi\AuthFrontend
+     - Http\Wopi\AuthMiddleware
+     - Http\Wopi\Middleware
+     - Http\Wopi\Router
+     - Http\Wopi\Server
+     
+## Model
+
+This package contains some Model classes or interfaces for various aspects of the application (users, workpaces, etc). Interfaces are generally implemented inside the plugins.
+
+ - Model\AddressBookItem
+ - Model\Context
+ - Model\ContextInterface
+ - Model\ContextProviderInterface
+ - Model\FilteredRepositoriesList
+ - Model\FilteredUsersList
+ - Model\RepositoryInterface
+ - Model\UserInterface
+ 
+## PluginFramework
+
+Core framework for detecting plugins and launching the plugin registry. This is really the heart of the machine.
+
+ - PluginFramework\CoreInstanceProvider
+ - PluginFramework\Plugin
+ - PluginFramework\PluginsService
+ - PluginFramework\SqlTableProvider
+ 
+## Serializer
+
+Utils used for serializing model objects into specific formats
+
+ - Serializer\NodeXML
+ - Serializer\RepositoryXML
+ - Serializer\UserXML
+ 
+## Services
+
+Singletons available throughout the application, for getting or setting the datamodel objects.
+
+ - Services\ApiKeysService
+ - Services\ApplicationState
+ - Services\AuthService
+ - Services\CacheService
+ - Services\ConfService
+ - Services\LocalCache
+ - Services\LocaleService
+ - Services\RepositoriesCache
+ - Services\RepositoryService
+ - Services\RolesService
+ - Services\SessionService
+ - Services\UsersService
+ 
+## Utils
+
+Many tools for helping with string manipulation, request parsing, etc.
+
+ - Utils\**Crypto**
+     - Utils\Crypto\Key
+     - Utils\Crypto\ZeroPaddingRijndael
+     - Utils\Crypto
+ - Utils\**DBHelper**
+ - Utils\**FileHelper**
+ - Utils\**Http**
+     - Utils\Http\BruteForceHelper
+     - Utils\Http\captcha_words.txt
+     - Utils\Http\CaptchaProvider
+     - Utils\Http\CookiesHelper
+     - Utils\Http\UserAgent
+ - Utils\**Reflection**
+     - Utils\Reflection\DiagnosticRunner
+     - Utils\Reflection\DocsParser
+     - Utils\Reflection\LocaleExtractor
+     - Utils\Reflection\PydioSdkGenerator
+ - Utils\**TextEncoder**
+ - Utils\Vars
+     - Utils\Vars\InputFilter
+     - Utils\Vars\OptionsHelper
+     - Utils\Vars\PasswordEncoder
+     - Utils\Vars\PathUtils
+     - Utils\Vars\StatHelper
+     - Utils\Vars\StringHelper
+     - Utils\Vars\UrlUtils
+     - Utils\Vars\VarsFilter
+     - Utils\Vars\XMLFilter
+ - Utils\XMLHelper
