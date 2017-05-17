@@ -1,6 +1,6 @@
-title: "Pydio API v1"
+title: "Pydio API"
 language: und
-menu: "Pydio API v1"
+menu: "Pydio API"
 weight: 2
 menu_name: menu-developer-guide
-abstract: "How to consume the standard Pydio server API (v1)."
+abstract: "How to consume the standard Pydio server API."

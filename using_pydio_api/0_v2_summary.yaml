@@ -1,0 +1,6 @@
+title: "Api V2 summary"
+language: und
+menu: "Api V2 summary"
+weight: 0
+menu_name: menu-developer-guide
+abstract: "How-to concretely consume the APIs, via the REST protocol, PHP Command line or ready-to-use SOAP clients."

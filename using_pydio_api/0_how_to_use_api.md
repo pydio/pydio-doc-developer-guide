@@ -5,7 +5,7 @@
 In this documentation, we will assume that you already have a working Pydio server, and especially that you went through
 the steps to make sure that the REST API are correctly configured. Basically, this just requires making sure that your 
 web server is correctly configured for RewriteRules.
-If you are not sure, please check the administrator guide : https://pydio.com/en/docs/v6-enterprise/checking-apis
+If you are not sure, please check the administrator guide : https://pydio.com/en/docs/v8/checking-apis
 
 ### Input / Output Expected Formats
 
@@ -19,17 +19,19 @@ That said, **our most common format** still is a SOAP-like format :
 
 Input and output are expected to use UTF-8 encoding.
 
-## Building REST Api URL's
+## Api V1
+
+### Building REST Api URL's
 
 All the Pydio actions that can be addressed via the standard Pydio clients (web, mobile, sync) can be accessed directly 
 through various standard protocols by your own client application.
 
-### Base URI
+#### Base URI
 
 On a default Pydio installation, the rest API is configured to be available on https://yourpydio.com/api/. This can be modified
 by changing the .htaccess definitions for the rewrite rules. 
 
-### Workspace ID or ALIAS
+#### Workspace ID or ALIAS
 
 Once logged in to Pydio, a "user" is always logged to a given "workspace". Even when you are looking the welcome page, you are in fact logged
 on a special "workspace", powered in background by the access.ajxp_home plugin. Depending on this workspace you are browsing, 
@@ -44,12 +46,15 @@ This is important to keep in mind. In our generated API documentation, we will g
 **you will have to replace it with your own**. For specific actions like users/groups provisioning, you must be working on the Admin Panel
 workspace, and the API docs thus use /api/settings/ instead of /api/default/.
 
-### Action Name
+#### Action Name
 
 Finally, the next mandatory part of the URI is the name of the action to be performed. It is defined in each plugins under the &lt;actions&gt; xml elements.
 
 [:summary]
 
+## Api V2
+
+Starting with Pydio 7, we have rewritten the REST API from ground up to stick more closely to the REST standards. The api V2 is accessible under `yourpydio/api/v2` and provides access points for managing files and folders, as well as a whole set of commands for provisioning users and workspaces.
 
 ## Authentication
 
