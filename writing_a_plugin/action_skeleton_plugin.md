@@ -2,48 +2,107 @@
 This plugin is typically provided to help you kickstart the writing of a new plugin. It demonstrates a couple of features, particularly adding a button somewhere, as well as a header and footer in the interface, and a sample communication with the server.
 
 ### Header and Footer
+
 You can see the following registry_contribution in the manifest
 
-	<client_configs uuidAttr="name">
-        <template name="bottom" element="ajxp_desktop" position="after"><![CDATA[
-            <div id="optional_bottom_div" style="font-family:arial;padding:10px;">This CDATA section will be overriden by the PHP part of the plugin</div>
-        ]]></template>
-        <template name="head" element="ajxp_desktop" position="before"><![CDATA[
-            <div id="optional_header_div" style="background-color: #999; color: white;font-family:arial;padding:10px;">Your custom header content</div>
-        ]]></template>
-	</client_configs>
+	<registry_contributions>
+        <client_configs uuidAttr="name">
+            <template name="skeleton_bottom" element="ajxp_desktop" position="bottom" theme="material" namespace="SkeletonActions" component="Template"/>
+        </client_configs>
+	</registry_contributions>
 
-The Footer section is updated by the PHP plugin, during the **parseSpecificContributions()** function call. We use XPath to search the XML and replace its content with the plugin parameter value “CUSTOM_FOOTER_CONTENT” (set via the GUI).
+This `SkeletonActions.Template` points to a react component defined in an external javascript library. This library is loaded in the same XML with : 
+ 
+     <client_settings>
+         <resources>
+             <js className="SkeletonActions" file="plugins/action.skeleton/res/build/SkeletonActions.js"/>
+         </resources>
+     </client_settings>
+
 
 ### Action Button
+
 The following code adds an action to the global toolbar, which opens a dialog, and use a Connexion() javascript object to retrieve some data on the server:
 
 
-	<action name="my_skeleton_button_frame">
-        <gui text="skeleton.4" title="skeleton.5" src="skeleton_images/ICON_SIZE/user-desktop.png" hasAccessKey="false">
-            <context selection="false" dir="" recycle="hidden" actionBar="true" ajxpWidgets="ActionsToolbar" actionBarGroup="user"/>
-        </gui>
-        <processing>
-            <clientCallback prepareModal="true"><![CDATA[
-                var dialogLoadFunction = function(){
-                var conn = new Connexion();
-                conn.addParameter("get_action", "my_skeleton_button_frame");
-                conn.onComplete = function(transport){
-                $('loaded_content').update(transport.responseText);
+	<registry_contributions>
+	    <actions>
+            <action name="my_skeleton_button">
+                <gui text="skeleton.1" title="skeleton.2" hasAccessKey="false">
+                    <context selection="false" dir="" recycle="hidden" actionBar="true" actionBarGroup="change_main"/>
+                </gui>
+                <processing>
+                    <clientCallback module="SkeletonActions.Callbacks.alertButton"/>
+                </processing>
+            </action>
+        </actions>
+	</registry_contributions>
+
+
+Again, the clientCallback points to our external JS library.
+
+### JS Library
+
+The structure of the JS library file is explained. Here the plugin does not use browserify to export the library, so we wrap the definitions in an anonymous function, and then we manually export the namespace to window.
+
+    (function(global){
+    
+        class Callbacks{
+   
+            static alertButton() {
+                // WILL BE CALLED WHEN my_skeleton_button ACTION IS TRIGGERED
+            }
+        
+        }
+    
+        /**
+         * Sample Dialog class used for reference only, ready to be
+         * copy/pasted :-)
+         */
+        const SkeletonDialog = React.createClass({
+    
+            // Component is a dialog, let's use pydio utilitaries
+            mixins:[
+                ActionDialogMixin,
+                CancelButtonProviderMixin,
+                SubmitButtonProviderMixin
+            ],
+
+            
+            // This is called on submit because it has SubmitButtonProviderMixin mixin.
+            submit(){
+                this.dismiss();
+            },
+            
+            // Let's load the content of the dialog at mount time
+            componentDidMount: function(){
+                PydioApi.getClient().request({get_action:'my_skeleton_button_frame'}, (transport)=>{
+                    this.setState({content: transport.responseText});
+                });
+            },
+            
+            // Finally the classical react render function
+            render: function(){
+    
+                if(!this.state || !this.state.content){
+                    return <Loader/>;
                 }
-                conn.sendAsync();
-                };
-                modal.showDialogForm("My Link", "my_skeleton_form", dialogLoadFunction);
-            ]]></clientCallback>
-            <clientForm id="my_skeleton_form"><![CDATA[
-                <div id="my_skeleton_form" box_width="450">
-                <h3>AJXP_MESSAGE[skeleton.6]</h3>
-                <div id="loaded_content"><p align="center">AJXP_MESSAGE[skeleton.7]</p></div>
-                </div>
-            ]]></clientForm>
-            <serverCallback methodName="receiveAction" pluginId="action.skeleton"/>
-        </processing>
-	</action>
+                return (
+                    <div dangerouslySetInnerHTML={{__html:this.state.content}}/>
+                );
+            }
+    
+        });
+    
+        // Export to global namespace
+        global.SkeletonActions = {
+            Callbacks: Callbacks,
+            Dialog   : SkeletonDialog
+        };
+    
+    })(window)
+
+### Server callback
 
 You can see that the **serverCallback** is pointing to the method “**receiveAction**”. In the PHP class, you’ll find the corresponding receiveAction method, with the standard callback signature **$action, $httpVars, $fileVars**.
 

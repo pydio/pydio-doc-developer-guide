@@ -43,10 +43,3 @@ This will be loaded on demand (i.e. the first time a Diaporama is required), but
 
 ## CSS Stylesheet
 A plugin can also provide its own style sheet. This is done by using a <css> tag, where only the file is necessary. The autoload attribute is also optional to make sure the style sheet is loaded at startup. As a good practice, use **res/css/** inside your plugin folder
-
-## Image library
-If your plugin comes with its own set of images, you will have to declare an image library, providing here an “alias”, that you can use when referring to images in your XML. The library itself is then a path to the plugin sub folder where you store your images. A good practice is to use **res/img/** The application will be able to resolve this alias to the real path. For example, if the alias is “my_plugin_imgs”, you can then use in an action “src” attribute the following:
-
-<code>src=”my_plugin_imgs/ICON_SIZE/myimage.png”</code>
-
-If you use ICON_SIZE, it will be replaced automatically, and you must make sure the according folders (22, 32, 64) are created in your image library.
