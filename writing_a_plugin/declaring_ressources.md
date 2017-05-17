@@ -42,4 +42,4 @@ For example, the editor.diaporama declares its javascript class (this mandatory 
 This will be loaded on demand (i.e. the first time a Diaporama is required), but you can also set an **_autoload=”true”_** attribute to make sure this Javascript library is loaded at the application startup.
 
 ## CSS Stylesheet
-A plugin can also provide its own style sheet. This is done by using a <css> tag, where only the file is necessary. The autoload attribute is also optional to make sure the style sheet is loaded at startup. As a good practice, use **res/css/** inside your plugin folder
+A plugin can also provide its own style sheet. This is done by using a `<css>` tag, where only the file is necessary. The autoload attribute is also optional to make sure the style sheet is loaded at startup. As a good practice, use **res/css/** inside your plugin folder

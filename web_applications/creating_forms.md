@@ -1,7 +1,7 @@
 One common task you may have to handle when creating interfaces will be providing forms. Over the time, we developed our own form manager that provides tools to handle fields and values on both the client and the server side. The components implied are prefixed with “SF” or “standardForms” on both sides.
 
 ## Defining forms in XML
-The definition of a set of form fields is generally done via XML, through a set of <**param**> elements. It can actually also be done via JavaScript, in that case you simply have to create javascript objects that contain the same keys as the **param** XML attributes. The attributes are described below (extract from the XSD).
+The definition of a set of form fields is generally done via XML, through a set of `<param>` elements. It can actually also be done via JavaScript, in that case you simply have to create javascript objects that contain the same keys as the **param** XML attributes. The attributes are described below (extract from the XSD).
 
 
 	<xs:element name="param">
@@ -80,7 +80,7 @@ Here is an example below, used in the Profile panel
         );
     }
 
-You can either manually define a full javascript object for fields definition, using the same attributes as the ones defined in the XML <param> tag. Or the Manager class from the same library can be useful if you want to parse XML located at a given location in the registry
+You can either manually define a full javascript object for fields definition, using the same attributes as the ones defined in the XML `<param>` tag. Or the Manager class from the same library can be useful if you want to parse XML located at a given location in the registry
 
     import Pydio from 'pydio'
     const {Manager} = Pydio.requireLib('form')
