@@ -1,4 +1,4 @@
-## Protocol
+
 
 This is is the core authentication mechanism used in Cells. As such, you will have to use this API as soon as you want to talk to other APIs.
 

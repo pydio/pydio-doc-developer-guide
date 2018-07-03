@@ -1,4 +1,4 @@
-# Introduction
+
 
 Pydio Cells is composed of a set of “microservices”, each one being dedicated to a simple task. These services can run distributed on a cluster of servers, and most of them can be independently horizontally scaled. They all communicate together via specific APIs, and each service brings its own persistence layer (when necessary). 
 That way, breaking a monolithic application into a set of microservices introduces many improvements : 

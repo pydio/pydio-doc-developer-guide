@@ -1,4 +1,4 @@
-## Backend
+
 
 The following is required to install and run the Pydio Cells backend:
 

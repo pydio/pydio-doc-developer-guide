@@ -1,4 +1,4 @@
-## Logging
+
 
 We mainly use 2 loggers that are defined in the `cells/common/log` package and used throughout the backend:
 

@@ -1,4 +1,4 @@
-## Pull Requests / Branches
+
 
 The code is currently using 3 branches (not counting the temporary dev branches) : 
 master : upstream branch, use this as default for Pull Requests

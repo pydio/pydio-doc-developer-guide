@@ -1,4 +1,4 @@
-## Frontend
+
 
 \# Retrieve the code
 git clone https://github.com/pydio/cells-front.git

@@ -1,4 +1,4 @@
-## Broker
+
 
 “Broker” services are generic services that mainly interact with others via the event bus. There are currently 4 of them:
 

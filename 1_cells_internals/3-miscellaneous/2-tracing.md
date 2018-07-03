@@ -1,4 +1,4 @@
-## Tracing
+
 
 In a microservice environment, it’s not rare that an incoming request will trigger many sub-requests to many services under the hood. For logging and also for diagnosing bottlenecks and services inter-dependencies, unique tokens are generated and then propagated via the requests Headers on each request. 
 A dedicated HTTP handler is added to both gRPC and REST services, in charge of automatically detecting whether a request already has a “Span Root Id” (identifying the very first entry point) and propagating it to sub-requests, and also adding a unique token (Span Id) for each of these. 

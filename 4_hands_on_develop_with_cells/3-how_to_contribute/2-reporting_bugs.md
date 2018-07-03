@@ -1,4 +1,4 @@
-## Reporting bugs 
+
 
 As described in the main contribution rules, we use Github only for "qualified bugs" : bugs that are easily reproduced and validated by a Pydio Team member. Our preferred communication channel is our Forum. Please do not ask question in github issues, nor in Twitter or other social feed.
 So, what should I do in case of:

@@ -1,3 +1,3 @@
-# Activity streams
+
 
 [:summary]

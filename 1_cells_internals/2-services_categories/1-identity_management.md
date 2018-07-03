@@ -1,4 +1,3 @@
-## Identity Management
 
 Identity Management (IDM) is split across 8 microservices, that separately manage a single aspect of the application objects :
 

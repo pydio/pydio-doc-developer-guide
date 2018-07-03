@@ -1,4 +1,4 @@
-## Users / Roles / Groups inheritance
+
 
 In Pydio Cells, the major IDM objects are linked to a role : a user has its own role, a group has its own role, and the administrator can define roles as needed.
 A user is always part of a group, either the “root group” or a subgroup defined in the interface. Groups are a way to hierarchically organise the user, and a user can only belong to one group. On the other hand, admin roles can be applied to any users, and a user can be assigned any number of roles. In that sense, roles are closer to AD/LDAP groups.

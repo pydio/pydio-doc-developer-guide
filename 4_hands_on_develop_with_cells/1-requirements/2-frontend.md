@@ -1,4 +1,4 @@
-FrontEnd
+
 
 Similar to Pydio 8.0.1, but with less php extensions needed :
 

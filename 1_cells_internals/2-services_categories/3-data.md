@@ -1,4 +1,3 @@
-## Data
 
 A Datasource provides access to data. It continuously listens and stores changes to maintain a consistent data index.
 

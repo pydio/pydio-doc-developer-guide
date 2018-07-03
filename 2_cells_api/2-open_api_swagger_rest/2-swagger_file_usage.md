@@ -1,4 +1,4 @@
-## Swagger file usage
+
 
 Once generated, the swagger.json can be used to automatically generate SDKs in various languages. It is also used internally to expose the REST defined URIs and bind them to the micro services handlers. 
 

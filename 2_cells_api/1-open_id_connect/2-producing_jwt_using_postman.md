@@ -1,4 +1,4 @@
-## Producing JWT using Postman
+
 
 First, you need to create an authentication token for a user. You will the login credentials for the user, as well as the API key and secret that you can find in the “Config backends” screen of the Pydio Cells administration screens.
 

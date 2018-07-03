@@ -1,3 +1,2 @@
-# Others
 
 [:summary]

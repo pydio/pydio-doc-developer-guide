@@ -1,4 +1,4 @@
-## Security Policies
+
 
 As already introduced, the first usage of resource-based rules is in the REST API endpoints authorizations. In this case, the policies are used as follow: 
 

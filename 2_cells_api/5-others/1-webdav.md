@@ -1,4 +1,4 @@
-## WebDAV 
+
 
 By default, Pydio Cells exposes a WebDAV protocol endpoint via the main gateway. 
 You can access it with valid credentials at the following address: <public-URL>/dav/. 

@@ -1,4 +1,4 @@
-## Vendoring
+
 
 Third party dependency management is done within Pydio Cells with Govendor. See [their Github page](https://github.com/kardianos/govendor) and this [very useful cheatsheet](https://github.com/kardianos/govendor/wiki/Govendor-CheatSheet).
 

@@ -1,4 +1,4 @@
-## Idm Objects Policies 
+
 
 Resource-based rules are also used to manage the visibility of all idm objects (users, workspaces, roles) for a given user. These rules can be queried for specific “read”, “write” and “owner” rights to e.g. filter the results of the listings and prevent modification of an object by an unauthorized person. 
 For example, Roles are used internally by users when they create “Teams” in their address books. By default, those roles have the following rules applied :

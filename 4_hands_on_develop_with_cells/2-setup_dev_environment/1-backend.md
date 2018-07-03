@@ -1,4 +1,4 @@
-## Backend
+
 
 Before trying to set up a development environment, you should first install a packaged binary version of the application. You can find a step by step guide in the [Installation guides](https://pydio.com/en/docs/cells/v1/installation-guides).
 

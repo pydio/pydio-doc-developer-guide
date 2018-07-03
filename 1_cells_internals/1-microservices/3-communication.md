@@ -1,4 +1,4 @@
-## Communication
+
 
 Communication between services can be using various transport methods described below.
 

@@ -1,4 +1,4 @@
-## Introduction
+
 
 Along with the role-based mechanism, it is possible to refine accesses to any specific API or to dynamically compute a specific ACL to be applied to a role. 
 Resource-based rules are heavily inspired by Amazon IAM [TODO / LINK] rules. The idea is to simply stack a set of rules in a “deny by default” mode and to merge them when necessary to decide : “who is allowed to access what in which context”: 

@@ -1,12 +1,13 @@
-####Introduction 
+
+
 Pydio Cells is a full rewrite of Pydio backend using Go, a modern server language developed and used by Google. Although still relying on PHP for the frontend part, most of the core features are now running in microservice architecture. Microservices are small pieces of software that can run independently, scale-out easily by running on a distributed infrastructure, and they communicate using gRPC.
 
-####Audience
+## Audience
 
 This documentation is for developers that are willing to submit bug fixes or extend some of the features of Pydio Cells. It is also intended for DevOps that want to have a deeper understanding of the app and/or are willing to integrate it in a larger IT ecosystem. 
 For regular users, the Pydio Cells distribution comes in the form of precompiled binaries for Linux and MacOS X and there is no need to re-compile the code nor to understand the concepts that are presented in the current document.
 
-####References
+## References
 
 The current document is not exhaustive and the reader might also refer to other Pydio Cells documentation sources to get a complete understanding of the application, namely:
 

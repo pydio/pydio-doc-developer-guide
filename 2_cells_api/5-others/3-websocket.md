@@ -1,4 +1,4 @@
-## WebSocket
+
 
 Pydio Cells exposes two authenticated websocket endpoints sending various messages from the server up to the javascript client. 
 Endpoints are :

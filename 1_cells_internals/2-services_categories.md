@@ -1,3 +1,3 @@
-# Services categories
+
 
 [:summary]
