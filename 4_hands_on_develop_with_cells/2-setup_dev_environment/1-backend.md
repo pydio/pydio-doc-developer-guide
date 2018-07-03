@@ -6,12 +6,14 @@ It will help insure that your system meets the necessary requirements and let yo
 
 Then, building the Pydio Cells backend from the source code is quite straightforward:
 
+```
 \# Retrieve the code
 go get -u github.com/pydio/cells
 \# From this line on, we assume you are in Pydio Cells' code root directory
 cd $GOPATH/src/github.com/pydio/cells 
 \# Build your binary
 make dev
+````
 
 Note: we had to fork a few libraries before integrating them as dependencies. If you need to modify this part of the code, you should first retrieve a local version by executing
-./deps.sh
+`./deps.sh`

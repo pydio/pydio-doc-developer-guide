@@ -1,4 +1,5 @@
 
 
 To run the tests, simply do
-go test -v ./...
+
+`go test -v ./...`
