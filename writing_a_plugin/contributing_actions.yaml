@@ -1,6 +1,0 @@
-title: "Contributing actions"
-language: und
-menu: "Contributing actions"
-weight: 2
-menu_name: menu-developer-guide
-abstract: "How a plugin can declare an action to the server, that will then be exposed to the world as a service."

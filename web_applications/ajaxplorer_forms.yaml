@@ -1,6 +1,0 @@
-title: "Pydio Forms"
-language: und
-menu: "Pydio Forms"
-weight: 2
-menu_name: menu-developer-guide
-abstract: "XML-defined forms can be generated automatically by the javascript Pydio platform"
