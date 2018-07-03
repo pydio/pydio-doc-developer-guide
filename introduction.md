@@ -18,4 +18,4 @@ The current document is not exhaustive and the reader might also refer to other 
 
 * [The on-line Go Documentation](https://godoc.org/github.com/pydio/cells).
 
-* [The Pydio forum](https://forum.pydio.com): if your question is not answered in any of the documentation, somebody might have asked it for you in the forum.
+* [The Pydio forum](https://forum.pydio.com) : if your question is not answered in any of the documentation, somebody might have asked it for you in the forum.
