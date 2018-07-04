@@ -5,30 +5,21 @@ A Datasource provides access to data. It continuously listens and stores changes
 
 Internally, a datasource is composed of (see image below):
 
-* A storage service: Provides access to the data and can be accessed by any tool that communicates using Amazon S3 protocol.
-
-* An index service: Stores the data state and stands as the only source of truth for request on data state.
-
-* A synchronizer: Maintains the storage and the index database synchronized.
-
+- A storage service: Provides access to the data and can be accessed by any tool that communicates using Amazon S3 protocol.
+- An index service: Stores the data state and stands as the only source of truth for request on data state.
+- A synchronizer: Maintains the storage and the index database synchronized.
 
 [:image-popup:1_cells_internals/datasource.png]
-
 
 Every time a datasource has its state updated, the index service publishes events to notify the other services.
 
 Below are the name pattern of the corresponding services, each of them is always started as a fork:
 
-* `pydio.grpc.data.index.<service_id>`
-
-* `pydio.grpc.data.object.<service_id>`
-
-* `pydio.grpc.data.sync.<service_id>`
-
-
+- `pydio.grpc.data.index.<service_id>`
+- `pydio.grpc.data.object.<service_id>`
+- `pydio.grpc.data.sync.<service_id>`
 
 [:image-popup:1_cells_internals/architecture_datasources.png]
-
 
 Each datasource index is stored in 3 independent tables of the default database. It can be configured to use any other database. This eases the sharding of data across multiple nodes.
 
