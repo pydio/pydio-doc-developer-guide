@@ -2,7 +2,7 @@
 
 “Broker” services are generic services that mainly interact with others via the event bus. There are currently 4 of them:
 
-* activity: in charge of persisting the activity streams (see corresponding CHAPTER)
+* activity: in charge of persisting the activity streams (see corresponding [CHAPTER](https://pydio.com/en/docs/developer-guide/activity-streams))
 
 * chat : Chat rooms provide a generic real-time discussion mechanism that can be attached to any objects (cells, nodes, etc..). This service is just in charge of the messages persistence, it is tightly coupled with the WebSocket service that listen/broadcast messages to the clients.
 
