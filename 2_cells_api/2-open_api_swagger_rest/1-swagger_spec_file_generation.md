@@ -10,6 +10,6 @@ As described in the preceding chapter, communication between microservices is do
 
 - Models are defined in the various `.proto` files that are to be found under `cells/common/proto/rest`
 - All models are imported in a single main `rest.proto` file that is in the same package
-- This file is compiled using a specific version of the protoc compiler (**TODO** enhance and document this) to generate the swagger spec file named `rest.swagger.json`
-- We use then this spec file to generate various resources:
-- A specific `protoc.sh` script to generate the `swagger.go` file (**TODO** where do we use this),
+- This file is compiled using a specific version of the protoc compiler to generate the swagger spec file named `rest.swagger.json`.
+- We use then this spec file to generate various resources
+- A specific `protoc.sh` script is then used to generate the `swagger.go` file.
