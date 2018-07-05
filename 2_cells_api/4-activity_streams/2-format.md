@@ -1,8 +1,9 @@
 
-
 Activities are stored in the [Activity Streams 2.0 format](https://www.w3.org/TR/activitystreams-core/). This is a generic JSON-based RFC published by the W3C. This format is used for all activities either sent via the event bus (and then for example sent back to the users via WebSocket), or when listing activities using the Rest API.
-Here is an example of a REST call to http://proxy:8083/activity/streams
-```
+
+Here is an example of a REST call to `http://proxy:8083/activity/streams`:
+
+```JSON
 {
     "@context": "https://www.w3.org/ns/activitystreams",
     "type": "Collection",
@@ -97,5 +98,4 @@ Here is an example of a REST call to http://proxy:8083/activity/streams
     ],
     "totalItems": 3
 }
-
 ```
