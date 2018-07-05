@@ -1,5 +1,4 @@
 
-
 We mainly use 2 loggers that are defined in the `cells/common/log` package and used throughout the backend:
 
 - A syslog logger is used to log technical information.
@@ -13,7 +12,7 @@ Pydio Cells relies on the [zap logging framework](https://github.com/uber-go/zap
 - Error
 - Fatal
 
-And 2 types of output format 
+And 2 types of output format:
 
 - JSON
 - Console like with colors.
