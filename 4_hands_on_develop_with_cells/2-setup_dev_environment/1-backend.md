@@ -12,7 +12,7 @@ go get -u github.com/pydio/cells
 cd $GOPATH/src/github.com/pydio/cells
 # Build your binary
 make dev
-````
+```
 
 Note: we had to fork a few libraries before integrating them as dependencies. If you need to modify this part of the code, you should first retrieve a local version by executing
 `./deps.sh`
