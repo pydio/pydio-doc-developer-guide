@@ -39,9 +39,9 @@ First you need to create a environment on postman, follow the screenshots below 
 
 [:image-popup:2_cells_api/create_env_postman.png]
 
-[:image-popup:2_cells_api/postman_post.png]
-
 [:image-popup:2_cells_api/setup_env_postman.png]
+
+[:image-popup:2_cells_api/add_env_postman.png]
 
 - **Edit Environment** : put a name for this env variable
 
