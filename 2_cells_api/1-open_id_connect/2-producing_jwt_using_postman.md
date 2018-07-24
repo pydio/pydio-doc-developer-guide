@@ -53,7 +53,7 @@ Now that our environment variable is created we need to enable it on the current
 
 [:image-popup:2_cells_api/enable_created_env_postman.png]
 
-Now you have to options to make use of this env variable, change on each of your requests the `Bearer token` value to `{{dex_token}}` or you can even automate this a step further and to for that follos the steps below.
+Now you have two options to make use of this env variable, change on each of your requests the `Bearer token` value to `{{dex_token}}` or you can even automate this a step further and to for that follos the steps below.
 
 First add a collection,
 
