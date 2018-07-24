@@ -53,7 +53,7 @@ You can now put the script that will generate the token and then allocate it to 
 
 [:image-popup:2_cells_api/script_postman.png]
 
-Now that our environment variable is created and that the script is associated with the env variable, we need to enable it on the current workspace and to do so select it as seen in this screenshot
+Now that our environment variable is created and that the script is associated with the env variable, we need to enable it on the current workspace and to do so select it as seen in this screenshot, the script must be added to the api request for the token, `http://<your-cells>/auth/dex/token`
 
 [:image-popup:2_cells_api/enable_created_env_postman.png]
 
