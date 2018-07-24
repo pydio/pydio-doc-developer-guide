@@ -58,7 +58,7 @@ pm.test("Update environment", function () {
 });
 ```
 
-[:image-popup:2_cells_api/script_postman.png]
+[:image-popup:2_cells_api/add_script_postman.png]
 
 Now that our environment variable is created and that the script is associated with the env variable, we need to enable it on the current workspace and to do so select it as seen in this screenshot, the script must be added to the api request for the token, `http://<your-cells>/auth/dex/token`
 
