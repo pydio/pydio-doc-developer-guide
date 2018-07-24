@@ -49,7 +49,11 @@ First you need to create a environment on postman, follow the screenshots below 
 
 - **Value** : You don't have to fill this one, the goal of those steps is to facilitate this process.
 
-Now that our environment variable is created we need to enable it on the current workspace and to do so select it as seen in this screenshot
+You can now put the script that will generate the token and then allocate it to the env variable.
+
+[:image-popup:2_cells_api/script_postman.png]
+
+Now that our environment variable is created and that the script is associated with the env variable, we need to enable it on the current workspace and to do so select it as seen in this screenshot
 
 [:image-popup:2_cells_api/enable_created_env_postman.png]
 
