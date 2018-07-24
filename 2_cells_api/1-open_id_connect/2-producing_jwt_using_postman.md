@@ -51,6 +51,13 @@ First you need to create a environment on postman, follow the screenshots below 
 
 You can now put the script that will generate the token and then allocate it to the env variable.
 
+```
+pm.test("Update environment", function () {
+    var jsonData = pm.response.json();
+    pm.environment.set("dex_token", jsonData.id_token);
+});
+```
+
 [:image-popup:2_cells_api/script_postman.png]
 
 Now that our environment variable is created and that the script is associated with the env variable, we need to enable it on the current workspace and to do so select it as seen in this screenshot, the script must be added to the api request for the token, `http://<your-cells>/auth/dex/token`
