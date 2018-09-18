@@ -1,5 +1,7 @@
 
-Pydio Cells is a full rewrite of Pydio backend using Go, a modern server language developed and used by Google. Although still relying on PHP for the frontend part, most of the core features are now running in microservice architecture. Microservices are small pieces of software that can run independently, scale-out easily by running on a distributed infrastructure, and they communicate using gRPC.
+Pydio Cells is a full rewrite of Pydio backend using Go, a modern server language developed and used by Google. Most of the core features are now running in microservice architecture. Microservices are small pieces of software that can run independently, scale-out easily by running on a distributed infrastructure, and they communicate using gRPC.
+
+The main frontend is implemented using ReactJS framework, together with Material UI best practices.
 
 ## Audience
 
