@@ -3,7 +3,7 @@
 
 As described in the preceding chapter, communication between microservices is done using either gRPC (low-level) or REST (world-facing). The various business and technical model objects are defined with protobuf syntax in various proto files. Protobufs are standard in the gRPC world, but we also use them to describe our REST APIs. Using specific Protobuf annotations, we can generate an Open API spec file that describes the model and the REST API entry points. This file is then used to:
 
-- Generate the REST API documentation that can be accessed via the Admin console
+- Generate the REST API documentation that can be accessed via the Admin console,
 - Generate various clients that connect to the backend via REST services.
 
 ### Swagger spec file generation

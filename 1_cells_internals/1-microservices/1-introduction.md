@@ -1,6 +1,7 @@
 
-Pydio Cells is composed of a set of “microservices”, each one being dedicated to a simple task. These services can run distributed on a cluster of servers, and most of them can be independently horizontally scaled. They all communicate together via specific APIs, and each service brings its own persistence layer (when necessary).
-That way, breaking a monolithic application into a set of microservices introduces many improvements:
+Pydio Cells is composed of a set of “microservices”, each one being dedicated to a simple task. These services can run distributed on a cluster of servers, and most of them can be independantly horizontally scaled. They all communicate together via specific APIs, and each service brings its own persistence layer (when necessary).
+
+Breaking a monolithic application into a set of microservices introduces many improvements:
 
 - Communication between services via API dictates a predefined protocol without assuming the nature of the service. Services can for example be written in different languages.
 - Per-service persistence layer allows to choose the best persistence implementation for the task implemented by each service.

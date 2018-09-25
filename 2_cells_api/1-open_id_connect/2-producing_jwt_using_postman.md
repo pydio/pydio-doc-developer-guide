@@ -1,5 +1,5 @@
 
-First, you need to create an authentication token for a user. You need the login credentials for the user, as well as the API key and secret that you can find in the `Config backends` screen of the Pydio Cells administration screens.
+First, you need to create an authentication token for a user. You need the login credentials for the user, as well as the API key and secret that you can find by using the `./cells config list` command.
 
 Below is an example of an authentication token request on the pydio demo website (login / password: admin / admin, api key / secret : cells-front / cells-front)
 
@@ -43,15 +43,15 @@ First you need to create a environment on postman, follow the screenshots below 
 
 [:image-popup:2_cells_api/add_env_postman.png]
 
-- **Edit Environment** : put a name for this env variable
+- **Edit Environment**: put a name for this env variable
 
-- **Key** : put a key for this env like the one used on the screenshot `dex_token` otherwise you can name it as you wish but you must respect variable naming therefore do not make use of whitespaces and such.
+- **Key**: put a key for this env like the one used on the screenshot `dex_token` otherwise you can name it as you wish but you must respect variable naming therefore do not make use of whitespaces and such.
 
-- **Value** : You don't have to fill this one, the goal of those steps is to facilitate this process.
+- **Value**: You don't have to fill this one, the goal of those steps is to facilitate this process.
 
 You can now put the script that will generate the token and then allocate it to the env variable.
 
-```
+```script
 pm.test("Update environment", function () {
     var jsonData = pm.response.json();
     pm.environment.set("dex_token", jsonData.id_token);

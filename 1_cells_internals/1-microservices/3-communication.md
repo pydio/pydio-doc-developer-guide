@@ -1,5 +1,5 @@
 
-Communication between services can be using various transport methods described below.
+Communication between services is generally achieved using one of the below transport methods:
 
 ### gRPC
 
@@ -9,10 +9,11 @@ Pydio Cells Protobufs are available in .proto and in their .go compiled form in 
 ### HTTP REST
 
 Some services expose standard HTTP endpoints with REST APIs. As described below, these are higher level services “facing” the outside world (via proxies).
-In Pydio Cells, for the sake of documentation and ease of golang marshalling/unmarshalling operations, REST APIs are also described in Protobuf format, along with specific annotations to map the proto services to GET/POST/PUT… classic HTTP operations. Proto messages are serialized in JSON using the jsonpb library (to make sure enums are serialized as string and not ints).
+
+In Pydio Cells, for the sake of documentation and ease of golang marshalling/unmarshalling operations, REST APIs are also described in Protobuf format, along with specific annotations to map the proto services to GET/POST/PUT... classic HTTP operations. Proto messages are serialized in JSON using the jsonpb library (to make sure enums are serialized as string and not ints).  
 These proto services also generate an OpenAPI JSON description of the REST services, allowing easy generation of SDKs for Pydio Cells API in any language.
 
-For the record, the documentation of the HTTP REST API of Pydio Cells is generated with Swagger and can be found in the web front UI, in the admin settings panel under `All Plugins >> REST APIs`.
+The documentation of the HTTP REST API of Pydio Cells is generated with Swagger and can be found in the web front UI. In `settings` workspace, go to `All Plugins >> REST APIs`.
 
 ### Event bus
 

@@ -25,11 +25,11 @@ Depending on the launching mode (see below), the logs are redirected to:
 
 The logs can then be accessed within the admin dashboard.
 
-Currently, the application can launched in one of the three following configuration:
+Currently, the application can be launched in one of the three following configuration:
 
 - **Debug**: all log messages are redirected to standard out in a console friendly format
 - **Info** (this is the default mode): same as debug mode but all message with `debug` level are dropped
-- **Production**: 
+- **Production**:
   - Debug message are dropped
   - Message are formatted as JSON
   - Messages are redirected to the standard output, some rolling files and streamed the gRPC service that stores and indexes the messages.

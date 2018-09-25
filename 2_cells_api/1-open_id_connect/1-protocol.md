@@ -5,4 +5,4 @@ OpenIDConnect is a layer developed on the OAuth2 protocol to carry authorization
 
 In Pydio Cells, a dedicated OIDC server (using coreos/dex application) is bundled and in charge of all authentication operations. It produces a JWT that is then used by the various clients to query the services. Pydio Cells frontend is seen as an OAuth Client application.
 
-It is possible to configure the various Expiry times of both the JWT and the RefreshToken. By default, Pydio Cells JWT is short-lived, requiring regular refreshment and allowing to re-check the user permissions at this time. The refresh token expiry time can be set “sliding”, so that its expiry time is updated at each refresh call.
+It is possible to configure the various Expiry times of both the JWT and the RefreshToken. By default, Pydio Cells JWT is short-lived, requiring regular refreshment and allowing to re-check the user permissions at this time. The refresh token expiry time can be set "sliding", so that its expiry time is updated at each refresh call.
