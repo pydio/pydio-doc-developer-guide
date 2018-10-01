@@ -29,6 +29,6 @@ You should also note that the object service, that is implemented by a fork of m
 
 The tree service aggregates all datasources and presents the whole as a single data tree in which each datasource is a child of the root node.
 
-[:image-popup:1_cells_internals/tree-service.png]
+[:image-popup:1_cells_internals/tree-service-overview.png]
 
 This master tree is used internally to identify nodes by their UUID. It is used globally inside the application, and the ACL (Access Control List) are just flags positioned on any node UUID to grant read/write access to a user to a given node. This is how workspaces and shares are implemented. See previous chapter to learn more about Identity Management.
