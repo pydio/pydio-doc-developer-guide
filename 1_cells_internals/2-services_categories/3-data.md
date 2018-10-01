@@ -9,7 +9,7 @@ Internally, a datasource is composed of (see image below):
 - An index service: stores the data state and stands as the only source of truth for request on data state.
 - A synchronizer: maintains the storage and the index database synchronized.
 
-[:image-popup:1_cells_internals/datasource.png]
+[:image-popup:1_cells_internals/datasource-overview.png]
 
 Every time a datasource has its state updated, the index service publishes events to notify the other services.
 
@@ -19,7 +19,7 @@ Below are the name pattern of the corresponding services, each of them is always
 - `pydio.grpc.data.object.<service_id>`
 - `pydio.grpc.data.sync.<service_id>`
 
-[:image-popup:1_cells_internals/architecture_datasources.png]
+[:image-popup:1_cells_internals/architecture-datasources.png]
 
 Each datasource index is stored in 3 independent tables of the default database. It can be configured to use any other database. This eases the sharding of data across multiple nodes.
 

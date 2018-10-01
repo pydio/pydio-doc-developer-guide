@@ -3,7 +3,11 @@ In a microservice architecture, it is common to have low-level services that do 
 
 Moreover, the authentication/authorization mechanism may not be enabled on all services, as it would be too much overhead. The API Gateway will complete the underlying APIs with public facing features, such as authenticating incoming requests. Underlying APIs will consider the requests as pre-authorized.
 
-In Pydio Cells, many gRPC services have their REST counterpart for serving information to the outside. See for example [https://github.com/micro/micro/tree/master/api](https://github.com/micro/micro/tree/master/api) and the schema below.
+In Pydio Cells, many gRPC services have their REST counterpart for serving information to the outside. See the schema below.
+
+[:image-popup:1_cells_internals/api-gateway.png]
+
+
 For instance, a query to the /config/ REST endpoint will call the pydio.grpc.config service below to retrieve and store the configs.
 
 ```sh
