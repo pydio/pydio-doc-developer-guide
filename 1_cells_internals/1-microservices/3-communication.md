@@ -17,4 +17,4 @@ The documentation of the HTTP REST API of Pydio Cells is generated with Swagger 
 
 ### Event bus
 
-Another way of communication across services goes through the global event bus. This feature is also provided by Nats or Consul. It allows the broadcast of messages to the whole application. Services can subscribe to certain topics and asynchronously receive messages.
+Another way of communication across services goes through the global event bus. This feature is also provided by Nats. It allows the broadcast of messages to the whole application. Services can subscribe to certain topics and asynchronously receive messages.

@@ -1,7 +1,7 @@
 
 Below is an overview of the Pydio Cells architecture (click on it to see the detail):
 
-[:image-popup:1_cells_internals/Pydio_cells_Architecture-V1.png]
+[:image-popup:1_cells_internals/global-architecture.png]
 
 As explained in the previous section, public access APIs are following the “API Gateway” pattern: gRPC services may provide an additional gateway service that translates HTTP REST into gRPC.
 A dedicated service is acting as a proxy to dispatch incoming queries to these gateways.

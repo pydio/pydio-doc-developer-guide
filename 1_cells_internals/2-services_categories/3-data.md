@@ -9,7 +9,7 @@ Internally, a datasource is composed of (see image below):
 - An index service: stores the data state and stands as the only source of truth for request on data state.
 - A synchronizer: maintains the storage and the index database synchronized.
 
-[:image-popup:1_cells_internals/datasource.png]
+[:image-popup:1_cells_internals/datasource-overview.png]
 
 Every time a datasource has its state updated, the index service publishes events to notify the other services.
 
@@ -19,7 +19,7 @@ Below are the name pattern of the corresponding services, each of them is always
 - `pydio.grpc.data.object.<service_id>`
 - `pydio.grpc.data.sync.<service_id>`
 
-[:image-popup:1_cells_internals/architecture_datasources.png]
+[:image-popup:1_cells_internals/architecture-datasources.png]
 
 Each datasource index is stored in 3 independent tables of the default database. It can be configured to use any other database. This eases the sharding of data across multiple nodes.
 
@@ -29,6 +29,6 @@ You should also note that the object service, that is implemented by a fork of m
 
 The tree service aggregates all datasources and presents the whole as a single data tree in which each datasource is a child of the root node.
 
-[:image-popup:1_cells_internals/tree-service.png]
+[:image-popup:1_cells_internals/tree-service-overview.png]
 
 This master tree is used internally to identify nodes by their UUID. It is used globally inside the application, and the ACL (Access Control List) are just flags positioned on any node UUID to grant read/write access to a user to a given node. This is how workspaces and shares are implemented. See previous chapter to learn more about Identity Management.

@@ -1,7 +1,7 @@
 
 The gateway folder contains the highest level services. Most of them are simple proxies in charge of dispatching the incoming requests to the underlying services. Finally, a top level proxy is dispatching all requests to these middlewares, as described below: 
 
-[:image-popup:1_cells_internals/gate.png]
+[:image-popup:1_cells_internals/gateway-services.png]
 
 - The Data gateway provides an Amazon s3 compatible access to actual data
 - Dav, Wopi and WebSockets implement their respective protocols
