@@ -1,3 +1,4 @@
+#### Users, roles and groups
 
 In Pydio Cells, the major IDM objects are linked to a role: a user has its own role, a group has its own role, and the administrator can define roles as needed.  
 
@@ -16,3 +17,12 @@ Permissions can be of 3 types:
 - Actions enable/disable: frontend plugins actions can be dynamically enabled/disabled by a given role.
 
 This permissions are applied at various workspace “scopes”: they can be applied to all workspaces, only shared workspaces (cells), or to only one specific workspace.
+
+#### ACLs
+
+ACLs are basically the Read/Write permissions granting access to a specific workspace. In Pydio Cells, the dedicated idm/acl service is in charge of storing the ACLs. This service is simply maintaining a list of ACLs that make the association between:
+
+- A node UUID: point in the global tree where this ACL applies
+- A Role UUID (optional)
+- A Workspace UUID (optional)
+- An Action (name/value): defines the actual ACL effect.
