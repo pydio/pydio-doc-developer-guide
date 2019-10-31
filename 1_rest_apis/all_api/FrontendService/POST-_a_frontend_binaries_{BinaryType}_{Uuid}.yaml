@@ -1,0 +1,4 @@
+title: "POST /a/frontend/binaries/{BinaryType}/{Uuid}"
+menu: "POST /a/frontend/binaries/{BinaryType}/{Uuid}"
+language: und
+menu_name: menu-dev-guide-v7
