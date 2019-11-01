@@ -1,12 +1,16 @@
 
-Pydio Cells is a full rewrite of Pydio backend using Go, a modern server language developed and used by Google. Most of the core features are now running in microservice architecture. Microservices are small pieces of software that can run independently, scale-out easily by running on a distributed infrastructure, and they communicate using gRPC.
-
-The main frontend is implemented using ReactJS framework, together with Material UI best practices.
+Welcome to the Cells v2 APIs and tooling references. 
 
 ## Audience
 
-This documentation is for developers that are willing to submit bug fixes or extend some of the features of Pydio Cells. It is also intended for DevOps that want to have a deeper understanding of the app and/or are willing to integrate it in a larger IT ecosystem.
-For regular users, the Pydio Cells distribution comes in the form of precompiled binaries for Linux and MacOS X and there is no need to re-compile the code nor to understand the concepts that are presented in the current document.
+This is a good start if you wich to :
+
+ * Programmatically interact with a Cells instance, for deployment automation, workflows, etc.
+ * Learn more about the available Rest APIs and command line tools
+ * Develop your own extensions to Cells
+ * Fix bugs and submit pull requests to the project
+
+For regular users, the Cells distribution comes in the form of precompiled binaries for Linux, MacOS X and Windows and there is no need to re-compile the code nor to understand the concepts that are presented in the current document.
 
 ## References
 

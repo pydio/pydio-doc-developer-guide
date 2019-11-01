@@ -9,7 +9,7 @@ This webdav access can be used to “mount” any accessible workspace as a netw
 
 ### gRPC
 
-TODO
+Currently only used by the CellsSync client, a dedicated gRPC gateway has been added in Cells V2 for providing a fast HTTP/2 access to the tree operations. In a proper TLS configuration of the Cells proxy, gRPC is exposed at the same URL as your Cells server.
 
 ### WebSocket
 
