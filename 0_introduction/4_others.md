@@ -1,19 +1,28 @@
+Apart from Rest and S3 APIs, there are a couple of other accessible endpoints in your Cells Server : 
+
+- WebDAV
+- gRPC
+- Websocket
+- WOPI
+
 ### WebDAV
 
-By default, Pydio Cells exposes a WebDAV protocol endpoint via the main gateway. 
-You can access it with valid credentials at the following address: `<public-URL>/dav/`.
-
-All requests are then forwarded to a preconfigured dav specific port (see pydio.json config file or ./cells config list). This port is managed by a gRPC service that exposes a WebDAV handler based on `golang.org/x/net/webdav` library and wrapped with Pydio Cells authentication and logging layers.
+By default, Pydio Cells exposes a WebDAV protocol endpoint accessible at the following address: `<public-URL>/dav/`. It is protected by a Basic-Auth authentication, using user/password credentials.
 
 This webdav access can be used to “mount” any accessible workspace as a network drive on the user’s desktops (windows / mac / linux).
 
 ### gRPC
 
-Currently only used by the CellsSync client, a dedicated gRPC gateway has been added in Cells V2 for providing a fast HTTP/2 access to the tree operations. In a proper TLS configuration of the Cells proxy, gRPC is exposed at the same URL as your Cells server.
+Currently only used by the CellsSync client, a dedicated gRPC gateway provides a fast HTTP/2 access to the tree operations. 
+
+Depending on the TLS configuration: 
+
+- If TLS is enabled, gRPC is exposed at the same URL as your Cells server (root serves both HTTP/1.1 and HTTP/2).
+- If TLS is not enabled, or gRPC is forced to use an alternative port using the PYDIO_GRPC_EXTERNAL environment variable, this gateway is exposed on a dedicated port. This port is exposed in the /a/config/discovery API endpoint response.
 
 ### WebSocket
 
-Pydio Cells exposes two authenticated websocket endpoints sending various messages from the server up to the javascript client.
+Pydio Cells exposes two authenticated websocket endpoints sending various PUSH messages from the server. It is currently used by the WebUI Javascript client.
 
 Endpoints are:
 
