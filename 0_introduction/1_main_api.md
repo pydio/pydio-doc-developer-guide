@@ -11,7 +11,7 @@ These API's provide all the necessary tools for:
  * **Files** : Getting information about the files (metadata), triggering files/folders background operations, etc. This API is _NOT_ used for uploading or downloading files contents (see below)
 
 
-REST API is documented in the OpenAPI JSON Document format, the de-facto standard that can be used to generate documentations or generate client SDK or servers stubs. 
+REST API is documented in the OpenAPI JSON Document format, the de-facto standard that can be used to generate documentations or generate client SDK or servers stubs. It is documented in the next chapter "Rest API", and you can also consult a more detailed version of the documentation hosted on the [Swagger Hub](https://app.swaggerhub.com/apis-docs/pydio/pydiocells/2.0).
 
 ### S3 API 
 
