@@ -15,19 +15,73 @@ REST API is documented in the OpenAPI JSON Document format, the de-facto standar
 
 ### S3 API 
 
-For **manipulating the file contents** in a consistent way (uploads / downloads), Cells provides an S3-compatible API. The root of your installation can be used as an s3-compatible storage in a third party software that supports such feature. There is only one bucket available, name `io`. 
+For **manipulating the file contents** in a consistent way (uploads / downloads), Cells provides an S3-compatible API. The root of your installation can be used as an s3-compatible storage in a third party software that supports such feature. There is only one bucket available, named `io`. 
 
 This endpoint requires the standard S3-Signature headers, which can be fairly complex to generate, so we recommend using one of the numerous libraries available out there to communicate with S3. To connect to the Pydio S3 as you would for an amazon s3 bucket, your client will need to be set to use:
+
  - Cells url as custom url, making sure the library handles bucket name _as path_ and not _as subdomain_.
  - Data Bucket `io`
- - Access key and secrets: use the JWT (see Authentication section) as the API Key, and `gatewaysecret` as the API Secret.
+ - Access key and secrets: use the JWT (see Authentication section) as the API Key, and `gatewaysecret` as a fixed API Secret.
 
-### Node Paths : userspace vs. admin APIs
+### Node paths
 
-When manipulating files through the APIs, the nodes (files or folders) are identified by their **path**, that are slash-separated segments similar to file paths (always forward slash, even if Cells is running on Windows...). 
+When manipulating files through the APIs, the nodes (files or folders) are identified by their **path**, that are slash-separated segments similar to file paths (always using forward slash, even if Cells is running on Windows). 
 
-A typical path looks like `/workspace-slug/path/to/file.txt`. 
+#### User Context
 
-The very first segment is **always** composed of a workspace slug, locating the resource inside a given workspace (or Cell). For example, listing files under the `/` path will result in listing the workspaces visible to the currently logged user.
+In most cases, a typical path looks like `/workspace-slug/path/to/file.txt`. 
 
-However, some specific admin-oriented APIs (like AdminTreeService) will list the paths starting at the very root of the server internal tree, which means displaying the datasources ids as its first level.
+The very first segment is always composed of the workspace slug, locating the resource inside a given workspace (or Cell). For example, listing files under the `/` root path will result in listing the workspaces visible to the currently logged user :
+
+```
+POST https://SERVER_NAME/a/tree/stats {"NodePaths":["/*"]}
+{
+    "Nodes": [
+        {
+            "Path": "personal-files", // WORKSPACE SLUG
+            "Type": "COLLECTION",
+            "MetaStore": {...}
+        },
+        {
+            "Path": "common-files", // WORKSPACE SLUG
+            "Type": "COLLECTION",
+            "MetaStore": {...}
+        }
+    ]
+}
+
+```
+
+#### Admin Context
+
+Some specific _admin-oriented APIs_ (like AdminTreeService) will list the paths starting at the very root of the server internal tree, which means displaying the datasources ids as its first level : 
+
+```
+POST https://SERVER_NAME/a/tree/admin/list {"Node":{"Path":"/"}}}
+
+{
+    "Parent": {
+        "Uuid": "ROOT",
+        "Path": "/"
+    },
+    "Children": [
+        {
+            "Uuid": "DATASOURCE:cellsdata",
+            "Path": "cellsdata", // DATASOURCE NAME
+            "MetaStore": {...}
+        },
+        {
+            "Uuid": "DATASOURCE:personal",
+            "Path": "personal", // DATASOURCE NAME
+            "MetaStore": {...}
+        },
+        {
+            "Uuid": "DATASOURCE:pydiods1",
+            "Path": "pydiods1", // DATASOURCE NAME
+            "MetaStore": {
+                "name": "\"pydiods1\""
+            }
+        }
+    ]
+}
+```
