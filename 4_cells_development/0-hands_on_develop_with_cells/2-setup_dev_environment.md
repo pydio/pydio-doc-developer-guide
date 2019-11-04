@@ -1,4 +1,14 @@
-#### Backend
+### Requirements
+
+The following is required to develop on Cells backend and frontend
+
+- Go version 1.12+
+- Git
+- Nodejs 6.+ (and npm 3.10+)
+- Grunt & grunt-cli
+
+
+### Building binary
 
 Before trying to set up a development environment, you should first install a packaged binary version of the application. You can find a step by step guide in the [Installation guides](https://pydio.com/en/docs/cells/v1/installation-guides).
 
@@ -8,26 +18,25 @@ Then, building the Pydio Cells backend from the source code is quite straightfor
 
 ```sh
 # Retrieve the code
-go get -u github.com/pydio/cells
-# From this line on, we assume you are in Pydio Cells' code root directory
-cd $GOPATH/src/github.com/pydio/cells
-# Build your binary
-make dev
+> go get -u github.com/pydio/cells
+> cd $GOPATH/src/github.com/pydio/cells
+
+# Build the  cellsbinary
+> make dev
 ```
 
-Note: we had to fork a few libraries before integrating them as dependencies. They are vendored but if you need to modify this part of the code, you should first retrieve a local version by executing
-`./deps.sh`
-
-#### Installation
+### Installation
 
 To have the environment running, you must also:
 
 - Create a database in your chosen DB server,
 - Run the Pydio Cells installer that will guide you through the necessary steps: you might refer to [the admin guide](https://pydio.com/en/docs/administration-guides) for additional information.
 
-`./cells install`
+```
+> ./cells install
+```
 
 
-#### Running the tests
+### Running the tests
 
 To run the tests, simply do: `go test -v ./...`

@@ -1,4 +1,4 @@
-Apart from Rest and S3 APIs, there are a couple of other accessible endpoints in your Cells Server : 
+Apart from REST and S3 APIs, there are a couple of other accessible endpoints in your Cells Server : 
 
 - WebDAV
 - gRPC

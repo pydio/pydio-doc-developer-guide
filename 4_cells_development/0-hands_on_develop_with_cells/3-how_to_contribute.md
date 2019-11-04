@@ -1,8 +1,8 @@
-#### Guidelines
+### Guidelines
 
 Expected code style and rules that we internally respect are defined in the [Contributing manifest](https://github.com/pydio/cells/blob/master/CONTRIBUTING.md) that can be found in the main [Pydio Cells repository](https://github.com/pydio/cells) on Github.
 
-#### Reporting Bugs
+### Reporting Bugs
 
 As described in the main contribution rules, we use Github only for "qualified bugs" : bugs that are easily reproduced and validated by a Pydio Team member. Our preferred communication channel is our Forum. Please do not ask question in github issues, nor in Twitter or other social feed.
 
@@ -18,7 +18,7 @@ And only if you're invited to:
 - or submit a pull request.
 
 
-#### Branches and PRs
+### Branches and PRs
 
 
 The code is currently using 3 branches (not counting the temporary dev branches):
