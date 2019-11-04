@@ -1,0 +1,44 @@
+
+
+
+
+
+
+
+ 
+[Enterprise Only] List oauth2 clients  
+
+
+No Parameters
+
+
+
+### Response Example (200)
+Response Type /definitions/entOAuth2ClientCollection
+
+```
+{
+  "Clients": [
+    {
+      "Audience": [
+        "string"
+      ],
+      "ClientID": "string",
+      "GrantTypes": [
+        "string"
+      ],
+      "Name": "string",
+      "RedirectURIs": [
+        "string"
+      ],
+      "ResponseTypes": [
+        "string"
+      ],
+      "Scope": "string",
+      "Secret": "string"
+    }
+  ]
+}
+```
+
+

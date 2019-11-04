@@ -12,7 +12,8 @@ Once you get a valid JWT token, you will pass it along any API Calls using the `
 
 Cells provides the following endpoints for standard OAuth2 operations
 
-
+ * Auth URL : `https://SERVER_NAME/oidc/oauth2/auth`
+ * Token URL : `https://SERVER_NAME/oidc/oauth2/token`
 
 
 ### Cells OAuth2 Default Clients

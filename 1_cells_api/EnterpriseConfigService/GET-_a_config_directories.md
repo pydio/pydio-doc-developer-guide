@@ -1,0 +1,81 @@
+
+
+
+
+
+
+
+ 
+[Enterprise Only] List additional user directories  
+
+
+No Parameters
+
+
+
+### Response Example (200)
+Response Type /definitions/entExternalDirectoryCollection
+
+```
+{
+  "Directories": [
+    {
+      "BindDN": "string",
+      "BindPW": "string",
+      "ConfigId": "string",
+      "Connection": "string",
+      "DomainName": "string",
+      "Host": "string",
+      "MappingRules": [
+        {
+          "LeftAttribute": "string",
+          "RightAttribute": "string",
+          "RolePrefix": "string",
+          "RuleString": "string"
+        }
+      ],
+      "MemberOfMapping": {
+        "GroupFilter": {
+          "DNs": [
+            "string"
+          ],
+          "DisplayAttribute": "string",
+          "Filter": "string",
+          "IDAttribute": "string",
+          "Scope": "string"
+        },
+        "Mapping": {
+          "LeftAttribute": "string",
+          "RightAttribute": "string",
+          "RolePrefix": "string",
+          "RuleString": "string"
+        },
+        "PydioMemberOfAttribute": "string",
+        "PydioMemberOfValueFormat": "string",
+        "RealMemberOf": true,
+        "RealMemberOfAttribute": "string",
+        "RealMemberOfValueFormat": "string",
+        "SupportNestedGroup": true
+      },
+      "PageSize": 10,
+      "RolePrefix": "string",
+      "RootCA": "string",
+      "RootCAData": "string",
+      "Schedule": "string",
+      "SchedulerDetails": "string",
+      "SkipVerifyCertificate": true,
+      "User": {
+        "DNs": [
+          "string"
+        ],
+        "DisplayAttribute": "string",
+        "Filter": "string",
+        "IDAttribute": "string",
+        "Scope": "string"
+      }
+    }
+  ]
+}
+```
+
+
