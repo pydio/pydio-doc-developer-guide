@@ -19,7 +19,7 @@ If possible, depending on the OS and the available underlying libraries, the Aut
 
 ### Usage
 
-As documented in the [Command Line references](../cells-client-cec), cec provides the following commands :
+As documented in the [Command Line references](./cells-client-cec), cec provides the following commands :
 
 ```
 Usage:
