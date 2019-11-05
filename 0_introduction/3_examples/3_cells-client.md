@@ -1,6 +1,10 @@
 CellsClient (a.k.a `cec`) is a dedicated tool that packages authentication and files operations into an easy-to-use binary. 
 
-It can be downloaded from [TODO DOWNLOAD CEC URL]() for your Linux, MacOSX and Windows. 
+Binaries can be downloaded for here: 
+
+- [Cec Linux amd64](https://download.pydio.com/latest/cells-client/release/{latest}/linux-amd64/cec)
+- [Cec MacOSX](https://download.pydio.com/latest/cells-client/release/{latest}/darwin-amd64/cec) 
+- [Cec Windows](https://download.pydio.com/latest/cells-client/release/{latest}/windows-amd64/cec.exe). 
 
 ### Authentication
 
@@ -15,7 +19,7 @@ If possible, depending on the OS and the available underlying libraries, the Aut
 
 ### Usage
 
-As documented in the [Command Line references](../../2_cli_references/2_cells-client), cec provides the following commands :
+As documented in the [Command Line references](../cells-client-cec), cec provides the following commands :
 
 ```
 Usage:
