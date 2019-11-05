@@ -1,4 +1,3 @@
-
 ## OAuth 2
 
 Available OAuth 2 default parameters to use for Cells:
@@ -36,7 +35,7 @@ Get an Access Token
 
 [:image:0_introduction/postman/new_access_token_settings.png]
 
-Once your Press **Request Token**, you will be invited to log in with your Credentials on your Cells instance,
+Once you Press **Request Token**, you will be invited to log in with your Credentials on your Cells instance,
 
 after that you will be redirected on postman with a token.
 
