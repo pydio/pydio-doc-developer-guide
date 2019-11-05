@@ -68,10 +68,10 @@ This URL is composed of the following components :
 
 Using Postman, you can use this URL to interact with this object. In order to be properly identified, you have to use the "Authorization" tab, choose AWS Signature and enter:
 
-| name          | value                                                             |
-| ------------- | ----------------------------------------------------------------- |
-| **AcessKey**  | you can copy and paste the token retrieved previously with OAuth2 |
-| **SecretKeY** | `gatewaysecret` (this is a fixed value).                          |
+| name          | value                                                                        |
+| ------------- | ---------------------------------------------------------------------------- |
+| **AcessKey**  | you can copy and paste the **Access token** retrieved previously with OAuth2 |
+| **SecretKeY** | `gatewaysecret` (this is a fixed value).                                     |
 
 [:image:0_introduction/postman/s3_request.png]
 
