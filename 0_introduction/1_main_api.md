@@ -1,4 +1,4 @@
-Pydio Cells exposes APIs to perform tasks on the server. These APIs are tested, consistent, and used by all official Cells client applications (Web UX, mobile applications, sync clients). We will focus here on the two API that are useful for the day-to-day operations: managing the files and folders and their various metadata, provisioning configurations, etc.
+In Pydio Cells, APIs are first-class citizen that you can use to automate task on your server. These APIs are tested, consistent, and used by all official Cells client applications (Web UX, mobile applications, sync clients). We will focus here on the two API that are useful for the day-to-day operations: managing the files and folders and their various metadata, provisioning configurations, etc.
 
 ### Rest API
 
