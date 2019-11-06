@@ -4,7 +4,7 @@ It is recommended to use the Authorization Flow Grant.
 
 The Authorization flow first requires you to request a temporary authorization code that you later exchange for an access token. As we create CSRF cookies to validate the flow, the code needs to be retrieved via a browser. In this document we are redirecting to a Pydio Cells page created to display an authorization code but you can also prefer to use your own page, as long as the URL is added to the list of callback urls allowed for this client.
 
-[:image:0_introduction/curl/authentication.gif]
+[:image-popup:0_introduction/curl/authentication.gif]
 
 #### References
 
