@@ -1,3 +1,8 @@
+<div style="background-color: #fbe9b7;font-size: 14px;">
+<span style="background-color: #fae4a6;padding: 10px;">WARNING</span>
+<span style="padding: 10px;display: inline-block;">This documentation is for Pydio 8 (PHP), EOL end 2019. Time to move to <a href="https://pydio.com/en/docs/cells/v2/quick-start">Pydio Cells</a>!</span>
+</div>
+
 Below is a description of the main Pydio JavaScript classes that are used in the GUI. We don’t cover all the libraries, and see the JSApi access driver to have a way more detailed documentation of each class and its methods.
 
 This document correspond to Pydio 6.4.0 release.

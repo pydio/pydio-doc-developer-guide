@@ -1,3 +1,8 @@
+<div style="background-color: #fbe9b7;font-size: 14px;">
+<span style="background-color: #fae4a6;padding: 10px;">WARNING</span>
+<span style="padding: 10px;display: inline-block;">This documentation is for Pydio 8 (PHP), EOL end 2019. Time to move to <a href="https://pydio.com/en/docs/cells/v2/quick-start">Pydio Cells</a>!</span>
+</div>
+
 ## Basics
 Along with the flexibility of a plugin-oriented framework comes always the need for an event-oriented mechanism to link the plugins together. This is very important to avoid introducing hard dependencies from one plugin to another, by directly calling a plugin method from within another.
 

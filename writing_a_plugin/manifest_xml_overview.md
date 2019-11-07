@@ -1,3 +1,8 @@
+<div style="background-color: #fbe9b7;font-size: 14px;">
+<span style="background-color: #fae4a6;padding: 10px;">WARNING</span>
+<span style="padding: 10px;display: inline-block;">This documentation is for Pydio 8 (PHP), EOL end 2019. Time to move to <a href="https://pydio.com/en/docs/cells/v2/quick-start">Pydio Cells</a>!</span>
+</div>
+
 The root element of any manifest should be an `<ajxp_plugin>` element, with the id attribute set to the plugin id (id = type.name). For the sake of listing and documenting the pluging, a couple of attributes are required :
 
 + id: type.name of the plugin. Actually it is added automatically if not there

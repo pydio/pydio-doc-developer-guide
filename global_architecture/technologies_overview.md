@@ -1,3 +1,8 @@
+<div style="background-color: #fbe9b7;font-size: 14px;">
+<span style="background-color: #fae4a6;padding: 10px;">WARNING</span>
+<span style="padding: 10px;display: inline-block;">This documentation is for Pydio 8 (PHP), EOL end 2019. Time to move to <a href="https://pydio.com/en/docs/cells/v2/quick-start">Pydio Cells</a>!</span>
+</div>
+
 ### PHP Server – access points
 Pydio is based on the PHP scripting language for the server-side, the main entry point being the **/index.php** of the root of the installation. Queries parameters are sent via HTTP GET or HTTP POST to the script, and responses can be sent back with various content types, depending on the action. The most common format is currently XML (always encoded in UTF-8) but JSON can be used for some specific actions (particularly in the Settings panel actions), and the downloads trigger “force-download” headers and binary data.
 

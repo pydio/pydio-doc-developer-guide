@@ -1,3 +1,8 @@
+<div style="background-color: #fbe9b7;font-size: 14px;">
+<span style="background-color: #fae4a6;padding: 10px;">WARNING</span>
+<span style="padding: 10px;display: inline-block;">This documentation is for Pydio 8 (PHP), EOL end 2019. Time to move to <a href="https://pydio.com/en/docs/cells/v2/quick-start">Pydio Cells</a>!</span>
+</div>
+
 Starting with Pydio 7, we have rewritten the REST API from ground up to stick more closely to the REST standards. The api V2 is accessible under `yourpydio/api/v2` and provides access points for managing files and folders, as well as a whole set of commands for provisioning users and workspaces.
 
 This API is entirely described in the OpenAPI format (formerly Swagger). Please use the [Reference](https://pydio.com/en/pydio-api-v2) to get all informations about the possible requests. Below is a short description of the major groups of this api.

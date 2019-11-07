@@ -1,3 +1,8 @@
+<div style="background-color: #fbe9b7;font-size: 14px;">
+<span style="background-color: #fae4a6;padding: 10px;">WARNING</span>
+<span style="padding: 10px;display: inline-block;">This documentation is for Pydio 8 (PHP), EOL end 2019. Time to move to <a href="https://pydio.com/en/docs/cells/v2/quick-start">Pydio Cells</a>!</span>
+</div>
+
 One common task you may have to handle when creating interfaces will be providing forms. Over the time, we developed our own form manager that provides tools to handle fields and values on both the client and the server side. The components implied are prefixed with “SF” or “standardForms” on both sides.
 
 ## Defining forms in XML

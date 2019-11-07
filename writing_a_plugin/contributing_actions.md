@@ -1,3 +1,8 @@
+<div style="background-color: #fbe9b7;font-size: 14px;">
+<span style="background-color: #fae4a6;padding: 10px;">WARNING</span>
+<span style="padding: 10px;display: inline-block;">This documentation is for Pydio 8 (PHP), EOL end 2019. Time to move to <a href="https://pydio.com/en/docs/cells/v2/quick-start">Pydio Cells</a>!</span>
+</div>
+
 ## The action XML element
 The main contribution a plugin will bring to the registry is generally a set of “actions”, adding some buttons in one of the GUI toolbar, and declaring a supported callback for this action, thus extending the server API on the fly. This is done by using the `<action>` tag, inside a `<registry_contributions><actions></actions></registry_contributions>`.
 
