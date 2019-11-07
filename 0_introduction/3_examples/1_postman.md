@@ -52,7 +52,7 @@ You can now query any endpoint that you have access to.
 
 ### API Call
 
-- The example call will be made to this endpoint: [POST /a/meta/bulk/get](en/docs/developer-guide/post-ametabulkget)
+- The example call will be made to this endpoint: [POST /a/meta/bulk/get](/en/docs/developer-guide/post-ametabulkget)
 
 Example:
 
