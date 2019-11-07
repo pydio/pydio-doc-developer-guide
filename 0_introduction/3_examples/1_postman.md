@@ -52,6 +52,32 @@ You can now query any endpoint that you have access to.
 
 ### API Call
 
+- The example call will be [POST /a/meta/bulk/get](en/docs/developer-guide/post-ametabulkget)
+
+Example:
+
+| type          | value                | description                                   |
+| ------------- | -------------------- | --------------------------------------------- |
+| endpoint      | **/a/meta/bulk/get** | Endpoint that list all the Nodes              |
+| authorization | OAuth2 Access token  | Access Token retrieved from the previous Step |
+| body          | json                 | JSON body of the request                      |
+
+This is the modified body that will query all the children.
+
+```json
+{
+  "AllMetaProviders": true,
+  "Limit": 0,
+  "NodePaths": [
+    "/*"
+  ],
+  "Offset": 0,
+  "Versions": true
+}
+```
+
+[:image:0_introduction/postman/postman_api_request.png]
+
 ### S3 Call
 
 Postman is a powerful client side application that can be use to debug and test communication with a server over TCP.
