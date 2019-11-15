@@ -17,9 +17,7 @@ And only if you're invited to:
 - Post a github issue: make sure to put as much detail as possible.
 - or submit a pull request.
 
-
 ### Branches and PRs
-
 
 The code is currently using 3 branches (not counting the temporary dev branches):
 

@@ -7,12 +7,11 @@ The following is required to develop on Cells backend and frontend
 - Nodejs 6.+ (and npm 3.10+)
 - Grunt & grunt-cli
 
-
 ### Building binary
 
-Before trying to set up a development environment, you should first install a packaged binary version of the application. You can find a step by step guide in the [Installation guides](https://pydio.com/en/docs/cells/v1/installation-guides).
+Before trying to set up a development environment, you should first install a packaged binary version of the application. You can find a step by step guide in the [Quick Start section of the admin guide](https://pydio.com/en/docs/cells/v2/quick-start).
 
-It will help insure that your system meets the necessary requirements and let you resolve potential problems that are not directly bound to the fact that you build the code on your machine.
+It helps insuring that your system meets the necessary requirements and let you resolve potential problems that are not directly bound to the fact that you build the code on your machine.
 
 Then, building the Pydio Cells backend from the source code is quite straightforward:
 
@@ -32,10 +31,9 @@ To have the environment running, you must also:
 - Create a database in your chosen DB server,
 - Run the Pydio Cells installer that will guide you through the necessary steps: you might refer to [the admin guide](https://pydio.com/en/docs/administration-guides) for additional information.
 
-```
+```sh
 > ./cells install
 ```
-
 
 ### Running the tests
 

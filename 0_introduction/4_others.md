@@ -1,4 +1,4 @@
-Apart from REST and S3 APIs, there are a couple of other accessible endpoints in your Cells Server : 
+Apart from REST and S3 APIs, there are a couple of other accessible endpoints in your Cells Server:
 
 - WebDAV
 - gRPC
@@ -9,13 +9,13 @@ Apart from REST and S3 APIs, there are a couple of other accessible endpoints in
 
 By default, Pydio Cells exposes a WebDAV protocol endpoint accessible at the following address: `<public-URL>/dav/`. It is protected by a Basic-Auth authentication, using user/password credentials.
 
-This webdav access can be used to “mount” any accessible workspace as a network drive on the user’s desktops (windows / mac / linux).
+This webdav access can be used to “mount” any accessible workspace as a network drive on the user’s desktops (Windows / Mac / Linux).
 
 ### gRPC
 
-Currently only used by the CellsSync client, a dedicated gRPC gateway provides a fast HTTP/2 access to the tree operations. 
+Currently only used by the CellsSync client, a dedicated gRPC gateway provides a fast HTTP/2 access to the tree operations.
 
-Depending on the TLS configuration: 
+Depending on the TLS configuration:
 
 - If TLS is enabled, gRPC is exposed at the same URL as your Cells server (root serves both HTTP/1.1 and HTTP/2).
 - If TLS is not enabled, or gRPC is forced to use an alternative port using the PYDIO_GRPC_EXTERNAL environment variable, this gateway is exposed on a dedicated port. This port is exposed in the /a/config/discovery API endpoint response.

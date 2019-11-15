@@ -7,7 +7,6 @@ In Pydio Cells, many gRPC services have their REST counterpart for serving infor
 
 [:image-popup:1_cells_internals/api-gateway.png]
 
-
 For instance, a query to the /config/ REST endpoint will call the pydio.grpc.config service below to retrieve and store the configs.
 
 ```sh
