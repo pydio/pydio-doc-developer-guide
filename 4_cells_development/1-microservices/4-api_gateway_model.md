@@ -5,7 +5,7 @@ Moreover, the authentication/authorization mechanism may not be enabled on all s
 
 In Pydio Cells, many gRPC services have their REST counterpart for serving information to the outside. See the schema below.
 
-[:image-popup:1_cells_internals/api-gateway.png]
+[:image:1_cells_internals/api-gateway.png]
 
 For instance, a query to the /config/ REST endpoint will call the pydio.grpc.config service below to retrieve and store the configs.
 

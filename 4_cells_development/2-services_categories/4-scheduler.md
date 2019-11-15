@@ -9,7 +9,7 @@ Pydio comes with a powerful built-in scheduler that is composed of three differe
 
 The figure below shows how these three services interact.
 
-[:image-popup:1_cells_internals/schedulerservices.png]
+[:image:1_cells_internals/schedulerservices.png]
 
 Jobs are currently stored inside a BoltDB file, which implies that the job services cannot be scaled for the time being, but the task runners themselves can be easily dispatched on many servers, as they listen to events in a queued manner (only one node reads (consumes) a given event).
 
@@ -18,13 +18,13 @@ Jobs are currently stored inside a BoltDB file, which implies that the job servi
 Jobs are defined by unitary Actions, that can be started in parallel or in a chained way. Actions are small pieces of code that are already compiled in the binary. Each step can take an input, define how to eventually filter this output, and send data to the output.
 Below is a diagram of how actions are processed when actually running a task.
 
-[:image-popup:1_cells_internals/taskrunner.png]
+[:image:1_cells_internals/taskrunner.png]
 
 ### Preset Jobs
 
 Pydio internally uses the scheduler to perform the following tasks
 
-- Automatically extract Thumbnails and EXIF data from images whenever they are created/modified.
+- Automatically extract thumbnails and EXIF data from images whenever they are created/modified.
 - Create versions of any files whenever they change
 - Archive database tables that are growing in size.
 
