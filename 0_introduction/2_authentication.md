@@ -4,29 +4,20 @@ The core authentication mechanism used in Cells is **OpenID Connect**, an identi
 
 OpenID Connect carries OAuth2 authorizations in the [JWT (JSON Web Tokens)](https://jwt.io/) format. It is used and maintained by major actors like Google or Facebook, and has the advantage of providing an authentication token to third party apps without needing to request the user id/password.
 
-Pydio Cells contains an OIDC server for authentication operations. It produces **JWTs tokens** used by various clients to query the services. Pydio Cells frontend itself is seen as an OAuth Client application, and so will be your API callers.
+Pydio Cells contains an OIDC server for authentication operations. It produces **JWTs tokens** used by various clients to query the services. Pydio Cells frontend itself is seen as an OAuth Client application.
 
-Once you get a valid JWT token, you pass it along any API Calls using the `Authorization: Bearer ${token}` header.
+Once you get a valid JWT token, you will pass it along any API Calls using the `Authorization: Bearer ${token}` header.
 
-### Cells OAuth2 Endpoints
+### Cells OIDC / OAuth2 Endpoints
 
-Cells provides the following endpoints for standard OAuth2 operations
+Cells provides the following endpoints for standard OIDC / OAuth2 operations
 
-| Parameter              | value                                                            |
+| Endpoint               | Value                                                            |
 | ---------------------- | ---------------------------------------------------------------- |
-| OIDC Configuration URL | http(s)://your-cells.com**/oidc/.well-known/openid-configuration |
-| Auth URL               | http(s)://your-cells.com**/oidc/oauth2/auth**                    |
-| Token URL              | http(s)://your-cells.com**/oidc/oauth2/token**                   |
+| OIDC Configuration URL | http(s)://your-cells.com/oidc/.well-known/openid-configuration |
+| OAuth2 Auth URL        | http(s)://your-cells.com/oidc/oauth2/auth                    |
+| OAuth2 Token URL       | http(s)://your-cells.com/oidc/oauth2/token                   |
 
-<a name="quick_bash_setup"></a>
-
-#### Quick bash setup
-
-```sh
-DOMAIN="http(s)://yourpydio.com"
-AUTHORIZATION_ENDPOINT=`curl --silent $DOMAIN/oidc/.well-known/openid-configuration | jq --raw-output '.authorization_endpoint'`
-TOKEN_ENDPOINT=`curl --silent $DOMAIN/oidc/.well-known/openid-configuration | jq --raw-output '.token_endpoint'`
-```
 
 ### Cells OAuth2 Default Clients
 

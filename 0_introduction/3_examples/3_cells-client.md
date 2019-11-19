@@ -1,6 +1,6 @@
 CellsClient (a.k.a `cec`) is a dedicated tool that packages authentication and files operations into an easy-to-use binary. 
 
-Binaries can be downloaded for here: 
+Latest binaries can be downloaded from here: 
 
 - [Cec Linux amd64](https://download.pydio.com/latest/cells-client/release/{latest}/linux-amd64/cec)
 - [Cec MacOSX](https://download.pydio.com/latest/cells-client/release/{latest}/darwin-amd64/cec) 
@@ -16,6 +16,8 @@ As with other API consumers, you first need to authenticate the cec against the 
 If you are on a desktop-based computer, a browser will be opened and once the authentication is finished, the application will automatically exchange the authorization code and save the authentication token. Otherwise, an URL is displayed in the console, that you must copy and paste to a browser to be able to manually get the authorization code.
 
 If possible, depending on the OS and the available underlying libraries, the Authentication Token is stored in the local user Keyring. Also, it is automatically refreshed using the Refresh Token.
+
+_Note: OAuth2 support starts with Cells v2.0. If you are still using an earlier version (you should not!), use `cec configure` command instead to use the OAuth2 Grant Type Password workflow._
 
 ### Usage
 

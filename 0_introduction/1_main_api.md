@@ -1,4 +1,4 @@
-In Pydio Cells, APIs are first-class citizen that you can use to automate task on your server. These APIs are tested, consistent, and used by all official Cells client applications (Web UX, mobile applications, sync clients). We will focus here on the two API that are useful for the day-to-day operations: managing the files and folders and their various metadata, provisioning configurations, etc.
+In Pydio Cells, APIs are first-class citizen that you can use to automate task on your server. These APIs are tested, consistent, and used by all official Cells client applications (Web UX, mobile applications, sync clients). We will focus here on the two API that are useful for the day-to-day operations like managing the files and folders and their various metadata, provisioning configurations, etc.
 
 ### Rest API
 
@@ -16,11 +16,13 @@ REST API is documented in the OpenAPI JSON Document format, the de-facto standar
 
 For **manipulating the file contents** in a consistent way (uploads/downloads), Cells provides an S3-compatible API. The root of your installation can be used as an s3-compatible storage in a third party software that supports such feature. There is only one bucket available, named `io`.
 
-This endpoint requires the standard S3-Signature headers, which can be fairly complex to generate, so we recommend using one of the numerous libraries available out there to communicate with S3. To connect to the Pydio S3 as you would for an amazon S3 bucket, your client will need to be set to use:
+This endpoint requires the standard S3-Signature headers, which can be fairly complex to generate, so we recommend using one of the numerous libraries available out there to communicate with S3. To connect to the Cells, an S3 Client will require the following settings:
 
-- Cells URL as custom URL, making sure the library handles bucket name _as path_ and not _as subdomain_.
-- Data Bucket `io`
-- Access key and secrets: use the JWT (see Authentication section) as the API Key, and `gatewaysecret` as a fixed API Secret.
+- **Custom URL** : your Cells URL.
+- **Data Bucket** : `io`
+- **Access key and secret** : use the JWT (see Authentication section) as the API Key, and `gatewaysecret` as a fixed API Secret.
+
+_Please note_: make sure the library handles bucket name _as path_ and not _as subdomain_.
 
 ### Node paths
 

@@ -1,4 +1,4 @@
-## Authentication via cURL
+## OAuth2 Authentication Process
 
 It is recommended to use the Authorization Flow Grant.
 
@@ -6,12 +6,9 @@ The Authorization flow first requires you to request a temporary authorization c
 
 [:image-popup:0_introduction/curl/authentication.gif]
 
-#### References
+### Client Parameters
 
-- [Quick bash setup](../2_authentication#quick_bash_setup)
-- [Create OAuth2 Client]() 
-
-#### OAuth2 Client Parameters
+We assume here that you have created a dedicated Client inside Cells. Check [Create OAuth2 Client](./authentication) for more info.
 
 | Parameter        | value                                    |
 | ---------------- | ---------------------------------------- |
@@ -22,7 +19,16 @@ The Authorization flow first requires you to request a temporary authorization c
 | Grant Types      | Authorization Code                       |
 | Response Types   | Code, Token, IDToken                     |
 
-#### Request Authorization
+
+### Quick bash setup
+
+```sh
+DOMAIN="http(s)://yourpydio.com"
+AUTHORIZATION_ENDPOINT=`curl --silent $DOMAIN/oidc/.well-known/openid-configuration | jq --raw-output '.authorization_endpoint'`
+TOKEN_ENDPOINT=`curl --silent $DOMAIN/oidc/.well-known/openid-configuration | jq --raw-output '.token_endpoint'`
+```
+
+### Request Authorization
 
 This will open a browser window if you have a default browser setup. If you don't, then echo and copy and paste this url in your preferred browser
 
@@ -32,15 +38,21 @@ open "$AUTHORIZATION_ENDPOINT?response_type=code&client_id=cells-curl&cells_secr
 
 Copy the code generated in the clipboard
 
-#### Exchange the code for an access token
+### Exchange the code for an access token
 
 ```
 CODE=<paste here>
 ACCESS_TOKEN=`curl --silent -u "cells-curl:password" -X POST -d "grant_type=authorization_code&code=$CODE&redirect_uri=$DOMAIN/oauth2/oob" $TOKEN_ENDPOINT | jq --raw-output '.access_token'`
 ```
 
-#### API Call
+## API Call
+
+Below is a sample API call using the Authorization header with the Access Token you have previously retrieved.
 
 ```
 curl -H "Authorization: Bearer $ACCESS_TOKEN" $DOMAIN/a/config/ctl
 ```
+
+## S3 Call
+
+Performing S3 calls using curl is quite complex, as the S3 Authorization mechanism requires specific signatures computation based on each request sent to S3. We suggest using a dedicated command line S3 tool instead, using the `ACCESS_TOKEN` as Api Key and the string `gatewaysecret` as password.

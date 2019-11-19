@@ -1,3 +1,5 @@
+Postman is a powerful client side application that can be use to debug and test communication with a server over TCP. See [GetPostman.com](https://www.getpostman.com/) to download the application.
+
 ## OAuth 2
 
 Available OAuth 2 default parameters to use for Cells:
@@ -5,9 +7,9 @@ Available OAuth 2 default parameters to use for Cells:
 | Parameter        | value                                              |
 | ---------------- | -------------------------------------------------- |
 | Callback URL     | http://localhost:3000/servers/callback             |
-| Auth URL         | http(s)://your-cells.com**/oidc/oauth2/auth**      |
-| Access Token URL | http(s)://your-cells.com**/oidc/oauth2/token**     |
-| Client ID        | **cells-sync**, **cells-client**, **cells-mobile** |
+| Auth URL         | http(s)://your-cells.com/oidc/oauth2/auth      |
+| Access Token URL | http(s)://your-cells.com/oidc/oauth2/token     |
+| Client ID        | cells-sync, cells-client, cells-mobile |
 | Scope            | openid email profile pydio offline                 |
 
 ## Authenticate with Postman
@@ -52,13 +54,13 @@ You can now query any endpoint that you have access to.
 
 ### API Call
 
-- The example call will be made to this endpoint: [POST /a/meta/bulk/get](/en/docs/developer-guide/post-ametabulkget)
+This example calls the TreeService endpoint [POST /a/tree/stats](./post-atreestats), that provides a way to list files and folders ("nodes") on the server.
 
 Example:
 
 | type          | value                | description                                   |
 | ------------- | -------------------- | --------------------------------------------- |
-| endpoint      | **/a/meta/bulk/get** | Endpoint that list all the Nodes              |
+| endpoint      | /a/tree/stats        | Endpoint that list all the Nodes              |
 | authorization | OAuth2 Access token  | Access Token retrieved from the previous Step |
 | body          | json                 | JSON body of the request                      |
 
@@ -79,8 +81,6 @@ This is the modified body that will query all the children.
 [:image-popup:0_introduction/postman/postman_api_request.png]
 
 ### S3 Call
-
-Postman is a powerful client side application that can be use to debug and test communication with a server over TCP.
 
 Below is an sample URL for accessing data from the object file `file.txt` in the personal workspace of a user in [the demo](http://demo.pydio.com):
 
@@ -103,7 +103,5 @@ Using Postman, you can use this URL to interact with this object. In order to be
 
 Then using the appropriate HTTP method, you can : 
 
-- **HEAD** read metadata about the file
 - **GET** download this file
 - **PUT** upload data inside this file
-- ... You can use all the Amazon S3 api in the same fashion.
