@@ -1,5 +1,3 @@
-## ./cec doc
-
 Generate documentation of the Cells Client
 
 ### Synopsis

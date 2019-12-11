@@ -1,5 +1,3 @@
-## ./cec ls
-
 List files in your remote server
 
 ### Synopsis

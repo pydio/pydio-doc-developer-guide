@@ -1,5 +1,3 @@
-## ./cec rm
-
 Trash files or folders
 
 ### Synopsis

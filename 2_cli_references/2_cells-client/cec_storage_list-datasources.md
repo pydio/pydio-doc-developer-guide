@@ -1,5 +1,3 @@
-## ./cec storage list-datasources
-
 List configured datasources
 
 ### Synopsis

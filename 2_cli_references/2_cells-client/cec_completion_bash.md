@@ -1,5 +1,3 @@
-## ./cec completion bash
-
 
 
 ### Synopsis

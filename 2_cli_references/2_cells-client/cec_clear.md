@@ -1,5 +1,3 @@
-## ./cec clear
-
 Clear current configuration
 
 ### Synopsis

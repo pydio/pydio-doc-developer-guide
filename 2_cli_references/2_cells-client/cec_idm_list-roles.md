@@ -1,5 +1,3 @@
-## ./cec idm list-roles
-
 List roles
 
 ### Synopsis

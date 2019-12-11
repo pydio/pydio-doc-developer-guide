@@ -1,5 +1,3 @@
-## ./cec storage resync-ds
-
 Launch a resync
 
 ### Synopsis

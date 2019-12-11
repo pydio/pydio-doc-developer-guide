@@ -1,5 +1,3 @@
-## ./cec idm list-workspaces
-
 List workspaces
 
 ### Synopsis

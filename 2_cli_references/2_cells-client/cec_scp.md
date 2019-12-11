@@ -1,5 +1,3 @@
-## ./cec scp
-
 Copy files from/to Cells
 
 ### Synopsis

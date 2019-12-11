@@ -1,5 +1,3 @@
-## ./cec idm list-groups
-
 List groups
 
 ### Synopsis

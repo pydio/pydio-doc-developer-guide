@@ -1,5 +1,3 @@
-## ./cec completion
-
 Add auto-completion helper to Cells Client
 
 ### Synopsis

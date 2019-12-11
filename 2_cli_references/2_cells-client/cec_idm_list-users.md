@@ -1,5 +1,3 @@
-## ./cec idm list-users
-
 List users
 
 ### Synopsis

@@ -1,5 +1,3 @@
-## ./cec configure oauth
-
 User OAuth2 to login to server
 
 ### Synopsis

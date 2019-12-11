@@ -1,5 +1,3 @@
-## ./cec mv
-
 Move and/or rename nodes on the server
 
 ### Synopsis

@@ -1,5 +1,3 @@
-## ./cec storage
-
 DataSources commands
 
 ### Synopsis

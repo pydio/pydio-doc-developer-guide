@@ -1,5 +1,3 @@
-## ./cec version isvalid
-
 Return an error if the passed version is not correctly formatted
 
 ### Synopsis

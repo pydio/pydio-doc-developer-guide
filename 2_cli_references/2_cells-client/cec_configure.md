@@ -1,5 +1,3 @@
-## ./cec configure
-
 Configure a connection to a running server and locally persist credentials for later use
 
 ### Synopsis

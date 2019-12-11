@@ -1,5 +1,3 @@
-## ./cec version isgreater
-
 Compares the two passed versions and returns an error if the first is *not* strictly greater than the second
 
 ### Synopsis

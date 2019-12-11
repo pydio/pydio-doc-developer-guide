@@ -1,5 +1,3 @@
-## ./cec cp
-
 Copy files from A to B within your remote server
 
 ### Synopsis

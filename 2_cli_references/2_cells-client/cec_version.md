@@ -1,5 +1,3 @@
-## ./cec version
-
 Show current version of this application (and some utils)
 
 ### Synopsis

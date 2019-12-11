@@ -1,5 +1,3 @@
-## ./cec configure client-auth
-
 Connect to the server directly using the Client Credentials
 
 ### Synopsis
@@ -10,7 +8,7 @@ Launch an interractive process to gather necessary client information to configu
 You can typically use the static credentials (Id and Secret) defined in the "services"."pydio.grpc.auth"."staticClients" section of your server's "pydio.json" config file, 
 and a valid userName/password with enough permissions to achieve what you want on the server.
 
-Please beware that this sentitive information will be stored in clear text if you do not have a *correctly configured and running* keyring on your client machine.
+Please beware that this sentitive information will be stored in clear text if you do not have a **correctly configured and running** keyring on your client machine.
 
 You can also go through the whole process in a non-interractive manner by using the provided flags.
 

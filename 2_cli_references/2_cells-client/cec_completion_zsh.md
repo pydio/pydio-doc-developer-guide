@@ -1,5 +1,3 @@
-## ./cec completion zsh
-
 
 
 ### Synopsis

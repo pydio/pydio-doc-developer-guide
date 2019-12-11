@@ -1,5 +1,3 @@
-## ./cec mkdir
-
 Create folder(s) in the remote server
 
 ### Synopsis

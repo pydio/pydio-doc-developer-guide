@@ -1,5 +1,3 @@
-## ./cec idm
-
 Identity Management commands
 
 ### Synopsis
