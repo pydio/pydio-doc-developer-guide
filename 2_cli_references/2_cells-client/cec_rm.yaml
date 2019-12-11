@@ -1,5 +1,5 @@
-title: "cec ls"
-menu: "cec ls"
+title: "cec rm"
+menu: "cec rm"
 language: und
 menu_name: menu-dev-guide-v7
-weight: 16
+weight: 19
