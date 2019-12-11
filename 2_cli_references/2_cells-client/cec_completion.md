@@ -11,39 +11,38 @@ This command installs an additional plugin to provide suggestions when working w
 
 1) Using Bash
 
-## On Linux, you must insure the 'bash-completion' library is installed:
-# on Debian / Ubuntu
-sudo apt install bash-completion
+	On Linux, you must insure the 'bash-completion' library is installed:
+		Debian / Ubuntu
+			sudo apt install bash-completion
+		
+		RHEL / CentOS
+			sudo yum install bash-completion
+		
+		On MacOS (be sure to follow the instructions displayed on Homebrew)
+			brew install bash-completion
 
-# on RHEL / CentOS
-sudo yum install bash-completion
-
-# on MacOS
-brew install bash-completion
-(make sure to follow the instructions displayed on Homebrew)
-
-# Then, to enable completion in your current session:
+Then, to enable completion in your current session:
 	
 	source <(./cec completion bash)
 
-# Or in a persistent manner:
+Or in a persistent manner:
 
-## Debian/Ubuntu/CentOS
-	./cec completion bash | sudo tee /etc/bash_completion.d/cec
+	Debian/Ubuntu/CentOS
+		./cec completion bash | sudo tee /etc/bash_completion.d/cec
 
-## macOS
-	./cec completion bash | tee /usr/local/etc/bash_completion.d/cec
+	MacOS
+		./cec completion bash | tee /usr/local/etc/bash_completion.d/cec
 
 2) Using Zsh
 
-# Add to current zsh session:
-	source <(./cec completion zsh)
+	Add to current zsh session:
+		source <(./cec completion zsh)
 
-	# Add in a persistent manner:
-	./cec completion zsh | sudo tee <path>/<to>/<your zsh completion folder>
+	Add in a persistent manner:
+		./cec completion zsh | sudo tee <path>/<to>/<your zsh completion folder>
 	
-	# On macOS
-	./cec completion zsh | sudo tee /Users/<your current user>/.zsh/completion/_cec
+	On macOS
+		./cec completion zsh | tee /Users/<your current user>/.zsh/completion/_cec
 	 
 
 ```
