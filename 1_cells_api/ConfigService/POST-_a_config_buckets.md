@@ -6,36 +6,42 @@
 
 
  
-List files and folders starting at the root (first level lists the datasources)  
+List Buckets on a given object storage  
 
 
 ### Body Parameters
 
 Name | Description | Type | Required
 ---|---|---|---
-**Ancestors** | Send back a list of parent nodes, until the root, including the original node | _boolean_ |   
-**FilterType** | Filter by node type (LEAF / COLLECTION) | _#/definitions/treeNodeType_ |   
-**Limit** | Limit the number of results | _string_ |   
-**Node** | Main node used as a parent | _#/definitions/treeNode_ |   
-**Offset** | Start listing at a given position | _string_ |   
-**Recursive** | Send back all children of the node | _boolean_ |   
-**WithCommits** | Sends the list of commits for a given node (not used) | _boolean_ |   
-**WithVersions** | Sends the list of versions for a given node | _boolean_ |   
+**BucketsRegexp** |  | _string_ |   
+**DataSource** |  | _#/definitions/objectDataSource_ |   
 
 
 ### Body Example
 ```
 {
-  "Ancestors": true,
-  "FilterType": "string",
-  "Limit": "string",
-  "Node": {
-    "Path": "string"
-  },
-  "Offset": "string",
-  "Recursive": true,
-  "WithCommits": true,
-  "WithVersions": true
+  "BucketsRegexp": "string",
+  "DataSource": {
+    "ApiKey": "string",
+    "ApiSecret": "string",
+    "CreationDate": 10,
+    "Disabled": true,
+    "EncryptionKey": "string",
+    "EncryptionMode": "string",
+    "LastSynchronizationDate": 10,
+    "Name": "string",
+    "ObjectsBaseFolder": "string",
+    "ObjectsBucket": "string",
+    "ObjectsHost": "string",
+    "ObjectsPort": 10,
+    "ObjectsSecure": true,
+    "ObjectsServiceName": "string",
+    "PeerAddress": "string",
+    "StorageConfiguration": {},
+    "StorageType": "string",
+    "VersioningPolicyName": "string",
+    "Watch": true
+  }
 }
 ```
 
