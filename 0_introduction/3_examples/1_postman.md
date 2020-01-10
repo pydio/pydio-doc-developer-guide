@@ -4,17 +4,17 @@ Postman is a powerful client side application that can be use to debug and test 
 
 Available OAuth 2 default parameters to use for Cells:
 
-| Parameter        | value                                              |
-| ---------------- | -------------------------------------------------- |
-| Callback URL     | http://localhost:3000/servers/callback             |
-| Auth URL         | http(s)://your-cells.com/oidc/oauth2/auth      |
-| Access Token URL | http(s)://your-cells.com/oidc/oauth2/token     |
-| Client ID        | cells-sync, cells-client, cells-mobile |
-| Scope            | openid email profile pydio offline                 |
+| Parameter        | value                                      |
+| ---------------- | ------------------------------------------ |
+| Callback URL     | http://localhost:3000/servers/callback     |
+| Auth URL         | http(s)://your-cells.com/oidc/oauth2/auth  |
+| Access Token URL | http(s)://your-cells.com/oidc/oauth2/token |
+| Client ID        | cells-sync, cells-client, cells-mobile     |
+| Scope            | openid email profile pydio offline         |
 
 ## Authenticate with Postman
 
-Add authentication on Postman=
+Add authentication on Postman:
 
 - **Type:** select **OAuth 2.0**
 - Then press **Get New Access Token**
@@ -31,6 +31,7 @@ Get an Access Token
 | **Auth URL**              | https://cells-test/oidc/oauth2/auth                  |
 | **Access Token URL**      | https://cells-test/oidc/oauth2/token                 |
 | **Client ID**             | cells-sync                                           |
+| **Client Secret**         | omit (you can let the field empty)                   |
 | **Scope**                 | openid email profile pydio offline                   |
 | **State**                 | you can put whatever you want (minimum 8 characters) |
 | **Client Authentication** | Send as Basic Auth header                            |
@@ -58,11 +59,11 @@ This example calls the TreeService endpoint [POST /a/tree/stats](./post-atreesta
 
 Example:
 
-| type          | value                | description                                   |
-| ------------- | -------------------- | --------------------------------------------- |
-| endpoint      | /a/tree/stats        | Endpoint that list all the Nodes              |
-| authorization | OAuth2 Access token  | Access Token retrieved from the previous Step |
-| body          | json                 | JSON body of the request                      |
+| type          | value               | description                                   |
+| ------------- | ------------------- | --------------------------------------------- |
+| endpoint      | /a/tree/stats       | Endpoint that list all the Nodes              |
+| authorization | OAuth2 Access token | Access Token retrieved from the previous Step |
+| body          | json                | JSON body of the request                      |
 
 This is the modified body that will query all the children.
 
@@ -84,22 +85,23 @@ This is the modified body that will query all the children.
 
 Below is an sample URL for accessing data from the object file `file.txt` in the personal workspace of a user in [the demo](http://demo.pydio.com):
 
-`https://demo.pydio.com/io/personal-files-1/file.txt`
+`https://demo.pydio.com/io/personal-files/file.txt`
 
 This URL is composed of the following components :  
 
-- /io : the name of the bucket where data is exposed  
-- /personal-files-1 : the "slug" of the workspace where the file is located.
-- /file.txt : path of the file inside the workspace
+- `/io` : the bucket name where data is exposed  
+- `/personal-files` : the "slug" of the workspace where the file is located.
+- `/file.txt` : path to the file inside the workspace
 
 Using Postman, you can use this URL to interact with this object. In order to be properly identified, you have to use the "Authorization" tab, choose AWS Signature and enter:
 
-| name          | value                                                                        |
-| ------------- | ---------------------------------------------------------------------------- |
-| **AcessKey**  | you can copy and paste the **Access token** retrieved previously with OAuth2 |
-| **SecretKeY** | `gatewaysecret` (this is a fixed value).                                     |
+| name             | value                                                                                |
+| ---------------- | ------------------------------------------------------------------------------------ |
+| **AccessKey**    | you can copy and paste the **Access token** retrieved previously with OAuth2         |
+| **SecretKeY**    | `gatewaysecret` (this is a fixed value).                                             |
+| **Service Name** | _In the authorization tab > Advanced > Service Name add `s3`_ (see screenshot below) |
 
-[:image:0_introduction/postman/s3_request.png]
+[:image:0_introduction/postman/postman_s3_get.png]
 
 Then using the appropriate HTTP method, you can : 
 
