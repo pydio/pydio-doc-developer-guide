@@ -1,28 +1,29 @@
-## ./cells-enterprise user unlock
+## ./cells-enterprise user set-pwd
 
-Unlock User
+Change user password
 
 ### Synopsis
 
-Remove locks on a user
+Set the password of a given user. 
 
-This may be handy if admin is locked out of the interface
+Directly use --password (or -p) to provide a new password, or leave empty to be prompted.
 
 EXAMPLE
 =======
-$ ./cells-enterprise user unlock -u LOGIN
+$ ./cells-enterprise user set-pwd -u 'USER_LOGIN' -p 'NEW_PASSWORD'
 
 
 
 ```
-./cells-enterprise user unlock [flags]
+./cells-enterprise user set-pwd [flags]
 ```
 
 ### Options
 
 ```
-  -h, --help              help for unlock
-  -u, --username string   Login of the user to unlock
+  -h, --help              help for set-pwd
+  -p, --password string   New password
+  -u, --username string   Login of the user to update
 ```
 
 ### Options inherited from parent commands
