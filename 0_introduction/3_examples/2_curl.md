@@ -10,15 +10,27 @@ The Authorization flow first requires you to request a temporary authorization c
 
 We assume here that you have created a dedicated Client inside Cells. Check [Create OAuth2 Client](./authentication) for more info.
 
-| Parameter        | value                                    |
-| ---------------- | ---------------------------------------- |
-| Client Name      | cells-curl                               |
-| Client ID        | cells-curl                               |
-| Client Secret    | password                                 |
-| Callback URLs    | http://mypydio.localhost:8080/oauth2/oob |
-| Grant Types      | Authorization Code                       |
-| Response Types   | Code, Token, IDToken                     |
+| Parameter      | value                                    |
+| -------------- | ---------------------------------------- |
+| Client Name    | cells-curl                               |
+| Client ID      | cells-curl                               |
+| Client Secret  | password                                 |
+| Callback URLs  | http://mypydio.localhost:8080/oauth2/oob |
+| Grant Types    | Authorization Code                       |
+| Response Types | Code, Token, IDToken                     |
 
+You can also use the default client(which is Public) [see](./authentication):
+
+| Parameter      | value                                    |
+| -------------- | ---------------------------------------- |
+| Client Name    | `cells-client`                           |
+| Client ID      | `cells-client`                           |
+| Client Secret  | `<empty>`                                |
+| Callback URLs  | http://mypydio.localhost:8080/oauth2/oob |
+| Grant Types    | `authorization_code`                     |
+| Response Types | `code`, `token`, `id_token`              |
+
+_You can also add, edit the default clients directly in your `pydio.json` file._
 
 ### Quick bash setup
 
