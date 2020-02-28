@@ -98,7 +98,7 @@ Using Postman, you can use this URL to interact with this object. In order to be
 | name             | value                                                                                |
 | ---------------- | ------------------------------------------------------------------------------------ |
 | **AccessKey**    | you can copy and paste the **Access token** retrieved previously with OAuth2         |
-| **SecretKeY**    | `gatewaysecret` (this is a fixed value).                                             |
+| **SecretKey**    | `gatewaysecret` (this is a fixed value).                                             |
 | **Service Name** | _In the authorization tab > Advanced > Service Name add `s3`_ (see screenshot below) |
 
 [:image:0_introduction/postman/postman_s3_get.png]
