@@ -22,18 +22,109 @@ Name | Description | Type | Required
   "Job": {
     "Actions": [
       {
+        "ActionOutputFilter": {
+          "Query": {
+            "Limit": "string",
+            "Offset": "string",
+            "Operation": "string",
+            "ResourcePolicyQuery": {
+              "Any": true,
+              "Empty": true,
+              "Subjects": [
+                "string"
+              ]
+            },
+            "SubQueries": [
+              {
+                "type_url": "string",
+                "value": "string"
+              }
+            ],
+            "groupBy": 10
+          }
+        },
         "ChainedActions": [
           "[Recursive structure]"
         ],
+        "ContextMetaFilter": {
+          "Query": {
+            "Limit": "string",
+            "Offset": "string",
+            "Operation": "string",
+            "ResourcePolicyQuery": {
+              "Any": true,
+              "Empty": true,
+              "Subjects": [
+                "string"
+              ]
+            },
+            "SubQueries": [
+              {
+                "type_url": "string",
+                "value": "string"
+              }
+            ],
+            "groupBy": 10
+          },
+          "Type": "string"
+        },
+        "Description": "string",
+        "FailedFilterActions": [
+          "[Recursive structure]"
+        ],
         "ID": "string",
+        "IdmFilter": {
+          "All": true,
+          "Collect": true,
+          "Query": {
+            "Limit": "string",
+            "Offset": "string",
+            "Operation": "string",
+            "ResourcePolicyQuery": {
+              "Any": true,
+              "Empty": true,
+              "Subjects": [
+                "string"
+              ]
+            },
+            "SubQueries": [
+              {
+                "type_url": "string",
+                "value": "string"
+              }
+            ],
+            "groupBy": 10
+          },
+          "Type": "string"
+        },
+        "IdmSelector": {
+          "All": true,
+          "Collect": true,
+          "Query": {
+            "Limit": "string",
+            "Offset": "string",
+            "Operation": "string",
+            "ResourcePolicyQuery": {
+              "Any": true,
+              "Empty": true,
+              "Subjects": [
+                "string"
+              ]
+            },
+            "SubQueries": [
+              {
+                "type_url": "string",
+                "value": "string"
+              }
+            ],
+            "groupBy": 10
+          },
+          "Type": "string"
+        },
+        "Label": "string",
         "NodesFilter": {
           "All": true,
           "Collect": true,
-          "Nodes": [
-            {
-              "Path": "string"
-            }
-          ],
           "Pathes": [
             "string"
           ],
@@ -60,11 +151,6 @@ Name | Description | Type | Required
         "NodesSelector": {
           "All": true,
           "Collect": true,
-          "Nodes": [
-            {
-              "Path": "string"
-            }
-          ],
           "Pathes": [
             "string"
           ],
@@ -89,27 +175,6 @@ Name | Description | Type | Required
           }
         },
         "Parameters": {},
-        "SourceFilter": {
-          "Query": {
-            "Limit": "string",
-            "Offset": "string",
-            "Operation": "string",
-            "ResourcePolicyQuery": {
-              "Any": true,
-              "Empty": true,
-              "Subjects": [
-                "string"
-              ]
-            },
-            "SubQueries": [
-              {
-                "type_url": "string",
-                "value": "string"
-              }
-            ],
-            "groupBy": 10
-          }
-        },
         "UsersFilter": {
           "All": true,
           "Collect": true,
@@ -256,10 +321,56 @@ Name | Description | Type | Required
     ],
     "AutoClean": true,
     "AutoStart": true,
+    "ContextMetaFilter": {
+      "Query": {
+        "Limit": "string",
+        "Offset": "string",
+        "Operation": "string",
+        "ResourcePolicyQuery": {
+          "Any": true,
+          "Empty": true,
+          "Subjects": [
+            "string"
+          ]
+        },
+        "SubQueries": [
+          {
+            "type_url": "string",
+            "value": "string"
+          }
+        ],
+        "groupBy": 10
+      },
+      "Type": "string"
+    },
     "EventNames": [
       "string"
     ],
     "ID": "string",
+    "IdmFilter": {
+      "All": true,
+      "Collect": true,
+      "Query": {
+        "Limit": "string",
+        "Offset": "string",
+        "Operation": "string",
+        "ResourcePolicyQuery": {
+          "Any": true,
+          "Empty": true,
+          "Subjects": [
+            "string"
+          ]
+        },
+        "SubQueries": [
+          {
+            "type_url": "string",
+            "value": "string"
+          }
+        ],
+        "groupBy": 10
+      },
+      "Type": "string"
+    },
     "Inactive": true,
     "Label": "string",
     "Languages": [
@@ -269,11 +380,6 @@ Name | Description | Type | Required
     "NodeEventFilter": {
       "All": true,
       "Collect": true,
-      "Nodes": [
-        {
-          "Path": "string"
-        }
-      ],
       "Pathes": [
         "string"
       ],
@@ -298,6 +404,16 @@ Name | Description | Type | Required
       }
     },
     "Owner": "string",
+    "Parameters": [
+      {
+        "Description": "string",
+        "JsonChoices": "string",
+        "Mandatory": true,
+        "Name": "string",
+        "Type": "string",
+        "Value": "string"
+      }
+    ],
     "Schedule": {
       "Iso8601MinDelta": "string",
       "Iso8601Schedule": "string"
@@ -307,18 +423,109 @@ Name | Description | Type | Required
         "ActionsLogs": [
           {
             "Action": {
+              "ActionOutputFilter": {
+                "Query": {
+                  "Limit": "string",
+                  "Offset": "string",
+                  "Operation": "string",
+                  "ResourcePolicyQuery": {
+                    "Any": true,
+                    "Empty": true,
+                    "Subjects": [
+                      "string"
+                    ]
+                  },
+                  "SubQueries": [
+                    {
+                      "type_url": "string",
+                      "value": "string"
+                    }
+                  ],
+                  "groupBy": 10
+                }
+              },
               "ChainedActions": [
                 "[Recursive structure]"
               ],
+              "ContextMetaFilter": {
+                "Query": {
+                  "Limit": "string",
+                  "Offset": "string",
+                  "Operation": "string",
+                  "ResourcePolicyQuery": {
+                    "Any": true,
+                    "Empty": true,
+                    "Subjects": [
+                      "string"
+                    ]
+                  },
+                  "SubQueries": [
+                    {
+                      "type_url": "string",
+                      "value": "string"
+                    }
+                  ],
+                  "groupBy": 10
+                },
+                "Type": "string"
+              },
+              "Description": "string",
+              "FailedFilterActions": [
+                "[Recursive structure]"
+              ],
               "ID": "string",
+              "IdmFilter": {
+                "All": true,
+                "Collect": true,
+                "Query": {
+                  "Limit": "string",
+                  "Offset": "string",
+                  "Operation": "string",
+                  "ResourcePolicyQuery": {
+                    "Any": true,
+                    "Empty": true,
+                    "Subjects": [
+                      "string"
+                    ]
+                  },
+                  "SubQueries": [
+                    {
+                      "type_url": "string",
+                      "value": "string"
+                    }
+                  ],
+                  "groupBy": 10
+                },
+                "Type": "string"
+              },
+              "IdmSelector": {
+                "All": true,
+                "Collect": true,
+                "Query": {
+                  "Limit": "string",
+                  "Offset": "string",
+                  "Operation": "string",
+                  "ResourcePolicyQuery": {
+                    "Any": true,
+                    "Empty": true,
+                    "Subjects": [
+                      "string"
+                    ]
+                  },
+                  "SubQueries": [
+                    {
+                      "type_url": "string",
+                      "value": "string"
+                    }
+                  ],
+                  "groupBy": 10
+                },
+                "Type": "string"
+              },
+              "Label": "string",
               "NodesFilter": {
                 "All": true,
                 "Collect": true,
-                "Nodes": [
-                  {
-                    "Path": "string"
-                  }
-                ],
                 "Pathes": [
                   "string"
                 ],
@@ -345,11 +552,6 @@ Name | Description | Type | Required
               "NodesSelector": {
                 "All": true,
                 "Collect": true,
-                "Nodes": [
-                  {
-                    "Path": "string"
-                  }
-                ],
                 "Pathes": [
                   "string"
                 ],
@@ -374,27 +576,6 @@ Name | Description | Type | Required
                 }
               },
               "Parameters": {},
-              "SourceFilter": {
-                "Query": {
-                  "Limit": "string",
-                  "Offset": "string",
-                  "Operation": "string",
-                  "ResourcePolicyQuery": {
-                    "Any": true,
-                    "Empty": true,
-                    "Subjects": [
-                      "string"
-                    ]
-                  },
-                  "SubQueries": [
-                    {
-                      "type_url": "string",
-                      "value": "string"
-                    }
-                  ],
-                  "groupBy": 10
-                }
-              },
               "UsersFilter": {
                 "All": true,
                 "Collect": true,
@@ -539,6 +720,18 @@ Name | Description | Type | Required
               }
             },
             "InputMessage": {
+              "Acls": [
+                {
+                  "Action": {
+                    "Name": "string",
+                    "Value": "string"
+                  },
+                  "ID": "string",
+                  "NodeID": "string",
+                  "RoleID": "string",
+                  "WorkspaceID": "string"
+                }
+              ],
               "Activities": [
                 {
                   "accuracy": "[Unknown Type number]",
@@ -626,6 +819,31 @@ Name | Description | Type | Required
                   "Time": 10
                 }
               ],
+              "Roles": [
+                {
+                  "AutoApplies": [
+                    "string"
+                  ],
+                  "ForceOverride": true,
+                  "GroupRole": true,
+                  "IsTeam": true,
+                  "Label": "string",
+                  "LastUpdated": 10,
+                  "Policies": [
+                    {
+                      "Action": "string",
+                      "Effect": "string",
+                      "JsonConditions": "string",
+                      "Resource": "string",
+                      "Subject": "string",
+                      "id": "string"
+                    }
+                  ],
+                  "PoliciesContextEditable": true,
+                  "UserRole": true,
+                  "Uuid": "string"
+                }
+              ],
               "Users": [
                 {
                   "Attributes": {},
@@ -672,10 +890,48 @@ Name | Description | Type | Required
                     }
                   ],
                   "Uuid": "string"
+                }
+              ],
+              "Workspaces": [
+                {
+                  "Attributes": "string",
+                  "Description": "string",
+                  "Label": "string",
+                  "LastUpdated": 10,
+                  "Policies": [
+                    {
+                      "Action": "string",
+                      "Effect": "string",
+                      "JsonConditions": "string",
+                      "Resource": "string",
+                      "Subject": "string",
+                      "id": "string"
+                    }
+                  ],
+                  "PoliciesContextEditable": true,
+                  "RootNodes": {},
+                  "RootUUIDs": [
+                    "string"
+                  ],
+                  "Scope": "string",
+                  "Slug": "string",
+                  "UUID": "string"
                 }
               ]
             },
             "OutputMessage": {
+              "Acls": [
+                {
+                  "Action": {
+                    "Name": "string",
+                    "Value": "string"
+                  },
+                  "ID": "string",
+                  "NodeID": "string",
+                  "RoleID": "string",
+                  "WorkspaceID": "string"
+                }
+              ],
               "Activities": [
                 {
                   "accuracy": "[Unknown Type number]",
@@ -763,6 +1019,31 @@ Name | Description | Type | Required
                   "Time": 10
                 }
               ],
+              "Roles": [
+                {
+                  "AutoApplies": [
+                    "string"
+                  ],
+                  "ForceOverride": true,
+                  "GroupRole": true,
+                  "IsTeam": true,
+                  "Label": "string",
+                  "LastUpdated": 10,
+                  "Policies": [
+                    {
+                      "Action": "string",
+                      "Effect": "string",
+                      "JsonConditions": "string",
+                      "Resource": "string",
+                      "Subject": "string",
+                      "id": "string"
+                    }
+                  ],
+                  "PoliciesContextEditable": true,
+                  "UserRole": true,
+                  "Uuid": "string"
+                }
+              ],
               "Users": [
                 {
                   "Attributes": {},
@@ -809,6 +1090,32 @@ Name | Description | Type | Required
                     }
                   ],
                   "Uuid": "string"
+                }
+              ],
+              "Workspaces": [
+                {
+                  "Attributes": "string",
+                  "Description": "string",
+                  "Label": "string",
+                  "LastUpdated": 10,
+                  "Policies": [
+                    {
+                      "Action": "string",
+                      "Effect": "string",
+                      "JsonConditions": "string",
+                      "Resource": "string",
+                      "Subject": "string",
+                      "id": "string"
+                    }
+                  ],
+                  "PoliciesContextEditable": true,
+                  "RootNodes": {},
+                  "RootUUIDs": [
+                    "string"
+                  ],
+                  "Scope": "string",
+                  "Slug": "string",
+                  "UUID": "string"
                 }
               ]
             }
@@ -916,50 +1223,109 @@ Response Type /definitions/jobsPutJobResponse
   "Job": {
     "Actions": [
       {
+        "ActionOutputFilter": {
+          "Query": {
+            "Limit": "string",
+            "Offset": "string",
+            "Operation": "string",
+            "ResourcePolicyQuery": {
+              "Any": true,
+              "Empty": true,
+              "Subjects": [
+                "string"
+              ]
+            },
+            "SubQueries": [
+              {
+                "type_url": "string",
+                "value": "string"
+              }
+            ],
+            "groupBy": 10
+          }
+        },
         "ChainedActions": [
           "[Recursive structure]"
         ],
+        "ContextMetaFilter": {
+          "Query": {
+            "Limit": "string",
+            "Offset": "string",
+            "Operation": "string",
+            "ResourcePolicyQuery": {
+              "Any": true,
+              "Empty": true,
+              "Subjects": [
+                "string"
+              ]
+            },
+            "SubQueries": [
+              {
+                "type_url": "string",
+                "value": "string"
+              }
+            ],
+            "groupBy": 10
+          },
+          "Type": "string"
+        },
+        "Description": "string",
+        "FailedFilterActions": [
+          "[Recursive structure]"
+        ],
         "ID": "string",
+        "IdmFilter": {
+          "All": true,
+          "Collect": true,
+          "Query": {
+            "Limit": "string",
+            "Offset": "string",
+            "Operation": "string",
+            "ResourcePolicyQuery": {
+              "Any": true,
+              "Empty": true,
+              "Subjects": [
+                "string"
+              ]
+            },
+            "SubQueries": [
+              {
+                "type_url": "string",
+                "value": "string"
+              }
+            ],
+            "groupBy": 10
+          },
+          "Type": "string"
+        },
+        "IdmSelector": {
+          "All": true,
+          "Collect": true,
+          "Query": {
+            "Limit": "string",
+            "Offset": "string",
+            "Operation": "string",
+            "ResourcePolicyQuery": {
+              "Any": true,
+              "Empty": true,
+              "Subjects": [
+                "string"
+              ]
+            },
+            "SubQueries": [
+              {
+                "type_url": "string",
+                "value": "string"
+              }
+            ],
+            "groupBy": 10
+          },
+          "Type": "string"
+        },
+        "Label": "string",
         "NodesFilter": {
           "All": true,
           "Collect": true,
-          "Nodes": [
-            {
-              "AppearsIn": [
-                {
-                  "Path": "string",
-                  "WsLabel": "string",
-                  "WsUuid": "string"
-                }
-              ],
-              "Commits": [
-                {
-                  "Data": "string",
-                  "Description": "string",
-                  "Event": {
-                    "Metadata": {},
-                    "Optimistic": true,
-                    "Silent": true,
-                    "Source": "[Recursive structure]",
-                    "Target": "[Recursive structure]",
-                    "Type": "string"
-                  },
-                  "MTime": "string",
-                  "OwnerUuid": "string",
-                  "Size": "string",
-                  "Uuid": "string"
-                }
-              ],
-              "Etag": "string",
-              "MTime": "string",
-              "MetaStore": {},
-              "Mode": 10,
-              "Path": "string",
-              "Size": "string",
-              "Type": "string",
-              "Uuid": "string"
-            }
-          ],
           "Pathes": [
             "string"
           ],
@@ -986,43 +1352,6 @@ Response Type /definitions/jobsPutJobResponse
         "NodesSelector": {
           "All": true,
           "Collect": true,
-          "Nodes": [
-            {
-              "AppearsIn": [
-                {
-                  "Path": "string",
-                  "WsLabel": "string",
-                  "WsUuid": "string"
-                }
-              ],
-              "Commits": [
-                {
-                  "Data": "string",
-                  "Description": "string",
-                  "Event": {
-                    "Metadata": {},
-                    "Optimistic": true,
-                    "Silent": true,
-                    "Source": "[Recursive structure]",
-                    "Target": "[Recursive structure]",
-                    "Type": "string"
-                  },
-                  "MTime": "string",
-                  "OwnerUuid": "string",
-                  "Size": "string",
-                  "Uuid": "string"
-                }
-              ],
-              "Etag": "string",
-              "MTime": "string",
-              "MetaStore": {},
-              "Mode": 10,
-              "Path": "string",
-              "Size": "string",
-              "Type": "string",
-              "Uuid": "string"
-            }
-          ],
           "Pathes": [
             "string"
           ],
@@ -1047,27 +1376,6 @@ Response Type /definitions/jobsPutJobResponse
           }
         },
         "Parameters": {},
-        "SourceFilter": {
-          "Query": {
-            "Limit": "string",
-            "Offset": "string",
-            "Operation": "string",
-            "ResourcePolicyQuery": {
-              "Any": true,
-              "Empty": true,
-              "Subjects": [
-                "string"
-              ]
-            },
-            "SubQueries": [
-              {
-                "type_url": "string",
-                "value": "string"
-              }
-            ],
-            "groupBy": 10
-          }
-        },
         "UsersFilter": {
           "All": true,
           "Collect": true,
@@ -1214,10 +1522,56 @@ Response Type /definitions/jobsPutJobResponse
     ],
     "AutoClean": true,
     "AutoStart": true,
+    "ContextMetaFilter": {
+      "Query": {
+        "Limit": "string",
+        "Offset": "string",
+        "Operation": "string",
+        "ResourcePolicyQuery": {
+          "Any": true,
+          "Empty": true,
+          "Subjects": [
+            "string"
+          ]
+        },
+        "SubQueries": [
+          {
+            "type_url": "string",
+            "value": "string"
+          }
+        ],
+        "groupBy": 10
+      },
+      "Type": "string"
+    },
     "EventNames": [
       "string"
     ],
     "ID": "string",
+    "IdmFilter": {
+      "All": true,
+      "Collect": true,
+      "Query": {
+        "Limit": "string",
+        "Offset": "string",
+        "Operation": "string",
+        "ResourcePolicyQuery": {
+          "Any": true,
+          "Empty": true,
+          "Subjects": [
+            "string"
+          ]
+        },
+        "SubQueries": [
+          {
+            "type_url": "string",
+            "value": "string"
+          }
+        ],
+        "groupBy": 10
+      },
+      "Type": "string"
+    },
     "Inactive": true,
     "Label": "string",
     "Languages": [
@@ -1227,43 +1581,6 @@ Response Type /definitions/jobsPutJobResponse
     "NodeEventFilter": {
       "All": true,
       "Collect": true,
-      "Nodes": [
-        {
-          "AppearsIn": [
-            {
-              "Path": "string",
-              "WsLabel": "string",
-              "WsUuid": "string"
-            }
-          ],
-          "Commits": [
-            {
-              "Data": "string",
-              "Description": "string",
-              "Event": {
-                "Metadata": {},
-                "Optimistic": true,
-                "Silent": true,
-                "Source": "[Recursive structure]",
-                "Target": "[Recursive structure]",
-                "Type": "string"
-              },
-              "MTime": "string",
-              "OwnerUuid": "string",
-              "Size": "string",
-              "Uuid": "string"
-            }
-          ],
-          "Etag": "string",
-          "MTime": "string",
-          "MetaStore": {},
-          "Mode": 10,
-          "Path": "string",
-          "Size": "string",
-          "Type": "string",
-          "Uuid": "string"
-        }
-      ],
       "Pathes": [
         "string"
       ],
@@ -1288,6 +1605,16 @@ Response Type /definitions/jobsPutJobResponse
       }
     },
     "Owner": "string",
+    "Parameters": [
+      {
+        "Description": "string",
+        "JsonChoices": "string",
+        "Mandatory": true,
+        "Name": "string",
+        "Type": "string",
+        "Value": "string"
+      }
+    ],
     "Schedule": {
       "Iso8601MinDelta": "string",
       "Iso8601Schedule": "string"
@@ -1297,50 +1624,109 @@ Response Type /definitions/jobsPutJobResponse
         "ActionsLogs": [
           {
             "Action": {
+              "ActionOutputFilter": {
+                "Query": {
+                  "Limit": "string",
+                  "Offset": "string",
+                  "Operation": "string",
+                  "ResourcePolicyQuery": {
+                    "Any": true,
+                    "Empty": true,
+                    "Subjects": [
+                      "string"
+                    ]
+                  },
+                  "SubQueries": [
+                    {
+                      "type_url": "string",
+                      "value": "string"
+                    }
+                  ],
+                  "groupBy": 10
+                }
+              },
               "ChainedActions": [
                 "[Recursive structure]"
               ],
+              "ContextMetaFilter": {
+                "Query": {
+                  "Limit": "string",
+                  "Offset": "string",
+                  "Operation": "string",
+                  "ResourcePolicyQuery": {
+                    "Any": true,
+                    "Empty": true,
+                    "Subjects": [
+                      "string"
+                    ]
+                  },
+                  "SubQueries": [
+                    {
+                      "type_url": "string",
+                      "value": "string"
+                    }
+                  ],
+                  "groupBy": 10
+                },
+                "Type": "string"
+              },
+              "Description": "string",
+              "FailedFilterActions": [
+                "[Recursive structure]"
+              ],
               "ID": "string",
+              "IdmFilter": {
+                "All": true,
+                "Collect": true,
+                "Query": {
+                  "Limit": "string",
+                  "Offset": "string",
+                  "Operation": "string",
+                  "ResourcePolicyQuery": {
+                    "Any": true,
+                    "Empty": true,
+                    "Subjects": [
+                      "string"
+                    ]
+                  },
+                  "SubQueries": [
+                    {
+                      "type_url": "string",
+                      "value": "string"
+                    }
+                  ],
+                  "groupBy": 10
+                },
+                "Type": "string"
+              },
+              "IdmSelector": {
+                "All": true,
+                "Collect": true,
+                "Query": {
+                  "Limit": "string",
+                  "Offset": "string",
+                  "Operation": "string",
+                  "ResourcePolicyQuery": {
+                    "Any": true,
+                    "Empty": true,
+                    "Subjects": [
+                      "string"
+                    ]
+                  },
+                  "SubQueries": [
+                    {
+                      "type_url": "string",
+                      "value": "string"
+                    }
+                  ],
+                  "groupBy": 10
+                },
+                "Type": "string"
+              },
+              "Label": "string",
               "NodesFilter": {
                 "All": true,
                 "Collect": true,
-                "Nodes": [
-                  {
-                    "AppearsIn": [
-                      {
-                        "Path": "string",
-                        "WsLabel": "string",
-                        "WsUuid": "string"
-                      }
-                    ],
-                    "Commits": [
-                      {
-                        "Data": "string",
-                        "Description": "string",
-                        "Event": {
-                          "Metadata": {},
-                          "Optimistic": true,
-                          "Silent": true,
-                          "Source": "[Recursive structure]",
-                          "Target": "[Recursive structure]",
-                          "Type": "string"
-                        },
-                        "MTime": "string",
-                        "OwnerUuid": "string",
-                        "Size": "string",
-                        "Uuid": "string"
-                      }
-                    ],
-                    "Etag": "string",
-                    "MTime": "string",
-                    "MetaStore": {},
-                    "Mode": 10,
-                    "Path": "string",
-                    "Size": "string",
-                    "Type": "string",
-                    "Uuid": "string"
-                  }
-                ],
                 "Pathes": [
                   "string"
                 ],
@@ -1367,43 +1753,6 @@ Response Type /definitions/jobsPutJobResponse
               "NodesSelector": {
                 "All": true,
                 "Collect": true,
-                "Nodes": [
-                  {
-                    "AppearsIn": [
-                      {
-                        "Path": "string",
-                        "WsLabel": "string",
-                        "WsUuid": "string"
-                      }
-                    ],
-                    "Commits": [
-                      {
-                        "Data": "string",
-                        "Description": "string",
-                        "Event": {
-                          "Metadata": {},
-                          "Optimistic": true,
-                          "Silent": true,
-                          "Source": "[Recursive structure]",
-                          "Target": "[Recursive structure]",
-                          "Type": "string"
-                        },
-                        "MTime": "string",
-                        "OwnerUuid": "string",
-                        "Size": "string",
-                        "Uuid": "string"
-                      }
-                    ],
-                    "Etag": "string",
-                    "MTime": "string",
-                    "MetaStore": {},
-                    "Mode": 10,
-                    "Path": "string",
-                    "Size": "string",
-                    "Type": "string",
-                    "Uuid": "string"
-                  }
-                ],
                 "Pathes": [
                   "string"
                 ],
@@ -1428,27 +1777,6 @@ Response Type /definitions/jobsPutJobResponse
                 }
               },
               "Parameters": {},
-              "SourceFilter": {
-                "Query": {
-                  "Limit": "string",
-                  "Offset": "string",
-                  "Operation": "string",
-                  "ResourcePolicyQuery": {
-                    "Any": true,
-                    "Empty": true,
-                    "Subjects": [
-                      "string"
-                    ]
-                  },
-                  "SubQueries": [
-                    {
-                      "type_url": "string",
-                      "value": "string"
-                    }
-                  ],
-                  "groupBy": 10
-                }
-              },
               "UsersFilter": {
                 "All": true,
                 "Collect": true,
@@ -1593,6 +1921,18 @@ Response Type /definitions/jobsPutJobResponse
               }
             },
             "InputMessage": {
+              "Acls": [
+                {
+                  "Action": {
+                    "Name": "string",
+                    "Value": "string"
+                  },
+                  "ID": "string",
+                  "NodeID": "string",
+                  "RoleID": "string",
+                  "WorkspaceID": "string"
+                }
+              ],
               "Activities": [
                 {
                   "accuracy": "[Unknown Type number]",
@@ -1670,6 +2010,7 @@ Response Type /definitions/jobsPutJobResponse
                     {
                       "Path": "string",
                       "WsLabel": "string",
+                      "WsSlug": "string",
                       "WsUuid": "string"
                     }
                   ],
@@ -1710,6 +2051,31 @@ Response Type /definitions/jobsPutJobResponse
                   "StringBody": "string",
                   "Success": true,
                   "Time": 10
+                }
+              ],
+              "Roles": [
+                {
+                  "AutoApplies": [
+                    "string"
+                  ],
+                  "ForceOverride": true,
+                  "GroupRole": true,
+                  "IsTeam": true,
+                  "Label": "string",
+                  "LastUpdated": 10,
+                  "Policies": [
+                    {
+                      "Action": "string",
+                      "Effect": "string",
+                      "JsonConditions": "string",
+                      "Resource": "string",
+                      "Subject": "string",
+                      "id": "string"
+                    }
+                  ],
+                  "PoliciesContextEditable": true,
+                  "UserRole": true,
+                  "Uuid": "string"
                 }
               ],
               "Users": [
@@ -1758,10 +2124,48 @@ Response Type /definitions/jobsPutJobResponse
                     }
                   ],
                   "Uuid": "string"
+                }
+              ],
+              "Workspaces": [
+                {
+                  "Attributes": "string",
+                  "Description": "string",
+                  "Label": "string",
+                  "LastUpdated": 10,
+                  "Policies": [
+                    {
+                      "Action": "string",
+                      "Effect": "string",
+                      "JsonConditions": "string",
+                      "Resource": "string",
+                      "Subject": "string",
+                      "id": "string"
+                    }
+                  ],
+                  "PoliciesContextEditable": true,
+                  "RootNodes": {},
+                  "RootUUIDs": [
+                    "string"
+                  ],
+                  "Scope": "string",
+                  "Slug": "string",
+                  "UUID": "string"
                 }
               ]
             },
             "OutputMessage": {
+              "Acls": [
+                {
+                  "Action": {
+                    "Name": "string",
+                    "Value": "string"
+                  },
+                  "ID": "string",
+                  "NodeID": "string",
+                  "RoleID": "string",
+                  "WorkspaceID": "string"
+                }
+              ],
               "Activities": [
                 {
                   "accuracy": "[Unknown Type number]",
@@ -1839,6 +2243,7 @@ Response Type /definitions/jobsPutJobResponse
                     {
                       "Path": "string",
                       "WsLabel": "string",
+                      "WsSlug": "string",
                       "WsUuid": "string"
                     }
                   ],
@@ -1879,6 +2284,31 @@ Response Type /definitions/jobsPutJobResponse
                   "StringBody": "string",
                   "Success": true,
                   "Time": 10
+                }
+              ],
+              "Roles": [
+                {
+                  "AutoApplies": [
+                    "string"
+                  ],
+                  "ForceOverride": true,
+                  "GroupRole": true,
+                  "IsTeam": true,
+                  "Label": "string",
+                  "LastUpdated": 10,
+                  "Policies": [
+                    {
+                      "Action": "string",
+                      "Effect": "string",
+                      "JsonConditions": "string",
+                      "Resource": "string",
+                      "Subject": "string",
+                      "id": "string"
+                    }
+                  ],
+                  "PoliciesContextEditable": true,
+                  "UserRole": true,
+                  "Uuid": "string"
                 }
               ],
               "Users": [
@@ -1927,6 +2357,32 @@ Response Type /definitions/jobsPutJobResponse
                     }
                   ],
                   "Uuid": "string"
+                }
+              ],
+              "Workspaces": [
+                {
+                  "Attributes": "string",
+                  "Description": "string",
+                  "Label": "string",
+                  "LastUpdated": 10,
+                  "Policies": [
+                    {
+                      "Action": "string",
+                      "Effect": "string",
+                      "JsonConditions": "string",
+                      "Resource": "string",
+                      "Subject": "string",
+                      "id": "string"
+                    }
+                  ],
+                  "PoliciesContextEditable": true,
+                  "RootNodes": {},
+                  "RootUUIDs": [
+                    "string"
+                  ],
+                  "Scope": "string",
+                  "Slug": "string",
+                  "UUID": "string"
                 }
               ]
             }
@@ -2024,4 +2480,4 @@ Response Type /definitions/jobsPutJobResponse
 
 
 
-###### Auto generated by Pydio Cells Enterprise Distribution v2.0.9 on 11-Jun-2020
+###### Auto generated by Pydio Cells Enterprise Distribution v2.1.0-rc0 on 17-Jun-2020
