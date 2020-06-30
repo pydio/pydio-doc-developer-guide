@@ -37,14 +37,9 @@ Available Commands:
   mv          Move and/or rename nodes on the server
   rm          Trash files or folders
   scp         Copy files from/to Cells
-  storage     DataSources commands
-  version     Show current version of this application (and some utils)
-
-Flags:
-  -c, --config string   Path to the configuration file
-  -h, --help            help for cec
-
-Use "cec [command] --help" for more information about a command.
+  storage     DataSources management commands
+  update      Check for available updates and apply them
+  version     Show Cells Client version information
 ```
 
 ### Example
