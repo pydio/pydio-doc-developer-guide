@@ -1,0 +1,4 @@
+title: "PUT /a/scheduler/templates/jobs/{Name}"
+menu: "PUT /a/scheduler/templates/jobs/{Name}"
+language: und
+menu_name: menu-dev-guide-v7

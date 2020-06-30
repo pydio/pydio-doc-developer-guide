@@ -1,0 +1,4 @@
+title: "GET /a/config/scheduler/actions/{ActionName}"
+menu: "GET /a/config/scheduler/actions/{ActionName}"
+language: und
+menu_name: menu-dev-guide-v7
