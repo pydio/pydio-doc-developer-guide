@@ -52,6 +52,8 @@ Response Type /definitions/restUserJobsCollection
       "Actions": [
         {
           "ActionOutputFilter": {
+            "Description": "string",
+            "Label": "string",
             "Query": {
               "Limit": "string",
               "Offset": "string",
@@ -72,10 +74,14 @@ Response Type /definitions/restUserJobsCollection
               "groupBy": 10
             }
           },
+          "BreakAfter": true,
+          "Bypass": true,
           "ChainedActions": [
             "[Recursive structure]"
           ],
           "ContextMetaFilter": {
+            "Description": "string",
+            "Label": "string",
             "Query": {
               "Limit": "string",
               "Offset": "string",
@@ -105,6 +111,8 @@ Response Type /definitions/restUserJobsCollection
           "IdmFilter": {
             "All": true,
             "Collect": true,
+            "Description": "string",
+            "Label": "string",
             "Query": {
               "Limit": "string",
               "Offset": "string",
@@ -129,6 +137,8 @@ Response Type /definitions/restUserJobsCollection
           "IdmSelector": {
             "All": true,
             "Collect": true,
+            "Description": "string",
+            "Label": "string",
             "Query": {
               "Limit": "string",
               "Offset": "string",
@@ -154,6 +164,8 @@ Response Type /definitions/restUserJobsCollection
           "NodesFilter": {
             "All": true,
             "Collect": true,
+            "Description": "string",
+            "Label": "string",
             "Pathes": [
               "string"
             ],
@@ -180,6 +192,8 @@ Response Type /definitions/restUserJobsCollection
           "NodesSelector": {
             "All": true,
             "Collect": true,
+            "Description": "string",
+            "Label": "string",
             "Pathes": [
               "string"
             ],
@@ -207,6 +221,8 @@ Response Type /definitions/restUserJobsCollection
           "UsersFilter": {
             "All": true,
             "Collect": true,
+            "Description": "string",
+            "Label": "string",
             "Query": {
               "Limit": "string",
               "Offset": "string",
@@ -232,6 +248,7 @@ Response Type /definitions/restUserJobsCollection
                 "GroupLabel": "string",
                 "GroupPath": "string",
                 "IsGroup": true,
+                "LastConnected": 10,
                 "Login": "string",
                 "OldPassword": "string",
                 "Password": "string",
@@ -278,6 +295,8 @@ Response Type /definitions/restUserJobsCollection
           "UsersSelector": {
             "All": true,
             "Collect": true,
+            "Description": "string",
+            "Label": "string",
             "Query": {
               "Limit": "string",
               "Offset": "string",
@@ -303,6 +322,7 @@ Response Type /definitions/restUserJobsCollection
                 "GroupLabel": "string",
                 "GroupPath": "string",
                 "IsGroup": true,
+                "LastConnected": 10,
                 "Login": "string",
                 "OldPassword": "string",
                 "Password": "string",
@@ -351,6 +371,8 @@ Response Type /definitions/restUserJobsCollection
       "AutoClean": true,
       "AutoStart": true,
       "ContextMetaFilter": {
+        "Description": "string",
+        "Label": "string",
         "Query": {
           "Limit": "string",
           "Offset": "string",
@@ -372,6 +394,7 @@ Response Type /definitions/restUserJobsCollection
         },
         "Type": "string"
       },
+      "Custom": true,
       "EventNames": [
         "string"
       ],
@@ -379,6 +402,8 @@ Response Type /definitions/restUserJobsCollection
       "IdmFilter": {
         "All": true,
         "Collect": true,
+        "Description": "string",
+        "Label": "string",
         "Query": {
           "Limit": "string",
           "Offset": "string",
@@ -409,6 +434,8 @@ Response Type /definitions/restUserJobsCollection
       "NodeEventFilter": {
         "All": true,
         "Collect": true,
+        "Description": "string",
+        "Label": "string",
         "Pathes": [
           "string"
         ],
@@ -453,6 +480,8 @@ Response Type /definitions/restUserJobsCollection
             {
               "Action": {
                 "ActionOutputFilter": {
+                  "Description": "string",
+                  "Label": "string",
                   "Query": {
                     "Limit": "string",
                     "Offset": "string",
@@ -473,10 +502,14 @@ Response Type /definitions/restUserJobsCollection
                     "groupBy": 10
                   }
                 },
+                "BreakAfter": true,
+                "Bypass": true,
                 "ChainedActions": [
                   "[Recursive structure]"
                 ],
                 "ContextMetaFilter": {
+                  "Description": "string",
+                  "Label": "string",
                   "Query": {
                     "Limit": "string",
                     "Offset": "string",
@@ -506,6 +539,8 @@ Response Type /definitions/restUserJobsCollection
                 "IdmFilter": {
                   "All": true,
                   "Collect": true,
+                  "Description": "string",
+                  "Label": "string",
                   "Query": {
                     "Limit": "string",
                     "Offset": "string",
@@ -530,6 +565,8 @@ Response Type /definitions/restUserJobsCollection
                 "IdmSelector": {
                   "All": true,
                   "Collect": true,
+                  "Description": "string",
+                  "Label": "string",
                   "Query": {
                     "Limit": "string",
                     "Offset": "string",
@@ -555,6 +592,8 @@ Response Type /definitions/restUserJobsCollection
                 "NodesFilter": {
                   "All": true,
                   "Collect": true,
+                  "Description": "string",
+                  "Label": "string",
                   "Pathes": [
                     "string"
                   ],
@@ -581,6 +620,8 @@ Response Type /definitions/restUserJobsCollection
                 "NodesSelector": {
                   "All": true,
                   "Collect": true,
+                  "Description": "string",
+                  "Label": "string",
                   "Pathes": [
                     "string"
                   ],
@@ -608,6 +649,8 @@ Response Type /definitions/restUserJobsCollection
                 "UsersFilter": {
                   "All": true,
                   "Collect": true,
+                  "Description": "string",
+                  "Label": "string",
                   "Query": {
                     "Limit": "string",
                     "Offset": "string",
@@ -633,6 +676,7 @@ Response Type /definitions/restUserJobsCollection
                       "GroupLabel": "string",
                       "GroupPath": "string",
                       "IsGroup": true,
+                      "LastConnected": 10,
                       "Login": "string",
                       "OldPassword": "string",
                       "Password": "string",
@@ -679,6 +723,8 @@ Response Type /definitions/restUserJobsCollection
                 "UsersSelector": {
                   "All": true,
                   "Collect": true,
+                  "Description": "string",
+                  "Label": "string",
                   "Query": {
                     "Limit": "string",
                     "Offset": "string",
@@ -704,6 +750,7 @@ Response Type /definitions/restUserJobsCollection
                       "GroupLabel": "string",
                       "GroupPath": "string",
                       "IsGroup": true,
+                      "LastConnected": 10,
                       "Login": "string",
                       "OldPassword": "string",
                       "Password": "string",
@@ -912,6 +959,7 @@ Response Type /definitions/restUserJobsCollection
                     "GroupLabel": "string",
                     "GroupPath": "string",
                     "IsGroup": true,
+                    "LastConnected": 10,
                     "Login": "string",
                     "OldPassword": "string",
                     "Password": "string",
@@ -1145,6 +1193,7 @@ Response Type /definitions/restUserJobsCollection
                     "GroupLabel": "string",
                     "GroupPath": "string",
                     "IsGroup": true,
+                    "LastConnected": 10,
                     "Login": "string",
                     "OldPassword": "string",
                     "Password": "string",
@@ -1233,6 +1282,8 @@ Response Type /definitions/restUserJobsCollection
       "UserEventFilter": {
         "All": true,
         "Collect": true,
+        "Description": "string",
+        "Label": "string",
         "Query": {
           "Limit": "string",
           "Offset": "string",
@@ -1258,6 +1309,7 @@ Response Type /definitions/restUserJobsCollection
             "GroupLabel": "string",
             "GroupPath": "string",
             "IsGroup": true,
+            "LastConnected": 10,
             "Login": "string",
             "OldPassword": "string",
             "Password": "string",
@@ -1309,4 +1361,4 @@ Response Type /definitions/restUserJobsCollection
 
 
 
-###### Auto generated by Pydio Cells Enterprise Distribution v2.1.9 on 18-Nov-2020
+###### Auto generated by Pydio Cells Enterprise Distribution v2.2.0-rc1 on 3-Dec-2020

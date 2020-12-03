@@ -52,42 +52,44 @@ Launch the installation process
 ### Options
 
 ```
-      --bind string            Internal URL:PORT on which the main proxy will bind. Self-signed SSL will be used by default
-      --exit_after_install     Simply exits main process after the installation is done
-      --external string        External PROTOCOL:URL:PORT exposed to the outside
+      --bind string            Internal URL:PORT on which the main proxy will bind. Self-signed SSL will be used by default [$CELLS_BIND]
+      --cli                    Do not prompt for install mode, use CLI mode by default [$CELLS_INSTALL_CLI]
+      --exit_after_install     Simply exits main process after the installation is done [$CELLS_EXIT_AFTER_INSTALL]
+      --external string        External PROTOCOL:URL:PORT exposed to the outside [$CELLS_EXTERNAL]
   -h, --help                   help for install
-      --json string            Points toward a configuration in JSON format
-      --le_agree               Accept Let's Encrypt EULA
-      --le_email string        Contact e-mail for Let's Encrypt provided certificate
-      --le_staging             Rather use staging CA entry point
-      --no_tls                 Configure the main gateway to rather use plain HTTP
-      --tls_cert_file string   TLS cert file path
-      --tls_key_file string    TLS key file path
-      --yaml string            Points toward a configuration in YAML format
+      --json string            Points toward a configuration in JSON format [$CELLS_INSTALL_JSON]
+      --le_agree               Accept Let's Encrypt EULA [$CELLS_LE_AGREE]
+      --le_email string        Contact e-mail for Let's Encrypt provided certificate [$CELLS_LE_EMAIL]
+      --le_staging             Rather use staging CA entry point [$CELLS_LE_STAGING]
+      --no_tls                 Configure the main gateway to rather use plain HTTP [$CELLS_NO_TLS]
+      --tls_cert_file string   TLS cert file path [$CELLS_TLS_CERT_FILE]
+      --tls_key_file string    TLS key file path [$CELLS_TLS_KEY_FILE]
+      --yaml string            Points toward a configuration in YAML format [$CELLS_INSTALL_YAML]
 ```
 
 ### Options inherited from parent commands
 
 ```
-      --broker string                     Pub/sub service for events between services (currently nats only) (default "nats")
-      --broker_address string             Broker port (default ":4222")
-      --enable_metrics                    Instrument code to expose internal metrics
-      --enable_pprof                      Enable pprof remote debugging
-      --fork                              Used internally by application when forking processes
-      --grpc_cert string                  Certificates used for communication via grpc
-      --grpc_external string              External port exposed for gRPC (may be fixed if no SSL is configured or a reverse proxy is used)
-      --grpc_key string                   Certificates used for communication via grpc
-      --log string                        Sets the log level mode (default "info")
-      --registry string                   Registry used to manage services (currently nats only) (default "nats")
-      --registry_address string           Registry connection address (default ":4222")
-      --registry_cluster_address string   Registry cluster address
-      --registry_cluster_routes string    Registry cluster routes
-      --transport string                  Transport protocol for RPC (default "grpc")
-      --transport_address string          Transport protocol port (default ":4222")
+      --broker string                     Pub/sub service for events between services (currently nats only) [$CELLS_BROKER] (default "nats")
+      --broker_address string             Broker port [$CELLS_BROKER_ADDRESS] (default ":4222")
+      --config string                     Config [$CELLS_CONFIG] (default "local")
+      --enable_metrics                    Instrument code to expose internal metrics [$CELLS_ENABLE_METRICS]
+      --enable_pprof                      Enable pprof remote debugging [$CELLS_ENABLE_PPROF]
+      --fork                              Used internally by application when forking processes [$CELLS_IS_FORK]
+      --grpc_cert string                  Certificates used for communication via grpc [$CELLS_GRPC_CERT]
+      --grpc_external string              External port exposed for gRPC (may be fixed if no SSL is configured or a reverse proxy is used) [$CELLS_GRPC_EXTERNAL]
+      --grpc_key string                   Certificates used for communication via grpc [$CELLS_GRPC_KEY]
+      --log string                        Sets the log level mode [$CELLS_LOGS_LEVEL] (default "info")
+      --registry string                   Registry used to manage services (currently nats only) [$CELLS_REGISTRY] (default "nats")
+      --registry_address string           Registry connection address [$CELLS_REGISTRY_ADDRESS] (default ":4222")
+      --registry_cluster_address string   Registry cluster address [$CELLS_REGISTRY_CLUSTER_ADDRESS]
+      --registry_cluster_routes string    Registry cluster routes [$CELLS_REGISTRY_CLUSTER_ROUTES]
+      --transport string                  Transport protocol for RPC [$CELLS_TRANSPORT] (default "grpc")
+      --transport_address string          Transport protocol port [$CELLS_TRANSPORT_ADDRESS] (default ":4222")
 ```
 
 ### SEE ALSO
 
 * [./cells-enterprise](./cells-enterprise)	 - Secure File Sharing for business
 
-###### Auto generated by Pydio Cells Enterprise Distribution v2.1.9 on 18-Nov-2020
+###### Auto generated by Pydio Cells Enterprise Distribution v2.2.0-rc1 on 3-Dec-2020
