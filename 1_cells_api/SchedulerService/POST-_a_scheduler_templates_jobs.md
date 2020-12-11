@@ -29,8 +29,6 @@ Response Type /definitions/entListJobTemplatesResponse
       "Actions": [
         {
           "ActionOutputFilter": {
-            "Description": "string",
-            "Label": "string",
             "Query": {
               "Limit": "string",
               "Offset": "string",
@@ -51,14 +49,10 @@ Response Type /definitions/entListJobTemplatesResponse
               "groupBy": 10
             }
           },
-          "BreakAfter": true,
-          "Bypass": true,
           "ChainedActions": [
             "[Recursive structure]"
           ],
           "ContextMetaFilter": {
-            "Description": "string",
-            "Label": "string",
             "Query": {
               "Limit": "string",
               "Offset": "string",
@@ -88,8 +82,6 @@ Response Type /definitions/entListJobTemplatesResponse
           "IdmFilter": {
             "All": true,
             "Collect": true,
-            "Description": "string",
-            "Label": "string",
             "Query": {
               "Limit": "string",
               "Offset": "string",
@@ -114,8 +106,6 @@ Response Type /definitions/entListJobTemplatesResponse
           "IdmSelector": {
             "All": true,
             "Collect": true,
-            "Description": "string",
-            "Label": "string",
             "Query": {
               "Limit": "string",
               "Offset": "string",
@@ -141,8 +131,6 @@ Response Type /definitions/entListJobTemplatesResponse
           "NodesFilter": {
             "All": true,
             "Collect": true,
-            "Description": "string",
-            "Label": "string",
             "Pathes": [
               "string"
             ],
@@ -169,8 +157,6 @@ Response Type /definitions/entListJobTemplatesResponse
           "NodesSelector": {
             "All": true,
             "Collect": true,
-            "Description": "string",
-            "Label": "string",
             "Pathes": [
               "string"
             ],
@@ -198,8 +184,6 @@ Response Type /definitions/entListJobTemplatesResponse
           "UsersFilter": {
             "All": true,
             "Collect": true,
-            "Description": "string",
-            "Label": "string",
             "Query": {
               "Limit": "string",
               "Offset": "string",
@@ -225,7 +209,6 @@ Response Type /definitions/entListJobTemplatesResponse
                 "GroupLabel": "string",
                 "GroupPath": "string",
                 "IsGroup": true,
-                "LastConnected": 10,
                 "Login": "string",
                 "OldPassword": "string",
                 "Password": "string",
@@ -272,8 +255,6 @@ Response Type /definitions/entListJobTemplatesResponse
           "UsersSelector": {
             "All": true,
             "Collect": true,
-            "Description": "string",
-            "Label": "string",
             "Query": {
               "Limit": "string",
               "Offset": "string",
@@ -299,7 +280,6 @@ Response Type /definitions/entListJobTemplatesResponse
                 "GroupLabel": "string",
                 "GroupPath": "string",
                 "IsGroup": true,
-                "LastConnected": 10,
                 "Login": "string",
                 "OldPassword": "string",
                 "Password": "string",
@@ -348,8 +328,6 @@ Response Type /definitions/entListJobTemplatesResponse
       "AutoClean": true,
       "AutoStart": true,
       "ContextMetaFilter": {
-        "Description": "string",
-        "Label": "string",
         "Query": {
           "Limit": "string",
           "Offset": "string",
@@ -371,7 +349,6 @@ Response Type /definitions/entListJobTemplatesResponse
         },
         "Type": "string"
       },
-      "Custom": true,
       "EventNames": [
         "string"
       ],
@@ -379,8 +356,6 @@ Response Type /definitions/entListJobTemplatesResponse
       "IdmFilter": {
         "All": true,
         "Collect": true,
-        "Description": "string",
-        "Label": "string",
         "Query": {
           "Limit": "string",
           "Offset": "string",
@@ -411,8 +386,6 @@ Response Type /definitions/entListJobTemplatesResponse
       "NodeEventFilter": {
         "All": true,
         "Collect": true,
-        "Description": "string",
-        "Label": "string",
         "Pathes": [
           "string"
         ],
@@ -457,8 +430,6 @@ Response Type /definitions/entListJobTemplatesResponse
             {
               "Action": {
                 "ActionOutputFilter": {
-                  "Description": "string",
-                  "Label": "string",
                   "Query": {
                     "Limit": "string",
                     "Offset": "string",
@@ -479,14 +450,10 @@ Response Type /definitions/entListJobTemplatesResponse
                     "groupBy": 10
                   }
                 },
-                "BreakAfter": true,
-                "Bypass": true,
                 "ChainedActions": [
                   "[Recursive structure]"
                 ],
                 "ContextMetaFilter": {
-                  "Description": "string",
-                  "Label": "string",
                   "Query": {
                     "Limit": "string",
                     "Offset": "string",
@@ -516,8 +483,6 @@ Response Type /definitions/entListJobTemplatesResponse
                 "IdmFilter": {
                   "All": true,
                   "Collect": true,
-                  "Description": "string",
-                  "Label": "string",
                   "Query": {
                     "Limit": "string",
                     "Offset": "string",
@@ -542,8 +507,6 @@ Response Type /definitions/entListJobTemplatesResponse
                 "IdmSelector": {
                   "All": true,
                   "Collect": true,
-                  "Description": "string",
-                  "Label": "string",
                   "Query": {
                     "Limit": "string",
                     "Offset": "string",
@@ -569,8 +532,6 @@ Response Type /definitions/entListJobTemplatesResponse
                 "NodesFilter": {
                   "All": true,
                   "Collect": true,
-                  "Description": "string",
-                  "Label": "string",
                   "Pathes": [
                     "string"
                   ],
@@ -597,8 +558,6 @@ Response Type /definitions/entListJobTemplatesResponse
                 "NodesSelector": {
                   "All": true,
                   "Collect": true,
-                  "Description": "string",
-                  "Label": "string",
                   "Pathes": [
                     "string"
                   ],
@@ -626,8 +585,6 @@ Response Type /definitions/entListJobTemplatesResponse
                 "UsersFilter": {
                   "All": true,
                   "Collect": true,
-                  "Description": "string",
-                  "Label": "string",
                   "Query": {
                     "Limit": "string",
                     "Offset": "string",
@@ -653,7 +610,6 @@ Response Type /definitions/entListJobTemplatesResponse
                       "GroupLabel": "string",
                       "GroupPath": "string",
                       "IsGroup": true,
-                      "LastConnected": 10,
                       "Login": "string",
                       "OldPassword": "string",
                       "Password": "string",
@@ -700,8 +656,6 @@ Response Type /definitions/entListJobTemplatesResponse
                 "UsersSelector": {
                   "All": true,
                   "Collect": true,
-                  "Description": "string",
-                  "Label": "string",
                   "Query": {
                     "Limit": "string",
                     "Offset": "string",
@@ -727,7 +681,6 @@ Response Type /definitions/entListJobTemplatesResponse
                       "GroupLabel": "string",
                       "GroupPath": "string",
                       "IsGroup": true,
-                      "LastConnected": 10,
                       "Login": "string",
                       "OldPassword": "string",
                       "Password": "string",
@@ -936,7 +889,6 @@ Response Type /definitions/entListJobTemplatesResponse
                     "GroupLabel": "string",
                     "GroupPath": "string",
                     "IsGroup": true,
-                    "LastConnected": 10,
                     "Login": "string",
                     "OldPassword": "string",
                     "Password": "string",
@@ -1170,7 +1122,6 @@ Response Type /definitions/entListJobTemplatesResponse
                     "GroupLabel": "string",
                     "GroupPath": "string",
                     "IsGroup": true,
-                    "LastConnected": 10,
                     "Login": "string",
                     "OldPassword": "string",
                     "Password": "string",
@@ -1259,8 +1210,6 @@ Response Type /definitions/entListJobTemplatesResponse
       "UserEventFilter": {
         "All": true,
         "Collect": true,
-        "Description": "string",
-        "Label": "string",
         "Query": {
           "Limit": "string",
           "Offset": "string",
@@ -1286,7 +1235,6 @@ Response Type /definitions/entListJobTemplatesResponse
             "GroupLabel": "string",
             "GroupPath": "string",
             "IsGroup": true,
-            "LastConnected": 10,
             "Login": "string",
             "OldPassword": "string",
             "Password": "string",
@@ -1338,4 +1286,4 @@ Response Type /definitions/entListJobTemplatesResponse
 
 
 
-###### Auto generated by Pydio Cells Enterprise Distribution v2.2.0-rc1 on 3-Dec-2020
+###### Auto generated by Pydio Cells Enterprise Distribution v2.1.10 on 11-Dec-2020
