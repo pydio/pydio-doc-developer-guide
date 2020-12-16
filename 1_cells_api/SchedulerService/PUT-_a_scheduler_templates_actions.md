@@ -22,6 +22,8 @@ Name | Description | Type | Required
   "Template": {
     "Action": {
       "ActionOutputFilter": {
+        "Description": "string",
+        "Label": "string",
         "Query": {
           "Limit": "string",
           "Offset": "string",
@@ -42,10 +44,14 @@ Name | Description | Type | Required
           "groupBy": 10
         }
       },
+      "BreakAfter": true,
+      "Bypass": true,
       "ChainedActions": [
         "[Recursive structure]"
       ],
       "ContextMetaFilter": {
+        "Description": "string",
+        "Label": "string",
         "Query": {
           "Limit": "string",
           "Offset": "string",
@@ -75,6 +81,8 @@ Name | Description | Type | Required
       "IdmFilter": {
         "All": true,
         "Collect": true,
+        "Description": "string",
+        "Label": "string",
         "Query": {
           "Limit": "string",
           "Offset": "string",
@@ -99,6 +107,8 @@ Name | Description | Type | Required
       "IdmSelector": {
         "All": true,
         "Collect": true,
+        "Description": "string",
+        "Label": "string",
         "Query": {
           "Limit": "string",
           "Offset": "string",
@@ -124,6 +134,8 @@ Name | Description | Type | Required
       "NodesFilter": {
         "All": true,
         "Collect": true,
+        "Description": "string",
+        "Label": "string",
         "Pathes": [
           "string"
         ],
@@ -150,6 +162,8 @@ Name | Description | Type | Required
       "NodesSelector": {
         "All": true,
         "Collect": true,
+        "Description": "string",
+        "Label": "string",
         "Pathes": [
           "string"
         ],
@@ -177,6 +191,8 @@ Name | Description | Type | Required
       "UsersFilter": {
         "All": true,
         "Collect": true,
+        "Description": "string",
+        "Label": "string",
         "Query": {
           "Limit": "string",
           "Offset": "string",
@@ -202,6 +218,7 @@ Name | Description | Type | Required
             "GroupLabel": "string",
             "GroupPath": "string",
             "IsGroup": true,
+            "LastConnected": 10,
             "Login": "string",
             "OldPassword": "string",
             "Password": "string",
@@ -248,6 +265,8 @@ Name | Description | Type | Required
       "UsersSelector": {
         "All": true,
         "Collect": true,
+        "Description": "string",
+        "Label": "string",
         "Query": {
           "Limit": "string",
           "Offset": "string",
@@ -273,6 +292,7 @@ Name | Description | Type | Required
             "GroupLabel": "string",
             "GroupPath": "string",
             "IsGroup": true,
+            "LastConnected": 10,
             "Login": "string",
             "OldPassword": "string",
             "Password": "string",
@@ -335,6 +355,8 @@ Response Type /definitions/entPutActionTemplateResponse
   "Template": {
     "Action": {
       "ActionOutputFilter": {
+        "Description": "string",
+        "Label": "string",
         "Query": {
           "Limit": "string",
           "Offset": "string",
@@ -355,10 +377,14 @@ Response Type /definitions/entPutActionTemplateResponse
           "groupBy": 10
         }
       },
+      "BreakAfter": true,
+      "Bypass": true,
       "ChainedActions": [
         "[Recursive structure]"
       ],
       "ContextMetaFilter": {
+        "Description": "string",
+        "Label": "string",
         "Query": {
           "Limit": "string",
           "Offset": "string",
@@ -388,6 +414,8 @@ Response Type /definitions/entPutActionTemplateResponse
       "IdmFilter": {
         "All": true,
         "Collect": true,
+        "Description": "string",
+        "Label": "string",
         "Query": {
           "Limit": "string",
           "Offset": "string",
@@ -412,6 +440,8 @@ Response Type /definitions/entPutActionTemplateResponse
       "IdmSelector": {
         "All": true,
         "Collect": true,
+        "Description": "string",
+        "Label": "string",
         "Query": {
           "Limit": "string",
           "Offset": "string",
@@ -437,6 +467,8 @@ Response Type /definitions/entPutActionTemplateResponse
       "NodesFilter": {
         "All": true,
         "Collect": true,
+        "Description": "string",
+        "Label": "string",
         "Pathes": [
           "string"
         ],
@@ -463,6 +495,8 @@ Response Type /definitions/entPutActionTemplateResponse
       "NodesSelector": {
         "All": true,
         "Collect": true,
+        "Description": "string",
+        "Label": "string",
         "Pathes": [
           "string"
         ],
@@ -490,6 +524,8 @@ Response Type /definitions/entPutActionTemplateResponse
       "UsersFilter": {
         "All": true,
         "Collect": true,
+        "Description": "string",
+        "Label": "string",
         "Query": {
           "Limit": "string",
           "Offset": "string",
@@ -515,6 +551,7 @@ Response Type /definitions/entPutActionTemplateResponse
             "GroupLabel": "string",
             "GroupPath": "string",
             "IsGroup": true,
+            "LastConnected": 10,
             "Login": "string",
             "OldPassword": "string",
             "Password": "string",
@@ -561,6 +598,8 @@ Response Type /definitions/entPutActionTemplateResponse
       "UsersSelector": {
         "All": true,
         "Collect": true,
+        "Description": "string",
+        "Label": "string",
         "Query": {
           "Limit": "string",
           "Offset": "string",
@@ -586,6 +625,7 @@ Response Type /definitions/entPutActionTemplateResponse
             "GroupLabel": "string",
             "GroupPath": "string",
             "IsGroup": true,
+            "LastConnected": 10,
             "Login": "string",
             "OldPassword": "string",
             "Password": "string",
@@ -638,4 +678,4 @@ Response Type /definitions/entPutActionTemplateResponse
 
 
 
-###### Auto generated by Pydio Cells Enterprise Distribution v2.1.11 on 15-Dec-2020
+###### Auto generated by Pydio Cells Enterprise Distribution v2.2.0-rc2 on 16-Dec-2020
