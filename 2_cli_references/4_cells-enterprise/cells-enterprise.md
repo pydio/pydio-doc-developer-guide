@@ -4,45 +4,47 @@ Secure File Sharing for business
 
 ### Synopsis
 
-Thank you for using Pydio Cells.
-Comprehensive sync & share solution for your collaborators. Open-source software deployed on-premise or in a private cloud.
 
-### Installation
+DESCRIPTION
 
-For the very first run, use './cells-enterprise install' to load browser-based or command-line based installation wizard. Services
-will start at the end of the installation.
+  Cells is a comprehensive sync & share solution for your collaborators. 
+  Open-source software deployed on-premise or in a private cloud.
 
-### Run
+CONFIGURE
 
-Run './cells-enterprise start' to load all services.
+  For the very first run, use './cells-enterprise configure' to load browser-based or command-line based installation wizard. 
+  Services will start at the end of the installation.
 
-### Logs level
+RUN
 
-By default, logs are outputted in console format at the Info level. You can set the --log flag or set the PYDIO_LOGS_LEVEL environment
-variable to one of the following values:
- - debug, info, error : logs are written in console format with the according level
- - production : logs are written in json format, for usage with a log aggregator tool.
+  Run '$ ./cells-enterprise start' to load all services.
 
-### Services Discovery
+WORKING DIRECTORIES
 
-Micro services need a registry mechanism to discover each other. You don't need to install any dependency.
-Cells currently only supports NATS (nats.io) implementation. If a gnatsd service is already running, it will be detected.
+  By default, application data is stored under the standard OS application dir : 
+  
+   - Linux: ${USER_HOME}/.config/pydio/cells
+   - Darwin: ${USER_HOME}/Library/Application Support/Pydio/cells
+   - Windows: ${USER_HOME}/ApplicationData/Roaming/Pydio/cells
 
-### Cells working directories
+  You can customize the various storage locations with the following ENV variables : 
+  
+   - CELLS_WORKING_DIR : replace the whole standard application dir
+   - CELLS_DATA_DIR : replace the location for storing default datasources (default CELLS_WORKING_DIR/data)
+   - CELLS_LOG_DIR : replace the location for storing logs (default CELLS_WORKING_DIR/logs)
+   - CELLS_SERVICES_DIR : replace location for services-specific data (default CELLS_WORKING_DIR/services) 
 
-By default, application data is stored under the standard OS application dir : 
+LOGS LEVEL
 
- - Linux: ${USER_HOME}/.config/pydio/cells
- - Darwin: ${USER_HOME}/Library/Application Support/Pydio/cells
- - Windows: ${USER_HOME}/ApplicationData/Roaming/Pydio/cells
+  By default, logs are outputted in console format at the Info level. You can set the --log flag or set the 
+  CELLS_LOGS_LEVEL environment variable to one of the following values:
+   - debug, info, error : logs are written in console format with the according level
+   - production : logs are written in json format, for usage with a log aggregator tool.
 
-You can customize the various storage locations with the following ENV variables : 
+SERVICES DISCOVERY
 
- - CELLS_WORKING_DIR : replace the whole standard application dir
- - CELLS_DATA_DIR : replace the location for storing default datasources (default CELLS_WORKING_DIR/data)
- - CELLS_LOG_DIR : replace the location for storing logs (default CELLS_WORKING_DIR/logs)
- - CELLS_SERVICES_DIR : replace location for services-specific data (default CELLS_WORKING_DIR/services) 
-
+  Microservices need a registry mechanism to discover each other. Cells ships and starts its own NATS (nats.io) 
+  implementation, unless a 'gnatsd' service is already running, in which case it will be detected.
 
 
 ```
@@ -52,41 +54,17 @@ You can customize the various storage locations with the following ENV variables
 ### Options
 
 ```
-      --broker string                     Pub/sub service for events between services (currently nats only) [$CELLS_BROKER] (default "nats")
-      --broker_address string             Broker port [$CELLS_BROKER_ADDRESS] (default ":4222")
-      --config string                     Config [$CELLS_CONFIG] (default "local")
-      --enable_metrics                    Instrument code to expose internal metrics [$CELLS_ENABLE_METRICS]
-      --enable_pprof                      Enable pprof remote debugging [$CELLS_ENABLE_PPROF]
-      --fork                              Used internally by application when forking processes [$CELLS_IS_FORK]
-      --grpc_cert string                  Certificates used for communication via grpc [$CELLS_GRPC_CERT]
-      --grpc_external string              External port exposed for gRPC (may be fixed if no SSL is configured or a reverse proxy is used) [$CELLS_GRPC_EXTERNAL]
-      --grpc_key string                   Certificates used for communication via grpc [$CELLS_GRPC_KEY]
-  -h, --help                              help for ./cells-enterprise
-      --log string                        Sets the log level mode [$CELLS_LOGS_LEVEL] (default "info")
-      --registry string                   Registry used to manage services (currently nats only) [$CELLS_REGISTRY] (default "nats")
-      --registry_address string           Registry connection address [$CELLS_REGISTRY_ADDRESS] (default ":4222")
-      --registry_cluster_address string   Registry cluster address [$CELLS_REGISTRY_CLUSTER_ADDRESS]
-      --registry_cluster_routes string    Registry cluster routes [$CELLS_REGISTRY_CLUSTER_ROUTES]
-      --transport string                  Transport protocol for RPC [$CELLS_TRANSPORT] (default "grpc")
-      --transport_address string          Transport protocol port [$CELLS_TRANSPORT_ADDRESS] (default ":4222")
+  -h, --help   help for ./cells-enterprise
 ```
 
 ### SEE ALSO
 
-* [./cells-enterprise acl](./cells-enterprise-acl)	 - Manage access control lists
-* [./cells-enterprise clean-recycle](./cells-enterprise-clean-recycle)	 - Creates and sends a job to clean all the recycle bins
-* [./cells-enterprise completion](./cells-enterprise-completion)	 - Add auto-completion helper to Cells
-* [./cells-enterprise config](./cells-enterprise-config)	 - Configuration manager
-* [./cells-enterprise data](./cells-enterprise-data)	 - Directly interact with a datasource
-* [./cells-enterprise dl-meta](./cells-enterprise-dl-meta)	 - Creates and sends a job to put a metadata tag on download and move inside an archive
-* [./cells-enterprise doc](./cells-enterprise-doc)	 - Manage documentation about Cells and this CLI tool
-* [./cells-enterprise files](./cells-enterprise-files)	 - Directly manage files and metadata on the nodes
-* [./cells-enterprise install](./cells-enterprise-install)	 - Launch the installation process
+* [./cells-enterprise admin](./cells-enterprise-admin)	 - Direct Read/Write access to Cells data
+* [./cells-enterprise configure](./cells-enterprise-configure)	 - Setup required configurations
 * [./cells-enterprise ps](./cells-enterprise-ps)	 - List all available services and their statuses
-* [./cells-enterprise start](./cells-enterprise-start)	 - Start Cells services
-* [./cells-enterprise stop](./cells-enterprise-stop)	 - Stop one or more services
+* [./cells-enterprise start](./cells-enterprise-start)	 - Start one or more services
+* [./cells-enterprise tools](./cells-enterprise-tools)	 - Additional tools
 * [./cells-enterprise update](./cells-enterprise-update)	 - Check for available updates and apply them
-* [./cells-enterprise user](./cells-enterprise-user)	 - Manage users
-* [./cells-enterprise version](./cells-enterprise-version)	 - Show Pydio Cells version information
+* [./cells-enterprise version](./cells-enterprise-version)	 - Show binary current version information
 
-###### Auto generated by Pydio Cells Enterprise Distribution v2.2.0-rc2 on 21-Dec-2020
+###### Auto generated by Pydio Cells Enterprise Distribution v2.2.0-rc3 on 14-Jan-2021

@@ -1,30 +1,42 @@
 ## ./cells-enterprise start
 
-Start Cells services
+Start one or more services
 
 ### Synopsis
 
-Start one or more services on this machine
 
-### Syntax
+DESCRIPTION
 
-$ ./cells-enterprise start [flags] args...
+  Start one or more services on this machine. 
+  $ ./cells-enterprise start [flags] args...
 
-Additional arguments are regexp that can match any of the service names available (see 'list' command).
-The -t/--tags flag may limit to only a certain category of services, use lowercase like broker, idm, data, etc...
-The -x/--exclude flag may exclude one or more services
-Both flags may be used in conjunction with the regexp arguments.
+  Select specific services with regular expressions in the additional arguments. No arguments will start all services available (see 'ps' command). 
+   - The -t/--tags flag may limit to only a certain category of services, use lowercase like broker, idm, data, etc...  
+   - The -x/--exclude flag may exclude one or more services
+  Both flags may be used in conjunction with the regexp arguments.
 
-### Examples
+REQUIREMENTS
+  
+  Ulimit: set a number of allowed open files greater or equal to 2048.
+  For production use, a minimum of 8192 is recommended (see ulimit -n).
 
-Start only services starting with grpc
-$ ./cells-enterprise start pydio.grpc
+  Setcap: if you intend to bind the server to standard http ports (80, 443), 
+  you must grant necessary permissions on cells binary with this command:
+  $ sudo setcap 'cap_net_bind_service=+ep' <path to your binary>    
 
-Start only services for scheduler
-$ ./cells-enterprise start --tag=scheduler
+EXAMPLES
 
-Start whole plateform except the roles service
-$ ./cells-enterprise start --exclude=pydio.grpc.idm.roles
+  1. Start all Cells services
+  $ ./cells-enterprise start
+
+  2. Start only services starting with grpc
+  $ ./cells-enterprise start pydio.grpc
+
+  3. Start only services for scheduler
+  $ ./cells-enterprise start --tag=scheduler
+
+  4. Start whole plateform except the roles service
+  $ ./cells-enterprise start --exclude=pydio.grpc.idm.roles
 
 
 
@@ -35,35 +47,35 @@ $ ./cells-enterprise start --exclude=pydio.grpc.idm.roles
 ### Options
 
 ```
-  -x, --exclude stringArray   Filter
-      --healthcheck int       Healthcheck port number
-  -h, --help                  help for start
-  -t, --tags stringArray      Filter by tags
+      --broker string                     Pub/sub service for events between services (currently nats only) (default "nats")
+      --broker_address string             Broker port (default ":4222")
+      --enable_metrics                    Instrument code to expose internal metrics
+      --enable_pprof                      Enable pprof remote debugging
+  -x, --exclude stringArray               Filter
+      --fork                              Used internally by application when forking processes
+      --grpc_cert string                  Certificates used for communication via grpc
+      --grpc_external string              External port exposed for gRPC (may be fixed if no SSL is configured or a reverse proxy is used)
+      --grpc_key string                   Certificates used for communication via grpc
+      --healthcheck int                   Healthcheck port number
+  -h, --help                              help for start
+      --log string                        Sets the log level mode (default "info")
+      --nats_monitor_port int             Expose nats monitoring endpoints on a given port
+      --registry string                   Registry used to manage services (currently nats only) (default "nats")
+      --registry_address string           Registry connection address (default ":4222")
+      --registry_cluster_address string   Registry cluster address
+      --registry_cluster_routes string    Registry cluster routes
+  -t, --tags stringArray                  Filter by tags
+      --transport string                  Transport protocol for RPC (default "grpc")
+      --transport_address string          Transport protocol port (default ":4222")
 ```
 
 ### Options inherited from parent commands
 
 ```
-      --broker string                     Pub/sub service for events between services (currently nats only) [$CELLS_BROKER] (default "nats")
-      --broker_address string             Broker port [$CELLS_BROKER_ADDRESS] (default ":4222")
-      --config string                     Config [$CELLS_CONFIG] (default "local")
-      --enable_metrics                    Instrument code to expose internal metrics [$CELLS_ENABLE_METRICS]
-      --enable_pprof                      Enable pprof remote debugging [$CELLS_ENABLE_PPROF]
-      --fork                              Used internally by application when forking processes [$CELLS_IS_FORK]
-      --grpc_cert string                  Certificates used for communication via grpc [$CELLS_GRPC_CERT]
-      --grpc_external string              External port exposed for gRPC (may be fixed if no SSL is configured or a reverse proxy is used) [$CELLS_GRPC_EXTERNAL]
-      --grpc_key string                   Certificates used for communication via grpc [$CELLS_GRPC_KEY]
-      --log string                        Sets the log level mode [$CELLS_LOGS_LEVEL] (default "info")
-      --registry string                   Registry used to manage services (currently nats only) [$CELLS_REGISTRY] (default "nats")
-      --registry_address string           Registry connection address [$CELLS_REGISTRY_ADDRESS] (default ":4222")
-      --registry_cluster_address string   Registry cluster address [$CELLS_REGISTRY_CLUSTER_ADDRESS]
-      --registry_cluster_routes string    Registry cluster routes [$CELLS_REGISTRY_CLUSTER_ROUTES]
-      --transport string                  Transport protocol for RPC [$CELLS_TRANSPORT] (default "grpc")
-      --transport_address string          Transport protocol port [$CELLS_TRANSPORT_ADDRESS] (default ":4222")
 ```
 
 ### SEE ALSO
 
 * [./cells-enterprise](./cells-enterprise)	 - Secure File Sharing for business
 
-###### Auto generated by Pydio Cells Enterprise Distribution v2.2.0-rc2 on 21-Dec-2020
+###### Auto generated by Pydio Cells Enterprise Distribution v2.2.0-rc3 on 14-Jan-2021
