@@ -38,7 +38,7 @@ For a fully automatized integration, implementing OAuth2 may be cumbersome and e
 Logged on the Cells server, use the `cells admin user token` command to easily generate an authentication token. Note that Cells must be running on the server.
 
 ```
-charles-mac:cells charles$ ./cells admin user token
+$ ./cells admin user token
 
 DESCRIPTION
 
