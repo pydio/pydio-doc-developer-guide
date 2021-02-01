@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-MENU_NAME="menu-dev-guide-v7"
+MENU_NAME="menu-admin-guide-v6-enterprise"
 CWD=$PWD
 
 echo "# Generating Cells commands docs"
