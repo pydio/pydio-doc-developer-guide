@@ -1,1 +1,0 @@
-Synchronize external directories with Cells database
