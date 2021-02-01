@@ -1,0 +1,2 @@
+This job uses a custom user attribute to detect if it is the first time the user "connects" to a workspace, that is the first
+time it reads any node under a given path in the tree (and in a certain context).

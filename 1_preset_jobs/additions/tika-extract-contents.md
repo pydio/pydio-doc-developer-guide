@@ -1,0 +1,5 @@
+Apache Tika is an independant, open source, content extractor that supports a very wide range of file formats. It can
+even support OCR for extracting text from images. This job sends file contents to Tika and gets the textual information to
+be indexed internally by the Cells search engine. This textual content is stored on Cells side to avoid having to resend file to Tika on re-indexation.
+
+Tika provides also metadata extraction, that can be indexed by Cells search engine as well.

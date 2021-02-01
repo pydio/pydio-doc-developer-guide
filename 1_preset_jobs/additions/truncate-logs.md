@@ -1,0 +1,1 @@
+Housekeeping job to keep logs databases size under control. Can be applied to both pydio.grpc.log (system logs) and pydio.grpc.audit (audit logs) services.
