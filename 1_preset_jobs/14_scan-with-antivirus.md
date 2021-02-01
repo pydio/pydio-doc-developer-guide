@@ -3,11 +3,8 @@ Scan files by sending them to a Clamd server
 
 [:image:1_preset_jobs/capture-scan-with-antivirus.png]
 
-### Trigger(s)
-Event-based
-
-
 ### Parameters
+
 |Name|Type|Default|Mandatory|Description|
 |----|----|-------|---------|-----------|
 |ServerProtocol|select, possible values: tcp (tcp), unix (unix)|tcp|true|Select protocol used to access server.|
@@ -16,4 +13,8 @@ Event-based
 |TagInfected|text|infected|true|Tag file with this value when a virus is detected.|
 |TagFailed|text|scan-failed|false|Tag file when virus detection failed (result is unknown).|
 
+
+
+### Trigger Type
+Event-based
 
