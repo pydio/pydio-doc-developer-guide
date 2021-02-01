@@ -1,0 +1,1 @@
+Diff and merge two configuration stores

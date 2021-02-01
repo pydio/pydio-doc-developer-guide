@@ -1,0 +1,1 @@
+Recursively delete files or folders passed in input

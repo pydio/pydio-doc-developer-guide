@@ -1,0 +1,1 @@
+Blank action for appending selectors, filters, or simply logging the current content of the input message.

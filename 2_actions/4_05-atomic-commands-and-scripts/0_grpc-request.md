@@ -1,0 +1,1 @@
+Perform a valid JSON-encoded call to any micro-service

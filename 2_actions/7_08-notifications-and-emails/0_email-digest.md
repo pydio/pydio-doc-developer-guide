@@ -1,0 +1,1 @@
+Compute a summary of last notifications and send to user

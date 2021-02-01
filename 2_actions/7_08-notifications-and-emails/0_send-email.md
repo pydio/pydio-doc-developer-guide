@@ -1,0 +1,1 @@
+Send an arbitrary email. Make sure to set up a subject, a message and at least one value for email or login recipients.

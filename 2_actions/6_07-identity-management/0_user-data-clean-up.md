@@ -1,0 +1,1 @@
+Clean user data on deletion. Personal resources are moved to folder suffixed with the user UUID.

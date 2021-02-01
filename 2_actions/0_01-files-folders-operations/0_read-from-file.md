@@ -1,0 +1,1 @@
+Read file contents from the node passed as input

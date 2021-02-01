@@ -1,0 +1,1 @@
+Create a message using templates and pass it to the next actions. Templates can use if/else structures to build different output based on the input.

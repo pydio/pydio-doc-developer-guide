@@ -1,0 +1,1 @@
+Diff and merge workspaces from stores

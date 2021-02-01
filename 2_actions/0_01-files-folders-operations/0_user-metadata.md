@@ -1,0 +1,1 @@
+Update user-defined metadata on files/folders. Beware that jsonValue is expected to be a valid JSON, so e.g. even a simple string must be double-quoted.

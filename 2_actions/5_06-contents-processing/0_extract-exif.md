@@ -1,0 +1,1 @@
+Extract EXIF data from jpeg images and store them as indexed metadata

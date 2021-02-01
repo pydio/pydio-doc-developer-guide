@@ -1,0 +1,1 @@
+Trigger a Resync command on a SyncProvider microservice endpoint

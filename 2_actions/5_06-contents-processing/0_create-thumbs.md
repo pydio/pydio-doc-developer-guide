@@ -1,0 +1,1 @@
+Create thumbnails on image creation/modification

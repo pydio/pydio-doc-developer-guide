@@ -1,0 +1,1 @@
+Performs an antivirus scan using ClamAV

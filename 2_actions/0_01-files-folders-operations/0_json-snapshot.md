@@ -1,0 +1,1 @@
+Generate a JSON snapshot of the index, starting at a given path

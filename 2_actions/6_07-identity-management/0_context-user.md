@@ -1,0 +1,1 @@
+Extract current user from request context and add it to message output

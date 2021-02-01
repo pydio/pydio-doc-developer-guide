@@ -1,0 +1,1 @@
+Batch-delete users and groups, based on login or group path. Use one of the parameters.

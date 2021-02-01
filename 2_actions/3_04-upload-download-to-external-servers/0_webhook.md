@@ -1,0 +1,1 @@
+Transfer data input to an external WebHook like IFTTT or Zapier. Build your own Json body using templating and send using GET, PUT or POST request.

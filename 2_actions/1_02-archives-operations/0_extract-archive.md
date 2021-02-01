@@ -1,0 +1,1 @@
+Extract files and folders from a Zip, Tar or Tar.gz archive

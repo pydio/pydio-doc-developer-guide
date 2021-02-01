@@ -1,0 +1,1 @@
+Extract files contents by querying a running Apache Tika server
