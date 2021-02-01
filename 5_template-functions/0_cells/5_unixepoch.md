@@ -1,0 +1,1 @@
+Alias for `asStamp` function

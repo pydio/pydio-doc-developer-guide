@@ -1,0 +1,1 @@
+To check whether a file path is absolute, use `isAbs`.
