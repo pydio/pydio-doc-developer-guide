@@ -1,1 +1,6 @@
-Remove thumbnails associated to deleted images
+
+ Remove thumbnails associated to deleted images
+
+
+
+
