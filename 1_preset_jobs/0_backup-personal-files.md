@@ -1,7 +1,7 @@
 
 Create a compressed archive for each personal files for all users
 
-[:image:1_preset_jobs/backup-personal-files.png]
+[:image:1_preset_jobs/capture-backup-personal-files.png]
 
 ### Trigger(s)
 Scheduled

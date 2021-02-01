@@ -1,7 +1,7 @@
 
 Definitely remove files that were not modified since a given period
 
-[:image:1_preset_jobs/purge-files-older.png]
+[:image:1_preset_jobs/capture-purge-files-older.png]
 
 ### Trigger(s)
 Scheduled

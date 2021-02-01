@@ -1,7 +1,7 @@
 
 Create role automatically based on workspace creation
 
-[:image:1_preset_jobs/role-for-each-workspace.png]
+[:image:1_preset_jobs/capture-role-for-each-workspace.png]
 
 ### Trigger(s)
 Event-based

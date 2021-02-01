@@ -1,7 +1,7 @@
 
 Scan files by sending them to a Clamd server
 
-[:image:1_preset_jobs/scan-with-antivirus.png]
+[:image:1_preset_jobs/capture-scan-with-antivirus.png]
 
 ### Trigger(s)
 Event-based

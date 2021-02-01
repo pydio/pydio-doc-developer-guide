@@ -1,7 +1,7 @@
 
 Clean associated content binary when removing a file
 
-[:image:1_preset_jobs/tika-clean-contents.png]
+[:image:1_preset_jobs/capture-tika-clean-contents.png]
 
 ### Trigger(s)
 Event-based

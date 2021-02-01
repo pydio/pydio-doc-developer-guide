@@ -1,7 +1,7 @@
 
 Fill personal files with data from a template folder
 
-[:image:1_preset_jobs/personal-files-preset.png]
+[:image:1_preset_jobs/capture-personal-files-preset.png]
 
 ### Trigger(s)
 Event-based

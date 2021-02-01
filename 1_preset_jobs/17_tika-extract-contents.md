@@ -1,7 +1,7 @@
 
 Extract and store text contents for indexation
 
-[:image:1_preset_jobs/tika-extract-contents.png]
+[:image:1_preset_jobs/capture-tika-extract-contents.png]
 
 ### Trigger(s)
 Event-based

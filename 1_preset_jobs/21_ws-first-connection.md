@@ -1,7 +1,7 @@
 
 Trigger an action at user first connection to a workspace
 
-[:image:1_preset_jobs/ws-first-connection.png]
+[:image:1_preset_jobs/capture-ws-first-connection.png]
 
 ### Trigger(s)
 Event-based

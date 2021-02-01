@@ -1,7 +1,7 @@
 
 Monitor a specific Tag on files and send an email
 
-[:image:1_preset_jobs/detect-metadata-change.png]
+[:image:1_preset_jobs/capture-detect-metadata-change.png]
 
 ### Trigger(s)
 Event-based

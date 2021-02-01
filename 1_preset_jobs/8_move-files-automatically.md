@@ -1,7 +1,7 @@
 
 When uploaded in A/, automatically move file to B/
 
-[:image:1_preset_jobs/move-files-automatically.png]
+[:image:1_preset_jobs/capture-move-files-automatically.png]
 
 ### Trigger(s)
 Event-based

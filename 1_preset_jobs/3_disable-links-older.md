@@ -1,7 +1,7 @@
 
 Disable links that are older than a given period of time
 
-[:image:1_preset_jobs/disable-links-older.png]
+[:image:1_preset_jobs/capture-disable-links-older.png]
 
 ### Trigger(s)
 Manual

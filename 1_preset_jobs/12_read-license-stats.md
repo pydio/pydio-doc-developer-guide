@@ -1,7 +1,7 @@
 
 Check current license statistics and send alerts
 
-[:image:1_preset_jobs/read-license-stats.png]
+[:image:1_preset_jobs/capture-read-license-stats.png]
 
 ### Trigger(s)
 Manual

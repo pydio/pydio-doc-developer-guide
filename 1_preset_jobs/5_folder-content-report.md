@@ -1,7 +1,7 @@
 
 List folder contents, write a CSV and/or send a markdown email
 
-[:image:1_preset_jobs/folder-content-report.png]
+[:image:1_preset_jobs/capture-folder-content-report.png]
 
 ### Trigger(s)
 Manual

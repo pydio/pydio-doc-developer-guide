@@ -1,7 +1,7 @@
 
 Crawl all files and extract content using Tika
 
-[:image:1_preset_jobs/tika-reindexation.png]
+[:image:1_preset_jobs/capture-tika-reindexation.png]
 
 ### Trigger(s)
 Manual

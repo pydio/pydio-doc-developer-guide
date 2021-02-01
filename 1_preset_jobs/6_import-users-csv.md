@@ -1,7 +1,7 @@
 
 Import users from a CSV file uploaded at a given location
 
-[:image:1_preset_jobs/import-users-csv.png]
+[:image:1_preset_jobs/capture-import-users-csv.png]
 
 ### Trigger(s)
 Event-based

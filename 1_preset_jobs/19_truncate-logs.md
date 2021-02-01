@@ -1,7 +1,7 @@
 
 Truncate log databases to a given size every day at 6AM
 
-[:image:1_preset_jobs/truncate-logs.png]
+[:image:1_preset_jobs/capture-truncate-logs.png]
 
 ### Trigger(s)
 Scheduled

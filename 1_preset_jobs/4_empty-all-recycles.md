@@ -1,7 +1,7 @@
 
 Clear all workspaces recycle bin folders
 
-[:image:1_preset_jobs/empty-all-recycles.png]
+[:image:1_preset_jobs/capture-empty-all-recycles.png]
 
 ### Trigger(s)
 Scheduled

@@ -1,7 +1,7 @@
 
 Query objects service to get statistics about storage
 
-[:image:1_preset_jobs/storage-usage.png]
+[:image:1_preset_jobs/capture-storage-usage.png]
 
 ### Trigger(s)
 Manual
