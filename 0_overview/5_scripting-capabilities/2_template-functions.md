@@ -39,7 +39,7 @@ Extract info from data with gval "jsonpath" feature
 {{.Node | toJsonMap | gval "$[0].Path"}}
 ```
 
-**The exhaustive list of available functions [is available here]('./template-functions).**
+**The exhaustive list of available functions [is available here](./template-functions).**
 
 ## Scripting with Anko
 
