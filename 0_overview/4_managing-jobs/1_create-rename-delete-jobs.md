@@ -6,15 +6,15 @@ There are various methods to create a job, accessible via the "+JOB" button
 
 ### Using Preset Jobs
 
-Pre-defined are carefully crafted by Pydio Team to be easy to use, with predefined parameters and labelling of actions, queries and filters to make the diagram as simple as possible.
+Pre-defined jobs are carefully crafted by Pydio Team to be easy to use, with predefined parameters and nice labelling of actions, queries and filters to make the diagram as simple as possible.
 
-The most common approach to create your own job is to use a start from a Preset and modify it to suit your need.
+The most common approach to create your own job is to start from a Preset and modify it to suit your need.
 
 You can see the whole list of [Preset Jobs here](./preset-jobs).
 
 ### Creating an empty Job
 
-You are guided through the steps required to build the most basically functionnal job:
+If you want to create job from scratch, you will be guided through the steps required to build the most basically functional job:
 
  - Set up a label for the job
  - Choose a trigger type (manual, scheduled, event-based)

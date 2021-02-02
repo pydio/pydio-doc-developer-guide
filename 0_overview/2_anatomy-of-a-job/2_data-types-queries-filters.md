@@ -112,13 +112,14 @@ The following image shows the available Filters that can be used to select data 
 [:image-popup:0_overview/anatomy-filters-types.png]
 
 **Notes** 
-- You must **first connect two actions** to be able to drop a filter on the connector.
- - **a Filter returning no result will stop the current flow**, to avoid launching actions that would do nothing.
+
+ - You must **first connect two actions** to be able to drop a filter on the connector.  
+ - **a Filter returning no result will stop the current flow**, to avoid launching actions that would do nothing.  
  - A Filter can be also **applied directly to an event trigger**. As implied by the previous restriction (stop if empty), this is a best-practice to make sure to launch a job only if filter passes.  
 
 ### Conditional Filtering
 
-As explained above, filters are useful to limit the data that we want to process, but can be also used as simple "show-stoppers": if condition on data is not met, just stop there. In that case, one can want to provide an alternative sequence of actions. Switching a filter to "Conditional" mode will allow you to create "if/else" branches.
+As explained above, filters are useful to limit the data that we want to process, but can be also used as simple "show-stoppers": if condition on data is not met, just stop there. In that case, you may want to provide an alternative sequence of actions. Switching a filter to "Conditional" mode will allow you to create "if/else" branches.
 
 [:image:0_overview/anatomy-conditional.png]
 
@@ -131,8 +132,10 @@ Both Queries and Filters are built in a similar fashion: they are a composition 
 
 Although queries and filters are "typed" components ("Files/Folders" does not offer the same criteria as a "Users"), their "Query Builder" look the same. 
 
-Select/filter all Nodes that are "LEAF" (files) AND not named ".pydio"
-[:image:0_overview/anatomy-filter-and.png]
+ - Select/filter all Nodes that are "LEAF" (files) AND not named ".pydio"
+   [:image:0_overview/anatomy-filter-and.png]
+ 
+ - Select/filter all Nodes that are named "possible1" OR "possible2"
+   [:image:0_overview/anatomy-filter-or.png]
 
-Select/filter all Nodes that are named "possible1" OR "possible2"
-[:image:0_overview/anatomy-filter-or.png]
+See all the available building blocks for creating Queries and Filters [in the dedicated section](./filter-queries).

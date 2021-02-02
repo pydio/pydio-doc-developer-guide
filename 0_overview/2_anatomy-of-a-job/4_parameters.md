@@ -19,9 +19,9 @@ You can define your own set of parameters at the job level.
 
 Defining parameters at the job-level provides many advantages : 
 
- - **Centralize parameters management** and reeuse their values inside Actions, Filters and Queries.
+ - **Centralize parameters management** and reuse their values inside Actions, Filters and Queries.
  - **Parameters are typed** (string, number, boolean, preset list of choices...) to avoid human errors.
- - Manual and scheduled jobs run with the parameters preset values, but the "**Run With Custom Parameters**" option allows to apply specific values for just one specific run. 
+ - Manual and scheduled jobs run with the parameters preset values, but the "**Run With Custom Parameters**" option allows to apply some values for just one specific run. 
 
 Creating or editing parameter is simply done by clicking on the "+" button of the Parameters panel, or the "pencil" icon next to an existing parameter.
 

@@ -2,7 +2,7 @@ Cells Flows Jobs can be started in three ways: reacting to Cells events, based o
 
 ## Event-based Triggers
 
-To create a job that will react to certain events, use Event-based triggers. See the detailed list of triggers in the [reference documentation](./event-based-triggers).
+To create a job that will react to certain events, use Event-based triggers. Image below shows the list of available events.
 
 [:image:0_overview/anatomy-triggers-list-part1.png]
 
@@ -10,7 +10,7 @@ To create a job that will react to certain events, use Event-based triggers. See
 
 ### Combining Multiple Events
 
-A job can be programmed to start based on multiple events (for example jobs are often started on "File Created" or "File Modified" event), but as a rule of thumb make sure to combine only **events of the same type**. As explained in the Data Types section, events will feed their triggering data (e.g. "The modified File", "The user who logged in") in the first action Input, and that action will generally expected a specific data type.
+A job can be programmed to start based on multiple events (for example jobs are often started on "File Created" or "File Modified" event), but as a rule of thumb make sure to combine only **events of the same type**. As explained in the Data Types section, events will feed their triggering data (e.g. "The modified File", "The user who logged in") in the first action Input, and that action will generally expect a specific data type.
 
 [:image:0_overview/anatomy-triggers-events-multiple.png]
 
