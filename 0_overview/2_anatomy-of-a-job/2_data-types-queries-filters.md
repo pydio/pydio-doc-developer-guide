@@ -132,7 +132,7 @@ Both Queries and Filters are built in a similar fashion: they are a composition 
 Although queries and filters are "typed" components ("Files/Folders" does not offer the same criteria as a "Users"), their "Query Builder" look the same. 
 
 Select/filter all Nodes that are "LEAF" (files) AND not named ".pydio"
-[:image:0_overview/anatomy-filter-and]
+[:image:0_overview/anatomy-filter-and.png]
 
 Select/filter all Nodes that are named "possible1" OR "possible2"
-[:image:0_overview/anatomy-filter-or]
+[:image:0_overview/anatomy-filter-or.png]
