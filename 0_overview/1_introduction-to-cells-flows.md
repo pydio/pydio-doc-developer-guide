@@ -1,12 +1,12 @@
-Cells Flows is a drag-n-drop tool that allows you to easily automate tasks on files and folders and on users or permissions in Pydio Cells.
+Cells Flows is a powerful drag-and-drop tool that allows you to easily automate tasks in Pydio Cells.
 
 ## Why should I use Cells Flows? 
 
-As file sharing and content collaboration usage grows inside your company, keeping things under control is an important part of the data administrator day-to-day work: monitoring storage usage, making sure files shared by former employees are not publicly shared, providing on-demand accesses to various collaborators... **All these tedious manual tasks can be replaced by automatic jobs that are triggered in a timely manner or based on various platform events**.
+As file sharing and content collaboration usage grows inside your company, keeping things under control is an important part of the  administrator day-to-day work: monitoring storage usage, making sure any former employees files are not publicly shared, providing on-demand accesses to various collaborators... **All these tedious manual tasks can be replaced by automatic jobs that are triggered in a timely manner or based on various platform events**.
 
 ### Drag-and-drop Interface on top of Cells Internal Scheduler
 
-Cells Scheduler was added in Pydio Cells at day one to provide tasks management for features like Thumbnails Extraction, revoked token pruning, handling mailer queue, etc.  Cells Flows provides a **unique drag-and-drop interface** on top of this mature technology to build, modify and monitor automated jobs in your Cells instance.
+Cells Scheduler was added in Pydio Cells at day one to provide tasks management for features like Thumbnails Extraction, revoked token pruning, handling mailer queue, etc. Cells Flows provides a **unique drag-and-drop interface** on top of this mature technology to build, customize and monitor automated jobs in your Cells instance.
 
 [:image:0_overview/capture-folder-content-report.png]
 
@@ -38,3 +38,5 @@ A **Job** represent the definition of a sequence of **Actions**, basic building 
 When **Trigger** conditions are met (based on events, schedule or when you run manually), a job will launch **Task** with your job-defined **Parameters**, and process all actions and log their results in the **Task Logs**.
 
 [:image:0_overview/tasks-logs.png]
+
+Learn more about the anatomy of a Job to get started quickly in the next section!
