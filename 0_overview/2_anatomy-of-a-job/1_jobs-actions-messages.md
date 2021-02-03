@@ -1,4 +1,8 @@
+## The basic building blocks
+
 Basic building blocks of Cells Flows jobs are **Actions**. They provide a wide range of tools to either process file contents, transform arbitrary data, communicate with external tools or even simply print something to the task log to monitor the good processing of a running task. 
+
+See the [list of available actions](./actions) and get inspired!
 
 ## Chaining Actions
 
