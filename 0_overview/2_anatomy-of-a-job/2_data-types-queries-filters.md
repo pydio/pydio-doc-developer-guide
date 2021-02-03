@@ -125,7 +125,7 @@ As explained above, filters are useful to limit the data that we want to process
 
 ## Advanced Query Builder
 
-Both Queries and Filters are built in a similar fashion: they are a composition of criteria that can be combined using sub-queries that will be applied in together in two possible ways: 
+Both Queries and Filters are built in a similar fashion: they are a composition of criteria that can be combined using sub-queries that will be applied in two possible ways: 
  
  - Condition passes if **all condition are met (AND)**
  - Condition passed if **at least one condition is met (OR)** 
@@ -138,4 +138,4 @@ Although queries and filters are "typed" components ("Files/Folders" does not of
  - Select/filter all Nodes that are named "possible1" OR "possible2"
    [:image:0_overview/anatomy-filter-or.png]
 
-See all the available building blocks for creating Queries and Filters [in the dedicated section](./filter-queries).
+See all the available building blocks for creating Queries and Filters [in the dedicated section](./filters-queries).

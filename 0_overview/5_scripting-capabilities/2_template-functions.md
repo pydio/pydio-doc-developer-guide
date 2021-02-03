@@ -25,24 +25,34 @@ Functions can be successively piped: `{{.DataValue | f1 | f2}}` is equivalent to
 
 ## More examples
 
-Remove spaces in filename
+Replace word occurence then remove spaces from filename:
 ```
-{{.Node.Path | nospace}}
+{{.Node.Path | replace "search word" "replaced word" | nospace}}
 ```
-Assuming .ModifSince is -60h (minus 60 hours), compute real date in unix timestamp format:
+Display file size in a human readable format (e.g. 56MB):
 ```
-{{now | date_modify .ModifSince | asStamp}}
+{{.Node.Size | toString | humanBytes }}
 ```
 
-Extract info from data with gval "jsonpath" feature
+Compute a timestamp representing "yesterday at the same time":
+```
+{{now | date_modify "-24h" | asStamp}}
+```
+
+Extract info from data with `gval` "jsonpath" feature:
 ```
 {{.Node | toJsonMap | gval "$[0].Path"}}
 ```
 
+Using `gval` to compute a percentage and compare it to a threshold value. Here the LastOutput contains a json struct with storage statistics:
+```
+{{gval "$[0].Stats.Free / $[0].Stats.Total * 100 > $[1]" .LastOutput.JsonAsValue.Map .JobParameters.Threshold}}
+```
+
 **The exhaustive list of available functions [is available here](./template-functions).**
 
-## Scripting with Anko
+## Advanced scripting with Anko
 
-When Golang templating is not enough, you might want to write very advanced scripts to parse specific values, create ACLs or other things like that.
+When Golang templating is not enough, you might want to write complex scripts to parse specific values, create ACLs or other things like that. [Anko Script](./anko-script) action provides a pseudo-go language to perform such advanced data transformation. 
 
-A dedicated action called Anko Script gives you this feature. 
+Detailed documentation is not yet available for this scripting language, please contact us if you need to write your own action!
