@@ -1,35 +1,30 @@
-## ./cells admin config delete
+## ./cells admin config history
 
-Delete a configuration item
+Show the history of all configuration changes
 
 ### Synopsis
 
 
 DESCRIPTION
 
-  Delete a configuration item. It will be removed both from the pydio.json file and from the database.
+  View all changes ever made to the configuration and revert to a given version if necessary.
 
-SYNTAX
-
-  Configuration Item is represented by two parameters that you must pass as arguments:
-  - serviceName: name of the corresponding service
-  - configName: name of the parameter you want to delete
-
-EXAMPLE
-
-  Delete the port entry for the micro.web service (rest api)
-  $ ./cells config delete micro.web port
-
+  A version is created at each call to config.Save() inside the application, along with a log message
+  and the user originating this call.
 
 
 ```
-./cells admin config delete [flags]
+./cells admin config history [flags]
 ```
 
 ### Options
 
 ```
-  -h, --help   help for delete
+      --cat string       Print the JSON content of the config for this version
+      --diff string      Display a Diff between two versions, either by providing VERSION1:VERSION2 or just VERSION1 (will be compared to previous one)
+      --file string      Point to a specific DB file instead of default
+  -h, --help             help for history
+      --restore string   Restore configuration to this specific version
 ```
 
 ### Options inherited from parent commands
