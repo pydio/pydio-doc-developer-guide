@@ -6,6 +6,8 @@ Latest binaries can be downloaded from here:
 - [Cec MacOSX](https://download.pydio.com/latest/cells-client/release/{latest}/darwin-amd64/cec) 
 - [Cec Windows](https://download.pydio.com/latest/cells-client/release/{latest}/windows-amd64/cec.exe). 
 
+**For more details on how to use the cells-client check our [knowledge base](./kb/client-applications/using-cells-command-line-tool)**
+
 ### Authentication
 
 As with other API consumers, you first need to authenticate the cec against the server. This is done by using the following command 
@@ -13,6 +15,7 @@ As with other API consumers, you first need to authenticate the cec against the 
 ```
 ./cec configure
 ```
+
 If you are on a desktop-based computer, a browser will be opened and once the authentication is finished, the application will automatically exchange the authorization code and save the authentication token. Otherwise, an URL is displayed in the console, that you must copy and paste to a browser to be able to manually get the authorization code.
 
 If possible, depending on the OS and the available underlying libraries, the Authentication Token is stored in the local user Keyring. Also, it is automatically refreshed using the Refresh Token.
