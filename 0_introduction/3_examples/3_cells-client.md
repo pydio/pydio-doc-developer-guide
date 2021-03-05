@@ -20,7 +20,7 @@ If you are on a desktop-based computer, a browser will be opened and once the au
 
 If possible, depending on the OS and the available underlying libraries, the Authentication Token is stored in the local user Keyring. Also, it is automatically refreshed using the Refresh Token.
 
-_Note: OAuth2 support starts with Cells v2.0. If you are still using an earlier version (you should not!), use `cec configure client-auth` command instead to use the OAuth2 Grant Type Password workflow._
+_There is also the Personal Access token generated once on the server side making the authentication process non interactive._
 
 ### Usage
 
