@@ -103,7 +103,7 @@ Using Postman, you can use this URL to interact with this object. In order to be
 
 [:image:0_introduction/postman/postman_s3_get.png]
 
-Then using the appropriate HTTP method, you can : 
+Then using the appropriate HTTP method, you can:
 
 - **GET** download this file
 - **PUT** upload data inside this file
