@@ -1,4 +1,4 @@
-Cells Client (a.k.a `cec`) is a dedicated tool that packages authentication and file operations into an easy-to-use binary. 
+Cells Client (a.k.a `cec`) is a dedicated tool that packages authentication and file operations into an easy-to-use binary.
 
 Latest binaries can be downloaded from here:
 
@@ -6,7 +6,7 @@ Latest binaries can be downloaded from here:
 - [Cec MacOSX](https://download.pydio.com/latest/cells-client/release/{latest}/darwin-amd64/cec)
 - [Cec Windows](https://download.pydio.com/latest/cells-client/release/{latest}/windows-amd64/cec.exe)
 
-**For more details on how to use the cells-client check our [knowledge base](/kb/client-applications/using-cells-command-line-tool)**
+**For more details on how to use the cells-client check our [knowledge base](../kb/client-applications/using-cells-command-line-tool)**
 
 ### Authentication
 
