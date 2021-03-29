@@ -1,11 +1,5 @@
 title: "Cells Client"
-abstract: "How to use the 'cec' command to talk to your Cells server from the command line"
+menu: "Cells Client"
+menu_name: menu-dev-guide-v7
 language: und
-category: Client Applications
-tags:
-  - cli
-  - cec
-  - cells-client
-  - client
-  - developer
-  - automation 
+weight: 0
