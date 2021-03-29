@@ -1,4 +1,4 @@
-Postman is a powerful client side application that can be use to debug and test communication with a server over TCP. See [GetPostman.com](https://www.getpostman.com/) to download the application.
+Postman is a powerful client side application that can be used to debug and test communication with a server over TCP. See [GetPostman.com](https://www.getpostman.com/) to download the application.
 
 ## OAuth 2
 

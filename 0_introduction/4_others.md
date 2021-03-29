@@ -17,7 +17,7 @@ Currently only used by the CellsSync client, a dedicated gRPC gateway provides a
 
 Depending on the TLS configuration:
 
-- If TLS is enabled, gRPC is exposed at the same URL as your Cells server (root serves both HTTP/1.1 and HTTP/2).
+- If TLS is enabled, **gRPC is exposed at the same URL as your Cells server** (root serves both HTTP/1.1 and HTTP/2).
 - If TLS is not enabled, or gRPC is forced to use an alternative port using the PYDIO_GRPC_EXTERNAL environment variable, this gateway is exposed on a dedicated port. This port is exposed in the /a/config/discovery API endpoint response.
 
 ### WebSocket

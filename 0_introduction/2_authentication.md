@@ -18,7 +18,6 @@ Cells provides the following endpoints for standard OIDC / OAuth2 operations
 | OAuth2 Auth URL        | http(s)://your-cells.com/oidc/oauth2/auth                    |
 | OAuth2 Token URL       | http(s)://your-cells.com/oidc/oauth2/token                   |
 
-
 **OAuth2 Default Clients**
 
 As any OAuth2 provider, Cells require clients to be registered before they can connect. The server ships with 3 default clients respectively for Sync, Mobile, and CellsClient applications. The latest is a good choice if you wish to use the APIs.
@@ -37,7 +36,7 @@ For a fully automatized integration, implementing OAuth2 may be cumbersome and e
 
 Logged on the Cells server, use the `cells admin user token` command to easily generate an authentication token. Note that Cells must be running on the server.
 
-```
+```sh
 $ ./cells admin user token
 
 DESCRIPTION
@@ -80,4 +79,3 @@ Flags:
   -u, --user string     User login (mandatory)
 
 ```
-

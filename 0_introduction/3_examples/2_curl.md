@@ -44,7 +44,7 @@ TOKEN_ENDPOINT=`curl --silent $DOMAIN/oidc/.well-known/openid-configuration | jq
 
 This will open a browser window if you have a default browser setup. If you don't, then echo and copy and paste this url in your preferred browser
 
-```
+```sh
 open "$AUTHORIZATION_ENDPOINT?response_type=code&client_id=cells-curl&cells_secret=password&redirect_uri=$DOMAIN/oauth2/oob&state=12345678"
 ```
 
@@ -52,7 +52,7 @@ Copy the code generated in the clipboard
 
 ### Exchange the code for an access token
 
-```
+```sh
 CODE=<paste here>
 ACCESS_TOKEN=`curl --silent -u "cells-curl:password" -X POST -d "grant_type=authorization_code&code=$CODE&redirect_uri=$DOMAIN/oauth2/oob" $TOKEN_ENDPOINT | jq --raw-output '.access_token'`
 ```
@@ -61,7 +61,7 @@ ACCESS_TOKEN=`curl --silent -u "cells-curl:password" -X POST -d "grant_type=auth
 
 Below is a sample API call using the Authorization header with the Access Token you have previously retrieved.
 
-```
+```sh
 curl -H "Authorization: Bearer $ACCESS_TOKEN" $DOMAIN/a/config/ctl
 ```
 
