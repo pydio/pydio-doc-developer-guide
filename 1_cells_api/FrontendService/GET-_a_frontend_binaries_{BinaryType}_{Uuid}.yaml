@@ -1,0 +1,4 @@
+title: "GET /a/frontend/binaries/{BinaryType}/{Uuid}"
+menu: "GET /a/frontend/binaries/{BinaryType}/{Uuid}"
+language: und
+menu_name: menu-dev-guide-v7

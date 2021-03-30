@@ -1,0 +1,4 @@
+title: "DELETE /a/scheduler/templates/jobs/{Name}"
+menu: "DELETE /a/scheduler/templates/jobs/{Name}"
+language: und
+menu_name: menu-dev-guide-v7

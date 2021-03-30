@@ -1,0 +1,4 @@
+title: "GET /a/frontend/messages/{Lang}"
+menu: "GET /a/frontend/messages/{Lang}"
+language: und
+menu_name: menu-dev-guide-v7
