@@ -74,6 +74,58 @@ Name | Description | Type | Required
           },
           "Type": "string"
         },
+        "DataSourceFilter": {
+          "All": true,
+          "Collect": true,
+          "Description": "string",
+          "Label": "string",
+          "Query": {
+            "Limit": "string",
+            "Offset": "string",
+            "Operation": "string",
+            "ResourcePolicyQuery": {
+              "Any": true,
+              "Empty": true,
+              "Subjects": [
+                "string"
+              ]
+            },
+            "SubQueries": [
+              {
+                "type_url": "string",
+                "value": "string"
+              }
+            ],
+            "groupBy": 10
+          },
+          "Type": "string"
+        },
+        "DataSourceSelector": {
+          "All": true,
+          "Collect": true,
+          "Description": "string",
+          "Label": "string",
+          "Query": {
+            "Limit": "string",
+            "Offset": "string",
+            "Operation": "string",
+            "ResourcePolicyQuery": {
+              "Any": true,
+              "Empty": true,
+              "Subjects": [
+                "string"
+              ]
+            },
+            "SubQueries": [
+              {
+                "type_url": "string",
+                "value": "string"
+              }
+            ],
+            "groupBy": 10
+          },
+          "Type": "string"
+        },
         "Description": "string",
         "FailedFilterActions": [
           "[Recursive structure]"
@@ -189,6 +241,29 @@ Name | Description | Type | Required
           }
         },
         "Parameters": {},
+        "TriggerFilter": {
+          "Description": "string",
+          "Label": "string",
+          "Query": {
+            "Limit": "string",
+            "Offset": "string",
+            "Operation": "string",
+            "ResourcePolicyQuery": {
+              "Any": true,
+              "Empty": true,
+              "Subjects": [
+                "string"
+              ]
+            },
+            "SubQueries": [
+              {
+                "type_url": "string",
+                "value": "string"
+              }
+            ],
+            "groupBy": 10
+          }
+        },
         "UsersFilter": {
           "All": true,
           "Collect": true,
@@ -366,6 +441,32 @@ Name | Description | Type | Required
       "Type": "string"
     },
     "Custom": true,
+    "DataSourceFilter": {
+      "All": true,
+      "Collect": true,
+      "Description": "string",
+      "Label": "string",
+      "Query": {
+        "Limit": "string",
+        "Offset": "string",
+        "Operation": "string",
+        "ResourcePolicyQuery": {
+          "Any": true,
+          "Empty": true,
+          "Subjects": [
+            "string"
+          ]
+        },
+        "SubQueries": [
+          {
+            "type_url": "string",
+            "value": "string"
+          }
+        ],
+        "groupBy": 10
+      },
+      "Type": "string"
+    },
     "EventNames": [
       "string"
     ],
@@ -441,6 +542,12 @@ Name | Description | Type | Required
         "Value": "string"
       }
     ],
+    "ResourcesDependencies": [
+      {
+        "type_url": "string",
+        "value": "string"
+      }
+    ],
     "Schedule": {
       "Iso8601MinDelta": "string",
       "Iso8601Schedule": "string"
@@ -479,6 +586,58 @@ Name | Description | Type | Required
                 "[Recursive structure]"
               ],
               "ContextMetaFilter": {
+                "Description": "string",
+                "Label": "string",
+                "Query": {
+                  "Limit": "string",
+                  "Offset": "string",
+                  "Operation": "string",
+                  "ResourcePolicyQuery": {
+                    "Any": true,
+                    "Empty": true,
+                    "Subjects": [
+                      "string"
+                    ]
+                  },
+                  "SubQueries": [
+                    {
+                      "type_url": "string",
+                      "value": "string"
+                    }
+                  ],
+                  "groupBy": 10
+                },
+                "Type": "string"
+              },
+              "DataSourceFilter": {
+                "All": true,
+                "Collect": true,
+                "Description": "string",
+                "Label": "string",
+                "Query": {
+                  "Limit": "string",
+                  "Offset": "string",
+                  "Operation": "string",
+                  "ResourcePolicyQuery": {
+                    "Any": true,
+                    "Empty": true,
+                    "Subjects": [
+                      "string"
+                    ]
+                  },
+                  "SubQueries": [
+                    {
+                      "type_url": "string",
+                      "value": "string"
+                    }
+                  ],
+                  "groupBy": 10
+                },
+                "Type": "string"
+              },
+              "DataSourceSelector": {
+                "All": true,
+                "Collect": true,
                 "Description": "string",
                 "Label": "string",
                 "Query": {
@@ -617,6 +776,29 @@ Name | Description | Type | Required
                 }
               },
               "Parameters": {},
+              "TriggerFilter": {
+                "Description": "string",
+                "Label": "string",
+                "Query": {
+                  "Limit": "string",
+                  "Offset": "string",
+                  "Operation": "string",
+                  "ResourcePolicyQuery": {
+                    "Any": true,
+                    "Empty": true,
+                    "Subjects": [
+                      "string"
+                    ]
+                  },
+                  "SubQueries": [
+                    {
+                      "type_url": "string",
+                      "value": "string"
+                    }
+                  ],
+                  "groupBy": 10
+                }
+              },
               "UsersFilter": {
                 "All": true,
                 "Collect": true,
@@ -817,6 +999,7 @@ Name | Description | Type | Required
                   "latitude": "[Unknown Type number]",
                   "location": "[Recursive structure]",
                   "longitude": "[Unknown Type number]",
+                  "markdown": "string",
                   "mediaType": "string",
                   "name": "string",
                   "next": "[Recursive structure]",
@@ -844,6 +1027,31 @@ Name | Description | Type | Required
                   "updated": "string",
                   "url": "[Recursive structure]",
                   "width": 10
+                }
+              ],
+              "DataSources": [
+                {
+                  "ApiKey": "string",
+                  "ApiSecret": "string",
+                  "CreationDate": 10,
+                  "Disabled": true,
+                  "EncryptionKey": "string",
+                  "EncryptionMode": "string",
+                  "FlatStorage": true,
+                  "LastSynchronizationDate": 10,
+                  "Name": "string",
+                  "ObjectsBaseFolder": "string",
+                  "ObjectsBucket": "string",
+                  "ObjectsHost": "string",
+                  "ObjectsPort": 10,
+                  "ObjectsSecure": true,
+                  "ObjectsServiceName": "string",
+                  "PeerAddress": "string",
+                  "SkipSyncOnRestart": true,
+                  "StorageConfiguration": {},
+                  "StorageType": "string",
+                  "VersioningPolicyName": "string",
+                  "Watch": true
                 }
               ],
               "Event": {
@@ -1018,6 +1226,7 @@ Name | Description | Type | Required
                   "latitude": "[Unknown Type number]",
                   "location": "[Recursive structure]",
                   "longitude": "[Unknown Type number]",
+                  "markdown": "string",
                   "mediaType": "string",
                   "name": "string",
                   "next": "[Recursive structure]",
@@ -1045,6 +1254,31 @@ Name | Description | Type | Required
                   "updated": "string",
                   "url": "[Recursive structure]",
                   "width": 10
+                }
+              ],
+              "DataSources": [
+                {
+                  "ApiKey": "string",
+                  "ApiSecret": "string",
+                  "CreationDate": 10,
+                  "Disabled": true,
+                  "EncryptionKey": "string",
+                  "EncryptionMode": "string",
+                  "FlatStorage": true,
+                  "LastSynchronizationDate": 10,
+                  "Name": "string",
+                  "ObjectsBaseFolder": "string",
+                  "ObjectsBucket": "string",
+                  "ObjectsHost": "string",
+                  "ObjectsPort": 10,
+                  "ObjectsSecure": true,
+                  "ObjectsServiceName": "string",
+                  "PeerAddress": "string",
+                  "SkipSyncOnRestart": true,
+                  "StorageConfiguration": {},
+                  "StorageType": "string",
+                  "VersioningPolicyName": "string",
+                  "Watch": true
                 }
               ],
               "Event": {
@@ -1327,6 +1561,58 @@ Response Type /definitions/jobsPutJobResponse
           },
           "Type": "string"
         },
+        "DataSourceFilter": {
+          "All": true,
+          "Collect": true,
+          "Description": "string",
+          "Label": "string",
+          "Query": {
+            "Limit": "string",
+            "Offset": "string",
+            "Operation": "string",
+            "ResourcePolicyQuery": {
+              "Any": true,
+              "Empty": true,
+              "Subjects": [
+                "string"
+              ]
+            },
+            "SubQueries": [
+              {
+                "type_url": "string",
+                "value": "string"
+              }
+            ],
+            "groupBy": 10
+          },
+          "Type": "string"
+        },
+        "DataSourceSelector": {
+          "All": true,
+          "Collect": true,
+          "Description": "string",
+          "Label": "string",
+          "Query": {
+            "Limit": "string",
+            "Offset": "string",
+            "Operation": "string",
+            "ResourcePolicyQuery": {
+              "Any": true,
+              "Empty": true,
+              "Subjects": [
+                "string"
+              ]
+            },
+            "SubQueries": [
+              {
+                "type_url": "string",
+                "value": "string"
+              }
+            ],
+            "groupBy": 10
+          },
+          "Type": "string"
+        },
         "Description": "string",
         "FailedFilterActions": [
           "[Recursive structure]"
@@ -1442,6 +1728,29 @@ Response Type /definitions/jobsPutJobResponse
           }
         },
         "Parameters": {},
+        "TriggerFilter": {
+          "Description": "string",
+          "Label": "string",
+          "Query": {
+            "Limit": "string",
+            "Offset": "string",
+            "Operation": "string",
+            "ResourcePolicyQuery": {
+              "Any": true,
+              "Empty": true,
+              "Subjects": [
+                "string"
+              ]
+            },
+            "SubQueries": [
+              {
+                "type_url": "string",
+                "value": "string"
+              }
+            ],
+            "groupBy": 10
+          }
+        },
         "UsersFilter": {
           "All": true,
           "Collect": true,
@@ -1619,6 +1928,32 @@ Response Type /definitions/jobsPutJobResponse
       "Type": "string"
     },
     "Custom": true,
+    "DataSourceFilter": {
+      "All": true,
+      "Collect": true,
+      "Description": "string",
+      "Label": "string",
+      "Query": {
+        "Limit": "string",
+        "Offset": "string",
+        "Operation": "string",
+        "ResourcePolicyQuery": {
+          "Any": true,
+          "Empty": true,
+          "Subjects": [
+            "string"
+          ]
+        },
+        "SubQueries": [
+          {
+            "type_url": "string",
+            "value": "string"
+          }
+        ],
+        "groupBy": 10
+      },
+      "Type": "string"
+    },
     "EventNames": [
       "string"
     ],
@@ -1694,6 +2029,12 @@ Response Type /definitions/jobsPutJobResponse
         "Value": "string"
       }
     ],
+    "ResourcesDependencies": [
+      {
+        "type_url": "string",
+        "value": "string"
+      }
+    ],
     "Schedule": {
       "Iso8601MinDelta": "string",
       "Iso8601Schedule": "string"
@@ -1732,6 +2073,58 @@ Response Type /definitions/jobsPutJobResponse
                 "[Recursive structure]"
               ],
               "ContextMetaFilter": {
+                "Description": "string",
+                "Label": "string",
+                "Query": {
+                  "Limit": "string",
+                  "Offset": "string",
+                  "Operation": "string",
+                  "ResourcePolicyQuery": {
+                    "Any": true,
+                    "Empty": true,
+                    "Subjects": [
+                      "string"
+                    ]
+                  },
+                  "SubQueries": [
+                    {
+                      "type_url": "string",
+                      "value": "string"
+                    }
+                  ],
+                  "groupBy": 10
+                },
+                "Type": "string"
+              },
+              "DataSourceFilter": {
+                "All": true,
+                "Collect": true,
+                "Description": "string",
+                "Label": "string",
+                "Query": {
+                  "Limit": "string",
+                  "Offset": "string",
+                  "Operation": "string",
+                  "ResourcePolicyQuery": {
+                    "Any": true,
+                    "Empty": true,
+                    "Subjects": [
+                      "string"
+                    ]
+                  },
+                  "SubQueries": [
+                    {
+                      "type_url": "string",
+                      "value": "string"
+                    }
+                  ],
+                  "groupBy": 10
+                },
+                "Type": "string"
+              },
+              "DataSourceSelector": {
+                "All": true,
+                "Collect": true,
                 "Description": "string",
                 "Label": "string",
                 "Query": {
@@ -1870,6 +2263,29 @@ Response Type /definitions/jobsPutJobResponse
                 }
               },
               "Parameters": {},
+              "TriggerFilter": {
+                "Description": "string",
+                "Label": "string",
+                "Query": {
+                  "Limit": "string",
+                  "Offset": "string",
+                  "Operation": "string",
+                  "ResourcePolicyQuery": {
+                    "Any": true,
+                    "Empty": true,
+                    "Subjects": [
+                      "string"
+                    ]
+                  },
+                  "SubQueries": [
+                    {
+                      "type_url": "string",
+                      "value": "string"
+                    }
+                  ],
+                  "groupBy": 10
+                }
+              },
               "UsersFilter": {
                 "All": true,
                 "Collect": true,
@@ -2070,6 +2486,7 @@ Response Type /definitions/jobsPutJobResponse
                   "latitude": "[Unknown Type number]",
                   "location": "[Recursive structure]",
                   "longitude": "[Unknown Type number]",
+                  "markdown": "string",
                   "mediaType": "string",
                   "name": "string",
                   "next": "[Recursive structure]",
@@ -2099,6 +2516,31 @@ Response Type /definitions/jobsPutJobResponse
                   "width": 10
                 }
               ],
+              "DataSources": [
+                {
+                  "ApiKey": "string",
+                  "ApiSecret": "string",
+                  "CreationDate": 10,
+                  "Disabled": true,
+                  "EncryptionKey": "string",
+                  "EncryptionMode": "string",
+                  "FlatStorage": true,
+                  "LastSynchronizationDate": 10,
+                  "Name": "string",
+                  "ObjectsBaseFolder": "string",
+                  "ObjectsBucket": "string",
+                  "ObjectsHost": "string",
+                  "ObjectsPort": 10,
+                  "ObjectsSecure": true,
+                  "ObjectsServiceName": "string",
+                  "PeerAddress": "string",
+                  "SkipSyncOnRestart": true,
+                  "StorageConfiguration": {},
+                  "StorageType": "string",
+                  "VersioningPolicyName": "string",
+                  "Watch": true
+                }
+              ],
               "Event": {
                 "type_url": "string",
                 "value": "string"
@@ -2109,6 +2551,7 @@ Response Type /definitions/jobsPutJobResponse
                     {
                       "Path": "string",
                       "WsLabel": "string",
+                      "WsScope": "string",
                       "WsSlug": "string",
                       "WsUuid": "string"
                     }
@@ -2125,6 +2568,7 @@ Response Type /definitions/jobsPutJobResponse
                         "Target": "[Recursive structure]",
                         "Type": "string"
                       },
+                      "Location": "[Recursive structure]",
                       "MTime": "string",
                       "OwnerUuid": "string",
                       "Size": "string",
@@ -2304,6 +2748,7 @@ Response Type /definitions/jobsPutJobResponse
                   "latitude": "[Unknown Type number]",
                   "location": "[Recursive structure]",
                   "longitude": "[Unknown Type number]",
+                  "markdown": "string",
                   "mediaType": "string",
                   "name": "string",
                   "next": "[Recursive structure]",
@@ -2333,6 +2778,31 @@ Response Type /definitions/jobsPutJobResponse
                   "width": 10
                 }
               ],
+              "DataSources": [
+                {
+                  "ApiKey": "string",
+                  "ApiSecret": "string",
+                  "CreationDate": 10,
+                  "Disabled": true,
+                  "EncryptionKey": "string",
+                  "EncryptionMode": "string",
+                  "FlatStorage": true,
+                  "LastSynchronizationDate": 10,
+                  "Name": "string",
+                  "ObjectsBaseFolder": "string",
+                  "ObjectsBucket": "string",
+                  "ObjectsHost": "string",
+                  "ObjectsPort": 10,
+                  "ObjectsSecure": true,
+                  "ObjectsServiceName": "string",
+                  "PeerAddress": "string",
+                  "SkipSyncOnRestart": true,
+                  "StorageConfiguration": {},
+                  "StorageType": "string",
+                  "VersioningPolicyName": "string",
+                  "Watch": true
+                }
+              ],
               "Event": {
                 "type_url": "string",
                 "value": "string"
@@ -2343,6 +2813,7 @@ Response Type /definitions/jobsPutJobResponse
                     {
                       "Path": "string",
                       "WsLabel": "string",
+                      "WsScope": "string",
                       "WsSlug": "string",
                       "WsUuid": "string"
                     }
@@ -2359,6 +2830,7 @@ Response Type /definitions/jobsPutJobResponse
                         "Target": "[Recursive structure]",
                         "Type": "string"
                       },
+                      "Location": "[Recursive structure]",
                       "MTime": "string",
                       "OwnerUuid": "string",
                       "Size": "string",
@@ -2584,4 +3056,4 @@ Response Type /definitions/jobsPutJobResponse
 
 
 
-###### Auto generated by Pydio Cells Enterprise Distribution v2.2.10 on 2-Sep-2021
+###### Auto generated by Pydio Cells Enterprise Distribution v2.3.4 on 9-Sep-2021
