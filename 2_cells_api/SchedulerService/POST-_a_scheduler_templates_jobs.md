@@ -80,58 +80,6 @@ Response Type /definitions/entListJobTemplatesResponse
             },
             "Type": "string"
           },
-          "DataSourceFilter": {
-            "All": true,
-            "Collect": true,
-            "Description": "string",
-            "Label": "string",
-            "Query": {
-              "Limit": "string",
-              "Offset": "string",
-              "Operation": "string",
-              "ResourcePolicyQuery": {
-                "Any": true,
-                "Empty": true,
-                "Subjects": [
-                  "string"
-                ]
-              },
-              "SubQueries": [
-                {
-                  "type_url": "string",
-                  "value": "string"
-                }
-              ],
-              "groupBy": 10
-            },
-            "Type": "string"
-          },
-          "DataSourceSelector": {
-            "All": true,
-            "Collect": true,
-            "Description": "string",
-            "Label": "string",
-            "Query": {
-              "Limit": "string",
-              "Offset": "string",
-              "Operation": "string",
-              "ResourcePolicyQuery": {
-                "Any": true,
-                "Empty": true,
-                "Subjects": [
-                  "string"
-                ]
-              },
-              "SubQueries": [
-                {
-                  "type_url": "string",
-                  "value": "string"
-                }
-              ],
-              "groupBy": 10
-            },
-            "Type": "string"
-          },
           "Description": "string",
           "FailedFilterActions": [
             "[Recursive structure]"
@@ -247,29 +195,6 @@ Response Type /definitions/entListJobTemplatesResponse
             }
           },
           "Parameters": {},
-          "TriggerFilter": {
-            "Description": "string",
-            "Label": "string",
-            "Query": {
-              "Limit": "string",
-              "Offset": "string",
-              "Operation": "string",
-              "ResourcePolicyQuery": {
-                "Any": true,
-                "Empty": true,
-                "Subjects": [
-                  "string"
-                ]
-              },
-              "SubQueries": [
-                {
-                  "type_url": "string",
-                  "value": "string"
-                }
-              ],
-              "groupBy": 10
-            }
-          },
           "UsersFilter": {
             "All": true,
             "Collect": true,
@@ -447,32 +372,6 @@ Response Type /definitions/entListJobTemplatesResponse
         "Type": "string"
       },
       "Custom": true,
-      "DataSourceFilter": {
-        "All": true,
-        "Collect": true,
-        "Description": "string",
-        "Label": "string",
-        "Query": {
-          "Limit": "string",
-          "Offset": "string",
-          "Operation": "string",
-          "ResourcePolicyQuery": {
-            "Any": true,
-            "Empty": true,
-            "Subjects": [
-              "string"
-            ]
-          },
-          "SubQueries": [
-            {
-              "type_url": "string",
-              "value": "string"
-            }
-          ],
-          "groupBy": 10
-        },
-        "Type": "string"
-      },
       "EventNames": [
         "string"
       ],
@@ -548,12 +447,6 @@ Response Type /definitions/entListJobTemplatesResponse
           "Value": "string"
         }
       ],
-      "ResourcesDependencies": [
-        {
-          "type_url": "string",
-          "value": "string"
-        }
-      ],
       "Schedule": {
         "Iso8601MinDelta": "string",
         "Iso8601Schedule": "string"
@@ -592,58 +485,6 @@ Response Type /definitions/entListJobTemplatesResponse
                   "[Recursive structure]"
                 ],
                 "ContextMetaFilter": {
-                  "Description": "string",
-                  "Label": "string",
-                  "Query": {
-                    "Limit": "string",
-                    "Offset": "string",
-                    "Operation": "string",
-                    "ResourcePolicyQuery": {
-                      "Any": true,
-                      "Empty": true,
-                      "Subjects": [
-                        "string"
-                      ]
-                    },
-                    "SubQueries": [
-                      {
-                        "type_url": "string",
-                        "value": "string"
-                      }
-                    ],
-                    "groupBy": 10
-                  },
-                  "Type": "string"
-                },
-                "DataSourceFilter": {
-                  "All": true,
-                  "Collect": true,
-                  "Description": "string",
-                  "Label": "string",
-                  "Query": {
-                    "Limit": "string",
-                    "Offset": "string",
-                    "Operation": "string",
-                    "ResourcePolicyQuery": {
-                      "Any": true,
-                      "Empty": true,
-                      "Subjects": [
-                        "string"
-                      ]
-                    },
-                    "SubQueries": [
-                      {
-                        "type_url": "string",
-                        "value": "string"
-                      }
-                    ],
-                    "groupBy": 10
-                  },
-                  "Type": "string"
-                },
-                "DataSourceSelector": {
-                  "All": true,
-                  "Collect": true,
                   "Description": "string",
                   "Label": "string",
                   "Query": {
@@ -782,29 +623,6 @@ Response Type /definitions/entListJobTemplatesResponse
                   }
                 },
                 "Parameters": {},
-                "TriggerFilter": {
-                  "Description": "string",
-                  "Label": "string",
-                  "Query": {
-                    "Limit": "string",
-                    "Offset": "string",
-                    "Operation": "string",
-                    "ResourcePolicyQuery": {
-                      "Any": true,
-                      "Empty": true,
-                      "Subjects": [
-                        "string"
-                      ]
-                    },
-                    "SubQueries": [
-                      {
-                        "type_url": "string",
-                        "value": "string"
-                      }
-                    ],
-                    "groupBy": 10
-                  }
-                },
                 "UsersFilter": {
                   "All": true,
                   "Collect": true,
@@ -1005,7 +823,6 @@ Response Type /definitions/entListJobTemplatesResponse
                     "latitude": "[Unknown Type number]",
                     "location": "[Recursive structure]",
                     "longitude": "[Unknown Type number]",
-                    "markdown": "string",
                     "mediaType": "string",
                     "name": "string",
                     "next": "[Recursive structure]",
@@ -1035,31 +852,6 @@ Response Type /definitions/entListJobTemplatesResponse
                     "width": 10
                   }
                 ],
-                "DataSources": [
-                  {
-                    "ApiKey": "string",
-                    "ApiSecret": "string",
-                    "CreationDate": 10,
-                    "Disabled": true,
-                    "EncryptionKey": "string",
-                    "EncryptionMode": "string",
-                    "FlatStorage": true,
-                    "LastSynchronizationDate": 10,
-                    "Name": "string",
-                    "ObjectsBaseFolder": "string",
-                    "ObjectsBucket": "string",
-                    "ObjectsHost": "string",
-                    "ObjectsPort": 10,
-                    "ObjectsSecure": true,
-                    "ObjectsServiceName": "string",
-                    "PeerAddress": "string",
-                    "SkipSyncOnRestart": true,
-                    "StorageConfiguration": {},
-                    "StorageType": "string",
-                    "VersioningPolicyName": "string",
-                    "Watch": true
-                  }
-                ],
                 "Event": {
                   "type_url": "string",
                   "value": "string"
@@ -1070,7 +862,6 @@ Response Type /definitions/entListJobTemplatesResponse
                       {
                         "Path": "string",
                         "WsLabel": "string",
-                        "WsScope": "string",
                         "WsSlug": "string",
                         "WsUuid": "string"
                       }
@@ -1087,7 +878,6 @@ Response Type /definitions/entListJobTemplatesResponse
                           "Target": "[Recursive structure]",
                           "Type": "string"
                         },
-                        "Location": "[Recursive structure]",
                         "MTime": "string",
                         "OwnerUuid": "string",
                         "Size": "string",
@@ -1267,7 +1057,6 @@ Response Type /definitions/entListJobTemplatesResponse
                     "latitude": "[Unknown Type number]",
                     "location": "[Recursive structure]",
                     "longitude": "[Unknown Type number]",
-                    "markdown": "string",
                     "mediaType": "string",
                     "name": "string",
                     "next": "[Recursive structure]",
@@ -1297,31 +1086,6 @@ Response Type /definitions/entListJobTemplatesResponse
                     "width": 10
                   }
                 ],
-                "DataSources": [
-                  {
-                    "ApiKey": "string",
-                    "ApiSecret": "string",
-                    "CreationDate": 10,
-                    "Disabled": true,
-                    "EncryptionKey": "string",
-                    "EncryptionMode": "string",
-                    "FlatStorage": true,
-                    "LastSynchronizationDate": 10,
-                    "Name": "string",
-                    "ObjectsBaseFolder": "string",
-                    "ObjectsBucket": "string",
-                    "ObjectsHost": "string",
-                    "ObjectsPort": 10,
-                    "ObjectsSecure": true,
-                    "ObjectsServiceName": "string",
-                    "PeerAddress": "string",
-                    "SkipSyncOnRestart": true,
-                    "StorageConfiguration": {},
-                    "StorageType": "string",
-                    "VersioningPolicyName": "string",
-                    "Watch": true
-                  }
-                ],
                 "Event": {
                   "type_url": "string",
                   "value": "string"
@@ -1332,7 +1096,6 @@ Response Type /definitions/entListJobTemplatesResponse
                       {
                         "Path": "string",
                         "WsLabel": "string",
-                        "WsScope": "string",
                         "WsSlug": "string",
                         "WsUuid": "string"
                       }
@@ -1349,7 +1112,6 @@ Response Type /definitions/entListJobTemplatesResponse
                           "Target": "[Recursive structure]",
                           "Type": "string"
                         },
-                        "Location": "[Recursive structure]",
                         "MTime": "string",
                         "OwnerUuid": "string",
                         "Size": "string",
@@ -1576,4 +1338,4 @@ Response Type /definitions/entListJobTemplatesResponse
 
 
 
-###### Auto generated by Pydio Cells Enterprise Distribution v3.0.0-rc1 on 20-Sep-2021
+###### Auto generated by Pydio Cells Enterprise Distribution v2.2.12 on 21-Sep-2021
