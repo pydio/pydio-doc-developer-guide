@@ -1,0 +1,1 @@
+This job demonstrates how to generate image thumbnails from PDF using the command-line tool `pdftoppm`. 
