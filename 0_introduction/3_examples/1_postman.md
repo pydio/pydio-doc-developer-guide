@@ -4,7 +4,7 @@ Postman is a powerful client side application that can be used to debug and test
 
 Available OAuth 2 default parameters to use for Cells:
 
-| Parameter        | value                                      |
+| Parameter        | Value                                      |
 | ---------------- | ------------------------------------------ |
 | Callback URL     | http://localhost:3000/servers/callback     |
 | Auth URL         | http(s)://your-cells.com/oidc/oauth2/auth  |
@@ -36,7 +36,6 @@ Get an Access Token
 | **State**                 | you can put whatever you want (minimum 8 characters) |
 | **Client Authentication** | Send as Basic Auth header                            |
 
-[:image:0_introduction/postman/new_access_token_settings.png]
 
 Once you Press **Request Token**, you will be invited to log in with your Credentials on your Cells instance,
 
@@ -46,10 +45,8 @@ after that you will be redirected on postman with a token.
 
 Once you have your **Token**, return to the authorization tab:
 
-- Click on **Available Tokens**(screenshot below)
-- Select the **Token** (by its name)
-
-[:image:0_introduction/postman/select_available_token.png]
+- Click on **Available Tokens**
+- Select the **Token**
 
 You can now query any endpoint that you have access to.
 
@@ -83,15 +80,15 @@ This is the modified body that will query all the children.
 
 ### S3 Call
 
-Below is an sample URL for accessing data from the object file `file.txt` in the personal workspace of a user in [the demo](http://demo.pydio.com):
+Below is an sample URL for accessing data from the object file `Document Office Sample` in the personal workspace of a user in [the demo](http://demo.pydio.com):
 
-`https://demo.pydio.com/io/personal-files/file.txt`
+`https://demo.pydio.com/io/personal-files/Document Office Sample`
 
 This URL is composed of the following components :  
 
 - `/io` : the bucket name where data is exposed  
 - `/personal-files` : the "slug" of the workspace where the file is located.
-- `/file.txt` : path to the file inside the workspace
+- `/Document Office Sample` : path to the file inside the workspace
 
 Using Postman, you can use this URL to interact with this object. In order to be properly identified, you have to use the "Authorization" tab, choose AWS Signature and enter:
 
@@ -100,6 +97,9 @@ Using Postman, you can use this URL to interact with this object. In order to be
 | **AccessKey**    | you can copy and paste the **Access token** retrieved previously with OAuth2         |
 | **SecretKey**    | `gatewaysecret` (this is a fixed value).                                             |
 | **Service Name** | _In the authorization tab > Advanced > Service Name add `s3`_ (see screenshot below) |
+
+
+> For the **AccessKey** you can also use the Personal Access Token `./cells admin user token`
 
 [:image:0_introduction/postman/postman_s3_get.png]
 
