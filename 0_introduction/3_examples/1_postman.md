@@ -76,7 +76,7 @@ This is the modified body that will query all the children.
 }
 ```
 
-[:image-popup:0_introduction/postman/postman_api_request.png]
+[:image:0_introduction/postman/postman_api_request.png]
 
 ### S3 Call
 
