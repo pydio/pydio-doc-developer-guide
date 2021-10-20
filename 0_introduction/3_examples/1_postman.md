@@ -21,7 +21,6 @@ Add authentication on Postman:
 
 [:image:0_introduction/postman/select_auth_type.png]
 
-Get an Access Token
 
 | <u>name</u>               | <u>value</u>                                         |
 | ------------------------- | ---------------------------------------------------- |
@@ -43,10 +42,9 @@ after that you will be redirected on postman with a token.
 
 [:image:0_introduction/postman/resulting_token.png]
 
-Once you have your **Token**, return to the authorization tab:
+Once you have your **Token**:
 
-- Click on **Available Tokens**
-- Select the **Token**
+- Select the **Token** from the list.
 
 You can now query any endpoint that you have access to.
 
