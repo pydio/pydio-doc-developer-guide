@@ -1,6 +1,4 @@
-Javascript SDK for communicating with Cells server.
-
-It is hosted on [https://github.com/pydio/cells-sdk-js](https://github.com/pydio/cells-sdk-js) and published on NPM as the [cells-sdk](https://www.npmjs.com/package/cells-sdk) module.
+The Javascript SDK for communicating with Cells server is hosted on [https://github.com/pydio/cells-sdk-js](https://github.com/pydio/cells-sdk-js) and published on NPM as the [cells-sdk](https://www.npmjs.com/package/cells-sdk) module.
 
 This SDK is generated automatically using `swagger-codegen` tool from the OpenAPI specification of Cells Rest API. It does not rely on any framework and uses superagent internally for performing HTTP requests.
 
