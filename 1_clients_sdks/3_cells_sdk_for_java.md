@@ -23,10 +23,7 @@ Useful commands:
 
 ## Remote server
 
-A remote server is completely defined by a ServerURL. It wraps the validated URL of a remote server and is also in charge of managing TLS, it holds:
-
-- a skipVerify flag to violently skip all TLS layers
-- [TODO] a reference to untrusted certificates that have been explicitly accepted by the caller
+A remote server is completely defined by a ServerURL. It wraps the validated URL of a remote server and is also in charge of managing TLS. Typically, it holds a skipVerify flag to skip all TLS layers, that is useful if you are using a sel-signed certificate.
 
 A successfull call to the `ServerURL.ping()` method insure we perform HTTP requests to this address, with no SSL issue and have a valid ServerURL.
 
@@ -41,7 +38,7 @@ Authentication is managed at the transport layer. When you call `transport.getTo
 
 - a token is retrieved from its internal cache
 - it is refreshed if necessary
-- if no token have been found the transport look for persisted credentials and tries to get a token.
+- if no token have been found, the transport looks for persisted credentials and tries to get a token.
 
 To retrieve a transport, you must first register an account via the ServerFactory by providing a valid ServerURL and credentials, that can be:
 
@@ -53,7 +50,7 @@ To retrieve a transport, you must first register an account via the ServerFactor
 
 Pydio Cells relies on the S3 protocol to effectively transfer files. To ease dependency management, we do not provide implementation of the necessary S3Client at this layer, only an interface.
 
-Thus, you can instantiate a Client from within the SDK-Java but it will not be able the files themselves, only the metadata.
+Thus, you can instantiate a Client from within the SDK-Java but it will not be able to get the files themselves, only the metadata.
 
 To see some sample code on how to manage this, please refer to the cells-java-client or the cells-android-client repository depending on your setup.
 
@@ -92,7 +89,7 @@ Refer to the included tests for more examples.
 
 ## Testing
 
-At this layer we provide basic unit test for the few classes that need it most, typically to insure encoding / decoding of the StateID is OK.
+At this layer, we only provide basic unit tests for the few classes that need it most, typically to insure encoding / decoding of the StateID is OK.
 
 We have also implemented basic integration tests that need a target server.
 You can configure the various `src/test/resources/accounts` property files to point toward your test instances. Then simply run:
