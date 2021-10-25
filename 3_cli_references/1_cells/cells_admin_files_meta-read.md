@@ -11,22 +11,22 @@ DESCRIPTION
 
 EXAMPLE
 
-  $ ./cells files meta-read --uuid=244f072d-d9a1-11e7-950b-685b35ac60e5
+  $ ./cells admin files meta-read --uuid=244f072d-d9a1-11e7-950b-685b35ac60e5
   Will result : 
-	+-------------------------------+---------------------------------------------------------------------------------------------------------------+
-	|             NAME              |                                                     VALUE                                                     |
-	+-------------------------------+---------------------------------------------------------------------------------------------------------------+
-	| pydio:meta-data-source-name   | "pydiods1"                                                                                                    |
-	| ImageDimensions               | {"Height":200,"Width":200}                                                                                    |
-	| is_image                      | true                                                                                                          |
-	| readable_dimension            | "200px X 200px"                                                                                               |
-	| pydio:meta-data-source-path   | "download.png"                                                                                                |
-	| pydio:meta-object-service-url | "127.0.0.1:9001/pydiods1"                                                                                     |
-	| ImageThumbnails               | {"Processing":false,"thumbnails":[{"format":"jpg","size":256,"url":""},{"format":"jpg","size":512,"url":""}]} |
-	| image_width                   |                                                                                                           200 |
-	| name                          | "download.png"                                                                                                |
-	| image_height                  |                                                                                                           200 |
-	+-------------------------------+---------------------------------------------------------------------------------------------------------------+
+	+-------------------------------+--------------------------------------------------------------------------+
+	|             NAME              |                                                     VALUE                |
+	+-------------------------------+--------------------------------------------------------------------------+
+	| pydio:meta-data-source-name   | "pydiods1"                                                               |
+	| ImageDimensions               | {"Height":200,"Width":200}                                               |
+	| is_image                      | true                                                                     |
+	| readable_dimension            | "200px X 200px"                                                          |
+	| pydio:meta-data-source-path   | "download.png"                                                           |
+	| pydio:meta-object-service-url | "127.0.0.1:9001/pydiods1"                                                |
+	| ImageThumbnails               | {"Processing":false,"thumbnails":[{"format":"jpg","size":256,"url":""}]} |
+	| image_width                   | 200                                                                      |
+	| name                          | "download.png"                                                           |
+	| image_height                  | 200                                                                      |
+	+-------------------------------+--------------------------------------------------------------------------+
 
 
 
@@ -44,17 +44,25 @@ EXAMPLE
 ### Options inherited from parent commands
 
 ```
-      --broker string                     Pub/sub service for events between services (currently nats only) (default "nats")
-      --broker_address string             Nats broker port (default ":4222")
-      --registry_address string           Registry connection address (default ":4222")
-      --registry_cluster_address string   Registry cluster address
-      --registry_cluster_routes string    Registry cluster routes
-      --transport string                  Transport protocol for RPC (default "grpc")
-      --transport_address string          Transport protocol port (default ":4222")
+      --broker string                           Pub/sub service for events between services (currently nats only) (default "memory")
+      --nats_address string                     NATS server address (default ":4222")
+      --nats_cluster_address string             NATS server cluster address
+      --nats_cluster_routes string              NATS server cluster routes
+      --nats_monitor_port int                   Expose nats monitoring endpoints on a given port (default 8222)
+      --nats_streaming_cluster_bootstrap        NATS streaming bootstrap cluster
+      --nats_streaming_cluster_id string        NATS streaming cluster ID (default "cells")
+      --nats_streaming_cluster_node_id string   NATS streaming cluster node id
+      --nats_streaming_cluster_peers string     NATS streaming list of cluster peers
+      --nats_streaming_clustered                NATS streaming clustered
+      --nats_streaming_store string             NATS streaming store type (default "MEMORY")
+      --port_broker int                         Port used to start a broker discovery service (default 8003)
+      --port_registry int                       Port used to start a registry discovery service (default 8000)
+      --registry string                         Registry used to manage services (currently nats only) (default "memory")
+      --transport string                        Transport protocol for RPC (default "grpc")
 ```
 
 ### SEE ALSO
 
 * [./cells admin files](./cells-admin-files)	 - Directly manage files and metadata on the nodes
 
-###### Auto generated by Pydio Cells Home Edition v2.2.12 on 29-Sep-2021
+###### Auto generated by Pydio Cells Home Edition v3.0.0 on 25-Oct-2021

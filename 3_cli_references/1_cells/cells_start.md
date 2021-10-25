@@ -49,8 +49,6 @@ ENVIRONMENT
   is equivalent to 
   $ export CELLS_GRPC_EXTERNAL=54545; ./cells start
 
-  [Note]: the only exception is the --log flag, that is mapped to CELLS_LOG_LEVEL instead.
-
   2. Working Directories 
 
   - CELLS_WORKING_DIR: replace the whole standard application dir
@@ -58,11 +56,20 @@ ENVIRONMENT
   - CELLS_LOG_DIR: replace the location for storing logs (default CELLS_WORKING_DIR/logs)
   - CELLS_SERVICES_DIR: replace location for services-specific data (default CELLS_WORKING_DIR/services)
 
-  3. Others
+  3. Timeouts, limits, proxies
 
-  - CELLS_CACHES_HARD_LIMIT: raise memory used by internal caches (in MB, default is 8)
+  - CELLS_SQL_DEFAULT_CONN, CELLS_SQL_LONG_CONN: timeouts used for SQL queries. Use a golang duration (10s, 1m, etc). Defaults are respectively 30 seconds and 10 minutes.
+  - CELLS_CACHES_HARD_LIMIT: maximum memory limit used by internal caches (in MB, default is 8). This is a per/cache limit, not global.
   - CELLS_UPDATE_HTTP_PROXY: if your server uses a client proxy to access outside world, this can be set to query update server.
-  - HTTP_PROXY, HTTPS_PROXY, NO_PROXY: Golang-specific environment variables to configure a client proxy for all external http calls.   
+  - HTTP_PROXY, HTTPS_PROXY, NO_PROXY: golang-specific environment variables to configure a client proxy for all external http calls.
+
+  4. Development variables
+
+  - CELLS_ENABLE_WIP_LANGUAGES: show partially translated languages in the UX language picker. 
+  - CELLS_ENABLE_LIVEKIT: enable experimental support for video calls in the chat window, using a livekit-server.
+  - CELLS_ENABLE_FORMS_DEVEL: display a basic UX form with all possible fields types in the UX (for React developers)
+  - CELLS_DEFAULT_DS_STRUCT: if true, create default datasources using structured format instead of flat
+
 
 
 ```
@@ -72,30 +79,38 @@ ENVIRONMENT
 ### Options
 
 ```
-      --bind string                       Internal IP|DOMAIN:PORT on which the main proxy will bind. Self-signed SSL will be used by default
-      --broker_address string             Nats broker port (default ":4222")
-      --enable_metrics                    Instrument code to expose internal metrics
-      --enable_pprof                      Enable pprof remote debugging
-  -x, --exclude stringArray               Select services to start by filtering out some specific ones by name
-      --external string                   External full URL (http[s]://IP|DOMAIN[:PORT]) exposed to the outside
-      --grpc_cert string                  Certificates used for communication via grpc
-      --grpc_external string              External port exposed for gRPC (may be fixed if no SSL is configured or a reverse proxy is used)
-      --grpc_key string                   Certificates used for communication via grpc
-      --healthcheck int                   Healthcheck port number
-  -h, --help                              help for start
-      --le_agree                          Accept Let's Encrypt EULA
-      --le_email string                   Contact e-mail for Let's Encrypt provided certificate
-      --log string                        Sets the log level mode (default "info")
-      --nats_monitor_port int             Expose nats monitoring endpoints on a given port
-      --no_tls                            Configure the main gateway to rather use plain HTTP
-      --registry_address string           Registry connection address (default ":4222")
-      --registry_cluster_address string   Registry cluster address
-      --registry_cluster_routes string    Registry cluster routes
-  -t, --tags stringArray                  Select services to start by tags, possible values are 'broker', 'data', 'datasource', 'discovery', 'frontend', 'gateway', 'idm', 'scheduler'
-      --tls_cert_file string              TLS cert file path
-      --tls_key_file string               TLS key file path
-      --transport string                  Transport protocol for RPC (default "grpc")
-      --transport_address string          Transport protocol port (default ":4222")
+      --bind string                             Internal IP|DOMAIN:PORT on which the main proxy will bind. Self-signed SSL will be used by default
+      --enable_metrics                          Instrument code to expose internal metrics
+      --enable_pprof                            Enable pprof remote debugging
+  -x, --exclude stringArray                     Select services to start by filtering out some specific ones by name
+      --external string                         External full URL (http[s]://IP|DOMAIN[:PORT]) exposed to the outside
+      --grpc_cert string                        Certificates used for communication via grpc
+      --grpc_external string                    External port exposed for gRPC (may be fixed if no SSL is configured or a reverse proxy is used)
+      --grpc_key string                         Certificates used for communication via grpc
+      --healthcheck int                         Healthcheck port number
+  -h, --help                                    help for start
+      --le_agree                                Accept Let's Encrypt EULA
+      --le_email string                         Contact e-mail for Let's Encrypt provided certificate
+      --log string                              Sets the log level: 'debug', 'info', 'warn', 'error' (for backward-compatibility, 'production' is equivalent to log_json+info) (default "info")
+      --log_json                                Sets the log output format to JSON instead of text
+      --log_to_file                             Write logs on-file in CELLS_LOG_DIR (default true)
+      --nats_address string                     NATS server address (default ":4222")
+      --nats_cluster_address string             NATS server cluster address
+      --nats_cluster_routes string              NATS server cluster routes
+      --nats_monitor_port int                   Expose nats monitoring endpoints on a given port (default 8222)
+      --nats_streaming_cluster_bootstrap        NATS streaming bootstrap cluster
+      --nats_streaming_cluster_id string        NATS streaming cluster ID (default "cells")
+      --nats_streaming_cluster_node_id string   NATS streaming cluster node id
+      --nats_streaming_cluster_peers string     NATS streaming list of cluster peers
+      --nats_streaming_clustered                NATS streaming clustered
+      --nats_streaming_store string             NATS streaming store type (default "MEMORY")
+      --no_tls                                  Configure the main gateway to rather use plain HTTP
+      --port_broker int                         Port used to start a broker discovery service (default 8003)
+      --port_registry int                       Port used to start a registry discovery service (default 8000)
+  -t, --tags stringArray                        Select services to start by tags, possible values are 'broker', 'data', 'datasource', 'discovery', 'frontend', 'gateway', 'idm', 'scheduler'
+      --tls_cert_file string                    TLS cert file path
+      --tls_key_file string                     TLS key file path
+      --transport string                        Transport protocol for RPC (default "grpc")
 ```
 
 ### Options inherited from parent commands
@@ -107,4 +122,4 @@ ENVIRONMENT
 
 * [./cells](./cells)	 - Secure File Sharing for business
 
-###### Auto generated by Pydio Cells Home Edition v2.2.12 on 29-Sep-2021
+###### Auto generated by Pydio Cells Home Edition v3.0.0 on 25-Oct-2021
