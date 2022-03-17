@@ -38,8 +38,7 @@ Name | Description | Type | Required
             },
             "SubQueries": [
               {
-                "type_url": "string",
-                "value": "string"
+                "@type": "string"
               }
             ],
             "groupBy": 10
@@ -66,8 +65,7 @@ Name | Description | Type | Required
             },
             "SubQueries": [
               {
-                "type_url": "string",
-                "value": "string"
+                "@type": "string"
               }
             ],
             "groupBy": 10
@@ -92,8 +90,7 @@ Name | Description | Type | Required
             },
             "SubQueries": [
               {
-                "type_url": "string",
-                "value": "string"
+                "@type": "string"
               }
             ],
             "groupBy": 10
@@ -118,8 +115,7 @@ Name | Description | Type | Required
             },
             "SubQueries": [
               {
-                "type_url": "string",
-                "value": "string"
+                "@type": "string"
               }
             ],
             "groupBy": 10
@@ -149,8 +145,7 @@ Name | Description | Type | Required
             },
             "SubQueries": [
               {
-                "type_url": "string",
-                "value": "string"
+                "@type": "string"
               }
             ],
             "groupBy": 10
@@ -175,8 +170,7 @@ Name | Description | Type | Required
             },
             "SubQueries": [
               {
-                "type_url": "string",
-                "value": "string"
+                "@type": "string"
               }
             ],
             "groupBy": 10
@@ -205,8 +199,7 @@ Name | Description | Type | Required
             },
             "SubQueries": [
               {
-                "type_url": "string",
-                "value": "string"
+                "@type": "string"
               }
             ],
             "groupBy": 10
@@ -233,8 +226,7 @@ Name | Description | Type | Required
             },
             "SubQueries": [
               {
-                "type_url": "string",
-                "value": "string"
+                "@type": "string"
               }
             ],
             "groupBy": 10
@@ -257,8 +249,7 @@ Name | Description | Type | Required
             },
             "SubQueries": [
               {
-                "type_url": "string",
-                "value": "string"
+                "@type": "string"
               }
             ],
             "groupBy": 10
@@ -282,8 +273,7 @@ Name | Description | Type | Required
             },
             "SubQueries": [
               {
-                "type_url": "string",
-                "value": "string"
+                "@type": "string"
               }
             ],
             "groupBy": 10
@@ -356,8 +346,7 @@ Name | Description | Type | Required
             },
             "SubQueries": [
               {
-                "type_url": "string",
-                "value": "string"
+                "@type": "string"
               }
             ],
             "groupBy": 10
@@ -432,8 +421,7 @@ Name | Description | Type | Required
         },
         "SubQueries": [
           {
-            "type_url": "string",
-            "value": "string"
+            "@type": "string"
           }
         ],
         "groupBy": 10
@@ -459,8 +447,7 @@ Name | Description | Type | Required
         },
         "SubQueries": [
           {
-            "type_url": "string",
-            "value": "string"
+            "@type": "string"
           }
         ],
         "groupBy": 10
@@ -489,8 +476,7 @@ Name | Description | Type | Required
         },
         "SubQueries": [
           {
-            "type_url": "string",
-            "value": "string"
+            "@type": "string"
           }
         ],
         "groupBy": 10
@@ -524,8 +510,7 @@ Name | Description | Type | Required
         },
         "SubQueries": [
           {
-            "type_url": "string",
-            "value": "string"
+            "@type": "string"
           }
         ],
         "groupBy": 10
@@ -544,8 +529,7 @@ Name | Description | Type | Required
     ],
     "ResourcesDependencies": [
       {
-        "type_url": "string",
-        "value": "string"
+        "@type": "string"
       }
     ],
     "Schedule": {
@@ -573,8 +557,7 @@ Name | Description | Type | Required
                   },
                   "SubQueries": [
                     {
-                      "type_url": "string",
-                      "value": "string"
+                      "@type": "string"
                     }
                   ],
                   "groupBy": 10
@@ -601,8 +584,7 @@ Name | Description | Type | Required
                   },
                   "SubQueries": [
                     {
-                      "type_url": "string",
-                      "value": "string"
+                      "@type": "string"
                     }
                   ],
                   "groupBy": 10
@@ -627,8 +609,7 @@ Name | Description | Type | Required
                   },
                   "SubQueries": [
                     {
-                      "type_url": "string",
-                      "value": "string"
+                      "@type": "string"
                     }
                   ],
                   "groupBy": 10
@@ -653,8 +634,7 @@ Name | Description | Type | Required
                   },
                   "SubQueries": [
                     {
-                      "type_url": "string",
-                      "value": "string"
+                      "@type": "string"
                     }
                   ],
                   "groupBy": 10
@@ -684,8 +664,7 @@ Name | Description | Type | Required
                   },
                   "SubQueries": [
                     {
-                      "type_url": "string",
-                      "value": "string"
+                      "@type": "string"
                     }
                   ],
                   "groupBy": 10
@@ -710,8 +689,7 @@ Name | Description | Type | Required
                   },
                   "SubQueries": [
                     {
-                      "type_url": "string",
-                      "value": "string"
+                      "@type": "string"
                     }
                   ],
                   "groupBy": 10
@@ -740,8 +718,7 @@ Name | Description | Type | Required
                   },
                   "SubQueries": [
                     {
-                      "type_url": "string",
-                      "value": "string"
+                      "@type": "string"
                     }
                   ],
                   "groupBy": 10
@@ -768,8 +745,7 @@ Name | Description | Type | Required
                   },
                   "SubQueries": [
                     {
-                      "type_url": "string",
-                      "value": "string"
+                      "@type": "string"
                     }
                   ],
                   "groupBy": 10
@@ -792,8 +768,7 @@ Name | Description | Type | Required
                   },
                   "SubQueries": [
                     {
-                      "type_url": "string",
-                      "value": "string"
+                      "@type": "string"
                     }
                   ],
                   "groupBy": 10
@@ -817,8 +792,7 @@ Name | Description | Type | Required
                   },
                   "SubQueries": [
                     {
-                      "type_url": "string",
-                      "value": "string"
+                      "@type": "string"
                     }
                   ],
                   "groupBy": 10
@@ -891,8 +865,7 @@ Name | Description | Type | Required
                   },
                   "SubQueries": [
                     {
-                      "type_url": "string",
-                      "value": "string"
+                      "@type": "string"
                     }
                   ],
                   "groupBy": 10
@@ -963,6 +936,7 @@ Name | Description | Type | Required
               ],
               "Activities": [
                 {
+                  "@context": "string",
                   "accuracy": "[Unknown Type number]",
                   "actor": "[Recursive structure]",
                   "altitude": "[Unknown Type number]",
@@ -994,7 +968,6 @@ Name | Description | Type | Required
                   "items": [
                     "[Recursive structure]"
                   ],
-                  "jsonLdContext": "string",
                   "last": "[Recursive structure]",
                   "latitude": "[Unknown Type number]",
                   "location": "[Recursive structure]",
@@ -1055,8 +1028,7 @@ Name | Description | Type | Required
                 }
               ],
               "Event": {
-                "type_url": "string",
-                "value": "string"
+                "@type": "string"
               },
               "Nodes": [
                 {
@@ -1190,6 +1162,7 @@ Name | Description | Type | Required
               ],
               "Activities": [
                 {
+                  "@context": "string",
                   "accuracy": "[Unknown Type number]",
                   "actor": "[Recursive structure]",
                   "altitude": "[Unknown Type number]",
@@ -1221,7 +1194,6 @@ Name | Description | Type | Required
                   "items": [
                     "[Recursive structure]"
                   ],
-                  "jsonLdContext": "string",
                   "last": "[Recursive structure]",
                   "latitude": "[Unknown Type number]",
                   "location": "[Recursive structure]",
@@ -1282,8 +1254,7 @@ Name | Description | Type | Required
                 }
               ],
               "Event": {
-                "type_url": "string",
-                "value": "string"
+                "@type": "string"
               },
               "Nodes": [
                 {
@@ -1436,8 +1407,7 @@ Name | Description | Type | Required
         },
         "SubQueries": [
           {
-            "type_url": "string",
-            "value": "string"
+            "@type": "string"
           }
         ],
         "groupBy": 10
@@ -1525,8 +1495,7 @@ Response Type /definitions/jobsPutJobResponse
             },
             "SubQueries": [
               {
-                "type_url": "string",
-                "value": "string"
+                "@type": "string"
               }
             ],
             "groupBy": 10
@@ -1553,8 +1522,7 @@ Response Type /definitions/jobsPutJobResponse
             },
             "SubQueries": [
               {
-                "type_url": "string",
-                "value": "string"
+                "@type": "string"
               }
             ],
             "groupBy": 10
@@ -1579,8 +1547,7 @@ Response Type /definitions/jobsPutJobResponse
             },
             "SubQueries": [
               {
-                "type_url": "string",
-                "value": "string"
+                "@type": "string"
               }
             ],
             "groupBy": 10
@@ -1605,8 +1572,7 @@ Response Type /definitions/jobsPutJobResponse
             },
             "SubQueries": [
               {
-                "type_url": "string",
-                "value": "string"
+                "@type": "string"
               }
             ],
             "groupBy": 10
@@ -1636,8 +1602,7 @@ Response Type /definitions/jobsPutJobResponse
             },
             "SubQueries": [
               {
-                "type_url": "string",
-                "value": "string"
+                "@type": "string"
               }
             ],
             "groupBy": 10
@@ -1662,8 +1627,7 @@ Response Type /definitions/jobsPutJobResponse
             },
             "SubQueries": [
               {
-                "type_url": "string",
-                "value": "string"
+                "@type": "string"
               }
             ],
             "groupBy": 10
@@ -1692,8 +1656,7 @@ Response Type /definitions/jobsPutJobResponse
             },
             "SubQueries": [
               {
-                "type_url": "string",
-                "value": "string"
+                "@type": "string"
               }
             ],
             "groupBy": 10
@@ -1720,8 +1683,7 @@ Response Type /definitions/jobsPutJobResponse
             },
             "SubQueries": [
               {
-                "type_url": "string",
-                "value": "string"
+                "@type": "string"
               }
             ],
             "groupBy": 10
@@ -1744,8 +1706,7 @@ Response Type /definitions/jobsPutJobResponse
             },
             "SubQueries": [
               {
-                "type_url": "string",
-                "value": "string"
+                "@type": "string"
               }
             ],
             "groupBy": 10
@@ -1769,8 +1730,7 @@ Response Type /definitions/jobsPutJobResponse
             },
             "SubQueries": [
               {
-                "type_url": "string",
-                "value": "string"
+                "@type": "string"
               }
             ],
             "groupBy": 10
@@ -1843,8 +1803,7 @@ Response Type /definitions/jobsPutJobResponse
             },
             "SubQueries": [
               {
-                "type_url": "string",
-                "value": "string"
+                "@type": "string"
               }
             ],
             "groupBy": 10
@@ -1919,8 +1878,7 @@ Response Type /definitions/jobsPutJobResponse
         },
         "SubQueries": [
           {
-            "type_url": "string",
-            "value": "string"
+            "@type": "string"
           }
         ],
         "groupBy": 10
@@ -1946,8 +1904,7 @@ Response Type /definitions/jobsPutJobResponse
         },
         "SubQueries": [
           {
-            "type_url": "string",
-            "value": "string"
+            "@type": "string"
           }
         ],
         "groupBy": 10
@@ -1976,8 +1933,7 @@ Response Type /definitions/jobsPutJobResponse
         },
         "SubQueries": [
           {
-            "type_url": "string",
-            "value": "string"
+            "@type": "string"
           }
         ],
         "groupBy": 10
@@ -2011,8 +1967,7 @@ Response Type /definitions/jobsPutJobResponse
         },
         "SubQueries": [
           {
-            "type_url": "string",
-            "value": "string"
+            "@type": "string"
           }
         ],
         "groupBy": 10
@@ -2031,8 +1986,7 @@ Response Type /definitions/jobsPutJobResponse
     ],
     "ResourcesDependencies": [
       {
-        "type_url": "string",
-        "value": "string"
+        "@type": "string"
       }
     ],
     "Schedule": {
@@ -2060,8 +2014,7 @@ Response Type /definitions/jobsPutJobResponse
                   },
                   "SubQueries": [
                     {
-                      "type_url": "string",
-                      "value": "string"
+                      "@type": "string"
                     }
                   ],
                   "groupBy": 10
@@ -2088,8 +2041,7 @@ Response Type /definitions/jobsPutJobResponse
                   },
                   "SubQueries": [
                     {
-                      "type_url": "string",
-                      "value": "string"
+                      "@type": "string"
                     }
                   ],
                   "groupBy": 10
@@ -2114,8 +2066,7 @@ Response Type /definitions/jobsPutJobResponse
                   },
                   "SubQueries": [
                     {
-                      "type_url": "string",
-                      "value": "string"
+                      "@type": "string"
                     }
                   ],
                   "groupBy": 10
@@ -2140,8 +2091,7 @@ Response Type /definitions/jobsPutJobResponse
                   },
                   "SubQueries": [
                     {
-                      "type_url": "string",
-                      "value": "string"
+                      "@type": "string"
                     }
                   ],
                   "groupBy": 10
@@ -2171,8 +2121,7 @@ Response Type /definitions/jobsPutJobResponse
                   },
                   "SubQueries": [
                     {
-                      "type_url": "string",
-                      "value": "string"
+                      "@type": "string"
                     }
                   ],
                   "groupBy": 10
@@ -2197,8 +2146,7 @@ Response Type /definitions/jobsPutJobResponse
                   },
                   "SubQueries": [
                     {
-                      "type_url": "string",
-                      "value": "string"
+                      "@type": "string"
                     }
                   ],
                   "groupBy": 10
@@ -2227,8 +2175,7 @@ Response Type /definitions/jobsPutJobResponse
                   },
                   "SubQueries": [
                     {
-                      "type_url": "string",
-                      "value": "string"
+                      "@type": "string"
                     }
                   ],
                   "groupBy": 10
@@ -2255,8 +2202,7 @@ Response Type /definitions/jobsPutJobResponse
                   },
                   "SubQueries": [
                     {
-                      "type_url": "string",
-                      "value": "string"
+                      "@type": "string"
                     }
                   ],
                   "groupBy": 10
@@ -2279,8 +2225,7 @@ Response Type /definitions/jobsPutJobResponse
                   },
                   "SubQueries": [
                     {
-                      "type_url": "string",
-                      "value": "string"
+                      "@type": "string"
                     }
                   ],
                   "groupBy": 10
@@ -2304,8 +2249,7 @@ Response Type /definitions/jobsPutJobResponse
                   },
                   "SubQueries": [
                     {
-                      "type_url": "string",
-                      "value": "string"
+                      "@type": "string"
                     }
                   ],
                   "groupBy": 10
@@ -2378,8 +2322,7 @@ Response Type /definitions/jobsPutJobResponse
                   },
                   "SubQueries": [
                     {
-                      "type_url": "string",
-                      "value": "string"
+                      "@type": "string"
                     }
                   ],
                   "groupBy": 10
@@ -2450,6 +2393,7 @@ Response Type /definitions/jobsPutJobResponse
               ],
               "Activities": [
                 {
+                  "@context": "string",
                   "accuracy": "[Unknown Type number]",
                   "actor": "[Recursive structure]",
                   "altitude": "[Unknown Type number]",
@@ -2481,7 +2425,6 @@ Response Type /definitions/jobsPutJobResponse
                   "items": [
                     "[Recursive structure]"
                   ],
-                  "jsonLdContext": "string",
                   "last": "[Recursive structure]",
                   "latitude": "[Unknown Type number]",
                   "location": "[Recursive structure]",
@@ -2542,8 +2485,7 @@ Response Type /definitions/jobsPutJobResponse
                 }
               ],
               "Event": {
-                "type_url": "string",
-                "value": "string"
+                "@type": "string"
               },
               "Nodes": [
                 {
@@ -2712,6 +2654,7 @@ Response Type /definitions/jobsPutJobResponse
               ],
               "Activities": [
                 {
+                  "@context": "string",
                   "accuracy": "[Unknown Type number]",
                   "actor": "[Recursive structure]",
                   "altitude": "[Unknown Type number]",
@@ -2743,7 +2686,6 @@ Response Type /definitions/jobsPutJobResponse
                   "items": [
                     "[Recursive structure]"
                   ],
-                  "jsonLdContext": "string",
                   "last": "[Recursive structure]",
                   "latitude": "[Unknown Type number]",
                   "location": "[Recursive structure]",
@@ -2804,8 +2746,7 @@ Response Type /definitions/jobsPutJobResponse
                 }
               ],
               "Event": {
-                "type_url": "string",
-                "value": "string"
+                "@type": "string"
               },
               "Nodes": [
                 {
@@ -2993,8 +2934,7 @@ Response Type /definitions/jobsPutJobResponse
         },
         "SubQueries": [
           {
-            "type_url": "string",
-            "value": "string"
+            "@type": "string"
           }
         ],
         "groupBy": 10
@@ -3056,4 +2996,4 @@ Response Type /definitions/jobsPutJobResponse
 
 
 
-###### Auto generated by Pydio Cells Enterprise Distribution v3.0.5 on 25-Feb-2022
+###### Auto generated by Pydio Cells Enterprise Distribution v4.0.0-alpha1 on 17-Mar-2022

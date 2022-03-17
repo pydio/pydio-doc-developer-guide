@@ -1,0 +1,4 @@
+title: "DELETE /a/config/oauth2clients/{client_id}"
+menu: "DELETE /a/config/oauth2clients/{client_id}"
+language: und
+menu_name: menu-dev-guide-v7

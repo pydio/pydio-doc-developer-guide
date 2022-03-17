@@ -37,8 +37,7 @@ Name | Description | Type | Required
           },
           "SubQueries": [
             {
-              "type_url": "string",
-              "value": "string"
+              "@type": "string"
             }
           ],
           "groupBy": 10
@@ -65,8 +64,7 @@ Name | Description | Type | Required
           },
           "SubQueries": [
             {
-              "type_url": "string",
-              "value": "string"
+              "@type": "string"
             }
           ],
           "groupBy": 10
@@ -91,8 +89,7 @@ Name | Description | Type | Required
           },
           "SubQueries": [
             {
-              "type_url": "string",
-              "value": "string"
+              "@type": "string"
             }
           ],
           "groupBy": 10
@@ -117,8 +114,7 @@ Name | Description | Type | Required
           },
           "SubQueries": [
             {
-              "type_url": "string",
-              "value": "string"
+              "@type": "string"
             }
           ],
           "groupBy": 10
@@ -148,8 +144,7 @@ Name | Description | Type | Required
           },
           "SubQueries": [
             {
-              "type_url": "string",
-              "value": "string"
+              "@type": "string"
             }
           ],
           "groupBy": 10
@@ -174,8 +169,7 @@ Name | Description | Type | Required
           },
           "SubQueries": [
             {
-              "type_url": "string",
-              "value": "string"
+              "@type": "string"
             }
           ],
           "groupBy": 10
@@ -204,8 +198,7 @@ Name | Description | Type | Required
           },
           "SubQueries": [
             {
-              "type_url": "string",
-              "value": "string"
+              "@type": "string"
             }
           ],
           "groupBy": 10
@@ -232,8 +225,7 @@ Name | Description | Type | Required
           },
           "SubQueries": [
             {
-              "type_url": "string",
-              "value": "string"
+              "@type": "string"
             }
           ],
           "groupBy": 10
@@ -256,8 +248,7 @@ Name | Description | Type | Required
           },
           "SubQueries": [
             {
-              "type_url": "string",
-              "value": "string"
+              "@type": "string"
             }
           ],
           "groupBy": 10
@@ -281,8 +272,7 @@ Name | Description | Type | Required
           },
           "SubQueries": [
             {
-              "type_url": "string",
-              "value": "string"
+              "@type": "string"
             }
           ],
           "groupBy": 10
@@ -355,8 +345,7 @@ Name | Description | Type | Required
           },
           "SubQueries": [
             {
-              "type_url": "string",
-              "value": "string"
+              "@type": "string"
             }
           ],
           "groupBy": 10
@@ -445,8 +434,7 @@ Response Type /definitions/entPutActionTemplateResponse
           },
           "SubQueries": [
             {
-              "type_url": "string",
-              "value": "string"
+              "@type": "string"
             }
           ],
           "groupBy": 10
@@ -473,8 +461,7 @@ Response Type /definitions/entPutActionTemplateResponse
           },
           "SubQueries": [
             {
-              "type_url": "string",
-              "value": "string"
+              "@type": "string"
             }
           ],
           "groupBy": 10
@@ -499,8 +486,7 @@ Response Type /definitions/entPutActionTemplateResponse
           },
           "SubQueries": [
             {
-              "type_url": "string",
-              "value": "string"
+              "@type": "string"
             }
           ],
           "groupBy": 10
@@ -525,8 +511,7 @@ Response Type /definitions/entPutActionTemplateResponse
           },
           "SubQueries": [
             {
-              "type_url": "string",
-              "value": "string"
+              "@type": "string"
             }
           ],
           "groupBy": 10
@@ -556,8 +541,7 @@ Response Type /definitions/entPutActionTemplateResponse
           },
           "SubQueries": [
             {
-              "type_url": "string",
-              "value": "string"
+              "@type": "string"
             }
           ],
           "groupBy": 10
@@ -582,8 +566,7 @@ Response Type /definitions/entPutActionTemplateResponse
           },
           "SubQueries": [
             {
-              "type_url": "string",
-              "value": "string"
+              "@type": "string"
             }
           ],
           "groupBy": 10
@@ -612,8 +595,7 @@ Response Type /definitions/entPutActionTemplateResponse
           },
           "SubQueries": [
             {
-              "type_url": "string",
-              "value": "string"
+              "@type": "string"
             }
           ],
           "groupBy": 10
@@ -640,8 +622,7 @@ Response Type /definitions/entPutActionTemplateResponse
           },
           "SubQueries": [
             {
-              "type_url": "string",
-              "value": "string"
+              "@type": "string"
             }
           ],
           "groupBy": 10
@@ -664,8 +645,7 @@ Response Type /definitions/entPutActionTemplateResponse
           },
           "SubQueries": [
             {
-              "type_url": "string",
-              "value": "string"
+              "@type": "string"
             }
           ],
           "groupBy": 10
@@ -689,8 +669,7 @@ Response Type /definitions/entPutActionTemplateResponse
           },
           "SubQueries": [
             {
-              "type_url": "string",
-              "value": "string"
+              "@type": "string"
             }
           ],
           "groupBy": 10
@@ -763,8 +742,7 @@ Response Type /definitions/entPutActionTemplateResponse
           },
           "SubQueries": [
             {
-              "type_url": "string",
-              "value": "string"
+              "@type": "string"
             }
           ],
           "groupBy": 10
@@ -828,4 +806,4 @@ Response Type /definitions/entPutActionTemplateResponse
 
 
 
-###### Auto generated by Pydio Cells Enterprise Distribution v3.0.5 on 25-Feb-2022
+###### Auto generated by Pydio Cells Enterprise Distribution v4.0.0-alpha1 on 17-Mar-2022
