@@ -67,7 +67,8 @@ Response Type /definitions/restUserJobsCollection
               },
               "SubQueries": [
                 {
-                  "@type": "string"
+                  "type_url": "string",
+                  "value": "string"
                 }
               ],
               "groupBy": 10
@@ -94,7 +95,8 @@ Response Type /definitions/restUserJobsCollection
               },
               "SubQueries": [
                 {
-                  "@type": "string"
+                  "type_url": "string",
+                  "value": "string"
                 }
               ],
               "groupBy": 10
@@ -119,7 +121,8 @@ Response Type /definitions/restUserJobsCollection
               },
               "SubQueries": [
                 {
-                  "@type": "string"
+                  "type_url": "string",
+                  "value": "string"
                 }
               ],
               "groupBy": 10
@@ -144,7 +147,8 @@ Response Type /definitions/restUserJobsCollection
               },
               "SubQueries": [
                 {
-                  "@type": "string"
+                  "type_url": "string",
+                  "value": "string"
                 }
               ],
               "groupBy": 10
@@ -174,7 +178,8 @@ Response Type /definitions/restUserJobsCollection
               },
               "SubQueries": [
                 {
-                  "@type": "string"
+                  "type_url": "string",
+                  "value": "string"
                 }
               ],
               "groupBy": 10
@@ -199,7 +204,8 @@ Response Type /definitions/restUserJobsCollection
               },
               "SubQueries": [
                 {
-                  "@type": "string"
+                  "type_url": "string",
+                  "value": "string"
                 }
               ],
               "groupBy": 10
@@ -228,7 +234,8 @@ Response Type /definitions/restUserJobsCollection
               },
               "SubQueries": [
                 {
-                  "@type": "string"
+                  "type_url": "string",
+                  "value": "string"
                 }
               ],
               "groupBy": 10
@@ -255,7 +262,8 @@ Response Type /definitions/restUserJobsCollection
               },
               "SubQueries": [
                 {
-                  "@type": "string"
+                  "type_url": "string",
+                  "value": "string"
                 }
               ],
               "groupBy": 10
@@ -278,7 +286,8 @@ Response Type /definitions/restUserJobsCollection
               },
               "SubQueries": [
                 {
-                  "@type": "string"
+                  "type_url": "string",
+                  "value": "string"
                 }
               ],
               "groupBy": 10
@@ -302,7 +311,8 @@ Response Type /definitions/restUserJobsCollection
               },
               "SubQueries": [
                 {
-                  "@type": "string"
+                  "type_url": "string",
+                  "value": "string"
                 }
               ],
               "groupBy": 10
@@ -375,7 +385,8 @@ Response Type /definitions/restUserJobsCollection
               },
               "SubQueries": [
                 {
-                  "@type": "string"
+                  "type_url": "string",
+                  "value": "string"
                 }
               ],
               "groupBy": 10
@@ -450,7 +461,8 @@ Response Type /definitions/restUserJobsCollection
           },
           "SubQueries": [
             {
-              "@type": "string"
+              "type_url": "string",
+              "value": "string"
             }
           ],
           "groupBy": 10
@@ -476,7 +488,8 @@ Response Type /definitions/restUserJobsCollection
           },
           "SubQueries": [
             {
-              "@type": "string"
+              "type_url": "string",
+              "value": "string"
             }
           ],
           "groupBy": 10
@@ -505,7 +518,8 @@ Response Type /definitions/restUserJobsCollection
           },
           "SubQueries": [
             {
-              "@type": "string"
+              "type_url": "string",
+              "value": "string"
             }
           ],
           "groupBy": 10
@@ -539,7 +553,8 @@ Response Type /definitions/restUserJobsCollection
           },
           "SubQueries": [
             {
-              "@type": "string"
+              "type_url": "string",
+              "value": "string"
             }
           ],
           "groupBy": 10
@@ -558,7 +573,8 @@ Response Type /definitions/restUserJobsCollection
       ],
       "ResourcesDependencies": [
         {
-          "@type": "string"
+          "type_url": "string",
+          "value": "string"
         }
       ],
       "Schedule": {
@@ -586,7 +602,8 @@ Response Type /definitions/restUserJobsCollection
                     },
                     "SubQueries": [
                       {
-                        "@type": "string"
+                        "type_url": "string",
+                        "value": "string"
                       }
                     ],
                     "groupBy": 10
@@ -613,7 +630,8 @@ Response Type /definitions/restUserJobsCollection
                     },
                     "SubQueries": [
                       {
-                        "@type": "string"
+                        "type_url": "string",
+                        "value": "string"
                       }
                     ],
                     "groupBy": 10
@@ -638,7 +656,8 @@ Response Type /definitions/restUserJobsCollection
                     },
                     "SubQueries": [
                       {
-                        "@type": "string"
+                        "type_url": "string",
+                        "value": "string"
                       }
                     ],
                     "groupBy": 10
@@ -663,7 +682,8 @@ Response Type /definitions/restUserJobsCollection
                     },
                     "SubQueries": [
                       {
-                        "@type": "string"
+                        "type_url": "string",
+                        "value": "string"
                       }
                     ],
                     "groupBy": 10
@@ -693,7 +713,8 @@ Response Type /definitions/restUserJobsCollection
                     },
                     "SubQueries": [
                       {
-                        "@type": "string"
+                        "type_url": "string",
+                        "value": "string"
                       }
                     ],
                     "groupBy": 10
@@ -718,7 +739,8 @@ Response Type /definitions/restUserJobsCollection
                     },
                     "SubQueries": [
                       {
-                        "@type": "string"
+                        "type_url": "string",
+                        "value": "string"
                       }
                     ],
                     "groupBy": 10
@@ -747,7 +769,8 @@ Response Type /definitions/restUserJobsCollection
                     },
                     "SubQueries": [
                       {
-                        "@type": "string"
+                        "type_url": "string",
+                        "value": "string"
                       }
                     ],
                     "groupBy": 10
@@ -774,7 +797,8 @@ Response Type /definitions/restUserJobsCollection
                     },
                     "SubQueries": [
                       {
-                        "@type": "string"
+                        "type_url": "string",
+                        "value": "string"
                       }
                     ],
                     "groupBy": 10
@@ -797,7 +821,8 @@ Response Type /definitions/restUserJobsCollection
                     },
                     "SubQueries": [
                       {
-                        "@type": "string"
+                        "type_url": "string",
+                        "value": "string"
                       }
                     ],
                     "groupBy": 10
@@ -821,7 +846,8 @@ Response Type /definitions/restUserJobsCollection
                     },
                     "SubQueries": [
                       {
-                        "@type": "string"
+                        "type_url": "string",
+                        "value": "string"
                       }
                     ],
                     "groupBy": 10
@@ -894,7 +920,8 @@ Response Type /definitions/restUserJobsCollection
                     },
                     "SubQueries": [
                       {
-                        "@type": "string"
+                        "type_url": "string",
+                        "value": "string"
                       }
                     ],
                     "groupBy": 10
@@ -965,7 +992,6 @@ Response Type /definitions/restUserJobsCollection
                 ],
                 "Activities": [
                   {
-                    "@context": "string",
                     "accuracy": "[Unknown Type number]",
                     "actor": "[Recursive structure]",
                     "altitude": "[Unknown Type number]",
@@ -997,6 +1023,7 @@ Response Type /definitions/restUserJobsCollection
                     "items": [
                       "[Recursive structure]"
                     ],
+                    "jsonLdContext": "string",
                     "last": "[Recursive structure]",
                     "latitude": "[Unknown Type number]",
                     "location": "[Recursive structure]",
@@ -1057,7 +1084,8 @@ Response Type /definitions/restUserJobsCollection
                   }
                 ],
                 "Event": {
-                  "@type": "string"
+                  "type_url": "string",
+                  "value": "string"
                 },
                 "Nodes": [
                   {
@@ -1226,7 +1254,6 @@ Response Type /definitions/restUserJobsCollection
                 ],
                 "Activities": [
                   {
-                    "@context": "string",
                     "accuracy": "[Unknown Type number]",
                     "actor": "[Recursive structure]",
                     "altitude": "[Unknown Type number]",
@@ -1258,6 +1285,7 @@ Response Type /definitions/restUserJobsCollection
                     "items": [
                       "[Recursive structure]"
                     ],
+                    "jsonLdContext": "string",
                     "last": "[Recursive structure]",
                     "latitude": "[Unknown Type number]",
                     "location": "[Recursive structure]",
@@ -1318,7 +1346,8 @@ Response Type /definitions/restUserJobsCollection
                   }
                 ],
                 "Event": {
-                  "@type": "string"
+                  "type_url": "string",
+                  "value": "string"
                 },
                 "Nodes": [
                   {
@@ -1506,7 +1535,8 @@ Response Type /definitions/restUserJobsCollection
           },
           "SubQueries": [
             {
-              "@type": "string"
+              "type_url": "string",
+              "value": "string"
             }
           ],
           "groupBy": 10
@@ -1569,4 +1599,4 @@ Response Type /definitions/restUserJobsCollection
 
 
 
-###### Auto generated by Pydio Cells Enterprise Distribution v4.0.0-alpha1 on 17-Mar-2022
+###### Auto generated by Pydio Cells Enterprise Distribution v3.0.6 on 22-Mar-2022
