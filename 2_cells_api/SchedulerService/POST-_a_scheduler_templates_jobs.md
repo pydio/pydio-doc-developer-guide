@@ -44,8 +44,7 @@ Response Type /definitions/entListJobTemplatesResponse
               },
               "SubQueries": [
                 {
-                  "type_url": "string",
-                  "value": "string"
+                  "@type": "string"
                 }
               ],
               "groupBy": 10
@@ -72,8 +71,7 @@ Response Type /definitions/entListJobTemplatesResponse
               },
               "SubQueries": [
                 {
-                  "type_url": "string",
-                  "value": "string"
+                  "@type": "string"
                 }
               ],
               "groupBy": 10
@@ -98,8 +96,7 @@ Response Type /definitions/entListJobTemplatesResponse
               },
               "SubQueries": [
                 {
-                  "type_url": "string",
-                  "value": "string"
+                  "@type": "string"
                 }
               ],
               "groupBy": 10
@@ -124,8 +121,7 @@ Response Type /definitions/entListJobTemplatesResponse
               },
               "SubQueries": [
                 {
-                  "type_url": "string",
-                  "value": "string"
+                  "@type": "string"
                 }
               ],
               "groupBy": 10
@@ -155,8 +151,7 @@ Response Type /definitions/entListJobTemplatesResponse
               },
               "SubQueries": [
                 {
-                  "type_url": "string",
-                  "value": "string"
+                  "@type": "string"
                 }
               ],
               "groupBy": 10
@@ -181,8 +176,7 @@ Response Type /definitions/entListJobTemplatesResponse
               },
               "SubQueries": [
                 {
-                  "type_url": "string",
-                  "value": "string"
+                  "@type": "string"
                 }
               ],
               "groupBy": 10
@@ -211,8 +205,7 @@ Response Type /definitions/entListJobTemplatesResponse
               },
               "SubQueries": [
                 {
-                  "type_url": "string",
-                  "value": "string"
+                  "@type": "string"
                 }
               ],
               "groupBy": 10
@@ -239,8 +232,7 @@ Response Type /definitions/entListJobTemplatesResponse
               },
               "SubQueries": [
                 {
-                  "type_url": "string",
-                  "value": "string"
+                  "@type": "string"
                 }
               ],
               "groupBy": 10
@@ -263,8 +255,7 @@ Response Type /definitions/entListJobTemplatesResponse
               },
               "SubQueries": [
                 {
-                  "type_url": "string",
-                  "value": "string"
+                  "@type": "string"
                 }
               ],
               "groupBy": 10
@@ -288,8 +279,7 @@ Response Type /definitions/entListJobTemplatesResponse
               },
               "SubQueries": [
                 {
-                  "type_url": "string",
-                  "value": "string"
+                  "@type": "string"
                 }
               ],
               "groupBy": 10
@@ -362,8 +352,7 @@ Response Type /definitions/entListJobTemplatesResponse
               },
               "SubQueries": [
                 {
-                  "type_url": "string",
-                  "value": "string"
+                  "@type": "string"
                 }
               ],
               "groupBy": 10
@@ -438,8 +427,7 @@ Response Type /definitions/entListJobTemplatesResponse
           },
           "SubQueries": [
             {
-              "type_url": "string",
-              "value": "string"
+              "@type": "string"
             }
           ],
           "groupBy": 10
@@ -465,8 +453,7 @@ Response Type /definitions/entListJobTemplatesResponse
           },
           "SubQueries": [
             {
-              "type_url": "string",
-              "value": "string"
+              "@type": "string"
             }
           ],
           "groupBy": 10
@@ -495,8 +482,7 @@ Response Type /definitions/entListJobTemplatesResponse
           },
           "SubQueries": [
             {
-              "type_url": "string",
-              "value": "string"
+              "@type": "string"
             }
           ],
           "groupBy": 10
@@ -530,8 +516,7 @@ Response Type /definitions/entListJobTemplatesResponse
           },
           "SubQueries": [
             {
-              "type_url": "string",
-              "value": "string"
+              "@type": "string"
             }
           ],
           "groupBy": 10
@@ -550,8 +535,7 @@ Response Type /definitions/entListJobTemplatesResponse
       ],
       "ResourcesDependencies": [
         {
-          "type_url": "string",
-          "value": "string"
+          "@type": "string"
         }
       ],
       "Schedule": {
@@ -579,8 +563,7 @@ Response Type /definitions/entListJobTemplatesResponse
                     },
                     "SubQueries": [
                       {
-                        "type_url": "string",
-                        "value": "string"
+                        "@type": "string"
                       }
                     ],
                     "groupBy": 10
@@ -607,8 +590,7 @@ Response Type /definitions/entListJobTemplatesResponse
                     },
                     "SubQueries": [
                       {
-                        "type_url": "string",
-                        "value": "string"
+                        "@type": "string"
                       }
                     ],
                     "groupBy": 10
@@ -633,8 +615,7 @@ Response Type /definitions/entListJobTemplatesResponse
                     },
                     "SubQueries": [
                       {
-                        "type_url": "string",
-                        "value": "string"
+                        "@type": "string"
                       }
                     ],
                     "groupBy": 10
@@ -659,8 +640,7 @@ Response Type /definitions/entListJobTemplatesResponse
                     },
                     "SubQueries": [
                       {
-                        "type_url": "string",
-                        "value": "string"
+                        "@type": "string"
                       }
                     ],
                     "groupBy": 10
@@ -690,8 +670,7 @@ Response Type /definitions/entListJobTemplatesResponse
                     },
                     "SubQueries": [
                       {
-                        "type_url": "string",
-                        "value": "string"
+                        "@type": "string"
                       }
                     ],
                     "groupBy": 10
@@ -716,8 +695,7 @@ Response Type /definitions/entListJobTemplatesResponse
                     },
                     "SubQueries": [
                       {
-                        "type_url": "string",
-                        "value": "string"
+                        "@type": "string"
                       }
                     ],
                     "groupBy": 10
@@ -746,8 +724,7 @@ Response Type /definitions/entListJobTemplatesResponse
                     },
                     "SubQueries": [
                       {
-                        "type_url": "string",
-                        "value": "string"
+                        "@type": "string"
                       }
                     ],
                     "groupBy": 10
@@ -774,8 +751,7 @@ Response Type /definitions/entListJobTemplatesResponse
                     },
                     "SubQueries": [
                       {
-                        "type_url": "string",
-                        "value": "string"
+                        "@type": "string"
                       }
                     ],
                     "groupBy": 10
@@ -798,8 +774,7 @@ Response Type /definitions/entListJobTemplatesResponse
                     },
                     "SubQueries": [
                       {
-                        "type_url": "string",
-                        "value": "string"
+                        "@type": "string"
                       }
                     ],
                     "groupBy": 10
@@ -823,8 +798,7 @@ Response Type /definitions/entListJobTemplatesResponse
                     },
                     "SubQueries": [
                       {
-                        "type_url": "string",
-                        "value": "string"
+                        "@type": "string"
                       }
                     ],
                     "groupBy": 10
@@ -897,8 +871,7 @@ Response Type /definitions/entListJobTemplatesResponse
                     },
                     "SubQueries": [
                       {
-                        "type_url": "string",
-                        "value": "string"
+                        "@type": "string"
                       }
                     ],
                     "groupBy": 10
@@ -969,6 +942,7 @@ Response Type /definitions/entListJobTemplatesResponse
                 ],
                 "Activities": [
                   {
+                    "@context": "string",
                     "accuracy": "[Unknown Type number]",
                     "actor": "[Recursive structure]",
                     "altitude": "[Unknown Type number]",
@@ -1000,7 +974,6 @@ Response Type /definitions/entListJobTemplatesResponse
                     "items": [
                       "[Recursive structure]"
                     ],
-                    "jsonLdContext": "string",
                     "last": "[Recursive structure]",
                     "latitude": "[Unknown Type number]",
                     "location": "[Recursive structure]",
@@ -1061,8 +1034,7 @@ Response Type /definitions/entListJobTemplatesResponse
                   }
                 ],
                 "Event": {
-                  "type_url": "string",
-                  "value": "string"
+                  "@type": "string"
                 },
                 "Nodes": [
                   {
@@ -1231,6 +1203,7 @@ Response Type /definitions/entListJobTemplatesResponse
                 ],
                 "Activities": [
                   {
+                    "@context": "string",
                     "accuracy": "[Unknown Type number]",
                     "actor": "[Recursive structure]",
                     "altitude": "[Unknown Type number]",
@@ -1262,7 +1235,6 @@ Response Type /definitions/entListJobTemplatesResponse
                     "items": [
                       "[Recursive structure]"
                     ],
-                    "jsonLdContext": "string",
                     "last": "[Recursive structure]",
                     "latitude": "[Unknown Type number]",
                     "location": "[Recursive structure]",
@@ -1323,8 +1295,7 @@ Response Type /definitions/entListJobTemplatesResponse
                   }
                 ],
                 "Event": {
-                  "type_url": "string",
-                  "value": "string"
+                  "@type": "string"
                 },
                 "Nodes": [
                   {
@@ -1512,8 +1483,7 @@ Response Type /definitions/entListJobTemplatesResponse
           },
           "SubQueries": [
             {
-              "type_url": "string",
-              "value": "string"
+              "@type": "string"
             }
           ],
           "groupBy": 10
@@ -1576,4 +1546,4 @@ Response Type /definitions/entListJobTemplatesResponse
 
 
 
-###### Auto generated by Pydio Cells Enterprise Distribution v3.0.6 on 22-Mar-2022
+###### Auto generated by Pydio Cells Enterprise Distribution v4.0.0-alpha2 on 23-Mar-2022
