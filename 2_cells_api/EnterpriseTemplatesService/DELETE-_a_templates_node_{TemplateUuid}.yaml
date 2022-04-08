@@ -1,0 +1,4 @@
+title: "DELETE /a/templates/node/{TemplateUuid}"
+menu: "DELETE /a/templates/node/{TemplateUuid}"
+language: und
+menu_name: menu-dev-guide-v7
