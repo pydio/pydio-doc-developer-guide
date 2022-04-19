@@ -6,7 +6,7 @@
 
 
  
-Publish available REST APIs  
+[Enterprise Only] Audit all shares across the application  
 
 
 No Parameters
@@ -14,11 +14,13 @@ No Parameters
 
 
 ### Response Example (200)
-Response Type /definitions/restOpenApiResponse
+Response Type /definitions/reportsListReportsResponse
 
 ```
 {
-  "Data": "string"
+  "ReportDates": [
+    10
+  ]
 }
 ```
 
