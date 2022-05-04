@@ -13,6 +13,208 @@
 
 Name | Description | Type | Required
 ---|---|---|---
+**configbitbucket** |  | _#/definitions/authOAuth2ConnectorBitbucketConfig_ |   
+**configgithub** |  | _#/definitions/authOAuth2ConnectorGithubConfig_ |   
+**configgitlab** |  | _#/definitions/authOAuth2ConnectorGitlabConfig_ |   
+**configldap** |  | _#/definitions/authLdapServerConfig_ |   
+**configlinkedin** |  | _#/definitions/authOAuth2ConnectorLinkedinConfig_ |   
+**configmicrosoft** |  | _#/definitions/authOAuth2ConnectorMicrosoftConfig_ |   
+**configoauth** |  | _#/definitions/authOAuth2ConnectorOAuthConfig_ |   
+**configoidc** |  | _#/definitions/authOAuth2ConnectorOIDCConfig_ |   
+**configpydio** |  | _#/definitions/authOAuth2ConnectorPydioConfig_ |   
+**configsaml** |  | _#/definitions/authOAuth2ConnectorSAMLConfig_ |   
+**id** |  | _string_ |   
+**mappingRules** |  | _array_ |   
+**name** |  | _string_ |   
+**sites** |  | _array_ |   
+**type** |  | _string_ |   
+
+
+### Body Example
+```
+{
+  "configbitbucket": {
+    "clientID": "string",
+    "clientSecret": "string",
+    "redirectURI": "string",
+    "teams": [
+      "string"
+    ]
+  },
+  "configgithub": {
+    "clientID": "string",
+    "clientSecret": "string",
+    "hostName": "string",
+    "loadAllGroups": true,
+    "orgs": [
+      {
+        "name": "string",
+        "teams": [
+          "string"
+        ]
+      }
+    ],
+    "redirectURI": "string",
+    "rootCA": "string",
+    "teamNameField": "string",
+    "useLoginAsID": true
+  },
+  "configgitlab": {
+    "baseURL": "string",
+    "clientID": "string",
+    "clientSecret": "string",
+    "groups": [
+      "string"
+    ],
+    "redirectURI": "string",
+    "userLoginAsID": true
+  },
+  "configldap": {
+    "BindAnonymous": true,
+    "BindDN": "string",
+    "BindPW": "string",
+    "ConfigId": "string",
+    "Connection": "string",
+    "DomainName": "string",
+    "Host": "string",
+    "MappingRules": [
+      {
+        "LeftAttribute": "string",
+        "RightAttribute": "string",
+        "RolePrefix": "string",
+        "RuleString": "string"
+      }
+    ],
+    "MemberOfMapping": {
+      "GroupFilter": {
+        "DNs": [
+          "string"
+        ],
+        "DisplayAttribute": "string",
+        "Filter": "string",
+        "IDAttribute": "string",
+        "Scope": "string"
+      },
+      "Mapping": {
+        "LeftAttribute": "string",
+        "RightAttribute": "string",
+        "RolePrefix": "string",
+        "RuleString": "string"
+      },
+      "PydioMemberOfAttribute": "string",
+      "PydioMemberOfValueFormat": "string",
+      "RealMemberOf": true,
+      "RealMemberOfAttribute": "string",
+      "RealMemberOfValueFormat": "string",
+      "SupportNestedGroup": true
+    },
+    "PageSize": 10,
+    "RolePrefix": "string",
+    "RootCA": "string",
+    "RootCAData": "string",
+    "Schedule": "string",
+    "SchedulerDetails": "string",
+    "SkipVerifyCertificate": true,
+    "SyncOnly": true,
+    "User": {
+      "DNs": [
+        "string"
+      ],
+      "DisplayAttribute": "string",
+      "Filter": "string",
+      "IDAttribute": "string",
+      "Scope": "string"
+    }
+  },
+  "configlinkedin": {
+    "clientID": "string",
+    "clientSecret": "string",
+    "redirectURI": "string"
+  },
+  "configmicrosoft": {
+    "clientID": "string",
+    "clientSecret": "string",
+    "groupNameFormat": "string",
+    "groups": [
+      "string"
+    ],
+    "onlySecurityGroups": true,
+    "redirectURI": "string",
+    "tenant": "string",
+    "useGroupsAsWhitelist": true
+  },
+  "configoauth": {
+    "authorizeURL": "string",
+    "baseURL": "string",
+    "clientID": "string",
+    "clientSecret": "string",
+    "groups": [
+      "string"
+    ],
+    "redirectURI": "string",
+    "tokenURL": "string",
+    "useBrokenAuthHeaderProvider": true,
+    "useLoginAsID": true,
+    "userInfoURL": "string"
+  },
+  "configoidc": {
+    "basicAuthUnsupported": true,
+    "clientID": "string",
+    "clientSecret": "string",
+    "getUserInfo": true,
+    "hostedDomains": [
+      "string"
+    ],
+    "insecureSkipEmailVerified": true,
+    "issuer": "string",
+    "redirectURI": "string",
+    "scopes": [
+      "string"
+    ],
+    "userIDKey": "string",
+    "userNameKey": "string"
+  },
+  "configpydio": {
+    "pydioconnectors": [
+      {
+        "id": 10,
+        "name": "string",
+        "type": "string"
+      }
+    ]
+  },
+  "configsaml": {
+    "ca": "string",
+    "caData": "string",
+    "emailAttr": "string",
+    "entityIssuer": "string",
+    "groupsAttr": "string",
+    "groupsDelim": "string",
+    "insecureSkipSignatureValidation": true,
+    "nameIDPolicyFormat": "string",
+    "redirectURI": "string",
+    "ssoIssuer": "string",
+    "ssoURL": "string",
+    "usernameAttr": "string"
+  },
+  "id": "string",
+  "mappingRules": [
+    {
+      "LeftAttribute": "string",
+      "LeftSplit": "string",
+      "NoUpdate": true,
+      "RightAttribute": "string",
+      "RightValueTemplate": "string",
+      "RuleString": "string"
+    }
+  ],
+  "name": "string",
+  "sites": [
+    "string"
+  ],
+  "type": "string"
+}
+```
 
 
 
@@ -31,4 +233,4 @@ Response Type /definitions/entOAuth2ConnectorResponse
 
 
 
-###### Auto generated by Pydio Cells Enterprise Distribution v4.0.0-beta1 on 29-Apr-2022
+###### Auto generated by Pydio Cells Enterprise Distribution v3.0.7 on 4-May-2022
