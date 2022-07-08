@@ -37,7 +37,8 @@ Name | Description | Type | Required
           },
           "SubQueries": [
             {
-              "@type": "string"
+              "type_url": "string",
+              "value": "string"
             }
           ],
           "groupBy": 10
@@ -64,7 +65,8 @@ Name | Description | Type | Required
           },
           "SubQueries": [
             {
-              "@type": "string"
+              "type_url": "string",
+              "value": "string"
             }
           ],
           "groupBy": 10
@@ -89,12 +91,12 @@ Name | Description | Type | Required
           },
           "SubQueries": [
             {
-              "@type": "string"
+              "type_url": "string",
+              "value": "string"
             }
           ],
           "groupBy": 10
         },
-        "Timeout": "string",
         "Type": "string"
       },
       "DataSourceSelector": {
@@ -115,12 +117,12 @@ Name | Description | Type | Required
           },
           "SubQueries": [
             {
-              "@type": "string"
+              "type_url": "string",
+              "value": "string"
             }
           ],
           "groupBy": 10
         },
-        "Timeout": "string",
         "Type": "string"
       },
       "Description": "string",
@@ -146,12 +148,12 @@ Name | Description | Type | Required
           },
           "SubQueries": [
             {
-              "@type": "string"
+              "type_url": "string",
+              "value": "string"
             }
           ],
           "groupBy": 10
         },
-        "Timeout": "string",
         "Type": "string"
       },
       "IdmSelector": {
@@ -172,12 +174,12 @@ Name | Description | Type | Required
           },
           "SubQueries": [
             {
-              "@type": "string"
+              "type_url": "string",
+              "value": "string"
             }
           ],
           "groupBy": 10
         },
-        "Timeout": "string",
         "Type": "string"
       },
       "Label": "string",
@@ -202,12 +204,12 @@ Name | Description | Type | Required
           },
           "SubQueries": [
             {
-              "@type": "string"
+              "type_url": "string",
+              "value": "string"
             }
           ],
           "groupBy": 10
-        },
-        "Timeout": "string"
+        }
       },
       "NodesSelector": {
         "All": true,
@@ -230,15 +232,14 @@ Name | Description | Type | Required
           },
           "SubQueries": [
             {
-              "@type": "string"
+              "type_url": "string",
+              "value": "string"
             }
           ],
           "groupBy": 10
-        },
-        "Timeout": "string"
+        }
       },
       "Parameters": {},
-      "Timeout": "string",
       "TriggerFilter": {
         "Description": "string",
         "Label": "string",
@@ -255,7 +256,8 @@ Name | Description | Type | Required
           },
           "SubQueries": [
             {
-              "@type": "string"
+              "type_url": "string",
+              "value": "string"
             }
           ],
           "groupBy": 10
@@ -279,12 +281,12 @@ Name | Description | Type | Required
           },
           "SubQueries": [
             {
-              "@type": "string"
+              "type_url": "string",
+              "value": "string"
             }
           ],
           "groupBy": 10
         },
-        "Timeout": "string",
         "Users": [
           {
             "Attributes": {},
@@ -353,12 +355,12 @@ Name | Description | Type | Required
           },
           "SubQueries": [
             {
-              "@type": "string"
+              "type_url": "string",
+              "value": "string"
             }
           ],
           "groupBy": 10
         },
-        "Timeout": "string",
         "Users": [
           {
             "Attributes": {},
@@ -443,7 +445,8 @@ Response Type /definitions/entPutActionTemplateResponse
           },
           "SubQueries": [
             {
-              "@type": "string"
+              "type_url": "string",
+              "value": "string"
             }
           ],
           "groupBy": 10
@@ -470,7 +473,8 @@ Response Type /definitions/entPutActionTemplateResponse
           },
           "SubQueries": [
             {
-              "@type": "string"
+              "type_url": "string",
+              "value": "string"
             }
           ],
           "groupBy": 10
@@ -495,12 +499,12 @@ Response Type /definitions/entPutActionTemplateResponse
           },
           "SubQueries": [
             {
-              "@type": "string"
+              "type_url": "string",
+              "value": "string"
             }
           ],
           "groupBy": 10
         },
-        "Timeout": "string",
         "Type": "string"
       },
       "DataSourceSelector": {
@@ -521,12 +525,12 @@ Response Type /definitions/entPutActionTemplateResponse
           },
           "SubQueries": [
             {
-              "@type": "string"
+              "type_url": "string",
+              "value": "string"
             }
           ],
           "groupBy": 10
         },
-        "Timeout": "string",
         "Type": "string"
       },
       "Description": "string",
@@ -552,12 +556,12 @@ Response Type /definitions/entPutActionTemplateResponse
           },
           "SubQueries": [
             {
-              "@type": "string"
+              "type_url": "string",
+              "value": "string"
             }
           ],
           "groupBy": 10
         },
-        "Timeout": "string",
         "Type": "string"
       },
       "IdmSelector": {
@@ -578,12 +582,12 @@ Response Type /definitions/entPutActionTemplateResponse
           },
           "SubQueries": [
             {
-              "@type": "string"
+              "type_url": "string",
+              "value": "string"
             }
           ],
           "groupBy": 10
         },
-        "Timeout": "string",
         "Type": "string"
       },
       "Label": "string",
@@ -608,12 +612,12 @@ Response Type /definitions/entPutActionTemplateResponse
           },
           "SubQueries": [
             {
-              "@type": "string"
+              "type_url": "string",
+              "value": "string"
             }
           ],
           "groupBy": 10
-        },
-        "Timeout": "string"
+        }
       },
       "NodesSelector": {
         "All": true,
@@ -636,15 +640,14 @@ Response Type /definitions/entPutActionTemplateResponse
           },
           "SubQueries": [
             {
-              "@type": "string"
+              "type_url": "string",
+              "value": "string"
             }
           ],
           "groupBy": 10
-        },
-        "Timeout": "string"
+        }
       },
       "Parameters": {},
-      "Timeout": "string",
       "TriggerFilter": {
         "Description": "string",
         "Label": "string",
@@ -661,7 +664,8 @@ Response Type /definitions/entPutActionTemplateResponse
           },
           "SubQueries": [
             {
-              "@type": "string"
+              "type_url": "string",
+              "value": "string"
             }
           ],
           "groupBy": 10
@@ -685,12 +689,12 @@ Response Type /definitions/entPutActionTemplateResponse
           },
           "SubQueries": [
             {
-              "@type": "string"
+              "type_url": "string",
+              "value": "string"
             }
           ],
           "groupBy": 10
         },
-        "Timeout": "string",
         "Users": [
           {
             "Attributes": {},
@@ -759,12 +763,12 @@ Response Type /definitions/entPutActionTemplateResponse
           },
           "SubQueries": [
             {
-              "@type": "string"
+              "type_url": "string",
+              "value": "string"
             }
           ],
           "groupBy": 10
         },
-        "Timeout": "string",
         "Users": [
           {
             "Attributes": {},
@@ -824,4 +828,4 @@ Response Type /definitions/entPutActionTemplateResponse
 
 
 
-###### Auto generated by Pydio Cells Enterprise Distribution v4.0.0-rc1 on 7-Jul-2022
+###### Auto generated by Pydio Cells Enterprise Distribution v3.0.9 on 8-Jul-2022

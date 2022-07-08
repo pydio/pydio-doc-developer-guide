@@ -1,3 +1,5 @@
+## ./cells-enterprise start
+
 Start one or more services
 
 ### Synopsis
@@ -67,7 +69,6 @@ ENVIRONMENT
   - CELLS_ENABLE_LIVEKIT: enable experimental support for video calls in the chat window, using a livekit-server.
   - CELLS_ENABLE_FORMS_DEVEL: display a basic UX form with all possible fields types in the UX (for React developers)
   - CELLS_DEFAULT_DS_STRUCT: if true, create default datasources using structured format instead of flat
-  - CELLS_TRACE_FATAL: if true, tries to better display root cause of process crashes
 
 
 
@@ -78,39 +79,47 @@ ENVIRONMENT
 ### Options
 
 ```
-      --advertise_address string     Address that should be advertised to other members of the cluster (leave it empty for default advertise address)
-      --bind_address string          Address on which servers will bind. Binding port depends on the server type (grpc, http, etc). (default "0.0.0.0")
-      --broker string                Pub/sub service URL for events broadcast. Supported schemes:  (default "mem://")
-      --enable_metrics               Instrument code to expose internal metrics
-      --enable_pprof                 Enable pprof remote debugging
-  -x, --exclude stringArray          Select services to start by filtering out some specific ones by name
-      --grpc_discovery_port string   Default discovery gRPC server port (registry, broker, config, and log services). (default "8002")
-      --grpc_port string             Default gRPC server port (all gRPC services, except discovery ones) (default "8001")
-      --healthcheck int              Healthcheck port number
-  -h, --help                         help for start
-      --log string                   Output log level: debug, info, warn, error (production is equivalent to log_json+info) (default "info")
-      --log_json                     Output log formatted as JSON instead of text
-      --log_to_file                  Write logs on-file in CELLS_LOG_DIR (default true)
-      --registry string              Registry URL used to manage services. Supported schemes: etcd|file|grpc|mem (default "mem://?cache=shared")
-      --site_bind string             [Site] The 'site_' flags suite overrides config-defined sites. Bind is the site binding address (IP|DOMAIN:PORT), see other flags for TLS configurations.
-      --site_external string         [Site] External full URL (http[s]://IP|DOMAIN[:PORT]) exposed to the outside
-      --site_le_agree                [Site] Accept Let's Encrypt EULA
-      --site_le_email string         [Site] Set email to enable Let's Encrypt automatic TLS configuration
-      --site_le_staging              [Site] Use Let's Encrypt staging CA instead of production to avoid being banned on misconfiguration.
-      --site_no_tls                  [Site] Use plain HTTP
-      --site_tls_cert_file string    [Site] Path to custom TLS certificate file
-      --site_tls_key_file string     [Site] Path to custom TLS key file
-  -t, --tags stringArray             Select services to start by tags, possible values are 'broker', 'data', 'datasource', 'discovery', 'frontend', 'gateway', 'idm', 'scheduler'
+      --bind string                             Internal IP|DOMAIN:PORT on which the main proxy will bind. Self-signed SSL will be used by default
+      --enable_metrics                          Instrument code to expose internal metrics
+      --enable_pprof                            Enable pprof remote debugging
+  -x, --exclude stringArray                     Select services to start by filtering out some specific ones by name
+      --external string                         External full URL (http[s]://IP|DOMAIN[:PORT]) exposed to the outside
+      --grpc_cert string                        Certificates used for communication via grpc
+      --grpc_external string                    External port exposed for gRPC (may be fixed if no SSL is configured or a reverse proxy is used)
+      --grpc_key string                         Certificates used for communication via grpc
+      --healthcheck int                         Healthcheck port number
+  -h, --help                                    help for start
+      --le_agree                                Accept Let's Encrypt EULA
+      --le_email string                         Contact e-mail for Let's Encrypt provided certificate
+      --log string                              Sets the log level: 'debug', 'info', 'warn', 'error' (for backward-compatibility, 'production' is equivalent to log_json+info) (default "info")
+      --log_json                                Sets the log output format to JSON instead of text
+      --log_to_file                             Write logs on-file in CELLS_LOG_DIR (default true)
+      --nats_address string                     NATS server address (default ":4222")
+      --nats_cluster_address string             NATS server cluster address
+      --nats_cluster_routes string              NATS server cluster routes
+      --nats_monitor_port int                   Expose nats monitoring endpoints on a given port (default 8222)
+      --nats_streaming_cluster_bootstrap        NATS streaming bootstrap cluster
+      --nats_streaming_cluster_id string        NATS streaming cluster ID (default "cells")
+      --nats_streaming_cluster_node_id string   NATS streaming cluster node id
+      --nats_streaming_cluster_peers string     NATS streaming list of cluster peers
+      --nats_streaming_clustered                NATS streaming clustered
+      --nats_streaming_store string             NATS streaming store type (default "MEMORY")
+      --no_tls                                  Configure the main gateway to rather use plain HTTP
+      --port_broker int                         Port used to start a broker discovery service (default 8003)
+      --port_registry int                       Port used to start a registry discovery service (default 8000)
+  -t, --tags stringArray                        Select services to start by tags, possible values are 'broker', 'data', 'datasource', 'discovery', 'frontend', 'gateway', 'idm', 'scheduler'
+      --tls_cert_file string                    TLS cert file path
+      --tls_key_file string                     TLS key file path
+      --transport string                        Transport protocol for RPC (default "grpc")
 ```
 
 ### Options inherited from parent commands
 
 ```
-      --config string   Configuration storage URL. Supported schemes: etcd|file|grpc|mem|vault|vaults (default "file:///home/teamcity/.config/pydio/cells/pydio.json")
 ```
 
 ### SEE ALSO
 
 * [./cells-enterprise](./cells-enterprise)	 - Secure File Sharing for business
 
-###### Auto generated by Pydio Cells Enterprise Distribution v4.0.0-rc1 on 7-Jul-2022
+###### Auto generated by Pydio Cells Enterprise Distribution v3.0.9 on 8-Jul-2022
