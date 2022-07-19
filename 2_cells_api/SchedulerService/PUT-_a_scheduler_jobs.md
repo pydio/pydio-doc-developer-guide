@@ -38,8 +38,7 @@ Name | Description | Type | Required
             },
             "SubQueries": [
               {
-                "type_url": "string",
-                "value": "string"
+                "@type": "string"
               }
             ],
             "groupBy": 10
@@ -66,8 +65,7 @@ Name | Description | Type | Required
             },
             "SubQueries": [
               {
-                "type_url": "string",
-                "value": "string"
+                "@type": "string"
               }
             ],
             "groupBy": 10
@@ -92,12 +90,12 @@ Name | Description | Type | Required
             },
             "SubQueries": [
               {
-                "type_url": "string",
-                "value": "string"
+                "@type": "string"
               }
             ],
             "groupBy": 10
           },
+          "Timeout": "string",
           "Type": "string"
         },
         "DataSourceSelector": {
@@ -118,12 +116,12 @@ Name | Description | Type | Required
             },
             "SubQueries": [
               {
-                "type_url": "string",
-                "value": "string"
+                "@type": "string"
               }
             ],
             "groupBy": 10
           },
+          "Timeout": "string",
           "Type": "string"
         },
         "Description": "string",
@@ -149,12 +147,12 @@ Name | Description | Type | Required
             },
             "SubQueries": [
               {
-                "type_url": "string",
-                "value": "string"
+                "@type": "string"
               }
             ],
             "groupBy": 10
           },
+          "Timeout": "string",
           "Type": "string"
         },
         "IdmSelector": {
@@ -175,12 +173,12 @@ Name | Description | Type | Required
             },
             "SubQueries": [
               {
-                "type_url": "string",
-                "value": "string"
+                "@type": "string"
               }
             ],
             "groupBy": 10
           },
+          "Timeout": "string",
           "Type": "string"
         },
         "Label": "string",
@@ -205,12 +203,12 @@ Name | Description | Type | Required
             },
             "SubQueries": [
               {
-                "type_url": "string",
-                "value": "string"
+                "@type": "string"
               }
             ],
             "groupBy": 10
-          }
+          },
+          "Timeout": "string"
         },
         "NodesSelector": {
           "All": true,
@@ -233,14 +231,15 @@ Name | Description | Type | Required
             },
             "SubQueries": [
               {
-                "type_url": "string",
-                "value": "string"
+                "@type": "string"
               }
             ],
             "groupBy": 10
-          }
+          },
+          "Timeout": "string"
         },
         "Parameters": {},
+        "Timeout": "string",
         "TriggerFilter": {
           "Description": "string",
           "Label": "string",
@@ -257,8 +256,7 @@ Name | Description | Type | Required
             },
             "SubQueries": [
               {
-                "type_url": "string",
-                "value": "string"
+                "@type": "string"
               }
             ],
             "groupBy": 10
@@ -282,12 +280,12 @@ Name | Description | Type | Required
             },
             "SubQueries": [
               {
-                "type_url": "string",
-                "value": "string"
+                "@type": "string"
               }
             ],
             "groupBy": 10
           },
+          "Timeout": "string",
           "Users": [
             {
               "Attributes": {},
@@ -356,12 +354,12 @@ Name | Description | Type | Required
             },
             "SubQueries": [
               {
-                "type_url": "string",
-                "value": "string"
+                "@type": "string"
               }
             ],
             "groupBy": 10
           },
+          "Timeout": "string",
           "Users": [
             {
               "Attributes": {},
@@ -432,8 +430,7 @@ Name | Description | Type | Required
         },
         "SubQueries": [
           {
-            "type_url": "string",
-            "value": "string"
+            "@type": "string"
           }
         ],
         "groupBy": 10
@@ -459,12 +456,12 @@ Name | Description | Type | Required
         },
         "SubQueries": [
           {
-            "type_url": "string",
-            "value": "string"
+            "@type": "string"
           }
         ],
         "groupBy": 10
       },
+      "Timeout": "string",
       "Type": "string"
     },
     "EventNames": [
@@ -489,12 +486,12 @@ Name | Description | Type | Required
         },
         "SubQueries": [
           {
-            "type_url": "string",
-            "value": "string"
+            "@type": "string"
           }
         ],
         "groupBy": 10
       },
+      "Timeout": "string",
       "Type": "string"
     },
     "Inactive": true,
@@ -524,12 +521,12 @@ Name | Description | Type | Required
         },
         "SubQueries": [
           {
-            "type_url": "string",
-            "value": "string"
+            "@type": "string"
           }
         ],
         "groupBy": 10
-      }
+      },
+      "Timeout": "string"
     },
     "Owner": "string",
     "Parameters": [
@@ -544,8 +541,7 @@ Name | Description | Type | Required
     ],
     "ResourcesDependencies": [
       {
-        "type_url": "string",
-        "value": "string"
+        "@type": "string"
       }
     ],
     "Schedule": {
@@ -573,8 +569,7 @@ Name | Description | Type | Required
                   },
                   "SubQueries": [
                     {
-                      "type_url": "string",
-                      "value": "string"
+                      "@type": "string"
                     }
                   ],
                   "groupBy": 10
@@ -601,8 +596,7 @@ Name | Description | Type | Required
                   },
                   "SubQueries": [
                     {
-                      "type_url": "string",
-                      "value": "string"
+                      "@type": "string"
                     }
                   ],
                   "groupBy": 10
@@ -627,12 +621,12 @@ Name | Description | Type | Required
                   },
                   "SubQueries": [
                     {
-                      "type_url": "string",
-                      "value": "string"
+                      "@type": "string"
                     }
                   ],
                   "groupBy": 10
                 },
+                "Timeout": "string",
                 "Type": "string"
               },
               "DataSourceSelector": {
@@ -653,12 +647,12 @@ Name | Description | Type | Required
                   },
                   "SubQueries": [
                     {
-                      "type_url": "string",
-                      "value": "string"
+                      "@type": "string"
                     }
                   ],
                   "groupBy": 10
                 },
+                "Timeout": "string",
                 "Type": "string"
               },
               "Description": "string",
@@ -684,12 +678,12 @@ Name | Description | Type | Required
                   },
                   "SubQueries": [
                     {
-                      "type_url": "string",
-                      "value": "string"
+                      "@type": "string"
                     }
                   ],
                   "groupBy": 10
                 },
+                "Timeout": "string",
                 "Type": "string"
               },
               "IdmSelector": {
@@ -710,12 +704,12 @@ Name | Description | Type | Required
                   },
                   "SubQueries": [
                     {
-                      "type_url": "string",
-                      "value": "string"
+                      "@type": "string"
                     }
                   ],
                   "groupBy": 10
                 },
+                "Timeout": "string",
                 "Type": "string"
               },
               "Label": "string",
@@ -740,12 +734,12 @@ Name | Description | Type | Required
                   },
                   "SubQueries": [
                     {
-                      "type_url": "string",
-                      "value": "string"
+                      "@type": "string"
                     }
                   ],
                   "groupBy": 10
-                }
+                },
+                "Timeout": "string"
               },
               "NodesSelector": {
                 "All": true,
@@ -768,14 +762,15 @@ Name | Description | Type | Required
                   },
                   "SubQueries": [
                     {
-                      "type_url": "string",
-                      "value": "string"
+                      "@type": "string"
                     }
                   ],
                   "groupBy": 10
-                }
+                },
+                "Timeout": "string"
               },
               "Parameters": {},
+              "Timeout": "string",
               "TriggerFilter": {
                 "Description": "string",
                 "Label": "string",
@@ -792,8 +787,7 @@ Name | Description | Type | Required
                   },
                   "SubQueries": [
                     {
-                      "type_url": "string",
-                      "value": "string"
+                      "@type": "string"
                     }
                   ],
                   "groupBy": 10
@@ -817,12 +811,12 @@ Name | Description | Type | Required
                   },
                   "SubQueries": [
                     {
-                      "type_url": "string",
-                      "value": "string"
+                      "@type": "string"
                     }
                   ],
                   "groupBy": 10
                 },
+                "Timeout": "string",
                 "Users": [
                   {
                     "Attributes": {},
@@ -891,12 +885,12 @@ Name | Description | Type | Required
                   },
                   "SubQueries": [
                     {
-                      "type_url": "string",
-                      "value": "string"
+                      "@type": "string"
                     }
                   ],
                   "groupBy": 10
                 },
+                "Timeout": "string",
                 "Users": [
                   {
                     "Attributes": {},
@@ -963,6 +957,7 @@ Name | Description | Type | Required
               ],
               "Activities": [
                 {
+                  "@context": "string",
                   "accuracy": "[Unknown Type number]",
                   "actor": "[Recursive structure]",
                   "altitude": "[Unknown Type number]",
@@ -994,7 +989,6 @@ Name | Description | Type | Required
                   "items": [
                     "[Recursive structure]"
                   ],
-                  "jsonLdContext": "string",
                   "last": "[Recursive structure]",
                   "latitude": "[Unknown Type number]",
                   "location": "[Recursive structure]",
@@ -1055,8 +1049,7 @@ Name | Description | Type | Required
                 }
               ],
               "Event": {
-                "type_url": "string",
-                "value": "string"
+                "@type": "string"
               },
               "Nodes": [
                 {
@@ -1190,6 +1183,7 @@ Name | Description | Type | Required
               ],
               "Activities": [
                 {
+                  "@context": "string",
                   "accuracy": "[Unknown Type number]",
                   "actor": "[Recursive structure]",
                   "altitude": "[Unknown Type number]",
@@ -1221,7 +1215,6 @@ Name | Description | Type | Required
                   "items": [
                     "[Recursive structure]"
                   ],
-                  "jsonLdContext": "string",
                   "last": "[Recursive structure]",
                   "latitude": "[Unknown Type number]",
                   "location": "[Recursive structure]",
@@ -1282,8 +1275,7 @@ Name | Description | Type | Required
                 }
               ],
               "Event": {
-                "type_url": "string",
-                "value": "string"
+                "@type": "string"
               },
               "Nodes": [
                 {
@@ -1418,6 +1410,7 @@ Name | Description | Type | Required
       }
     ],
     "TasksSilentUpdate": true,
+    "Timeout": "string",
     "UserEventFilter": {
       "All": true,
       "Collect": true,
@@ -1436,12 +1429,12 @@ Name | Description | Type | Required
         },
         "SubQueries": [
           {
-            "type_url": "string",
-            "value": "string"
+            "@type": "string"
           }
         ],
         "groupBy": 10
       },
+      "Timeout": "string",
       "Users": [
         {
           "Attributes": {},
@@ -1525,8 +1518,7 @@ Response Type /definitions/jobsPutJobResponse
             },
             "SubQueries": [
               {
-                "type_url": "string",
-                "value": "string"
+                "@type": "string"
               }
             ],
             "groupBy": 10
@@ -1553,8 +1545,7 @@ Response Type /definitions/jobsPutJobResponse
             },
             "SubQueries": [
               {
-                "type_url": "string",
-                "value": "string"
+                "@type": "string"
               }
             ],
             "groupBy": 10
@@ -1579,12 +1570,12 @@ Response Type /definitions/jobsPutJobResponse
             },
             "SubQueries": [
               {
-                "type_url": "string",
-                "value": "string"
+                "@type": "string"
               }
             ],
             "groupBy": 10
           },
+          "Timeout": "string",
           "Type": "string"
         },
         "DataSourceSelector": {
@@ -1605,12 +1596,12 @@ Response Type /definitions/jobsPutJobResponse
             },
             "SubQueries": [
               {
-                "type_url": "string",
-                "value": "string"
+                "@type": "string"
               }
             ],
             "groupBy": 10
           },
+          "Timeout": "string",
           "Type": "string"
         },
         "Description": "string",
@@ -1636,12 +1627,12 @@ Response Type /definitions/jobsPutJobResponse
             },
             "SubQueries": [
               {
-                "type_url": "string",
-                "value": "string"
+                "@type": "string"
               }
             ],
             "groupBy": 10
           },
+          "Timeout": "string",
           "Type": "string"
         },
         "IdmSelector": {
@@ -1662,12 +1653,12 @@ Response Type /definitions/jobsPutJobResponse
             },
             "SubQueries": [
               {
-                "type_url": "string",
-                "value": "string"
+                "@type": "string"
               }
             ],
             "groupBy": 10
           },
+          "Timeout": "string",
           "Type": "string"
         },
         "Label": "string",
@@ -1692,12 +1683,12 @@ Response Type /definitions/jobsPutJobResponse
             },
             "SubQueries": [
               {
-                "type_url": "string",
-                "value": "string"
+                "@type": "string"
               }
             ],
             "groupBy": 10
-          }
+          },
+          "Timeout": "string"
         },
         "NodesSelector": {
           "All": true,
@@ -1720,14 +1711,15 @@ Response Type /definitions/jobsPutJobResponse
             },
             "SubQueries": [
               {
-                "type_url": "string",
-                "value": "string"
+                "@type": "string"
               }
             ],
             "groupBy": 10
-          }
+          },
+          "Timeout": "string"
         },
         "Parameters": {},
+        "Timeout": "string",
         "TriggerFilter": {
           "Description": "string",
           "Label": "string",
@@ -1744,8 +1736,7 @@ Response Type /definitions/jobsPutJobResponse
             },
             "SubQueries": [
               {
-                "type_url": "string",
-                "value": "string"
+                "@type": "string"
               }
             ],
             "groupBy": 10
@@ -1769,12 +1760,12 @@ Response Type /definitions/jobsPutJobResponse
             },
             "SubQueries": [
               {
-                "type_url": "string",
-                "value": "string"
+                "@type": "string"
               }
             ],
             "groupBy": 10
           },
+          "Timeout": "string",
           "Users": [
             {
               "Attributes": {},
@@ -1843,12 +1834,12 @@ Response Type /definitions/jobsPutJobResponse
             },
             "SubQueries": [
               {
-                "type_url": "string",
-                "value": "string"
+                "@type": "string"
               }
             ],
             "groupBy": 10
           },
+          "Timeout": "string",
           "Users": [
             {
               "Attributes": {},
@@ -1919,8 +1910,7 @@ Response Type /definitions/jobsPutJobResponse
         },
         "SubQueries": [
           {
-            "type_url": "string",
-            "value": "string"
+            "@type": "string"
           }
         ],
         "groupBy": 10
@@ -1946,12 +1936,12 @@ Response Type /definitions/jobsPutJobResponse
         },
         "SubQueries": [
           {
-            "type_url": "string",
-            "value": "string"
+            "@type": "string"
           }
         ],
         "groupBy": 10
       },
+      "Timeout": "string",
       "Type": "string"
     },
     "EventNames": [
@@ -1976,12 +1966,12 @@ Response Type /definitions/jobsPutJobResponse
         },
         "SubQueries": [
           {
-            "type_url": "string",
-            "value": "string"
+            "@type": "string"
           }
         ],
         "groupBy": 10
       },
+      "Timeout": "string",
       "Type": "string"
     },
     "Inactive": true,
@@ -2011,12 +2001,12 @@ Response Type /definitions/jobsPutJobResponse
         },
         "SubQueries": [
           {
-            "type_url": "string",
-            "value": "string"
+            "@type": "string"
           }
         ],
         "groupBy": 10
-      }
+      },
+      "Timeout": "string"
     },
     "Owner": "string",
     "Parameters": [
@@ -2031,8 +2021,7 @@ Response Type /definitions/jobsPutJobResponse
     ],
     "ResourcesDependencies": [
       {
-        "type_url": "string",
-        "value": "string"
+        "@type": "string"
       }
     ],
     "Schedule": {
@@ -2060,8 +2049,7 @@ Response Type /definitions/jobsPutJobResponse
                   },
                   "SubQueries": [
                     {
-                      "type_url": "string",
-                      "value": "string"
+                      "@type": "string"
                     }
                   ],
                   "groupBy": 10
@@ -2088,8 +2076,7 @@ Response Type /definitions/jobsPutJobResponse
                   },
                   "SubQueries": [
                     {
-                      "type_url": "string",
-                      "value": "string"
+                      "@type": "string"
                     }
                   ],
                   "groupBy": 10
@@ -2114,12 +2101,12 @@ Response Type /definitions/jobsPutJobResponse
                   },
                   "SubQueries": [
                     {
-                      "type_url": "string",
-                      "value": "string"
+                      "@type": "string"
                     }
                   ],
                   "groupBy": 10
                 },
+                "Timeout": "string",
                 "Type": "string"
               },
               "DataSourceSelector": {
@@ -2140,12 +2127,12 @@ Response Type /definitions/jobsPutJobResponse
                   },
                   "SubQueries": [
                     {
-                      "type_url": "string",
-                      "value": "string"
+                      "@type": "string"
                     }
                   ],
                   "groupBy": 10
                 },
+                "Timeout": "string",
                 "Type": "string"
               },
               "Description": "string",
@@ -2171,12 +2158,12 @@ Response Type /definitions/jobsPutJobResponse
                   },
                   "SubQueries": [
                     {
-                      "type_url": "string",
-                      "value": "string"
+                      "@type": "string"
                     }
                   ],
                   "groupBy": 10
                 },
+                "Timeout": "string",
                 "Type": "string"
               },
               "IdmSelector": {
@@ -2197,12 +2184,12 @@ Response Type /definitions/jobsPutJobResponse
                   },
                   "SubQueries": [
                     {
-                      "type_url": "string",
-                      "value": "string"
+                      "@type": "string"
                     }
                   ],
                   "groupBy": 10
                 },
+                "Timeout": "string",
                 "Type": "string"
               },
               "Label": "string",
@@ -2227,12 +2214,12 @@ Response Type /definitions/jobsPutJobResponse
                   },
                   "SubQueries": [
                     {
-                      "type_url": "string",
-                      "value": "string"
+                      "@type": "string"
                     }
                   ],
                   "groupBy": 10
-                }
+                },
+                "Timeout": "string"
               },
               "NodesSelector": {
                 "All": true,
@@ -2255,14 +2242,15 @@ Response Type /definitions/jobsPutJobResponse
                   },
                   "SubQueries": [
                     {
-                      "type_url": "string",
-                      "value": "string"
+                      "@type": "string"
                     }
                   ],
                   "groupBy": 10
-                }
+                },
+                "Timeout": "string"
               },
               "Parameters": {},
+              "Timeout": "string",
               "TriggerFilter": {
                 "Description": "string",
                 "Label": "string",
@@ -2279,8 +2267,7 @@ Response Type /definitions/jobsPutJobResponse
                   },
                   "SubQueries": [
                     {
-                      "type_url": "string",
-                      "value": "string"
+                      "@type": "string"
                     }
                   ],
                   "groupBy": 10
@@ -2304,12 +2291,12 @@ Response Type /definitions/jobsPutJobResponse
                   },
                   "SubQueries": [
                     {
-                      "type_url": "string",
-                      "value": "string"
+                      "@type": "string"
                     }
                   ],
                   "groupBy": 10
                 },
+                "Timeout": "string",
                 "Users": [
                   {
                     "Attributes": {},
@@ -2378,12 +2365,12 @@ Response Type /definitions/jobsPutJobResponse
                   },
                   "SubQueries": [
                     {
-                      "type_url": "string",
-                      "value": "string"
+                      "@type": "string"
                     }
                   ],
                   "groupBy": 10
                 },
+                "Timeout": "string",
                 "Users": [
                   {
                     "Attributes": {},
@@ -2450,6 +2437,7 @@ Response Type /definitions/jobsPutJobResponse
               ],
               "Activities": [
                 {
+                  "@context": "string",
                   "accuracy": "[Unknown Type number]",
                   "actor": "[Recursive structure]",
                   "altitude": "[Unknown Type number]",
@@ -2481,7 +2469,6 @@ Response Type /definitions/jobsPutJobResponse
                   "items": [
                     "[Recursive structure]"
                   ],
-                  "jsonLdContext": "string",
                   "last": "[Recursive structure]",
                   "latitude": "[Unknown Type number]",
                   "location": "[Recursive structure]",
@@ -2542,8 +2529,7 @@ Response Type /definitions/jobsPutJobResponse
                 }
               ],
               "Event": {
-                "type_url": "string",
-                "value": "string"
+                "@type": "string"
               },
               "Nodes": [
                 {
@@ -2712,6 +2698,7 @@ Response Type /definitions/jobsPutJobResponse
               ],
               "Activities": [
                 {
+                  "@context": "string",
                   "accuracy": "[Unknown Type number]",
                   "actor": "[Recursive structure]",
                   "altitude": "[Unknown Type number]",
@@ -2743,7 +2730,6 @@ Response Type /definitions/jobsPutJobResponse
                   "items": [
                     "[Recursive structure]"
                   ],
-                  "jsonLdContext": "string",
                   "last": "[Recursive structure]",
                   "latitude": "[Unknown Type number]",
                   "location": "[Recursive structure]",
@@ -2804,8 +2790,7 @@ Response Type /definitions/jobsPutJobResponse
                 }
               ],
               "Event": {
-                "type_url": "string",
-                "value": "string"
+                "@type": "string"
               },
               "Nodes": [
                 {
@@ -2975,6 +2960,7 @@ Response Type /definitions/jobsPutJobResponse
       }
     ],
     "TasksSilentUpdate": true,
+    "Timeout": "string",
     "UserEventFilter": {
       "All": true,
       "Collect": true,
@@ -2993,12 +2979,12 @@ Response Type /definitions/jobsPutJobResponse
         },
         "SubQueries": [
           {
-            "type_url": "string",
-            "value": "string"
+            "@type": "string"
           }
         ],
         "groupBy": 10
       },
+      "Timeout": "string",
       "Users": [
         {
           "Attributes": {},
@@ -3056,4 +3042,4 @@ Response Type /definitions/jobsPutJobResponse
 
 
 
-###### Auto generated by Pydio Cells Enterprise Distribution v3.0.9 on 8-Jul-2022
+###### Auto generated by Pydio Cells Enterprise Distribution v4.0.0-rc2 on 19-Jul-2022
