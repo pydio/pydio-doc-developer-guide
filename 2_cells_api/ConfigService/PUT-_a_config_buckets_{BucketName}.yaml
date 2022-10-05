@@ -1,0 +1,4 @@
+title: "PUT /a/config/buckets/{BucketName}"
+menu: "PUT /a/config/buckets/{BucketName}"
+language: und
+menu_name: menu-dev-guide-v7
