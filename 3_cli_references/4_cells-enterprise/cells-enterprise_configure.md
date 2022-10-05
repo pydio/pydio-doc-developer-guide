@@ -69,6 +69,7 @@ ENVIRONMENT
 ### Options
 
 ```
+      --bind_address string         Address on which servers will bind. Binding port depends on the server type (grpc, http, etc). (default "127.0.0.1")
       --cli                         Do not prompt for install mode, use CLI mode by default
       --exit_after_install          Simply exits main process after the installation is done
   -h, --help                        help for configure
