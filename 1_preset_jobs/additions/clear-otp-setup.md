@@ -1,0 +1,1 @@
+Manually triggered job to clear MFA status on a given user. Useful if user has forgotten their information.

@@ -1,1 +1,1 @@
-This job is a preset version of the "Purge Activities" generic job, providing out-of-the-box parameters for regular pruning of files and folders activities.  It should be run on a regular basis to avoid growing the on-file activities database to a very large size.
+This flow is a preset version of the "Purge Activities" generic job, providing out-of-the-box parameters for regular pruning of files and folders activities.  It should be run on a regular basis to avoid growing the on-file activities database to a very large size.

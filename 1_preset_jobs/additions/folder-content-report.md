@@ -1,4 +1,4 @@
-This job interestingly demonstrates various capacities of Cells Flows: 
+This flow interestingly demonstrates various capacities of Cells Flows: 
 
  - Use Golang templating to generate proper CSV or Markdown format based on actions input (in "Write To CSV File" and "Email In Markdown" actions)
 

@@ -1,4 +1,4 @@
-This job provides a full-featured, customizable validation workflow. It uses files metadata and specific roles to achieve the following approval scenario: 
+This flow provides a full-featured, customizable validation workflow. It uses files metadata and specific roles to achieve the following approval scenario: 
 
  - **Alert Reviewers**: when a file is created, tag it as "pending" and send an alert to all users with "reviewer" role.
  - **Inform Owner**: when a reviewer changes its metadata from "pending" to another status ("In Review" or "Validated"), notify the original creator that his file is being looked at.

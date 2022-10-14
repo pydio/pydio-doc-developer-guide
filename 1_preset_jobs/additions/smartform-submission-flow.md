@@ -1,0 +1,1 @@
+This flow shows how to read the SmartForm output by loading the `form.values` file content, and listing the content of the SmartForm folder. This is triggered by a metadata change, assuming the SmartForm is configured to set a metadata value to "submitted" on completion.

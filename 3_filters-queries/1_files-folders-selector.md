@@ -23,6 +23,7 @@ Typically, using bleve-like queries will request the Search Engine, these querie
 |**Content** (Content)|string|
 |**File name or Content** (FileNameOrContent)|string|
 |**Bleve-like search string** (FreeString)|string|
+|**ETag** (ETag)|string|
 |**File Extension** (Extension)|string|
 |**Path Depth** (PathDepth)|integer|
 |**Node UUIDs** (UUIDs)|string|

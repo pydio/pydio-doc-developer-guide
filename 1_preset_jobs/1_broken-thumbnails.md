@@ -3,7 +3,7 @@ Find images where thumbnail generation may have failed.
 
 [:image:1_preset_jobs/capture-broken-thumbnails.png]
 
-This job looks up for image files that are missing the specific `is_image` metadata. When found, it tries
+This flow looks up for image files that are missing the specific `is_image` metadata. When found, it tries
 to recreate the associated thumbnails. Can be useful when something wrong happened at first thumbnail generation (at upload time).
 
 ### Parameters

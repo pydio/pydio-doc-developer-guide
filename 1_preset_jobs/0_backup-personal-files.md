@@ -3,10 +3,10 @@ Create a compressed archive for each personal files for all users.
 
 [:image:1_preset_jobs/capture-backup-personal-files.png]
 
-This job combines various Queries to first list all "internal" users logins, then compute their personal 
+This flow combines various Queries to first list all "internal" users logins, then compute their personal 
 folder and pass this location as input to the "Compress" action. Last action is parametrized to select the archive format, its location. 
 
-This job can be useful for automatic backups, by pointing the final archive generation to e.g. an external S3 encrypted datasource.
+This flow can be useful for automatic backups, by pointing the final archive generation to e.g. an external S3 encrypted datasource.
 
 ### Parameters
 

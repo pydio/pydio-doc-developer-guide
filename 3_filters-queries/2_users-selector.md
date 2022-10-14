@@ -18,7 +18,7 @@ Users can be of type "User" or "Groups". To filter or look for a specific attrib
 |**Attribute Value** (AttributeValue)|string|
 |**Has any value** (AttributeAnyValue)|boolean|
 |**Has Role** (HasRole)|string|
-|**Object Type** (NodeType)|select, possible values: User (USER), Group (GROUP), Any (UNKNOWN)|
+|**Object Type** (NodeType)|select, possible values: Any (UNKNOWN), User (USER), Group (GROUP)|
 |**Has Profile** (HasProfile)|string|
 |**Connected Since** (ConnectedSince)|string|
 |**not** (not)|boolean|

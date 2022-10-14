@@ -1,0 +1,3 @@
+This flow can be used to compute (or recompute) files hashes inside a specific folder. It was primarily introduced in version 4 to attach a new hash signature to files `x-cells-hash` metadata. This new algorithm (`Cells Internal`) was introduced to provide a consistent hashing through the whole application, whatever the upload method (direct PUT, Multipart), the encryption mechanism and the datasource storage.
+
+The "Compute Hash" action can also be used to compute common hashes and attach them to any metadata. Supported algorithm are `md4`, `md5`, `sha1`, `sha256`, `sha512`.

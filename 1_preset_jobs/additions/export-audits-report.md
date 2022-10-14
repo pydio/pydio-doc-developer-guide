@@ -1,0 +1,1 @@
+This flows uses an internal gRPC call to the Audit Reports service, transforms the JSON output into XLSX or CSV and stores it in a location of your choice.

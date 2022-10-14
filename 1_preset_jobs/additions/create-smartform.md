@@ -1,0 +1,3 @@
+This flow can be used to automatically create a "SmartForm" when a user is created. A dedicated location is created in the user personal folder, and a SmartForm is attached to this folder.
+
+This flow relies on a SmartForm "Template UUID" for creation: you must have previously saved a SmartForm as a template, and use the "Copy" button inside the templates list to get the Uuid of this template. You can then use this UUID in the job's parameters.

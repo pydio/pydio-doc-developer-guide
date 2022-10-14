@@ -1,4 +1,4 @@
-Based on the internal gRPC API of the activity service, this jobs is useful for housekeeping and maintaining activity DB size
+Based on the internal gRPC API of the activity service, this flow is useful for housekeeping and maintaining activity DB size
 under control. Run regularly, it allows you to prune activities (either files/folders activities displayed in the right-hand panel of the interface or users notifications) on 
 a regular basis, based on various rules : 
 

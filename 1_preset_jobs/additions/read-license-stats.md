@@ -1,4 +1,4 @@
-This job is a good demonstration of using gRPC request to an internal Cells service, which result is returned in JSON format, 
+This flow is a good demonstration of using gRPC request to an internal Cells service, which result is returned in JSON format, 
 then using Go Template with `gval` function to compute percentage of license usage. 
 
 One can eventually append a "Send Email" action
