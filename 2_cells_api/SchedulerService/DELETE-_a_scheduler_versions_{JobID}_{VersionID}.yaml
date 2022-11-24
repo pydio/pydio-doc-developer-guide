@@ -1,0 +1,4 @@
+title: "DELETE /a/scheduler/versions/{JobID}/{VersionID}"
+menu: "DELETE /a/scheduler/versions/{JobID}/{VersionID}"
+language: und
+menu_name: menu-dev-guide-v7
