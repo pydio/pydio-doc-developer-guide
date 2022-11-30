@@ -81,7 +81,7 @@ ENVIRONMENT
       --advertise_address string     Address that should be advertised to other members of the cluster (leave it empty for default advertise address)
       --bind_address string          Address on which servers will bind. Binding port depends on the server type (grpc, http, etc). (default "127.0.0.1")
       --broker string                Pub/sub service URL for events broadcast. Supported schemes: grpc|mem|nats|rabbit (default "mem://")
-      --enable_metrics string        Instrument code to expose internal metrics (use true for local JSON file, or login:password for a Service Discovery) (default "false")
+      --enable_metrics               Instrument code to expose internal metrics (to local JSON file, or service discovery if Metrics Basic Auth is set)
       --enable_pprof                 Enable pprof remote debugging
   -x, --exclude stringArray          Select services to start by filtering out some specific ones by name
       --grpc_discovery_port string   Default discovery gRPC server port (registry, broker, config, and log services). (default "8030")
@@ -91,6 +91,7 @@ ENVIRONMENT
       --log string                   Output log level: debug, info, warn, error (production is equivalent to log_json+info) (default "info")
       --log_json                     Output log formatted as JSON instead of text
       --log_to_file                  Write logs on-file in CELLS_LOG_DIR (default true)
+      --metrics_basic_auth string    Expose metrics to a service discovery endpoint /metrics/sd
       --registry string              Registry URL used to manage services. Supported schemes: etcd|file|grpc|mem (default "mem://?cache=shared")
       --site_bind string             [Site] The 'site_' flags suite overrides config-defined sites. Bind is the site binding address IP|DOMAIN:PORT (default 0.0.0.0:8080)
       --site_external string         [Site] External full URL http[s]://IP|DOMAIN[:PORT] exposed to the outside
