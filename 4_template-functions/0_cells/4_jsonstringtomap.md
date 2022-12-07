@@ -1,1 +1,0 @@
-Unmarshal a json-encoded **string** as a map[string]interface{}

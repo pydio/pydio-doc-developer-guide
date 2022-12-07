@@ -1,1 +1,0 @@
-See `gval` definition. `gvals` is to be used when jsonpath expression expects an array of results instead of a single value.

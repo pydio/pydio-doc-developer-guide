@@ -1,1 +1,0 @@
-Remove title casing. `untitle "Hello World"` produces `hello world`.

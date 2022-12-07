@@ -1,1 +1,0 @@
-`int`: Convert to an `int` at the system's width.
