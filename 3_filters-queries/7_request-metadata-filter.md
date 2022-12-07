@@ -9,7 +9,8 @@ Conditions use the same syntax as security policies.
 
 
 ### Parameters
-|Label (internal name)|Type|
-|---|---|
-|**Field Name** (FieldName)|select, possible values: Remote Address (RemoteAddress), User Agent (UserAgent), Content Type (ContentType), HTTP Protocol (HttpProtocol), contextMetaField.RequestHost (RequestHost), Request Hostname (RequestHostname), contextMetaField.RequestPort (RequestPort), Request Method (RequestMethod), Request URI (RequestURI), Cookies String (CookiesString), Server Time (ServerTime)|
+|Label |Identifier|Type / Allowed Values| Comment |
+|---|---|---|---|
+|**Field Name**|FieldName|Remote Address (RemoteAddress),<br/>User Agent (UserAgent),<br/>Content Type (ContentType),<br/>HTTP Protocol (HttpProtocol),<br/>Request Host (RequestHost),<br/>Request Hostname (RequestHostname),<br/>Request Port (RequestPort),<br/>Request Method (RequestMethod),<br/>Request URI (RequestURI),<br/>Cookies String (CookiesString),<br/>Server Time (ServerTime)|Field on which the Condition test will be applied|
+|**Condition**|Condition|Subject equals (EqualsSubjectCondition),<br/>String does not match (StringNotMatchCondition),<br/>Office Hours (OfficeHoursCondition),<br/>Resource contains (ResourceContainsCondition),<br/>Boolean Value (BooleanCondition),<br/>Glob Matcher (PathGlobCondition),<br/>Date period (WithinPeriodCondition),<br/>String equals (StringEqualCondition),<br/>CIDRCondition (CIDRCondition),<br/>StringPairs equals (StringPairsEqualCondition),<br/>String matches (StringMatchCondition),<br/>Date after (DateAfterCondition)|One of the available conditions as defined for Security Policies|
 
