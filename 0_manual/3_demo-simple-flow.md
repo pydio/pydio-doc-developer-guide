@@ -7,6 +7,6 @@ The video provides a start-to-end tutorial for a sample usecase:
  - Watch for PDF files
  - Uploaded in a specific folder
  - Tag them automatically
- - Send an email to all users with role « Reviewers » if file is bigger than 500KB
+ - Email all users with role «Reviewers» if file is bigger than 500KB
 
 It is the first of a sery that will be dedicated to Cells Flows features.
