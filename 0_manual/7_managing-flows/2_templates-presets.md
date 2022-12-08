@@ -2,7 +2,7 @@ Jobs, actions, queries and filters can be saved as "Templates" for easily duplic
 
 ## Job Templates
 
-As explained in the Create section, one simple way to create a new job is to use a preset template that is shipped with Cells Flows. These jobs are carefully crafted by Pydio Team for ease of use and clarity of the flow chart. The full list is available in the [Preset Jobs](./preset-jobs) section.
+As explained in the Create section, one simple way to create a new job is to use a preset template that is shipped with Cells Flows. These jobs are carefully crafted by Pydio Team for ease of use and clarity of the flow chart. The full list is available in the [Preset Flows](./preset-flows) section.
 
 You can feed this template list with your own jobs, by simply selecting the "Save Job as Template" option in the bottom-right buttons of the job editor (you must be in Edit mode). Pick a label, an icon and a description to save this template.
 

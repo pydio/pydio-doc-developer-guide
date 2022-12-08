@@ -2,4 +2,5 @@ title: "Combining multiple triggers"
 language: und
 menu: "Combining multiple triggers"
 weight: 5
+abstract: "This page gives tips to group multiple Flows into one using multiple triggers and associated filters on different branches."
 menu_name: menu-admin-guide-v6-enterprise

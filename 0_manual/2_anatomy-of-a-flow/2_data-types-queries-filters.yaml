@@ -2,4 +2,5 @@ title: "Data Types, Queries, Filters"
 language: und
 menu: "Data Types, Queries, Filters"
 weight: 2
+abstract: "This page provides information about the data structures managed in Cells Flows and how to populate or filter them."
 menu_name: menu-admin-guide-v6-enterprise

@@ -41,4 +41,4 @@ When **Trigger** conditions are met (based on events, schedule or when you run m
 
 [:image:0_overview/tasks-logs.png]
 
-Learn more about the [Anatomy of a Job](./anatomy-job) to get started quickly in the next section!
+Learn more about the [Anatomy of a Flow](./anatomy-flow) to get started quickly in the next section!

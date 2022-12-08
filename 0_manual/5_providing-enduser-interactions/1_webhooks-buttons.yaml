@@ -2,4 +2,5 @@ title: "Webhooks & Buttons"
 language: und
 menu: "Webhooks & Buttons"
 weight: 1
+abstract: "Flows creation and edition is an admin-only operation, but once a Flow is ready, you have ways to let end-users with limited permissions interacting with it."
 menu_name: menu-admin-guide-v6-enterprise

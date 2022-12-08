@@ -2,4 +2,5 @@ title: "Triggers"
 language: und
 menu: "Triggers"
 weight: 3
+abstract: "Cells Flows Jobs can be started in many ways: reacting to Cells events, based on a schedule, or manually, or even by end-users using WebHooks and buttons."
 menu_name: menu-admin-guide-v6-enterprise

@@ -2,4 +2,5 @@ title: "Runtime Parameters and Variables"
 language: und
 menu: "Runtime Parameters and Variables"
 weight: 4
+abstract: "This page describes the various options to help with Parametrization of Flows, from Flow parameters, runtime parameters and variables."
 menu_name: menu-admin-guide-v6-enterprise

@@ -2,4 +2,5 @@ title: "Anko Pseudo-Script"
 language: und
 menu: "Anko Pseudo-Script"
 weight: 3
+abstract: "Anko is a pseudo-Go language that is interpreted and can be used when the need for complexity is beyond the scope of Cells atomic actions."
 menu_name: menu-admin-guide-v6-enterprise

@@ -1,4 +1,4 @@
-Cells Flows Jobs can be started in three ways: reacting to Cells events, based on a schedule, or manually
+Cells Flows Jobs can be started in many ways: reacting to Cells events, based on a schedule, or manually, or even by end-users using WebHooks and buttons.
 
 ## Event-based Triggers
 
@@ -27,3 +27,7 @@ Note that scheduled jobs can also be run manually.
 You can simply start a manual or scheduled job using the RUN NOW button in the top-right hand of the screen.
 
 [:image:0_overview/anatomy-triggers-manual.png]
+
+## WebHooks
+
+WebHooks are a powerful way for enabling users interaction with you admin-defined Flow. See the [Dedicated Section](./webhooks-buttons) to learn more about WebHooks.

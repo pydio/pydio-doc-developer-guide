@@ -1,4 +1,4 @@
-As explained in the first section of [Anatomy of a Flow](), a core concept of the workflow is how the "data" transits from one action to another inside ActionMessages. 
+As explained in the first section of [Anatomy of a Flow](./anatomy-flow), a core concept of the workflow is how the "data" transits from one action to another inside ActionMessages. 
 
 As soon as your Flow becomes a bit complex, you will have to try it and evaluate that it's working correclty given specific inputs. Generally, the only way is to run it with real data, and repeating the process of saving, running with real data and looking at the output to understand what when wrong can really become cumbersome.
 

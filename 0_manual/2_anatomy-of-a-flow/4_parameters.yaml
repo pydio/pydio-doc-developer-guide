@@ -2,4 +2,5 @@ title: "Parameters"
 language: und
 menu: "Parameters"
 weight: 4
+abstract: "This page describes the available tools for parametrization in Cells Flows, an essential feature of any workflow tool"
 menu_name: menu-admin-guide-v6-enterprise

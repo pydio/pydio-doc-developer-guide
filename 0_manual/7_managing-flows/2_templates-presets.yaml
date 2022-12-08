@@ -2,4 +2,5 @@ title: "Templates and Presets"
 language: und
 menu: "Templates and Presets"
 weight: 2
+abstract: "Saving Flows, Actions, Queries or Filters as templates allows you to build your own library of custom reusable components."
 menu_name: menu-admin-guide-v6-enterprise

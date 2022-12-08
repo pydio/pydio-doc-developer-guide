@@ -10,7 +10,7 @@ Actions are chained together with simple connectors : every action can be chaine
 
 [:image:0_overview/anatomy-actions.png]
 
-Connecting one action to 2 or more actions will start running these in parallel (see [Running actions in parallel](./running-actions-parallel)).
+Connecting one action to 2 or more actions will start running these in parallel (see [Parallelism & Concurrency](./parallelism-and-concurrency)).
 
 ## Handling Data flow
 

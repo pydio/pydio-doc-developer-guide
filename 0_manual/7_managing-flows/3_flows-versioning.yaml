@@ -2,4 +2,5 @@ title: "Flows Versioning"
 language: und
 menu: "Flows Versioning"
 weight: 3
+abstract: "This page describe how Flows are versioned and how you can create or restore a specific revision of a Flow."
 menu_name: menu-admin-guide-v6-enterprise

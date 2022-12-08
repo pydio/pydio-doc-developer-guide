@@ -1,5 +1,6 @@
 title: "Introduction to Cells Flows"
 language: und
-menu: "Introduction to Cells Flows"
+menu: "Introduction"
+abstract: "Cells Flows is a powerful drag-and-drop tool that allows you to easily automate tasks in Pydio Pydio Cells."
 weight: 1
 menu_name: menu-admin-guide-v6-enterprise

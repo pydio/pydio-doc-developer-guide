@@ -98,10 +98,16 @@ The following image shows the available Queries that can be used to select data 
 
 When Queries return many results, you may either choose to pass all the results along **as a bulk** to one specific action, or to **fan out each result as a unique message** passed to many instances of the same action. In the later case, multiple action instances will be triggered in parallel, each one processing one of the result.
 
+Example1: collecting data to spin one action with N results: 
 [:image:0_overview/anatomy-query-collect.png]
+
+Example2: collecting data and spinning N actions in parallel. You can cead more about [Parallelism and Concurrency](./parallelism-and-concurrency) and how to make the most out of this powerful feature.
 
 [:image:0_overview/anatomy-query-fan-out.png]
 
+Sometimes you have a message that contains N results and you actually want to trigger N actions instead. You can use the "**Fan Out**" flag of the selector, without any criteria, to just split the result into N messages => N actions. 
+
+[:image:0_overview/anatomy-query-fan-out-flag.png]
 
 ### Filtering Data
 

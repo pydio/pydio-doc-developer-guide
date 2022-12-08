@@ -2,4 +2,5 @@ title: "Using Golang Templates"
 language: und
 menu: "Using Golang Templates"
 weight: 1
+abstract: "Golang Templates can replace all parameters used in Cells Flows, providing a flexible way to programmatically retrieve values in a reusable way."
 menu_name: menu-admin-guide-v6-enterprise

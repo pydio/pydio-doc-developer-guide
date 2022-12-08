@@ -2,4 +2,5 @@ title: "Tasks Logs"
 language: und
 menu: "Tasks Logs"
 weight: 5
+abstract: "Tasks history and their logs can be found below the job workflow panel."
 menu_name: menu-admin-guide-v6-enterprise

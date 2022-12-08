@@ -2,4 +2,5 @@ title: "Templates Functions"
 language: und
 menu: "Templates Functions"
 weight: 2
+abstract: "This page describe the set of functions made available in the Golang Templates context."
 menu_name: menu-admin-guide-v6-enterprise

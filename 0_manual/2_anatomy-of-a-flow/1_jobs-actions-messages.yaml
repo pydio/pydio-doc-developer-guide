@@ -2,4 +2,5 @@ title: "Actions and Messages"
 menu: "Actions and Messages"
 language: und
 weight: 1
+abstract: "Actions are core components of a Flow. They are chained together and communicate by passing Messages around"
 menu_name: menu-admin-guide-v6-enterprise

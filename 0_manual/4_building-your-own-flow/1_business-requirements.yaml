@@ -2,4 +2,5 @@ title: "Business Requirements"
 language: und
 menu: "Business Requirements"
 weight: 1
+abstract: "Translating a workflow requirement into actionable steps for a workflow management tool involves identifying the specific tasks and activities that need to be completed, and organizing them into a sequence or flow that represents the steps that need to be taken to complete the workflow."
 menu_name: menu-admin-guide-v6-enterprise

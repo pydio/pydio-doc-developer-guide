@@ -28,6 +28,16 @@ If you notice the **Max. Parallel Tasks: 5** value, we avoid this by batch-proce
 
 Of course, if you have dimensioned your server CPU/RAM to handle super high load, you could decide to raise this value to accelerate thumbnails generation (within acceptable limits for your hardware).
 
+### Managing Timeouts
+
+Another important aspect of Cells Flows is that it can trigger long-running operations on your server, and sometimes it's not what you want. Or sometimes it is and you want to give a Flow some extra-time to make sure that it finished. 
+
+**Timeouts** are parameters that can be used at many levels of a Flow to precisely how each step should behave: 
+
+ - **Flow-level Timeout**: a global limit applying to the entire Flow, will interrupt all running actions if it is reached.
+ - **Queries Timeout**: Populating objects based on specific criteria can be time-consuming if the result ends up loading a huge amount of objects. All selector types have a Timeout parameter to limit these queries.
+ - **Actions Timeout**: All actions also have a Timeout option to limit their processing-time.
+
 ## Synchronizing parallel tasks
 
 Handling parallelism is useful for resource optimisation. But as soon as multiple branches are launched in parallel, they "forget" about their siblings, and they will finish "when they want". Generally this is not an issue, but in some case you want to actually :

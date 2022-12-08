@@ -2,4 +2,5 @@ title: "Parallelism and Concurrency"
 language: und
 menu: "Parallelism and Concurrency"
 weight: 3
+abstract: "Cells Flows internal structure allows to run multiple actions in parallel, which should be used carefully."
 menu_name: menu-admin-guide-v6-enterprise
