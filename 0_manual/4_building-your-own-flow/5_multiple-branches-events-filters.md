@@ -8,16 +8,19 @@ Wire Cells with a custom in-house tool that creates a thumbnail for specific fil
 ```
 
 First we need to create a simple job: 
+
 - Listens to the "On Create File" events, 
 - Filter them by extension, 
 - Call our extractor API, 
 - Store the thumbnail back as a metadata of the file. 
 
 If we look closer, how can we make sure that the created thumbnail is deleted along with the original file? Ok, let's create an other flow: 
+
 - Listen to "On Delete" file,  
 - Removed corresponding thumbnail
 
 And what about all the files that exist in the system _before_ we wired this in-house tool ? We can create a "Manual Flow": 
+
 - Crawl the datasources looking for files that are missing our special thumbnails
 - Process them accordingly (call extractore, store thumbnail).
 

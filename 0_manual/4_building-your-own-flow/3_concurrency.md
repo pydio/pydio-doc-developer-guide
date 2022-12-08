@@ -30,15 +30,16 @@ Of course, if you have dimensioned your server CPU/RAM to handle super high load
 
 ## Synchronizing parallel tasks
 
-Handling parallelism is useful for resource optimisation. But as soon as multiple branches are launched in parallel, the "forget" about their siblings, and they will finish "when they want". Generally this is not an issue, but in some case you want to actually 
+Handling parallelism is useful for resource optimisation. But as soon as multiple branches are launched in parallel, they "forget" about their siblings, and they will finish "when they want". Generally this is not an issue, but in some case you want to actually :
+
 - Launch many actions in parallel
 - Wait that they are all finished
 - Eventually collect and combine results from all these actions
 - And finally do something specific or carry on with the flow. 
 
-This is in fact doable by setting a "Merge Action" on the output of an action : all branches that start from this action will be synchronized and re-combined into a unique message and the Merge Action will then be called. It can then be chained with other actions.
+This is in fact doable by setting a "Merge Action" on the output of an action : all branches that start from this action will be synchronized and re-combined into a unique message and the Merge Action will then be called. 
 
-To create a merge action, look for the "branch" button on the output of the parent action that will is dispatching parallel branches:
+To create a merge action, look for the "branch" button on the output of the parent action that is dispatching parallel branches:
 
 [:image:0_overview/merge-action-button-focus.png]
 
@@ -49,6 +50,7 @@ A simple example showing how two branches can be synchronized and merged back to
 For those familiar with the Golang language, this is very similar to a `sync.WaitGroup`.
 
 Some notes : 
+
 - A Merge Action can be set on the job trigger, and it will apply to all the job branches, allowing to set a final action, whatever the branches where.
 - Due to technical limitations, one cannot add a Merge Action on an action that is already a Merge Action. If you need that, just chain another empty action and create the Merge Action on that one.
 - Merges operations can be nested to regroup actions by clusters. See the image example below.

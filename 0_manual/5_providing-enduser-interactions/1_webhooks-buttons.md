@@ -1,6 +1,6 @@
 In the current Cells version, Flows creation and edition is an admin-only operation, as by definition a Flow can access to a wide range of resources in the server. But once a Flow is ready, you may wish to let end-users (with limited permissions) to interact with it. 
 
-This is feature by creating a special trigger type, a "WebHook", that will register a custom API endpoint that can be called to trigger the Flow.
+A special trigger type called a "WebHook" can be registered as a custom API endpoint that can be called to trigger the Flow.
 
 ## WebHooks
 
@@ -47,7 +47,7 @@ Most common pattern is to allow access to `profile:admin` and `profile:standard`
 
 ## Buttons
 
-WebHooks provide a powerful feature to expose an admin-defined Flow to other class of users. But calling a REST API requires technical skills that are not really user-friendly... Once a WebFlow is active, you can in fact provide a nice, integrated integration to end-users by defining a Button that will appear in the interface! 
+WebHooks is a powerful feature to expose an admin-defined Flow, but calling a REST API requires technical skills that are not really user-friendly... Once a WebFlow is active, you can provide a **nice, integrated interaction to end-users by defining a Button** that will appear in the interface.
 
 [:image:0_overview/webhook-dialog-enable-button.png]
 
