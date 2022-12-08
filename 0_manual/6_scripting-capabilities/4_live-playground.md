@@ -25,3 +25,9 @@ Looking for "to":
 Selecting "toJsonMap" function: 
 
 [:image:0_overview/playground-result.png]
+
+## Testing Anko Script
+
+Using Anko mixed syntax is not easy, and often requires some test-and-learn cycles to write the correct anko script. Switching the Playground to Anko mode allows you to compile and evaluate a script and detect errors early.
+
+[:image:0_overview/playground-anko.png]

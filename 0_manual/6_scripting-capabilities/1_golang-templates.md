@@ -19,14 +19,14 @@ Let's imagine a simple data structure:
 
 The templating language contains a rich set of control structures to render text. Template controls are always delimited with `{{...}}`. Below is an overview of the most commonly used ones. To get a detailed list of all possible structures visit [text/template](https://golang.org/pkg/text/template/#hdr-Actions).
 
-|Control Structure	            |Definition|
-|---|---|
-|`{{/* a comment */}}`	         | Defines a comment|
-|`{{.}}`	                     |    Renders the root element|
-|`{{.Field1}}`	                 | Renders the “Field1”-field in the root element|
-|`{{.Data.Title}}`	             | Renders the “Title”-field in a nested element|
-|`{{if .Done}} {{else}} {{end}}` | Defines an if-Statement|
-|`{{range .List}} {{.}} {{end}}` | Loops over all “List” and renders each using {{.}}|
+| Control Structure	              | Definition                                         |
+|---------------------------------|----------------------------------------------------|
+| `{{/* a comment */}}`	          | Defines a comment                                  |
+| `{{.}}`	                        | Renders the root element                           |
+| `{{.Field1}}`	                  | Renders the “Field1”-field in the root element     |
+| `{{.Data.Title}}`	              | Renders the “Title”-field in a nested element      |
+| `{{if .Done}} {{else}} {{end}}` | Defines an if-Statement                            |
+| `{{range .List}} {{.}} {{end}}` | Loops over all “List” and renders each using {{.}} |
 
 ## Using Go Templates in Jobs
 
@@ -84,7 +84,7 @@ Below is a sample of the data passed as template data:
 
 ### Example: compute a target location
 
-With that in mind, let's assume we have an Action that takes a node as input (for example on creation), and whose task is to copy it somewhere inside "target" (action parameter). We want that "target" to be computed as follow: inside folder `TargetFolder` (defined in job-level parameters), renamed with the current user login and the date/time. 
+With that in mind, let's assume we have an Action that takes a node as input (for example on creation), and whose task is to copy it somewhere inside "target" (action parameter). We want that "target" to be computed as follows: inside folder `TargetFolder` (defined in job-level parameters), renamed with the current user login and the date/time. 
 
 The action "target" parameter could use the following value: 
 ```
