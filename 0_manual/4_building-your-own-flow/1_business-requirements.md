@@ -1,23 +1,23 @@
-Understanding your business requirements and starting to translate it to an "automation-oriented" sequence of actinos is the first if not the most difficult step. 
+Understanding your business requirements and starting to translate it to an "automation-oriented" sequence of actions is the first if not the most difficult step. 
 
 Translating a workflow requirement into actionable steps for a workflow management tool involves identifying the specific tasks and activities that need to be completed, and organizing them into a sequence or flow that represents the steps that need to be taken to complete the workflow. 
 
 ### Identifying the "what" and the "when"
 
-A first step is to understand "**what object**" are we about to manipulate. In most case for a tool like Pydio, you are handling "files" or "folders". But in some cases, you may be willing to modify or create "users", or even "permissions"...  
+The first step is to understand "**what**" you are about to manipulate. In most cases for a tool like Pydio, you will be handling "files" or "folders". In other cases, you may want to modify or create "users", "permissions", ...  
 
-Then you have to understand **the scope** of what you will be manipulating : are we talking about a specific occurence (e.g. one file) or do we have to gather a list of objects based on specific criteria?  
+Then you have to understand **the scope** of what you will be manipulating : are you targeting a specific resource (e.g. one file) or do you have to gather a list of filtered objects ?  
 
-This scope will be generally linked to the **"when"**, i.e. the event that will trigger the workflow: will it start on a programmed recurring time? or based on a specific event happening in the platform ? 
+Then finally you will need to figure out the **"when"**, i.e. which event will trigger the workflow: will it be a recurring task scheduled at a specific time? or will it be triggered by an event happening on the platform ? 
 
-Here are some examples below 
+Examples :
 
-| Requirement                                                | When              | What                                       |
-|------------------------------------------------------------|-------------------|--------------------------------------------|
-| I want to process all uploaded files with a custom script  | file uploaded     | the new file                               |
-| I want to alert admin when shared users will login         | user logged in    | the logged user                            |
-| I want to disable public links based on certain conditions | manual or regular | A selection of workspaces                  |
-| I want to purge files after 30 days                        | every night       | All files modified since more than 30 days |
+| Requirement                                                | When              | What                                       | Scope      |
+|------------------------------------------------------------|-------------------|--------------------------------------------|------------|
+| I want to process all uploaded files with a custom script  | file uploaded     | the new file                               | file       |
+| I want to alert admin when shared users will login         | user logged in    | the logged user                            | user       |
+| I want to disable public links based on certain conditions | manual or regular | A selection of workspaces                  | workspaces |
+| I want to purge files after 30 days                        | every night       | All files modified since more than 30 days | files      |
 
 ### Decomposing into Atomic Actions
 
@@ -33,7 +33,7 @@ On the other hand, the operation you need to do may not be available as a simple
 
 ### Identifying "Conditions" and translating into automations
 
-When it gets complex, a Flow generally is just a sequence of various actions that are triggered based on **conditions**. Like in a programmation language, it's all about understanding logical causes and consequences that can boil down to :
+When it gets complex, a Flow generally is just a sequence of various actions that are triggered when **conditions** are met. Like in a programmation language, it's all about understanding logical causes and consequences that can boil down to :
 
 ```
 If (condition fullfills...) then (do something) else (do something else)
@@ -45,18 +45,18 @@ Retrieve objects fullfilling the following conditions [condition1, condition2, c
 
 Cells Flows provides many ways to implement conditions:
 
-- If you need to gather an ensemble of object based on specific criteria, Cells Flows provides the "QUERIES" objects allowing one to retrieve objects from withing Cells internal data, following specific conditions. 
-- If your Flow is fed with an event-generated object (e.g. the "user" sent by the "user logged event"), the FILTERS allow you to apply the same kind of criteria and decide whether the flow should continue on a specific path or switch to another sequence of action. 
+- If you need to gather an ensemble of filtered object, Cells Flows provides "QUERIES" objects allowing you to retrieve objects from within Cells internal data, following specific conditions. 
+- If your Flow is fed with an event-generated object (e.g. the "user" sent by the "user logged event"), FILTERS allow you to apply the same kind of criteria and decide whether the flow should continue on a specific path or switch to another sequence of action. 
 
-Below are some Examples
+Examples :
 
-| Requirement                                     | Translates into                                  |
-|-------------------------------------------------|--------------------------------------------------|
-| All files modified since more than 30 days      | QUERY: Files, Modification Time parameter ">30d" |
-| Public links                                    | QUERY Workspace, Scope = LINK                    |
-| All Reviewers                                   | Users QUERY,  HasRole = "Reviewers"              |
-| If logged user is admin, do not email           | Users FILTER, Profile not equals "admin"         |
-| If DataSource is encrypted, do not extract data | DataSourceFilter, IsEncrypted = False            |
+| Requirement                                     | Translates into                                 |
+|-------------------------------------------------|-------------------------------------------------|
+| All files modified since more than 30 days      | QUERY Files, Modification Time parameter ">30d" |
+| Public links                                    | QUERY Workspace, Scope = LINK                   |
+| All Reviewers                                   | QUERY Users, HasRole = "Reviewers"              |
+| If logged user is admin, do not email           | FILTER Users, Profile not equals "admin"        |
+| If DataSource is encrypted, do not extract data | FILTER Datasource, IsEncrypted = False          |
 
 You will find the "ACTIONS", "FILTERS" and "QUERIES" in the toolbar when editing a Flow.
 

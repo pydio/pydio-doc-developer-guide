@@ -1,6 +1,6 @@
 ## Parallelism
 
-Various use cases may lead one action of a job to be started multiple times "in parallel": 
+Various use cases may lead to one action of a job being started multiple times "in parallel": 
 
 - An event-based job received many events at once
 - A QUERY is configured to select multiple objects and trigger one action for each object

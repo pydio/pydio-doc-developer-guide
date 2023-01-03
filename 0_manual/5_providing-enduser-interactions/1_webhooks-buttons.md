@@ -1,4 +1,4 @@
-In the current Cells version, Flows creation and edition is an admin-only operation, as by definition a Flow can access to a wide range of resources in the server. But once a Flow is ready, you may wish to let end-users (with limited permissions) to interact with it. 
+In the current Cells version, Flows creation and edition is an admin-only operation, as by definition a Flow can access to a wide range of resources in the server. But once a Flow is ready, you may wish to let end-users (with limited permissions) interact with it. 
 
 A special trigger type called a "WebHook" can be registered as a custom API endpoint that can be called to trigger the Flow.
 
@@ -31,7 +31,7 @@ To enable a WebHook, you must add a custom Trigger to the Flow main input:
 
 ### Parameters
 
-You can configure the webHook to allow the JobParameters default values to be overriden. In that case, as you can see in the Request body, you can pass your own values via the API.
+You can configure the webHook to allow the JobParameters default values to be overridden. In that case, as you can see in the Request body, you can pass your own values via the API.
 
 [:image:0_overview/webhook-dialog-apislug.png]
 

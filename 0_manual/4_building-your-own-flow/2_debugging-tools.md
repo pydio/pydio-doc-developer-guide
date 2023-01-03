@@ -1,22 +1,24 @@
 As explained in the first section of [Anatomy of a Flow](./anatomy-flow), a core concept of the workflow is how the "data" transits from one action to another inside ActionMessages. 
 
-As soon as your Flow becomes a bit complex, you will have to try it and evaluate that it's working correclty given specific inputs. Generally, the only way is to run it with real data, and repeating the process of saving, running with real data and looking at the output to understand what when wrong can really become cumbersome.
+As soon as your Flow grows, you will want to try it with specific inputs to see if it's working properly.
 
-Having the ability to inspect the values of all messages that are passed along during the Flow, and is a real time-saver in that case.
+Generally, the only way would be to use real data, and repeat the process of tweaking, saving, running, and looking at the output. It can quickly become very cumbersome.
+
+Cells Flows has the ability to inspect the values of all messages passing along. This proves a real time-saver for complex Flows.
 
 ## Enabling messages debugging
 
-You can switch Cells Flows into debug mode with the following **Environment** variable: 
+You can switch the debug mode on for Cells Flows with the following **Environment** variable: 
 ```
 export CELLS_JOBS_LOG_LEVEL=debug
 ```
-Then **restart Cells**. 
+And **restart Cells**. 
 
-Once the debugging is on, when opening the logs of task that have run you can toggle the DEBUG level logs using the `{}` button. These logs contain a lot of information, and particularly all the messages that are received by all actions, and outputted at then end of all actions. 
+Once the debugging is on, you can toggle the DEBUG level of the task logs using the `{}` button. They contain a lot of information, particularly all messages that are received by all actions, and outputted at the end of all actions. 
 
 [:image:0_overview/debugging-debugs-in-logs.png]
 
-These messages are displayed as expandable JSON objects, showing all the properties of the messages in a very detailed way.
+The messages are displayed as expandable JSON objects, showing all the properties of the messages in a very detailed way.
 
 [:image:0_overview/debugging-debugs-in-logs-expanded.png]
 
