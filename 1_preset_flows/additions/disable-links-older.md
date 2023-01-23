@@ -1,2 +1,1 @@
-This flow looks for all existing "LINK"-scoped workspaces (=public links) that were not updated since a given period of time, 
-and delete them. Can be useful to make sure some public links are not left out in the wild...
+This flow looks for all existing "LINK"-scoped workspaces (=public links) that were not updated since a given period of time, and delete them. Can be useful to make sure some public links are not left out in the wild.
