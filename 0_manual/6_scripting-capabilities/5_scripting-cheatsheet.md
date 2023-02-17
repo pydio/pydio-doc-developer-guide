@@ -38,17 +38,21 @@ Lets assume that we have a Read Node event on a node in "common-files" (pydiods1
 }
 ```
 
+
 ```json
 {{.Node.Path}} -> "pydiods1/images/image.jpg" .will be replaced with the path
 ```
+
 
 ```json
 {{toJson .Node}} -> will change the object into a json string (see below)
 ```
 
+
 ```json
 {{ext .Node.Path}} -> "jpg"
 ```
+
 
 ```json
 {{.Env.Date}} -> "01-02-2020"
