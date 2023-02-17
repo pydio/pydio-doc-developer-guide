@@ -1,6 +1,6 @@
 title: "Live Playground"
 language: und
 menu: "Live Playground"
-weight: 3
+weight: 4
 abstract: "The Live Playground provides a realtime testing platform for testing-and-learning scripts languages like Golang Templates or Anko."
 menu_name: menu-admin-guide-v6-enterprise
