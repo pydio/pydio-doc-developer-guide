@@ -1,33 +1,34 @@
-Truncate log indexes to a given size
+Clean Expired ACLs
 
 ### Synopsis
 
 
 DESCRIPTION
 
-  Appart from rotated log files, logs are indexed inside an on-file database for high-performance analysis and search. 
-  These indexes are rotated (50MB size by default) and you can use this command to remove the oldest index files. 
-  The most recent index will always be kept.
-  Specify the size threshold using bytes unit: 50MB, 5mb, 1GB, etc...
+  When deleted after a node deletion, ACLs are not really deleted but only expired, to be able to restore them
+  if necessary. This can lead to keep unused data, and particularly shared links information that may prevent users to 
+  re-use an existing custom link value. Use this command to definitely delete expired ACLs based on a period. 
+
+  Parameters accept either timestamps or durations. In the later case, corresponding time is computed using "Now - Duration".
 
 EXAMPLES
 
-  Truncate log indexes to 50MB : 
+  Clean all ACLs expired before last 24h 
 
-  $ ./cells admin clean logs --service=log --threshold=50MB
+  $ ./cells clean admin acls --before 24h 
 
 
 
 ```
-./cells admin clean logs [flags]
+./cells admin clean acls [flags]
 ```
 
 ### Options
 
 ```
-  -h, --help               help for logs
-  -s, --service string     Log service to truncate (use log by default) (default "log")
-  -t, --threshold string   Size of logs to keep, specify in bytes (e.g 50MB, 1GB, ...)
+  -a, --after string    Expiration date is greater than...
+  -b, --before string   Expiration date is lower than... (default "240h")
+  -h, --help            help for acls
 ```
 
 ### Options inherited from parent commands
