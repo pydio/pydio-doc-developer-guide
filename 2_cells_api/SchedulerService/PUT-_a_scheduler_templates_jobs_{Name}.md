@@ -79,6 +79,7 @@ Response Type /definitions/entPutJobTemplateResponse
         },
         "DataSourceFilter": {
           "All": true,
+          "ClearInput": true,
           "Collect": true,
           "Description": "string",
           "FanOutInput": true,
@@ -106,6 +107,7 @@ Response Type /definitions/entPutJobTemplateResponse
         },
         "DataSourceSelector": {
           "All": true,
+          "ClearInput": true,
           "Collect": true,
           "Description": "string",
           "FanOutInput": true,
@@ -138,6 +140,7 @@ Response Type /definitions/entPutJobTemplateResponse
         "ID": "string",
         "IdmFilter": {
           "All": true,
+          "ClearInput": true,
           "Collect": true,
           "Description": "string",
           "FanOutInput": true,
@@ -165,6 +168,7 @@ Response Type /definitions/entPutJobTemplateResponse
         },
         "IdmSelector": {
           "All": true,
+          "ClearInput": true,
           "Collect": true,
           "Description": "string",
           "FanOutInput": true,
@@ -194,6 +198,7 @@ Response Type /definitions/entPutJobTemplateResponse
         "MergeAction": "[Recursive structure]",
         "NodesFilter": {
           "All": true,
+          "ClearInput": true,
           "Collect": true,
           "Description": "string",
           "FanOutInput": true,
@@ -223,6 +228,7 @@ Response Type /definitions/entPutJobTemplateResponse
         },
         "NodesSelector": {
           "All": true,
+          "ClearInput": true,
           "Collect": true,
           "Description": "string",
           "FanOutInput": true,
@@ -276,6 +282,7 @@ Response Type /definitions/entPutJobTemplateResponse
         },
         "UsersFilter": {
           "All": true,
+          "ClearInput": true,
           "Collect": true,
           "Description": "string",
           "Label": "string",
@@ -350,6 +357,7 @@ Response Type /definitions/entPutJobTemplateResponse
         },
         "UsersSelector": {
           "All": true,
+          "ClearInput": true,
           "Collect": true,
           "Description": "string",
           "Label": "string",
@@ -425,6 +433,7 @@ Response Type /definitions/entPutJobTemplateResponse
       }
     ],
     "AutoClean": true,
+    "AutoRestart": true,
     "AutoStart": true,
     "ContextMetaFilter": {
       "Description": "string",
@@ -453,6 +462,7 @@ Response Type /definitions/entPutJobTemplateResponse
     "Custom": true,
     "DataSourceFilter": {
       "All": true,
+      "ClearInput": true,
       "Collect": true,
       "Description": "string",
       "FanOutInput": true,
@@ -502,6 +512,7 @@ Response Type /definitions/entPutJobTemplateResponse
     "ID": "string",
     "IdmFilter": {
       "All": true,
+      "ClearInput": true,
       "Collect": true,
       "Description": "string",
       "FanOutInput": true,
@@ -586,6 +597,7 @@ Response Type /definitions/entPutJobTemplateResponse
       },
       "DataSourceFilter": {
         "All": true,
+        "ClearInput": true,
         "Collect": true,
         "Description": "string",
         "FanOutInput": true,
@@ -613,6 +625,7 @@ Response Type /definitions/entPutJobTemplateResponse
       },
       "DataSourceSelector": {
         "All": true,
+        "ClearInput": true,
         "Collect": true,
         "Description": "string",
         "FanOutInput": true,
@@ -645,6 +658,7 @@ Response Type /definitions/entPutJobTemplateResponse
       "ID": "string",
       "IdmFilter": {
         "All": true,
+        "ClearInput": true,
         "Collect": true,
         "Description": "string",
         "FanOutInput": true,
@@ -672,6 +686,7 @@ Response Type /definitions/entPutJobTemplateResponse
       },
       "IdmSelector": {
         "All": true,
+        "ClearInput": true,
         "Collect": true,
         "Description": "string",
         "FanOutInput": true,
@@ -701,6 +716,7 @@ Response Type /definitions/entPutJobTemplateResponse
       "MergeAction": "[Recursive structure]",
       "NodesFilter": {
         "All": true,
+        "ClearInput": true,
         "Collect": true,
         "Description": "string",
         "FanOutInput": true,
@@ -730,6 +746,7 @@ Response Type /definitions/entPutJobTemplateResponse
       },
       "NodesSelector": {
         "All": true,
+        "ClearInput": true,
         "Collect": true,
         "Description": "string",
         "FanOutInput": true,
@@ -783,6 +800,7 @@ Response Type /definitions/entPutJobTemplateResponse
       },
       "UsersFilter": {
         "All": true,
+        "ClearInput": true,
         "Collect": true,
         "Description": "string",
         "Label": "string",
@@ -857,6 +875,7 @@ Response Type /definitions/entPutJobTemplateResponse
       },
       "UsersSelector": {
         "All": true,
+        "ClearInput": true,
         "Collect": true,
         "Description": "string",
         "Label": "string",
@@ -933,6 +952,7 @@ Response Type /definitions/entPutJobTemplateResponse
     "ModifiedAt": 10,
     "NodeEventFilter": {
       "All": true,
+      "ClearInput": true,
       "Collect": true,
       "Description": "string",
       "FanOutInput": true,
@@ -1037,6 +1057,7 @@ Response Type /definitions/entPutJobTemplateResponse
               },
               "DataSourceFilter": {
                 "All": true,
+                "ClearInput": true,
                 "Collect": true,
                 "Description": "string",
                 "FanOutInput": true,
@@ -1064,6 +1085,7 @@ Response Type /definitions/entPutJobTemplateResponse
               },
               "DataSourceSelector": {
                 "All": true,
+                "ClearInput": true,
                 "Collect": true,
                 "Description": "string",
                 "FanOutInput": true,
@@ -1096,6 +1118,7 @@ Response Type /definitions/entPutJobTemplateResponse
               "ID": "string",
               "IdmFilter": {
                 "All": true,
+                "ClearInput": true,
                 "Collect": true,
                 "Description": "string",
                 "FanOutInput": true,
@@ -1123,6 +1146,7 @@ Response Type /definitions/entPutJobTemplateResponse
               },
               "IdmSelector": {
                 "All": true,
+                "ClearInput": true,
                 "Collect": true,
                 "Description": "string",
                 "FanOutInput": true,
@@ -1152,6 +1176,7 @@ Response Type /definitions/entPutJobTemplateResponse
               "MergeAction": "[Recursive structure]",
               "NodesFilter": {
                 "All": true,
+                "ClearInput": true,
                 "Collect": true,
                 "Description": "string",
                 "FanOutInput": true,
@@ -1181,6 +1206,7 @@ Response Type /definitions/entPutJobTemplateResponse
               },
               "NodesSelector": {
                 "All": true,
+                "ClearInput": true,
                 "Collect": true,
                 "Description": "string",
                 "FanOutInput": true,
@@ -1234,6 +1260,7 @@ Response Type /definitions/entPutJobTemplateResponse
               },
               "UsersFilter": {
                 "All": true,
+                "ClearInput": true,
                 "Collect": true,
                 "Description": "string",
                 "Label": "string",
@@ -1308,6 +1335,7 @@ Response Type /definitions/entPutJobTemplateResponse
               },
               "UsersSelector": {
                 "All": true,
+                "ClearInput": true,
                 "Collect": true,
                 "Description": "string",
                 "Label": "string",
@@ -1924,6 +1952,7 @@ Response Type /definitions/entPutJobTemplateResponse
     "Timeout": "string",
     "UserEventFilter": {
       "All": true,
+      "ClearInput": true,
       "Collect": true,
       "Description": "string",
       "Label": "string",
@@ -2004,4 +2033,4 @@ Response Type /definitions/entPutJobTemplateResponse
 
 
 
-###### Auto generated by Pydio Cells Enterprise Distribution v4.1.2 on 23-Mar-2023
+###### Auto generated by Pydio Cells Enterprise Distribution v4.2.0-alpha1 on 17-Apr-2023
