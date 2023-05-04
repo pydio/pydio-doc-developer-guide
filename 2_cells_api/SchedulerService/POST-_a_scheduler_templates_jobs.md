@@ -89,6 +89,7 @@ Response Type /definitions/entListJobTemplatesResponse
           },
           "DataSourceFilter": {
             "All": true,
+            "ClearInput": true,
             "Collect": true,
             "Description": "string",
             "FanOutInput": true,
@@ -116,6 +117,7 @@ Response Type /definitions/entListJobTemplatesResponse
           },
           "DataSourceSelector": {
             "All": true,
+            "ClearInput": true,
             "Collect": true,
             "Description": "string",
             "FanOutInput": true,
@@ -148,6 +150,7 @@ Response Type /definitions/entListJobTemplatesResponse
           "ID": "string",
           "IdmFilter": {
             "All": true,
+            "ClearInput": true,
             "Collect": true,
             "Description": "string",
             "FanOutInput": true,
@@ -175,6 +178,7 @@ Response Type /definitions/entListJobTemplatesResponse
           },
           "IdmSelector": {
             "All": true,
+            "ClearInput": true,
             "Collect": true,
             "Description": "string",
             "FanOutInput": true,
@@ -204,6 +208,7 @@ Response Type /definitions/entListJobTemplatesResponse
           "MergeAction": "[Recursive structure]",
           "NodesFilter": {
             "All": true,
+            "ClearInput": true,
             "Collect": true,
             "Description": "string",
             "FanOutInput": true,
@@ -233,6 +238,7 @@ Response Type /definitions/entListJobTemplatesResponse
           },
           "NodesSelector": {
             "All": true,
+            "ClearInput": true,
             "Collect": true,
             "Description": "string",
             "FanOutInput": true,
@@ -286,6 +292,7 @@ Response Type /definitions/entListJobTemplatesResponse
           },
           "UsersFilter": {
             "All": true,
+            "ClearInput": true,
             "Collect": true,
             "Description": "string",
             "Label": "string",
@@ -360,6 +367,7 @@ Response Type /definitions/entListJobTemplatesResponse
           },
           "UsersSelector": {
             "All": true,
+            "ClearInput": true,
             "Collect": true,
             "Description": "string",
             "Label": "string",
@@ -435,6 +443,7 @@ Response Type /definitions/entListJobTemplatesResponse
         }
       ],
       "AutoClean": true,
+      "AutoRestart": true,
       "AutoStart": true,
       "ContextMetaFilter": {
         "Description": "string",
@@ -463,6 +472,7 @@ Response Type /definitions/entListJobTemplatesResponse
       "Custom": true,
       "DataSourceFilter": {
         "All": true,
+        "ClearInput": true,
         "Collect": true,
         "Description": "string",
         "FanOutInput": true,
@@ -512,6 +522,7 @@ Response Type /definitions/entListJobTemplatesResponse
       "ID": "string",
       "IdmFilter": {
         "All": true,
+        "ClearInput": true,
         "Collect": true,
         "Description": "string",
         "FanOutInput": true,
@@ -596,6 +607,7 @@ Response Type /definitions/entListJobTemplatesResponse
         },
         "DataSourceFilter": {
           "All": true,
+          "ClearInput": true,
           "Collect": true,
           "Description": "string",
           "FanOutInput": true,
@@ -623,6 +635,7 @@ Response Type /definitions/entListJobTemplatesResponse
         },
         "DataSourceSelector": {
           "All": true,
+          "ClearInput": true,
           "Collect": true,
           "Description": "string",
           "FanOutInput": true,
@@ -655,6 +668,7 @@ Response Type /definitions/entListJobTemplatesResponse
         "ID": "string",
         "IdmFilter": {
           "All": true,
+          "ClearInput": true,
           "Collect": true,
           "Description": "string",
           "FanOutInput": true,
@@ -682,6 +696,7 @@ Response Type /definitions/entListJobTemplatesResponse
         },
         "IdmSelector": {
           "All": true,
+          "ClearInput": true,
           "Collect": true,
           "Description": "string",
           "FanOutInput": true,
@@ -711,6 +726,7 @@ Response Type /definitions/entListJobTemplatesResponse
         "MergeAction": "[Recursive structure]",
         "NodesFilter": {
           "All": true,
+          "ClearInput": true,
           "Collect": true,
           "Description": "string",
           "FanOutInput": true,
@@ -740,6 +756,7 @@ Response Type /definitions/entListJobTemplatesResponse
         },
         "NodesSelector": {
           "All": true,
+          "ClearInput": true,
           "Collect": true,
           "Description": "string",
           "FanOutInput": true,
@@ -793,6 +810,7 @@ Response Type /definitions/entListJobTemplatesResponse
         },
         "UsersFilter": {
           "All": true,
+          "ClearInput": true,
           "Collect": true,
           "Description": "string",
           "Label": "string",
@@ -867,6 +885,7 @@ Response Type /definitions/entListJobTemplatesResponse
         },
         "UsersSelector": {
           "All": true,
+          "ClearInput": true,
           "Collect": true,
           "Description": "string",
           "Label": "string",
@@ -943,6 +962,7 @@ Response Type /definitions/entListJobTemplatesResponse
       "ModifiedAt": 10,
       "NodeEventFilter": {
         "All": true,
+        "ClearInput": true,
         "Collect": true,
         "Description": "string",
         "FanOutInput": true,
@@ -1047,6 +1067,7 @@ Response Type /definitions/entListJobTemplatesResponse
                 },
                 "DataSourceFilter": {
                   "All": true,
+                  "ClearInput": true,
                   "Collect": true,
                   "Description": "string",
                   "FanOutInput": true,
@@ -1074,6 +1095,7 @@ Response Type /definitions/entListJobTemplatesResponse
                 },
                 "DataSourceSelector": {
                   "All": true,
+                  "ClearInput": true,
                   "Collect": true,
                   "Description": "string",
                   "FanOutInput": true,
@@ -1106,6 +1128,7 @@ Response Type /definitions/entListJobTemplatesResponse
                 "ID": "string",
                 "IdmFilter": {
                   "All": true,
+                  "ClearInput": true,
                   "Collect": true,
                   "Description": "string",
                   "FanOutInput": true,
@@ -1133,6 +1156,7 @@ Response Type /definitions/entListJobTemplatesResponse
                 },
                 "IdmSelector": {
                   "All": true,
+                  "ClearInput": true,
                   "Collect": true,
                   "Description": "string",
                   "FanOutInput": true,
@@ -1162,6 +1186,7 @@ Response Type /definitions/entListJobTemplatesResponse
                 "MergeAction": "[Recursive structure]",
                 "NodesFilter": {
                   "All": true,
+                  "ClearInput": true,
                   "Collect": true,
                   "Description": "string",
                   "FanOutInput": true,
@@ -1191,6 +1216,7 @@ Response Type /definitions/entListJobTemplatesResponse
                 },
                 "NodesSelector": {
                   "All": true,
+                  "ClearInput": true,
                   "Collect": true,
                   "Description": "string",
                   "FanOutInput": true,
@@ -1244,6 +1270,7 @@ Response Type /definitions/entListJobTemplatesResponse
                 },
                 "UsersFilter": {
                   "All": true,
+                  "ClearInput": true,
                   "Collect": true,
                   "Description": "string",
                   "Label": "string",
@@ -1318,6 +1345,7 @@ Response Type /definitions/entListJobTemplatesResponse
                 },
                 "UsersSelector": {
                   "All": true,
+                  "ClearInput": true,
                   "Collect": true,
                   "Description": "string",
                   "Label": "string",
@@ -1934,6 +1962,7 @@ Response Type /definitions/entListJobTemplatesResponse
       "Timeout": "string",
       "UserEventFilter": {
         "All": true,
+        "ClearInput": true,
         "Collect": true,
         "Description": "string",
         "Label": "string",
@@ -2015,4 +2044,4 @@ Response Type /definitions/entListJobTemplatesResponse
 
 
 
-###### Auto generated by Pydio Cells Enterprise Distribution v4.1.3-alpha1 on 4-May-2023
+###### Auto generated by Pydio Cells Enterprise Distribution v4.2.0-rc2 on 4-May-2023
