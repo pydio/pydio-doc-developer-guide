@@ -79,7 +79,6 @@ Response Type /definitions/entRestoreJobVersionResponse
         },
         "DataSourceFilter": {
           "All": true,
-          "ClearInput": true,
           "Collect": true,
           "Description": "string",
           "FanOutInput": true,
@@ -107,7 +106,6 @@ Response Type /definitions/entRestoreJobVersionResponse
         },
         "DataSourceSelector": {
           "All": true,
-          "ClearInput": true,
           "Collect": true,
           "Description": "string",
           "FanOutInput": true,
@@ -140,7 +138,6 @@ Response Type /definitions/entRestoreJobVersionResponse
         "ID": "string",
         "IdmFilter": {
           "All": true,
-          "ClearInput": true,
           "Collect": true,
           "Description": "string",
           "FanOutInput": true,
@@ -168,7 +165,6 @@ Response Type /definitions/entRestoreJobVersionResponse
         },
         "IdmSelector": {
           "All": true,
-          "ClearInput": true,
           "Collect": true,
           "Description": "string",
           "FanOutInput": true,
@@ -198,7 +194,6 @@ Response Type /definitions/entRestoreJobVersionResponse
         "MergeAction": "[Recursive structure]",
         "NodesFilter": {
           "All": true,
-          "ClearInput": true,
           "Collect": true,
           "Description": "string",
           "FanOutInput": true,
@@ -228,7 +223,6 @@ Response Type /definitions/entRestoreJobVersionResponse
         },
         "NodesSelector": {
           "All": true,
-          "ClearInput": true,
           "Collect": true,
           "Description": "string",
           "FanOutInput": true,
@@ -282,7 +276,6 @@ Response Type /definitions/entRestoreJobVersionResponse
         },
         "UsersFilter": {
           "All": true,
-          "ClearInput": true,
           "Collect": true,
           "Description": "string",
           "Label": "string",
@@ -357,7 +350,6 @@ Response Type /definitions/entRestoreJobVersionResponse
         },
         "UsersSelector": {
           "All": true,
-          "ClearInput": true,
           "Collect": true,
           "Description": "string",
           "Label": "string",
@@ -433,7 +425,6 @@ Response Type /definitions/entRestoreJobVersionResponse
       }
     ],
     "AutoClean": true,
-    "AutoRestart": true,
     "AutoStart": true,
     "ContextMetaFilter": {
       "Description": "string",
@@ -462,7 +453,6 @@ Response Type /definitions/entRestoreJobVersionResponse
     "Custom": true,
     "DataSourceFilter": {
       "All": true,
-      "ClearInput": true,
       "Collect": true,
       "Description": "string",
       "FanOutInput": true,
@@ -512,7 +502,6 @@ Response Type /definitions/entRestoreJobVersionResponse
     "ID": "string",
     "IdmFilter": {
       "All": true,
-      "ClearInput": true,
       "Collect": true,
       "Description": "string",
       "FanOutInput": true,
@@ -597,7 +586,6 @@ Response Type /definitions/entRestoreJobVersionResponse
       },
       "DataSourceFilter": {
         "All": true,
-        "ClearInput": true,
         "Collect": true,
         "Description": "string",
         "FanOutInput": true,
@@ -625,7 +613,6 @@ Response Type /definitions/entRestoreJobVersionResponse
       },
       "DataSourceSelector": {
         "All": true,
-        "ClearInput": true,
         "Collect": true,
         "Description": "string",
         "FanOutInput": true,
@@ -658,7 +645,6 @@ Response Type /definitions/entRestoreJobVersionResponse
       "ID": "string",
       "IdmFilter": {
         "All": true,
-        "ClearInput": true,
         "Collect": true,
         "Description": "string",
         "FanOutInput": true,
@@ -686,7 +672,6 @@ Response Type /definitions/entRestoreJobVersionResponse
       },
       "IdmSelector": {
         "All": true,
-        "ClearInput": true,
         "Collect": true,
         "Description": "string",
         "FanOutInput": true,
@@ -716,7 +701,6 @@ Response Type /definitions/entRestoreJobVersionResponse
       "MergeAction": "[Recursive structure]",
       "NodesFilter": {
         "All": true,
-        "ClearInput": true,
         "Collect": true,
         "Description": "string",
         "FanOutInput": true,
@@ -746,7 +730,6 @@ Response Type /definitions/entRestoreJobVersionResponse
       },
       "NodesSelector": {
         "All": true,
-        "ClearInput": true,
         "Collect": true,
         "Description": "string",
         "FanOutInput": true,
@@ -800,7 +783,6 @@ Response Type /definitions/entRestoreJobVersionResponse
       },
       "UsersFilter": {
         "All": true,
-        "ClearInput": true,
         "Collect": true,
         "Description": "string",
         "Label": "string",
@@ -875,7 +857,6 @@ Response Type /definitions/entRestoreJobVersionResponse
       },
       "UsersSelector": {
         "All": true,
-        "ClearInput": true,
         "Collect": true,
         "Description": "string",
         "Label": "string",
@@ -952,7 +933,6 @@ Response Type /definitions/entRestoreJobVersionResponse
     "ModifiedAt": 10,
     "NodeEventFilter": {
       "All": true,
-      "ClearInput": true,
       "Collect": true,
       "Description": "string",
       "FanOutInput": true,
@@ -1057,7 +1037,6 @@ Response Type /definitions/entRestoreJobVersionResponse
               },
               "DataSourceFilter": {
                 "All": true,
-                "ClearInput": true,
                 "Collect": true,
                 "Description": "string",
                 "FanOutInput": true,
@@ -1085,7 +1064,6 @@ Response Type /definitions/entRestoreJobVersionResponse
               },
               "DataSourceSelector": {
                 "All": true,
-                "ClearInput": true,
                 "Collect": true,
                 "Description": "string",
                 "FanOutInput": true,
@@ -1118,7 +1096,6 @@ Response Type /definitions/entRestoreJobVersionResponse
               "ID": "string",
               "IdmFilter": {
                 "All": true,
-                "ClearInput": true,
                 "Collect": true,
                 "Description": "string",
                 "FanOutInput": true,
@@ -1146,7 +1123,6 @@ Response Type /definitions/entRestoreJobVersionResponse
               },
               "IdmSelector": {
                 "All": true,
-                "ClearInput": true,
                 "Collect": true,
                 "Description": "string",
                 "FanOutInput": true,
@@ -1176,7 +1152,6 @@ Response Type /definitions/entRestoreJobVersionResponse
               "MergeAction": "[Recursive structure]",
               "NodesFilter": {
                 "All": true,
-                "ClearInput": true,
                 "Collect": true,
                 "Description": "string",
                 "FanOutInput": true,
@@ -1206,7 +1181,6 @@ Response Type /definitions/entRestoreJobVersionResponse
               },
               "NodesSelector": {
                 "All": true,
-                "ClearInput": true,
                 "Collect": true,
                 "Description": "string",
                 "FanOutInput": true,
@@ -1260,7 +1234,6 @@ Response Type /definitions/entRestoreJobVersionResponse
               },
               "UsersFilter": {
                 "All": true,
-                "ClearInput": true,
                 "Collect": true,
                 "Description": "string",
                 "Label": "string",
@@ -1335,7 +1308,6 @@ Response Type /definitions/entRestoreJobVersionResponse
               },
               "UsersSelector": {
                 "All": true,
-                "ClearInput": true,
                 "Collect": true,
                 "Description": "string",
                 "Label": "string",
@@ -1952,7 +1924,6 @@ Response Type /definitions/entRestoreJobVersionResponse
     "Timeout": "string",
     "UserEventFilter": {
       "All": true,
-      "ClearInput": true,
       "Collect": true,
       "Description": "string",
       "Label": "string",
@@ -2034,4 +2005,4 @@ Response Type /definitions/entRestoreJobVersionResponse
 
 
 
-###### Auto generated by Pydio Cells Enterprise Distribution v4.2.0-rc1 on 25-Apr-2023
+###### Auto generated by Pydio Cells Enterprise Distribution v4.1.3-alpha1 on 4-May-2023
