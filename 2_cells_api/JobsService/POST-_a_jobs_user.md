@@ -103,6 +103,7 @@ Response Type /definitions/restUserJobsCollection
           },
           "DataSourceFilter": {
             "All": true,
+            "ClearInput": true,
             "Collect": true,
             "Description": "string",
             "FanOutInput": true,
@@ -130,6 +131,7 @@ Response Type /definitions/restUserJobsCollection
           },
           "DataSourceSelector": {
             "All": true,
+            "ClearInput": true,
             "Collect": true,
             "Description": "string",
             "FanOutInput": true,
@@ -162,6 +164,7 @@ Response Type /definitions/restUserJobsCollection
           "ID": "string",
           "IdmFilter": {
             "All": true,
+            "ClearInput": true,
             "Collect": true,
             "Description": "string",
             "FanOutInput": true,
@@ -189,6 +192,7 @@ Response Type /definitions/restUserJobsCollection
           },
           "IdmSelector": {
             "All": true,
+            "ClearInput": true,
             "Collect": true,
             "Description": "string",
             "FanOutInput": true,
@@ -218,6 +222,7 @@ Response Type /definitions/restUserJobsCollection
           "MergeAction": "[Recursive structure]",
           "NodesFilter": {
             "All": true,
+            "ClearInput": true,
             "Collect": true,
             "Description": "string",
             "FanOutInput": true,
@@ -247,6 +252,7 @@ Response Type /definitions/restUserJobsCollection
           },
           "NodesSelector": {
             "All": true,
+            "ClearInput": true,
             "Collect": true,
             "Description": "string",
             "FanOutInput": true,
@@ -300,6 +306,7 @@ Response Type /definitions/restUserJobsCollection
           },
           "UsersFilter": {
             "All": true,
+            "ClearInput": true,
             "Collect": true,
             "Description": "string",
             "Label": "string",
@@ -374,6 +381,7 @@ Response Type /definitions/restUserJobsCollection
           },
           "UsersSelector": {
             "All": true,
+            "ClearInput": true,
             "Collect": true,
             "Description": "string",
             "Label": "string",
@@ -449,6 +457,7 @@ Response Type /definitions/restUserJobsCollection
         }
       ],
       "AutoClean": true,
+      "AutoRestart": true,
       "AutoStart": true,
       "ContextMetaFilter": {
         "Description": "string",
@@ -477,6 +486,7 @@ Response Type /definitions/restUserJobsCollection
       "Custom": true,
       "DataSourceFilter": {
         "All": true,
+        "ClearInput": true,
         "Collect": true,
         "Description": "string",
         "FanOutInput": true,
@@ -526,6 +536,7 @@ Response Type /definitions/restUserJobsCollection
       "ID": "string",
       "IdmFilter": {
         "All": true,
+        "ClearInput": true,
         "Collect": true,
         "Description": "string",
         "FanOutInput": true,
@@ -610,6 +621,7 @@ Response Type /definitions/restUserJobsCollection
         },
         "DataSourceFilter": {
           "All": true,
+          "ClearInput": true,
           "Collect": true,
           "Description": "string",
           "FanOutInput": true,
@@ -637,6 +649,7 @@ Response Type /definitions/restUserJobsCollection
         },
         "DataSourceSelector": {
           "All": true,
+          "ClearInput": true,
           "Collect": true,
           "Description": "string",
           "FanOutInput": true,
@@ -669,6 +682,7 @@ Response Type /definitions/restUserJobsCollection
         "ID": "string",
         "IdmFilter": {
           "All": true,
+          "ClearInput": true,
           "Collect": true,
           "Description": "string",
           "FanOutInput": true,
@@ -696,6 +710,7 @@ Response Type /definitions/restUserJobsCollection
         },
         "IdmSelector": {
           "All": true,
+          "ClearInput": true,
           "Collect": true,
           "Description": "string",
           "FanOutInput": true,
@@ -725,6 +740,7 @@ Response Type /definitions/restUserJobsCollection
         "MergeAction": "[Recursive structure]",
         "NodesFilter": {
           "All": true,
+          "ClearInput": true,
           "Collect": true,
           "Description": "string",
           "FanOutInput": true,
@@ -754,6 +770,7 @@ Response Type /definitions/restUserJobsCollection
         },
         "NodesSelector": {
           "All": true,
+          "ClearInput": true,
           "Collect": true,
           "Description": "string",
           "FanOutInput": true,
@@ -807,6 +824,7 @@ Response Type /definitions/restUserJobsCollection
         },
         "UsersFilter": {
           "All": true,
+          "ClearInput": true,
           "Collect": true,
           "Description": "string",
           "Label": "string",
@@ -881,6 +899,7 @@ Response Type /definitions/restUserJobsCollection
         },
         "UsersSelector": {
           "All": true,
+          "ClearInput": true,
           "Collect": true,
           "Description": "string",
           "Label": "string",
@@ -957,6 +976,7 @@ Response Type /definitions/restUserJobsCollection
       "ModifiedAt": 10,
       "NodeEventFilter": {
         "All": true,
+        "ClearInput": true,
         "Collect": true,
         "Description": "string",
         "FanOutInput": true,
@@ -1061,6 +1081,7 @@ Response Type /definitions/restUserJobsCollection
                 },
                 "DataSourceFilter": {
                   "All": true,
+                  "ClearInput": true,
                   "Collect": true,
                   "Description": "string",
                   "FanOutInput": true,
@@ -1088,6 +1109,7 @@ Response Type /definitions/restUserJobsCollection
                 },
                 "DataSourceSelector": {
                   "All": true,
+                  "ClearInput": true,
                   "Collect": true,
                   "Description": "string",
                   "FanOutInput": true,
@@ -1120,6 +1142,7 @@ Response Type /definitions/restUserJobsCollection
                 "ID": "string",
                 "IdmFilter": {
                   "All": true,
+                  "ClearInput": true,
                   "Collect": true,
                   "Description": "string",
                   "FanOutInput": true,
@@ -1147,6 +1170,7 @@ Response Type /definitions/restUserJobsCollection
                 },
                 "IdmSelector": {
                   "All": true,
+                  "ClearInput": true,
                   "Collect": true,
                   "Description": "string",
                   "FanOutInput": true,
@@ -1176,6 +1200,7 @@ Response Type /definitions/restUserJobsCollection
                 "MergeAction": "[Recursive structure]",
                 "NodesFilter": {
                   "All": true,
+                  "ClearInput": true,
                   "Collect": true,
                   "Description": "string",
                   "FanOutInput": true,
@@ -1205,6 +1230,7 @@ Response Type /definitions/restUserJobsCollection
                 },
                 "NodesSelector": {
                   "All": true,
+                  "ClearInput": true,
                   "Collect": true,
                   "Description": "string",
                   "FanOutInput": true,
@@ -1258,6 +1284,7 @@ Response Type /definitions/restUserJobsCollection
                 },
                 "UsersFilter": {
                   "All": true,
+                  "ClearInput": true,
                   "Collect": true,
                   "Description": "string",
                   "Label": "string",
@@ -1332,6 +1359,7 @@ Response Type /definitions/restUserJobsCollection
                 },
                 "UsersSelector": {
                   "All": true,
+                  "ClearInput": true,
                   "Collect": true,
                   "Description": "string",
                   "Label": "string",
@@ -1948,6 +1976,7 @@ Response Type /definitions/restUserJobsCollection
       "Timeout": "string",
       "UserEventFilter": {
         "All": true,
+        "ClearInput": true,
         "Collect": true,
         "Description": "string",
         "Label": "string",
@@ -2029,4 +2058,4 @@ Response Type /definitions/restUserJobsCollection
 
 
 
-###### Auto generated by Pydio Cells Enterprise Distribution v4.1.3 on 9-May-2023
+###### Auto generated by Pydio Cells Enterprise Distribution v4.2.0 on 9-May-2023
