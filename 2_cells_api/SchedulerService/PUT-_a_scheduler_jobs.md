@@ -74,7 +74,6 @@ Name | Description | Type | Required
         },
         "DataSourceFilter": {
           "All": true,
-          "ClearInput": true,
           "Collect": true,
           "Description": "string",
           "FanOutInput": true,
@@ -102,7 +101,6 @@ Name | Description | Type | Required
         },
         "DataSourceSelector": {
           "All": true,
-          "ClearInput": true,
           "Collect": true,
           "Description": "string",
           "FanOutInput": true,
@@ -135,7 +133,6 @@ Name | Description | Type | Required
         "ID": "string",
         "IdmFilter": {
           "All": true,
-          "ClearInput": true,
           "Collect": true,
           "Description": "string",
           "FanOutInput": true,
@@ -163,7 +160,6 @@ Name | Description | Type | Required
         },
         "IdmSelector": {
           "All": true,
-          "ClearInput": true,
           "Collect": true,
           "Description": "string",
           "FanOutInput": true,
@@ -193,7 +189,6 @@ Name | Description | Type | Required
         "MergeAction": "[Recursive structure]",
         "NodesFilter": {
           "All": true,
-          "ClearInput": true,
           "Collect": true,
           "Description": "string",
           "FanOutInput": true,
@@ -223,7 +218,6 @@ Name | Description | Type | Required
         },
         "NodesSelector": {
           "All": true,
-          "ClearInput": true,
           "Collect": true,
           "Description": "string",
           "FanOutInput": true,
@@ -277,7 +271,6 @@ Name | Description | Type | Required
         },
         "UsersFilter": {
           "All": true,
-          "ClearInput": true,
           "Collect": true,
           "Description": "string",
           "Label": "string",
@@ -352,7 +345,6 @@ Name | Description | Type | Required
         },
         "UsersSelector": {
           "All": true,
-          "ClearInput": true,
           "Collect": true,
           "Description": "string",
           "Label": "string",
@@ -428,7 +420,6 @@ Name | Description | Type | Required
       }
     ],
     "AutoClean": true,
-    "AutoRestart": true,
     "AutoStart": true,
     "ContextMetaFilter": {
       "Description": "string",
@@ -457,7 +448,6 @@ Name | Description | Type | Required
     "Custom": true,
     "DataSourceFilter": {
       "All": true,
-      "ClearInput": true,
       "Collect": true,
       "Description": "string",
       "FanOutInput": true,
@@ -507,7 +497,6 @@ Name | Description | Type | Required
     "ID": "string",
     "IdmFilter": {
       "All": true,
-      "ClearInput": true,
       "Collect": true,
       "Description": "string",
       "FanOutInput": true,
@@ -592,7 +581,6 @@ Name | Description | Type | Required
       },
       "DataSourceFilter": {
         "All": true,
-        "ClearInput": true,
         "Collect": true,
         "Description": "string",
         "FanOutInput": true,
@@ -620,7 +608,6 @@ Name | Description | Type | Required
       },
       "DataSourceSelector": {
         "All": true,
-        "ClearInput": true,
         "Collect": true,
         "Description": "string",
         "FanOutInput": true,
@@ -653,7 +640,6 @@ Name | Description | Type | Required
       "ID": "string",
       "IdmFilter": {
         "All": true,
-        "ClearInput": true,
         "Collect": true,
         "Description": "string",
         "FanOutInput": true,
@@ -681,7 +667,6 @@ Name | Description | Type | Required
       },
       "IdmSelector": {
         "All": true,
-        "ClearInput": true,
         "Collect": true,
         "Description": "string",
         "FanOutInput": true,
@@ -711,7 +696,6 @@ Name | Description | Type | Required
       "MergeAction": "[Recursive structure]",
       "NodesFilter": {
         "All": true,
-        "ClearInput": true,
         "Collect": true,
         "Description": "string",
         "FanOutInput": true,
@@ -741,7 +725,6 @@ Name | Description | Type | Required
       },
       "NodesSelector": {
         "All": true,
-        "ClearInput": true,
         "Collect": true,
         "Description": "string",
         "FanOutInput": true,
@@ -795,7 +778,6 @@ Name | Description | Type | Required
       },
       "UsersFilter": {
         "All": true,
-        "ClearInput": true,
         "Collect": true,
         "Description": "string",
         "Label": "string",
@@ -870,7 +852,6 @@ Name | Description | Type | Required
       },
       "UsersSelector": {
         "All": true,
-        "ClearInput": true,
         "Collect": true,
         "Description": "string",
         "Label": "string",
@@ -947,7 +928,6 @@ Name | Description | Type | Required
     "ModifiedAt": 10,
     "NodeEventFilter": {
       "All": true,
-      "ClearInput": true,
       "Collect": true,
       "Description": "string",
       "FanOutInput": true,
@@ -1052,7 +1032,6 @@ Name | Description | Type | Required
               },
               "DataSourceFilter": {
                 "All": true,
-                "ClearInput": true,
                 "Collect": true,
                 "Description": "string",
                 "FanOutInput": true,
@@ -1080,7 +1059,6 @@ Name | Description | Type | Required
               },
               "DataSourceSelector": {
                 "All": true,
-                "ClearInput": true,
                 "Collect": true,
                 "Description": "string",
                 "FanOutInput": true,
@@ -1113,7 +1091,6 @@ Name | Description | Type | Required
               "ID": "string",
               "IdmFilter": {
                 "All": true,
-                "ClearInput": true,
                 "Collect": true,
                 "Description": "string",
                 "FanOutInput": true,
@@ -1141,7 +1118,6 @@ Name | Description | Type | Required
               },
               "IdmSelector": {
                 "All": true,
-                "ClearInput": true,
                 "Collect": true,
                 "Description": "string",
                 "FanOutInput": true,
@@ -1171,7 +1147,6 @@ Name | Description | Type | Required
               "MergeAction": "[Recursive structure]",
               "NodesFilter": {
                 "All": true,
-                "ClearInput": true,
                 "Collect": true,
                 "Description": "string",
                 "FanOutInput": true,
@@ -1201,7 +1176,6 @@ Name | Description | Type | Required
               },
               "NodesSelector": {
                 "All": true,
-                "ClearInput": true,
                 "Collect": true,
                 "Description": "string",
                 "FanOutInput": true,
@@ -1255,7 +1229,6 @@ Name | Description | Type | Required
               },
               "UsersFilter": {
                 "All": true,
-                "ClearInput": true,
                 "Collect": true,
                 "Description": "string",
                 "Label": "string",
@@ -1330,7 +1303,6 @@ Name | Description | Type | Required
               },
               "UsersSelector": {
                 "All": true,
-                "ClearInput": true,
                 "Collect": true,
                 "Description": "string",
                 "Label": "string",
@@ -1877,7 +1849,6 @@ Name | Description | Type | Required
     "Timeout": "string",
     "UserEventFilter": {
       "All": true,
-      "ClearInput": true,
       "Collect": true,
       "Description": "string",
       "Label": "string",
@@ -2020,7 +1991,6 @@ Response Type /definitions/jobsPutJobResponse
         },
         "DataSourceFilter": {
           "All": true,
-          "ClearInput": true,
           "Collect": true,
           "Description": "string",
           "FanOutInput": true,
@@ -2048,7 +2018,6 @@ Response Type /definitions/jobsPutJobResponse
         },
         "DataSourceSelector": {
           "All": true,
-          "ClearInput": true,
           "Collect": true,
           "Description": "string",
           "FanOutInput": true,
@@ -2081,7 +2050,6 @@ Response Type /definitions/jobsPutJobResponse
         "ID": "string",
         "IdmFilter": {
           "All": true,
-          "ClearInput": true,
           "Collect": true,
           "Description": "string",
           "FanOutInput": true,
@@ -2109,7 +2077,6 @@ Response Type /definitions/jobsPutJobResponse
         },
         "IdmSelector": {
           "All": true,
-          "ClearInput": true,
           "Collect": true,
           "Description": "string",
           "FanOutInput": true,
@@ -2139,7 +2106,6 @@ Response Type /definitions/jobsPutJobResponse
         "MergeAction": "[Recursive structure]",
         "NodesFilter": {
           "All": true,
-          "ClearInput": true,
           "Collect": true,
           "Description": "string",
           "FanOutInput": true,
@@ -2169,7 +2135,6 @@ Response Type /definitions/jobsPutJobResponse
         },
         "NodesSelector": {
           "All": true,
-          "ClearInput": true,
           "Collect": true,
           "Description": "string",
           "FanOutInput": true,
@@ -2223,7 +2188,6 @@ Response Type /definitions/jobsPutJobResponse
         },
         "UsersFilter": {
           "All": true,
-          "ClearInput": true,
           "Collect": true,
           "Description": "string",
           "Label": "string",
@@ -2298,7 +2262,6 @@ Response Type /definitions/jobsPutJobResponse
         },
         "UsersSelector": {
           "All": true,
-          "ClearInput": true,
           "Collect": true,
           "Description": "string",
           "Label": "string",
@@ -2374,7 +2337,6 @@ Response Type /definitions/jobsPutJobResponse
       }
     ],
     "AutoClean": true,
-    "AutoRestart": true,
     "AutoStart": true,
     "ContextMetaFilter": {
       "Description": "string",
@@ -2403,7 +2365,6 @@ Response Type /definitions/jobsPutJobResponse
     "Custom": true,
     "DataSourceFilter": {
       "All": true,
-      "ClearInput": true,
       "Collect": true,
       "Description": "string",
       "FanOutInput": true,
@@ -2453,7 +2414,6 @@ Response Type /definitions/jobsPutJobResponse
     "ID": "string",
     "IdmFilter": {
       "All": true,
-      "ClearInput": true,
       "Collect": true,
       "Description": "string",
       "FanOutInput": true,
@@ -2538,7 +2498,6 @@ Response Type /definitions/jobsPutJobResponse
       },
       "DataSourceFilter": {
         "All": true,
-        "ClearInput": true,
         "Collect": true,
         "Description": "string",
         "FanOutInput": true,
@@ -2566,7 +2525,6 @@ Response Type /definitions/jobsPutJobResponse
       },
       "DataSourceSelector": {
         "All": true,
-        "ClearInput": true,
         "Collect": true,
         "Description": "string",
         "FanOutInput": true,
@@ -2599,7 +2557,6 @@ Response Type /definitions/jobsPutJobResponse
       "ID": "string",
       "IdmFilter": {
         "All": true,
-        "ClearInput": true,
         "Collect": true,
         "Description": "string",
         "FanOutInput": true,
@@ -2627,7 +2584,6 @@ Response Type /definitions/jobsPutJobResponse
       },
       "IdmSelector": {
         "All": true,
-        "ClearInput": true,
         "Collect": true,
         "Description": "string",
         "FanOutInput": true,
@@ -2657,7 +2613,6 @@ Response Type /definitions/jobsPutJobResponse
       "MergeAction": "[Recursive structure]",
       "NodesFilter": {
         "All": true,
-        "ClearInput": true,
         "Collect": true,
         "Description": "string",
         "FanOutInput": true,
@@ -2687,7 +2642,6 @@ Response Type /definitions/jobsPutJobResponse
       },
       "NodesSelector": {
         "All": true,
-        "ClearInput": true,
         "Collect": true,
         "Description": "string",
         "FanOutInput": true,
@@ -2741,7 +2695,6 @@ Response Type /definitions/jobsPutJobResponse
       },
       "UsersFilter": {
         "All": true,
-        "ClearInput": true,
         "Collect": true,
         "Description": "string",
         "Label": "string",
@@ -2816,7 +2769,6 @@ Response Type /definitions/jobsPutJobResponse
       },
       "UsersSelector": {
         "All": true,
-        "ClearInput": true,
         "Collect": true,
         "Description": "string",
         "Label": "string",
@@ -2893,7 +2845,6 @@ Response Type /definitions/jobsPutJobResponse
     "ModifiedAt": 10,
     "NodeEventFilter": {
       "All": true,
-      "ClearInput": true,
       "Collect": true,
       "Description": "string",
       "FanOutInput": true,
@@ -2998,7 +2949,6 @@ Response Type /definitions/jobsPutJobResponse
               },
               "DataSourceFilter": {
                 "All": true,
-                "ClearInput": true,
                 "Collect": true,
                 "Description": "string",
                 "FanOutInput": true,
@@ -3026,7 +2976,6 @@ Response Type /definitions/jobsPutJobResponse
               },
               "DataSourceSelector": {
                 "All": true,
-                "ClearInput": true,
                 "Collect": true,
                 "Description": "string",
                 "FanOutInput": true,
@@ -3059,7 +3008,6 @@ Response Type /definitions/jobsPutJobResponse
               "ID": "string",
               "IdmFilter": {
                 "All": true,
-                "ClearInput": true,
                 "Collect": true,
                 "Description": "string",
                 "FanOutInput": true,
@@ -3087,7 +3035,6 @@ Response Type /definitions/jobsPutJobResponse
               },
               "IdmSelector": {
                 "All": true,
-                "ClearInput": true,
                 "Collect": true,
                 "Description": "string",
                 "FanOutInput": true,
@@ -3117,7 +3064,6 @@ Response Type /definitions/jobsPutJobResponse
               "MergeAction": "[Recursive structure]",
               "NodesFilter": {
                 "All": true,
-                "ClearInput": true,
                 "Collect": true,
                 "Description": "string",
                 "FanOutInput": true,
@@ -3147,7 +3093,6 @@ Response Type /definitions/jobsPutJobResponse
               },
               "NodesSelector": {
                 "All": true,
-                "ClearInput": true,
                 "Collect": true,
                 "Description": "string",
                 "FanOutInput": true,
@@ -3201,7 +3146,6 @@ Response Type /definitions/jobsPutJobResponse
               },
               "UsersFilter": {
                 "All": true,
-                "ClearInput": true,
                 "Collect": true,
                 "Description": "string",
                 "Label": "string",
@@ -3276,7 +3220,6 @@ Response Type /definitions/jobsPutJobResponse
               },
               "UsersSelector": {
                 "All": true,
-                "ClearInput": true,
                 "Collect": true,
                 "Description": "string",
                 "Label": "string",
@@ -3893,7 +3836,6 @@ Response Type /definitions/jobsPutJobResponse
     "Timeout": "string",
     "UserEventFilter": {
       "All": true,
-      "ClearInput": true,
       "Collect": true,
       "Description": "string",
       "Label": "string",
@@ -3974,4 +3916,4 @@ Response Type /definitions/jobsPutJobResponse
 
 
 
-###### Auto generated by Pydio Cells Enterprise Distribution v4.2.0-rc2 on 5-May-2023
+###### Auto generated by Pydio Cells Enterprise Distribution v4.1.3 on 9-May-2023
