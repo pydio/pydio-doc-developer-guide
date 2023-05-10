@@ -5,7 +5,7 @@
 |Label (internal name)|Type|Default|Description|
 |---|---|---|---|
 |**Archive path** (target)|string|<no value>|FullPath to the new archive|
-|**Archive format** (format)|select, possible values: Detect (file extension) (detect), Zip (zip), Tar (tar), TarGz (tar.gz)|detect|Compression format of the archive|
+|**Archive format** (format)|select, possible values: Detect (file extension) (detect),<br/>Zip (zip),<br/>Tar (tar),<br/>TarGz (tar.gz)|detect|Compression format of the archive|
 
 
 

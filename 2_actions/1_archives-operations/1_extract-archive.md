@@ -5,7 +5,7 @@
 |Label (internal name)|Type|Default|Description|
 |---|---|---|---|
 |**Extraction path** (target)|string||FullPath used for extracting contents. If left empty, will extract in the same folder.|
-|**Archive format** (format)|select, possible values: Detect (from filename) (detect), Zip (zip), Tar (tar), TarGz (tar.gz)|detect|Compression format of the archive|
+|**Archive format** (format)|select, possible values: Detect (from filename) (detect),<br/>Zip (zip),<br/>Tar (tar),<br/>TarGz (tar.gz)|detect|Compression format of the archive|
 
 
 
