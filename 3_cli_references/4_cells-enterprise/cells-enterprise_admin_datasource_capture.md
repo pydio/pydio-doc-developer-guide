@@ -1,35 +1,32 @@
-Find and compute missing thumbnails for images
+Capture index and objects into JSON or BoltDB format for sync debugging purposes
 
 ### Synopsis
 
 
 DESCRIPTION
 
-  Look up for files where x-cells-hash is missing and recompute them. This operation is launched in scheduler and can take
-  some time (and CPU).
+  Sometimes a subtle glitch may break structured datasources resynchronization, and for debugging purpose
+  it can be handy to capture both the "left" and "right" endpoints, namely the sql index and the s3 storage listing.
 
 EXAMPLES
 
-  1. To trigger the rethumbing of "pydiods1" datasource:
-  $ ./cells-enterprise admin datasource rethumb --datasource=pydiods1
-
-  2. Process only the folder/subfolder data :
-  $ ./cells-enterprise admin datasource rethumb --datasource=pydiods1 --path=folder/subfolder
+  1. Capture datasource pydiods1 into a given location
+  $ ./cells-enterprise admin datasource capture --datasource=pydiods1 --target=/path/to/folder --format=bolt
 
 
 
 ```
-./cells-enterprise admin datasource rethumb [flags]
+./cells-enterprise admin datasource capture [flags]
 ```
 
 ### Options
 
 ```
-  -c, --concurrency int     Maximum concurrency for computing files hashes (default 10)
-  -d, --datasource string   Name of datasource to process (default "pydiods1")
-  -h, --help                help for rethumb
-  -t, --timeout string      Maximum job duration (default "30m")
-  -u, --username string     Username under which the job will be executed (generally admin)
+  -d, --datasource string   Name of datasource to capture
+  -f, --format string       One of bolt|json storage, bolt by default (default "bolt")
+  -h, --help                help for capture
+  -s, --sides string        Capture both sides, can be restricted by specifying s3 or index. (default "both")
+  -t, --target string       Target folder where to store the snapshots
 ```
 
 ### Options inherited from parent commands
