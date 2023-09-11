@@ -47,9 +47,21 @@ add 1 2 3
 
  To increment by 1, use `add1`
 
+## add1f
+
+ To increment a float by 1, use `add1f`
+
+## addf
+
+ Sum floats with `addf`. Accepts two or more inputs.
+
+```
+addf 1.0 2.1 3.4
+```
+
 ## adler32sum
 
- No documentation for this function
+ Computes adler32 checksum
 
 ## ago
 
@@ -64,6 +76,18 @@ returns in `time.Duration` String() format
 ```
 2h34m7s
 ```
+
+## all
+
+ `all` returns true if `empty(x)` is false for all values x in the list.
+If the list is empty, return true.
+
+
+## any
+
+ `any` returns true if `empty(x)` is false for any x in the list.
+If the list is empty, return false.
+
 
 ## append
 
@@ -120,6 +144,10 @@ base "foo/bar/baz"
 
 The above prints "baz"
 
+## bcrypt
+
+ `bcrypt` returns the bcrypt hash of a password using bcrypt library with the DefaultCost.
+
 ## biggest
 
  No documentation for this function
@@ -174,6 +202,17 @@ The above produces `hello beautiful world`
 
 `ceil 123.001` will return `124.0`
 
+## chunk
+
+ To split a list into chunks of given size, use `chunk size list`. This is useful for pagination.
+
+```
+chunk 3 (list 1 2 3 4 5 6 7 8)
+```
+
+This produces list of lists `[ [ 1 2 3 ] [ 4 5 6 ] [ 7 8 ] ]`.
+
+
 ## clean
 
  Clean up a path.
@@ -221,7 +260,13 @@ template engine if there is a problem.
 
 ## concat
 
- No documentation for this function
+ Concatenate arbitrary number of lists into one.
+
+```
+concat $myList ( list 6 7 ) ( list 8 )
+```
+
+The above would produce `[1 2 3 4 5 6 7 8]`. `$myList` would remain unaltered.
 
 ## contains
 
@@ -298,15 +343,35 @@ If the modification format is wrong `dateModify` will return the date unmodified
 
 ## decryptAES
 
- No documentation for this function
+ The `decryptAES` function receives a base64 string encoded by the AES-256 CBC
+algorithm and returns the decoded text.
+
+```
+"30tEfhuJSVRhpG97XCuWgz2okj7L8vQ1s6V9zVUPeDQ=" | decryptAES "secretkey"
+```
 
 ## deepCopy
 
- No documentation for this function
+ The `deepCopy` and `mustDeepCopy` functions takes a value and makes a deep copy
+of the value. This includes dicts and other structures. `deepCopy` panics
+when there is a problem while `mustDeepCopy` returns an error to the template
+system when there is an error.
+
+```
+dict "a" 1 "b" 2 | deepCopy
+```
 
 ## deepEqual
 
- No documentation for this function
+ `deepEqual` returns true if two values are ["deeply equal"](https://golang.org/pkg/reflect/#DeepEqual)
+
+Works for non-primitive types as well (compared to the built-in `eq`).
+
+```
+deepEqual (list 1 2 3) (list 1 2 3)
+```
+
+The above will return `true`
 
 ## default
 
@@ -356,6 +421,39 @@ $myDict := dict "name1" "value1" "name2" "value2" "name3" "value 3"
 ```
 
 
+## dig
+
+ The `dig` function traverses a nested set of dicts, selecting keys from a list
+of values. It returns a default value if any of the keys are not found at the
+associated dict.
+
+```
+dig "user" "role" "humanName" "guest" $dict
+```
+
+Given a dict structured like
+```
+{
+  user: {
+    role: {
+      humanName: "curator"
+    }
+  }
+}
+```
+
+the above would return `"curator"`. If the dict lacked even a `user` field,
+the result would be `"guest"`.
+
+Dig can be very useful in cases where you'd like to avoid guard clauses,
+especially since Go's template package's `and` doesn't shortcut. For instance
+`and a.maybeNil a.maybeNil.iNeedThis` will always evaluate
+`a.maybeNil.iNeedThis`, and panic if `a` lacks a `maybeNil` field.)
+
+`dig` accepts its dict argument last in order to support pipelining. For instance:
+```
+merge a b c | dig "one" "two" "three" "<missing>"
+
 ## dir
 
  Compute dirname of a path. It uses internal `path` library, expecting forward slashes.
@@ -369,6 +467,38 @@ Example :
 ## div
 
  Perform integer division with `div`
+
+## divf
+
+ Floats division
+
+## duration
+
+ Formats a given amount of seconds as a `time.Duration`.
+
+This returns 1m35s
+
+```
+duration "95"
+```
+
+## durationRound
+
+ Rounds a given duration to the most significant unit. Strings and `time.Duration`
+gets parsed as a duration, while a `time.Time` is calculated as the duration since.
+
+This return 2h
+
+```
+durationRound "2h10m5s"
+```
+
+This returns 3mo
+
+```
+durationRound "2400h10m5s"
+```
+
 
 ## empty
 
@@ -385,7 +515,11 @@ you rarely need `if empty .Foo`. Instead, just use `if .Foo`.
 
 ## encryptAES
 
- No documentation for this function
+ The `encryptAES` function encrypts text with AES-256 CBC and returns a base64 encoded string.
+
+```
+encryptAES "secretkey" "plaintext"
+```
 
 ## ext
 
@@ -427,9 +561,20 @@ template engine if there is a problem.
 
 `floor 123.9999` will return `123.0`
 
+## fromJson
+
+ `fromJson` decodes a JSON document into a structure. If the input cannot be decoded as JSON the function will return an empty string.
+`mustFromJson` will return an error in case the JSON is invalid.
+
+```
+fromJson "{\"foo\": 55}"
+```
+
+
 ## genCA
 
- The `genCA` function generates a new, self-signed x509 certificate authority.
+ The `genCA` function generates a new, self-signed x509 certificate authority using a
+2048-bit RSA private key.
 
 It takes the following parameters:
 
@@ -450,6 +595,33 @@ $ca := genCA "foo-ca" 365
 Note that the returned object can be passed to the `genSignedCert` function
 to sign a certificate using this CA.
 
+
+## genCAWithKey
+
+ The `genCAWithKey` function generates a new, self-signed x509 certificate authority using a
+given private key.
+
+It takes the following parameters:
+
+- Subject's common name (cn)
+- Cert validity duration in days
+- Private key (PEM-encoded); DSA keys are not supported
+
+It returns an object with the following attributes:
+
+- `Cert`: A PEM-encoded certificate
+- `Key`: A PEM-encoded private key
+
+Example:
+
+```
+$ca := genCAWithKey "foo-ca" 365 (genPrivateKey "rsa")
+```
+
+Note that the returned object can be passed to the `genSignedCert` function
+to sign a certificate using this CA.
+
+
 ## genPrivateKey
 
  
@@ -464,7 +636,8 @@ It takes one of the values for its first param:
 
 ## genSelfSignedCert
 
- The `genSelfSignedCert` function generates a new, self-signed x509 certificate.
+ The `genSelfSignedCert` function generates a new, self-signed x509 certificate using a
+2048-bit RSA private key.
 
 It takes the following parameters:
 
@@ -484,10 +657,35 @@ Example:
 $cert := genSelfSignedCert "foo.com" (list "10.0.0.1" "10.0.0.2") (list "bar.com" "bat.com") 365
 ```
 
+
+## genSelfSignedCertWithKey
+
+ The `genSelfSignedCertWithKey` function generates a new, self-signed x509 certificate using a
+given private key.
+
+It takes the following parameters:
+
+- Subject's common name (cn)
+- Optional list of IPs; may be nil
+- Optional list of alternate DNS names; may be nil
+- Cert validity duration in days
+- Private key (PEM-encoded); DSA keys are not supported
+
+It returns an object with the following attributes:
+
+- `Cert`: A PEM-encoded certificate
+- `Key`: A PEM-encoded private key
+
+Example:
+
+```
+$cert := genSelfSignedCertWithKey "foo.com" (list "10.0.0.1" "10.0.0.2") (list "bar.com" "bat.com") 365 (genPrivateKey "ecdsa")
+```
+
 ## genSignedCert
 
  The `genSignedCert` function generates a new, x509 certificate signed by the
-specified CA.
+specified CA, using a 2048-bit RSA private key.
 
 It takes the following parameters:
 
@@ -504,9 +702,51 @@ $ca := genCA "foo-ca" 365
 $cert := genSignedCert "foo.com" (list "10.0.0.1" "10.0.0.2") (list "bar.com" "bat.com") 365 $ca
 ```
 
+
+## genSignedCertWithKey
+
+ The `genSignedCertWithKey` function generates a new, x509 certificate signed by the
+specified CA, using a given private key.
+
+It takes the following parameters:
+
+- Subject's common name (cn)
+- Optional list of IPs; may be nil
+- Optional list of alternate DNS names; may be nil
+- Cert validity duration in days
+- CA (see `genCA`)
+- Private key (PEM-encoded); DSA keys are not supported
+
+Example:
+
+```
+$ca := genCA "foo-ca" 365
+$cert := genSignedCert "foo.com" (list "10.0.0.1" "10.0.0.2") (list "bar.com" "bat.com") 365 $ca (genPrivateKey "ed25519")
+```
+
+
+## get
+
+ `get` finds a key inside a map[string]interface{}, similar to `index` core function. Only works for this type, not map[string]string.
+
+Given a map and a key, get the value from the map.
+
+```
+get $myDict "key1"
+```
+
+The above returns `"value1"`
+
+Note that if the key is not found, this operation will simply return `""`. No error
+will be generated.
+
 ## getHostByName
 
- No documentation for this function
+ The `getHostByName` receives a domain name and returns the ip address.
+
+```
+getHostByName "www.google.com" would return the corresponding ip address of www.google.com
+```
 
 ## has
 
@@ -575,6 +815,17 @@ htmlDateInZone (now) "UTC"
 ```
 
 
+## htpasswd
+
+ The `htpasswd` function takes a `username` and `password` and generates a `bcrypt` hash of the password. The result can be used for basic authentication on an [Apache HTTP Server](https://httpd.apache.org/docs/2.4/misc/password_encryptions.html#basic).
+
+```
+htpasswd "myUser" "myPassword"
+```
+
+Note that it is insecure to store the password directly in the template.
+
+
 ## indent
 
  The `indent` function indents every line in a given string to the specified
@@ -636,7 +887,13 @@ The above will produce `1+2+3`
 
 ## kebabcase
 
- No documentation for this function
+ Convert string from camelCase to kebab-case.
+
+```
+kebabcase "FirstName"
+```
+
+This above will produce `first-name`.
 
 ## keys
 
@@ -719,6 +976,10 @@ This will return `3`:
 max 1 2 3
 ```
 
+## maxf
+
+ Floats version of `max`
+
 ## merge
 
  Merge two or more dictionaries into one, giving precedence to the dest dictionary:
@@ -739,13 +1000,55 @@ deepCopy $source | merge $dest
 
 ## mergeOverwrite
 
- No documentation for this function
+ Merge two or more dictionaries into one, giving precedence from **right to left**, effectively
+overwriting values in the dest dictionary:
+
+Given:
+
+```
+dst:
+  default: default
+  overwrite: me
+  key: true
+
+src:
+  overwrite: overwritten
+  key: false
+```
+
+will result in:
+
+```
+newdict:
+  default: default
+  overwrite: overwritten
+  key: false
+```
+
+```
+$newdict := mergeOverwrite $dest $source1 $source2
+```
+
+This is a deep merge operation but not a deep copy operation. Nested objects that
+are merged are the same instance on both dicts. If you want a deep copy along
+with the merge than use the `deepCopy` function along with merging. For example,
+
+```
+deepCopy $source | mergeOverwrite $dest
+```
+
+`mustMergeOverwrite` will return an error in case of unsuccessful merge.
+
 
 ## min
 
  Return the smallest of a series of integers.
 
 `min 1 2 3` will return `1`
+
+## minf
+
+ Floats version of `min`
 
 ## mod
 
@@ -759,6 +1062,130 @@ deepCopy $source | merge $dest
 mul 1 2 3
 ```
 
+
+## mulf
+
+ Floats version of `mul`
+
+## mustAppend
+
+ "mustXXX" function returns an error while original XXX functions panics if something goes wrong
+
+## mustChunk
+
+ "mustXXX" function returns an error while original XXX functions panics if something goes wrong
+
+## mustCompact
+
+ "mustXXX" function returns an error while original XXX functions panics if something goes wrong
+
+## mustDateModify
+
+ "mustXXX" function returns an error while original XXX functions panics if something goes wrong
+
+## mustDeepCopy
+
+ "mustXXX" function returns an error while original XXX functions panics if something goes wrong
+
+## mustFirst
+
+ "mustXXX" function returns an error while original XXX functions panics if something goes wrong
+
+## mustFromJson
+
+ "mustXXX" function returns an error while original XXX functions panics if something goes wrong
+
+## mustHas
+
+ "mustXXX" function returns an error while original XXX functions panics if something goes wrong
+
+## mustInitial
+
+ "mustXXX" function returns an error while original XXX functions panics if something goes wrong
+
+## mustLast
+
+ "mustXXX" function returns an error while original XXX functions panics if something goes wrong
+
+## mustMerge
+
+ "mustXXX" function returns an error while original XXX functions panics if something goes wrong
+
+## mustMergeOverwrite
+
+ "mustXXX" function returns an error while original XXX functions panics if something goes wrong
+
+## mustPrepend
+
+ "mustXXX" function returns an error while original XXX functions panics if something goes wrong
+
+## mustPush
+
+ "mustXXX" function returns an error while original XXX functions panics if something goes wrong
+
+## mustRegexFind
+
+ "mustXXX" function returns an error while original XXX functions panics if something goes wrong
+
+## mustRegexFindAll
+
+ "mustXXX" function returns an error while original XXX functions panics if something goes wrong
+
+## mustRegexMatch
+
+ "mustXXX" function returns an error while original XXX functions panics if something goes wrong
+
+## mustRegexReplaceAll
+
+ "mustXXX" function returns an error while original XXX functions panics if something goes wrong
+
+## mustRegexReplaceAllLiteral
+
+ "mustXXX" function returns an error while original XXX functions panics if something goes wrong
+
+## mustRegexSplit
+
+ "mustXXX" function returns an error while original XXX functions panics if something goes wrong
+
+## mustRest
+
+ "mustXXX" function returns an error while original XXX functions panics if something goes wrong
+
+## mustReverse
+
+ "mustXXX" function returns an error while original XXX functions panics if something goes wrong
+
+## mustSlice
+
+ "mustXXX" function returns an error while original XXX functions panics if something goes wrong
+
+## mustToDate
+
+ "mustXXX" function returns an error while original XXX functions panics if something goes wrong
+
+## mustToJson
+
+ "mustXXX" function returns an error while original XXX functions panics if something goes wrong
+
+## mustToPrettyJson
+
+ "mustXXX" function returns an error while original XXX functions panics if something goes wrong
+
+## mustToRawJson
+
+ "mustXXX" function returns an error while original XXX functions panics if something goes wrong
+
+## mustUniq
+
+ "mustXXX" function returns an error while original XXX functions panics if something goes wrong
+
+## mustWithout
+
+ "mustXXX" function returns an error while original XXX functions panics if something goes wrong
+
+## must_date_modify
+
+ "mustXXX" function returns an error while original XXX functions panics if something goes wrong
 
 ## nindent
 
@@ -796,6 +1223,50 @@ $new := omit $myDict "name1" "name3"
 ```
 
 The above returns `{name2: value2}`
+
+## osBase
+
+ Return the last element of a filepath.
+
+```
+osBase "/foo/bar/baz"
+osBase "C:\\foo\\bar\\baz"
+```
+
+The above prints "baz" on Linux and Windows, respectively.
+
+## osClean
+
+ Clean up a path.
+
+```
+osClean "/foo/bar/../baz"
+osClean "C:\\foo\\bar\\..\\baz"
+```
+
+The above resolves the `..` and returns `foo/baz` on Linux and `C:\\foo\\baz` on Windows.
+
+
+## osDir
+
+ Return the directory, stripping the last part of the path. So `osDir "/foo/bar/baz"`
+returns `/foo/bar` on Linux, and `osDir "C:\\foo\\bar\\baz"`
+returns `C:\\foo\\bar` on Windows.
+
+## osExt
+
+ Return the file extension.
+
+```
+osExt "/foo.bar"
+osExt "C:\\foo.bar"
+```
+
+The above returns `.bar` on Linux and Windows, respectively.
+
+## osIsAbs
+
+ To check whether a file path is absolute, use `osIsAbs`.
 
 ## pick
 
@@ -939,6 +1410,23 @@ randNumeric 3
 
 The above will produce a random string with three digits.
 
+## randBytes
+
+ The `randBytes` function accepts a count `N` and generates a cryptographically
+secure (uses ```crypto/rand```) random sequence of `N` bytes. The sequence is
+returned as a base64 encoded string.
+
+```
+randBytes 24
+```
+
+## randInt
+
+ Returns a random integer value from min (inclusive) to max (exclusive).
+```
+randInt 12 30
+```
+
 ## randNumeric
 
  These four functions generate cryptographically secure (uses ```crypto/rand```)
@@ -997,6 +1485,18 @@ The above produces `true`
 
 `regexMatch` panics if there is a problem and `mustRegexMatch` returns an error to the
 template engine if there is a problem.
+
+## regexQuoteMeta
+
+ Returns a string that escapes all regular expression metacharacters inside the argument text;
+the returned string is a regular expression matching the literal text.
+
+```
+regexQuoteMeta "1.2.3"
+```
+
+The above produces `1\.2\.3`
+
 
 ## regexReplaceAll
 
@@ -1243,6 +1743,22 @@ major change is API breaking. For example,
 - `^0.0` is equivalent to `>=0.0.0 <0.1.0`
 - `^0` is equivalent to `>=0.0.0 <1.0.0`
 
+## seq
+
+ Works like the bash `seq` command.
+* 1 parameter  (end) - will generate all counting integers between 1 and `end` inclusive.
+* 2 parameters (start, end) - will generate all counting integers between `start` and `end` inclusive incrementing or decrementing by 1.
+* 3 parameters (start, step, end) - will generate all counting integers between `start` and `end` inclusive incrementing or decrementing by `step`.
+
+```
+seq 5       => 1 2 3 4 5
+seq -3      => 1 0 -1 -2 -3
+seq 0 2     => 0 1 2
+seq 2 -2    => 2 1 0 -1 -2
+seq 0 2 10  => 0 2 4 6 8 10
+seq 0 -2 -5 => 0 -2 -4
+```
+
 ## set
 
  Use `set` to add a new key/value pair to a dictionary.
@@ -1285,7 +1801,16 @@ The above will randomize the letters in `hello`, perhaps producing `oelhl`.
 
 ## slice
 
- No documentation for this function
+ To get partial elements of a list, use `slice list [n] [m]`. It is
+equivalent of `list[n:m]`.
+
+- `slice $myList` returns `[1 2 3 4 5]`. It is same as `myList[:]`.
+- `slice $myList 3` returns `[4 5]`. It is same as `myList[3:]`.
+- `slice $myList 1 3` returns `[2 3]`. It is same as `myList[1:3]`.
+- `slice $myList 0 3` returns `[1 2 3]`. It is same as `myList[:3]`.
+
+`slice` panics if there is a problem while `mustSlice` returns an error to the
+template engine if there is a problem.
 
 ## snakecase
 
@@ -1358,7 +1883,21 @@ The above produces `foo`
 
 ## splitn
 
- No documentation for this function
+ `splitn` function splits a string into a `dict`. It is designed to make
+it easy to use template dot notation for accessing members:
+
+```
+$a := splitn "$" 2 "foo$bar$baz"
+```
+
+The above produces a map with index keys. `{_0: foo, _1: bar$baz}`
+
+```
+$a._0
+```
+
+The above produces `foo`
+
 
 ## squote
 
@@ -1368,6 +1907,10 @@ The above produces `foo`
 ## sub
 
  To subtract, use `sub`
+
+## subf
+
+ Floats version of `sub`
 
 ## substr
 
@@ -1459,7 +2002,13 @@ toDate "2006-01-02" "2017-12-31" | date "02/01/2006"
 
 ## toDecimal
 
- No documentation for this function
+ Given a unix octal permission, produce a decimal.
+
+```
+"0777" | toDecimal
+```
+
+The above converts `0777` to `511` and returns the value as an int64.
 
 ## toJson
 
@@ -1481,6 +2030,17 @@ toPrettyJson .Item
 ```
 
 The above returns indented JSON string representation of `.Item`.
+
+## toRawJson
+
+ The `toRawJson` function encodes an item into JSON string with HTML characters unescaped.
+
+```
+toRawJson .Item
+```
+
+The above returns unescaped JSON string representation of `.Item`.
+
 
 ## toString
 
@@ -1509,13 +2069,7 @@ The above produces `hello`
 
 ## trimAll
 
- Remove given characters from the front or back of a string:
-
-```
-trimAll "$" "$5.00"
-```
-
-The above returns `5.00` (as a string).
+ No documentation for this function
 
 ## trimPrefix
 
@@ -1598,7 +2152,10 @@ template engine if there is a problem.
 
 ## unixEpoch
 
- No documentation for this function
+ Returns the seconds since the unix epoch for a `time.Time`.
+
+```
+now | unixEpoch
 
 ## unset
 
@@ -1653,11 +2210,38 @@ The above returns `HELLO`
 
 ## urlJoin
 
- No documentation for this function
+ Joins map (produced by `urlParse`) to produce URL string
+
+```
+urlJoin (dict "fragment" "fragment" "host" "host:80" "path" "/path" "query" "query" "scheme" "http")
+```
+
+The above returns the following string:
+```
+proto://host:80/path?query#fragment
+```
 
 ## urlParse
 
- No documentation for this function
+ Parses string for URL and produces dict with URL parts
+
+```
+urlParse "http://admin:secret@server.com:8080/api?list=false#anchor"
+```
+
+The above returns a dict, containing URL object:
+```yaml
+scheme:   'http'
+host:     'server.com:8080'
+path:     '/api'
+query:    'list=false'
+opaque:   nil
+fragment: 'anchor'
+userinfo: 'admin:secret'
+```
+
+For more info, check https://golang.org/pkg/net/url/#URL
+
 
 ## uuidv4
 
@@ -1671,7 +2255,17 @@ The above returns a new UUID of the v4 (randomly generated) type.
 
 ## values
 
- No documentation for this function
+ The `values` function is similar to `keys`, except it returns a new `list` with
+all the values of the source `dict` (only one dictionary is supported).
+
+```
+$vals := values $myDict
+```
+
+The above returns `list["value1", "value2", "value 3"]`. Note that the `values`
+function gives no guarantees about the result ordering- if you care about this,
+then use `sortAlpha`.
+
 
 ## without
 

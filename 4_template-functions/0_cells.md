@@ -22,11 +22,11 @@ Example :
 
 ## jsonBytesToMap
 
- No documentation for this function
+ Unmarshal a json-encoded **[]bytes** representation as a map[string]interface{}
 
 ## jsonBytesToSlice
 
- No documentation for this function
+ Unmarshal a json-encoded **[]bytes** representation as a slice []interface{}
 
 ## jsonStringToMap
 
@@ -34,7 +34,7 @@ Example :
 
 ## jsonStringToSlice
 
- No documentation for this function
+ Unmarshal a json-encoded **string** as a slice []interface{}
 
 ## publicLink
 
@@ -75,7 +75,3 @@ Example :
     => Test String
 
 This can be handy when manipulating strings from/to json values.
-
-## unixEpoch
-
- Alias for `asStamp` function

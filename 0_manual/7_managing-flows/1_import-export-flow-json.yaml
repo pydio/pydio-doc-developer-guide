@@ -1,0 +1,6 @@
+title: "Import/Export JSON File"
+language: und
+menu: "Import/Export JSON File"
+weight: 1
+abstract: "Flows can be easily exported and re-imported as JSON files."
+menu_name: menu-admin-guide-v6-enterprise

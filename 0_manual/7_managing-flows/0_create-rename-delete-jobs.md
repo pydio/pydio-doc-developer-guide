@@ -37,11 +37,3 @@ Then edit the label and hit Save.
 ## Deleting a Job
 
 Jobs can be simply deleted with the DELETE button.
-
-## Exporting Job in JSON format
-
-In Edit Mode, you can display the current JSON representation of your job. 
-
-[:image:0_overview/job-editor-button-json.png]
-
-By copy/pasting and saving this JSON to a file, it provides a flexible way to backup your jobs for further usage or exporting to another Cells instance. 
