@@ -1,21 +1,24 @@
-List groups
+List acls by node Uuid
 
 ### Synopsis
 
 
-DESCRIPION
+DESCRIPTION	
 
-  List user groups that are defined in your Pydio Cells instance.
+  List all workspaces on which the current logged in user has *at least* Read Access.
+
 
 
 ```
-./cec idm list-groups [flags]
+./cec idm list-acls [flags]
 ```
 
 ### Options
 
 ```
-  -h, --help   help for list-groups
+      --delete            Delete all found ACLs
+  -h, --help              help for list-acls
+  -n, --node-id strings   Search by node ID
 ```
 
 ### Options inherited from parent commands
