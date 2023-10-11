@@ -22,7 +22,8 @@
       "purge-users-notifications",
       "truncate-logs",
       "unlock-public-links",
-      "empty-all-recycles"
+      "empty-all-recycles",
+      "capture-snapshots"
     ]
   },
   {
@@ -35,7 +36,10 @@
       "import-users-csv",
       "list-locked-users",
       "role-for-each-workspace",
-      "ws-first-connection"
+      "ws-first-connection",
+      "batch-create-links",
+      "batch-delete-link",
+      "modify-a-user-login"
     ]
   },
   {
@@ -46,7 +50,8 @@
       "export-audits-report",
       "folder-content-report",
       "read-license-stats",
-      "storage-usage"
+      "storage-usage",
+      "export-users-permissions"
     ]
   },
   {
