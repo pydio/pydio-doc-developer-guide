@@ -81,6 +81,58 @@ Response Type /definitions/entListJobVersionsResponse
               },
               "Type": "string"
             },
+            "DataFilter": {
+              "ClearInput": true,
+              "Collect": true,
+              "Description": "string",
+              "FanOutInput": true,
+              "Label": "string",
+              "Query": {
+                "Limit": "string",
+                "Offset": "string",
+                "Operation": "string",
+                "ResourcePolicyQuery": {
+                  "Any": true,
+                  "Empty": true,
+                  "Subjects": [
+                    "string"
+                  ]
+                },
+                "SubQueries": [
+                  {
+                    "@type": "string"
+                  }
+                ],
+                "groupBy": 10
+              },
+              "Timeout": "string"
+            },
+            "DataSelector": {
+              "ClearInput": true,
+              "Collect": true,
+              "Description": "string",
+              "FanOutInput": true,
+              "Label": "string",
+              "Query": {
+                "Limit": "string",
+                "Offset": "string",
+                "Operation": "string",
+                "ResourcePolicyQuery": {
+                  "Any": true,
+                  "Empty": true,
+                  "Subjects": [
+                    "string"
+                  ]
+                },
+                "SubQueries": [
+                  {
+                    "@type": "string"
+                  }
+                ],
+                "groupBy": 10
+              },
+              "Timeout": "string"
+            },
             "DataSourceFilter": {
               "All": true,
               "ClearInput": true,
@@ -599,6 +651,58 @@ Response Type /definitions/entListJobVersionsResponse
             },
             "Type": "string"
           },
+          "DataFilter": {
+            "ClearInput": true,
+            "Collect": true,
+            "Description": "string",
+            "FanOutInput": true,
+            "Label": "string",
+            "Query": {
+              "Limit": "string",
+              "Offset": "string",
+              "Operation": "string",
+              "ResourcePolicyQuery": {
+                "Any": true,
+                "Empty": true,
+                "Subjects": [
+                  "string"
+                ]
+              },
+              "SubQueries": [
+                {
+                  "@type": "string"
+                }
+              ],
+              "groupBy": 10
+            },
+            "Timeout": "string"
+          },
+          "DataSelector": {
+            "ClearInput": true,
+            "Collect": true,
+            "Description": "string",
+            "FanOutInput": true,
+            "Label": "string",
+            "Query": {
+              "Limit": "string",
+              "Offset": "string",
+              "Operation": "string",
+              "ResourcePolicyQuery": {
+                "Any": true,
+                "Empty": true,
+                "Subjects": [
+                  "string"
+                ]
+              },
+              "SubQueries": [
+                {
+                  "@type": "string"
+                }
+              ],
+              "groupBy": 10
+            },
+            "Timeout": "string"
+          },
           "DataSourceFilter": {
             "All": true,
             "ClearInput": true,
@@ -953,6 +1057,7 @@ Response Type /definitions/entListJobVersionsResponse
             ]
           }
         },
+        "Metadata": {},
         "ModifiedAt": 10,
         "NodeEventFilter": {
           "All": true,
@@ -1058,6 +1163,58 @@ Response Type /definitions/entListJobVersionsResponse
                       "groupBy": 10
                     },
                     "Type": "string"
+                  },
+                  "DataFilter": {
+                    "ClearInput": true,
+                    "Collect": true,
+                    "Description": "string",
+                    "FanOutInput": true,
+                    "Label": "string",
+                    "Query": {
+                      "Limit": "string",
+                      "Offset": "string",
+                      "Operation": "string",
+                      "ResourcePolicyQuery": {
+                        "Any": true,
+                        "Empty": true,
+                        "Subjects": [
+                          "string"
+                        ]
+                      },
+                      "SubQueries": [
+                        {
+                          "@type": "string"
+                        }
+                      ],
+                      "groupBy": 10
+                    },
+                    "Timeout": "string"
+                  },
+                  "DataSelector": {
+                    "ClearInput": true,
+                    "Collect": true,
+                    "Description": "string",
+                    "FanOutInput": true,
+                    "Label": "string",
+                    "Query": {
+                      "Limit": "string",
+                      "Offset": "string",
+                      "Operation": "string",
+                      "ResourcePolicyQuery": {
+                        "Any": true,
+                        "Empty": true,
+                        "Subjects": [
+                          "string"
+                        ]
+                      },
+                      "SubQueries": [
+                        {
+                          "@type": "string"
+                        }
+                      ],
+                      "groupBy": 10
+                    },
+                    "Timeout": "string"
                   },
                   "DataSourceFilter": {
                     "All": true,
@@ -2041,4 +2198,4 @@ Response Type /definitions/entListJobVersionsResponse
 
 
 
-###### Auto generated by Pydio Cells Enterprise Distribution v4.3.0 on 10-Oct-2023
+###### Auto generated by Pydio Cells Enterprise Distribution v4.3.1-alpha1 on 27-Oct-2023
