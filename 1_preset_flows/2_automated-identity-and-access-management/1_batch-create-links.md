@@ -3,6 +3,14 @@ Create links on all files inside a folder and generate a CSV.
 
 [:image:1_preset_flows/capture-batch-create-links.png]
 
+This Flow automatically creates a unique public link for every files in a folder, and generates a reporting CSV with all links URLs.
+
+### How It Works
+
+The Flow basically loops on all files and call the "Create Link" action on them. The "Merge" features allows to resynchronize the loop and gather all generated links (as metadata of each Node), finally creating a unique CSV. For each node, the Link URL is retrieved with the `GeneratedLinkURL` key in its metadata.
+
+__Note about links__: a link owner must always be provided to create a public link, thus the first action that loads a user by its login at the beginning of the flow.
+
 ### Parameters
 
 |Name|Type|Default|Mandatory|Description|
@@ -22,8 +30,14 @@ Manual
 
 ```
 {
-  "Label": "Batch Create Links||Create links on all files inside a folder and generate a CSV||mdi mdi-share-variant",
+  "Label": "Batch Create Links",
   "Owner": "pydio.system.user",
+  "Metadata": {
+    "Description": "Create links on all files inside a folder and generate a CSV",
+    "Icon": "mdi mdi-share-variant",
+    "TplCategory": "idm",
+    "Usage": "This Flow automatically creates a unique public link for every files in a folder, and generates a reporting CSV with all links URLs.\n\n### How It Works\n\nThe Flow basically loops on all files and call the \"Create Link\" action on them. The \"Merge\" features allows to resynchronize the loop and gather all generated links (as metadata of each Node), finally creating a unique CSV. For each node, the Link URL is retrieved with the `GeneratedLinkURL` key in its metadata.\n\n__Note about links__: a link owner must always be provided to create a public link, thus the first action that loads a user by its login at the beginning of the flow."
+  },
   "CreatedAt": 1680601112,
   "ModifiedAt": 1682588307,
   "Custom": true,

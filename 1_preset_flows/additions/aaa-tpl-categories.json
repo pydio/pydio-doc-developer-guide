@@ -3,78 +3,36 @@
     "title": "Intelligent File Management",
     "menu": "File Management",
     "md": "Automate repetitive and time-consuming file management tasks, from backups to metadata to archiving.",
-    "children": [
-      "backup-personal-files",
-      "move-files-automatically",
-      "personal-files-preset",
-      "detect-metadata-change"
-    ]
+    "key": "file-management"
   },
   {
     "title": "Efficient System Maintenance",
     "menu": "System Maintenance",
     "md": "Reduce the never-ending pinchlist of vital but tedious and time-consuming tasks.",
-    "children": [
-      "daily-snapshots-flat",
-      "purge-activities",
-      "purge-files-activities",
-      "purge-files-older",
-      "purge-users-notifications",
-      "truncate-logs",
-      "unlock-public-links",
-      "empty-all-recycles",
-      "capture-snapshots"
-    ]
+    "key": "maintenance"
   },
   {
     "title": "Automated Identity and Access Management",
     "menu": "Identity and Access Management",
     "md": "A wide range of preset identity management workflows and an extensive library of off-the-shelf actions that can be used to quickly build custom identity and access solutions.",
-    "children": [
-      "clear-otp-setup",
-      "disable-links-older",
-      "import-users-csv",
-      "list-locked-users",
-      "role-for-each-workspace",
-      "ws-first-connection",
-      "batch-create-links",
-      "batch-delete-link",
-      "modify-a-user-login"
-    ]
+    "key": "idm"
   },
   {
     "title": "Data Analysis, Insights and Reporting",
     "menu": "Analysis, Insights and Reporting",
     "md": "Find data, analyze that data and then produce reports and presentations for external compliance or internal performance monitoring.",
-    "children": [
-      "export-audits-report",
-      "folder-content-report",
-      "read-license-stats",
-      "storage-usage",
-      "export-users-permissions"
-    ]
+    "key": "analytics"
   },
   {
     "title": "Workflow Automation",
     "menu": "Workflow Automation",
     "md": "Combine multiple actions and steps into a single streamlined workflow that uses automation and human inputs to improve a business process.",
-    "children": [
-      "create-smartform",
-      "smartform-submission",
-      "validation-workflow"
-    ]
+    "key": "workflow"
   },
   {
     "title": "Data Formatting and Conversion",
     "menu": "Data Formatting and Conversion",
     "md": "Extract file contents for pre-processing, virus detection, format conversion, etc.",
-    "children": [
-      "convert-tools",
-      "broken-thumbnails",
-      "pdf-thumbnails",
-      "recompute-hashes",
-      "tika-contents-extraction",
-      "scan-with-antivirus"
-    ]
+    "key": "content-processing"
   }
 ]

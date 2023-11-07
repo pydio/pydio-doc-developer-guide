@@ -3,13 +3,15 @@ Capture snapshots from both s3 and index for debugging purpose.
 
 [:image:1_preset_flows/capture-capture-snapshots.png]
 
+This Flow triggers a snapshots capture for a structured datasource, mainly for debugging purposes. Structured datasources are continuously synchronizing a storage (an object storage or a local FS exposed as an S3-compatible storage), and an SQL index. Sometimes, synchronization issues cannot be easily fixed and it can be useful to load the initial representation of both endpoints.
+
 ### Parameters
 
 |Name|Type|Default|Mandatory|Description|
 |----|----|-------|---------|-----------|
 |DataSourceName|text||true|Name of the datasource to capture.|
 |TargetFolder|text||true|Folder where to store the snapshots (must be created).|
-|Format|select, possible values: BoltDB (bolt), JSON (json)|json|true|Output format for the snapshots.|
+|Format|select, possible values: JSON (json), BoltDB (bolt)|json|true|Output format for the snapshots.|
 
 
 
@@ -20,8 +22,14 @@ Manual
 
 ```
 {
-  "Label": "Capture Snapshots||Capture snapshots from both s3 and index for debugging purpose||mdi mdi-reload",
+  "Label": "Capture Snapshots",
   "Owner": "pydio.system.user",
+  "Metadata": {
+    "Description": "Capture snapshots from both s3 and index for debugging purpose",
+    "Icon": "mdi mdi-reload",
+    "TplCategory": "maintenance",
+    "Usage": "This Flow triggers a snapshots capture for a structured datasource, mainly for debugging purposes. Structured datasources are continuously synchronizing a storage (an object storage or a local FS exposed as an S3-compatible storage), and an SQL index. Sometimes, synchronization issues cannot be easily fixed and it can be useful to load the initial representation of both endpoints."
+  },
   "Actions": [
     {
       "ID": "actions.cmd.capture",
