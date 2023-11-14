@@ -9,7 +9,8 @@
 |**Slug** (slug)|string|{{.Workspace.Slug}}|Workspace Slug|
 |**Scope** (scope)|string|{{.Workspace.Scope.String}}|Workspace Scope|
 |**Updated** (updated)|integer|<no value>|Last Updated (timestamp)|
-|**Name** (attribute_name)|string|<no value>||
+|**Name** (attributes.attribute_name)|string|<no value>||
+|**JSON Value** (attributes.attribute_value)|string|<no value>|JSON-encoded value (e.g. quoted string) or empty to remove|
 
 
 

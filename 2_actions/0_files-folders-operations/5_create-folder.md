@@ -4,8 +4,8 @@
 ### Parameters
 |Label (internal name)|Type|Default|Description|
 |---|---|---|---|
-|**Path** (path)|string||Folder Path|
 |**Wait for folder to be indexed** (check_exist)|boolean|true|Error if folder already exists|
+|**Path** (dirs.path)|string||Folder Path|
 
 
 

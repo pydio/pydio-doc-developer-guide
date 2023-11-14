@@ -5,7 +5,8 @@
 |Label (internal name)|Type|Default|Description|
 |---|---|---|---|
 |**Script Content** (script)|textarea, possible values: content-type:text/go||Pseudo-go Anko script|
-|**Name** (paramName)|string||Name of the parameter, can be used in script using Params["Name"]|
+|**Name** (script-params.paramName)|string||Name of the parameter, can be used in script using Params["Name"]|
+|**Value** (script-params.paramValue)|string||Value of the parameter, can use templating|
 
 
 
