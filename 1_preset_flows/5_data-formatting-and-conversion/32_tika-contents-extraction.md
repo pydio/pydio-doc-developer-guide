@@ -6,6 +6,13 @@ Extract and index textual contents using Tika service.
 [Apache Tika](https://tika.apache.org/) is an independent, open source, content extractor that supports a very wide range of file formats. It can
 even support OCR for extracting text from images. This flow sends file contents to Tika and gets the textual information to be indexed internally by the Cells search engine.
 
+### Install with Docker
+
+Installing with Docker is as simple as running the following command:
+```
+docker run -d -p 9998:9998 apache/tika:latest
+```
+
 ### How It Works
 
 The Flow assumes you have Tika running and available at a specific URL. Once extracted, the textual content is stored on Cells side to avoid having to resend file to Tika on re-indexation. The Flow is also in charge of cleaning associated metadata on file deletion, and can be triggered manually to re-extract contents from all compatible files (can be handy when first enabling job to run on existing files).
