@@ -4,8 +4,7 @@
 ### Parameters
 |Label (internal name)|Type|Default|Description|
 |---|---|---|---|
-|**Expected Format** (format)|select, possible values: String (string),<br/>Binary/JSON (binary),<br/>JSON Object as Variables (vars)|string|Expected format for file content|
-|**Alternative Input (replace and keep .Input.Node)** (alt_input)|string|<no value>|Select a custom input node by path|
+|**Input Path - Leave empty for .Input.Node** (alt_input)|string|<no value>|This actions reads from .Input.Nodes[0] by default, use this field to load a custom path|
 
 
 

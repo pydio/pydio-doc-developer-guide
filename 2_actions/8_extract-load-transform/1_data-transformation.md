@@ -4,9 +4,10 @@
 ### Parameters
 |Label (internal name)|Type|Default|Description|
 |---|---|---|---|
-|**Data input** (input)|select, possible values: Main Input (use selector for e.g $.Users...) (input),<br/>JsonBody (jsonbody),<br/>Raw Data / json-encoded (raw/json),<br/>Raw Data / csv-encoded (raw/csv),<br/>StringBody / json-encoded (stringbody)|jsonbody|Source used to compute input data|
-|**Root Selector (jsonpath)** (selector)|string|<no value>|Pre-select a collection of items with jsonpath|
-|**Output Format** (format)|select, possible values: JSON (JsonBody) (json),<br/>CSV (RawBody) (csv),<br/>XLSX (RawBody) (xlsx)|json|Format for saving after transformation|
+|**Data input** (input)|select, possible values: Main Input (use selector for e.g $.Users...) (input),<br/>JsonBody (jsonbody),<br/>Raw Data / json-encoded (raw/json),<br/>Raw Data / csv-encoded (raw/csv),<br/>StringBody / json-encoded (stringbody)|jsonbody|Source used to compute input data. Must be directly a slice, or you can use a Selector to point to a slice.
+
+ Use Main Input and Root Selector $.Vars.VarName to access a runtime variable.|
+|**Root Selector (jsonpath)** (selector)|string|<no value>|If the input is **not already a list (slice)**, use this selector to point to a list inside the input object.|
 |**Column Name** (name)|string|<no value>|Column Name|
 |**** ()|legend|<no value>|[XLSX Only] Sheet and Formulas|
 |**Sheet Name** (sheet)|string|Data|Excel Sheet Name|

@@ -4,8 +4,8 @@
 ### Parameters
 |Label (internal name)|Type|Default|Description|
 |---|---|---|---|
-|**url** (url)|string|<no value>|Source URL to download from|
-|**targetPath** (targetPath)|string|<no value>|TargetPath to download in|
+|**URL** (url)|string|<no value>|Source HTTP URL to download from|
+|**Target Path** (targetPath)|string|<no value>|TargetPath of the file to write|
 
 
 

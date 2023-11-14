@@ -4,11 +4,11 @@
 ### Parameters
 |Label (internal name)|Type|Default|Description|
 |---|---|---|---|
-|**host** (host)|string|<no value>|Hostname of the remote server|
-|**port** (port)|string|<no value>|Ssh port of the remote server|
-|**username** (username)|string|<no value>|Username of the remote server|
-|**password** (password)|password|<no value>|Password of the remote server|
-|**remotePath** (remotePath)|string|<no value>|Target of the scp|
+|**Host** (host)|string|<no value>|Hostname of the remote server|
+|**Port** (port)|integer|22|Ssh port of the remote server|
+|**Username** (username)|string|<no value>|Username of the remote server|
+|**Password** (password)|password|<no value>|Password of the remote server|
+|**Remote Path** (remotePath)|string|/|Target of the SCP command|
 
 
 
