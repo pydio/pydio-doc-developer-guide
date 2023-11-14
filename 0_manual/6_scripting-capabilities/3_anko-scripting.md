@@ -1,4 +1,4 @@
-Although Golang templates are very powerfull and it should be the preferred way to go when you need to manipulate data, sometimes you need more advanced scripting capabilities.
+Although Golang templates are very powerful and it should be the preferred way to go when you need to manipulate data, sometimes you need more advanced scripting capabilities.
 
 [Anko](https://github.com/mattn/anko) is a pseudo-go language that is able to manipulate all sorts of objects. It is better to be familiar with the Go language, although not necessary if you just need to write a simple script.
 
