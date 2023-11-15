@@ -10,6 +10,12 @@
 |**Sheet Name** (sheet)|string|Data|Excel Sheet Name|
 |**** ()|legend|<no value>|[CSV Only] Formatting|
 |**CSV separator** (csv-separator)|string|,|Separator character for CSV input / output|
+|**Output Format** (format)|Possible Values Below|json|Format for saving after transformation|
+|**&nbsp;&nbsp;&nbsp;&bull; JSON (JsonBody)** (json)|format|<no value>||
+|**&nbsp;&nbsp;&nbsp;&bull; Object (Variable)** (jsonvar)|format|<no value>||
+|**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Variable Name** (varName)|string|<no value>|Name of the output variable|
+|**&nbsp;&nbsp;&nbsp;&bull; CSV (RawBody)** (csv)|format|<no value>||
+|**&nbsp;&nbsp;&nbsp;&bull; XLSX (RawBody)** (xlsx)|format|<no value>||
 |**Column Name** (columns.name)|string|<no value>|Column Name|
 |**Selector (jsonpath or template)** (columns.jsonpath)|string|<no value>|Jsonpath Selector (applied to input)|
 |**Data Format** (columns.dataformat)|select, possible values: String (string),<br/>Integer (int64) (number),<br/>Float (float64) (float),<br/>Date (string) (date),<br/>Date (timestamp) (stamp),<br/>Boolean (true/false) (bool)|<no value>|Make sure output is in the correct format|

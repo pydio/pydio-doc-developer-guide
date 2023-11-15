@@ -14,6 +14,13 @@
 |**Type** (multipart-fields.mpart-ctype)|select, possible values: String (key/value) (string),<br/>File Contents (see below - declare filename in value) (content),<br/>File Path (read contents - use base as filename) (path)|string|Parameter type|
 |**Header Name** (headers.header-name)|string|<no value>|Header Name|
 |**Header Value** (headers.header-value)|string|<no value>|Header Value|
+|**Handle Response** (responseTarget)|Possible Values Below||Attach response to... (leave empty to discard)|
+|**&nbsp;&nbsp;&nbsp;&bull; Json Body (JSON-encoded Data)** (json)|responseTarget|<no value>||
+|**&nbsp;&nbsp;&nbsp;&bull; Raw Body (binary)** (raw)|responseTarget|<no value>||
+|**&nbsp;&nbsp;&nbsp;&bull; String Body** (string)|responseTarget|<no value>||
+|**&nbsp;&nbsp;&nbsp;&bull; Variable** (varBinary)|responseTarget|<no value>||
+|**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Name** (varName)|string|<no value>|Variable Name|
+|**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Data Type** (varType)|select, possible values: String (dump as string) (string),<br/>Object (decode from JSON) (object),<br/>Array (decode from JSON) (array),<br/>Binary (no conversion) (binary)|string|Try to decode data|
 
 
 
