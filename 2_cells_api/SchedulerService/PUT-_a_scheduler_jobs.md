@@ -72,6 +72,58 @@ Name | Description | Type | Required
           },
           "Type": "string"
         },
+        "DataFilter": {
+          "ClearInput": true,
+          "Collect": true,
+          "Description": "string",
+          "FanOutInput": true,
+          "Label": "string",
+          "Query": {
+            "Limit": "string",
+            "Offset": "string",
+            "Operation": "string",
+            "ResourcePolicyQuery": {
+              "Any": true,
+              "Empty": true,
+              "Subjects": [
+                "string"
+              ]
+            },
+            "SubQueries": [
+              {
+                "@type": "string"
+              }
+            ],
+            "groupBy": 10
+          },
+          "Timeout": "string"
+        },
+        "DataSelector": {
+          "ClearInput": true,
+          "Collect": true,
+          "Description": "string",
+          "FanOutInput": true,
+          "Label": "string",
+          "Query": {
+            "Limit": "string",
+            "Offset": "string",
+            "Operation": "string",
+            "ResourcePolicyQuery": {
+              "Any": true,
+              "Empty": true,
+              "Subjects": [
+                "string"
+              ]
+            },
+            "SubQueries": [
+              {
+                "@type": "string"
+              }
+            ],
+            "groupBy": 10
+          },
+          "Timeout": "string"
+        },
         "DataSourceFilter": {
           "All": true,
           "ClearInput": true,
@@ -590,6 +642,58 @@ Name | Description | Type | Required
         },
         "Type": "string"
       },
+      "DataFilter": {
+        "ClearInput": true,
+        "Collect": true,
+        "Description": "string",
+        "FanOutInput": true,
+        "Label": "string",
+        "Query": {
+          "Limit": "string",
+          "Offset": "string",
+          "Operation": "string",
+          "ResourcePolicyQuery": {
+            "Any": true,
+            "Empty": true,
+            "Subjects": [
+              "string"
+            ]
+          },
+          "SubQueries": [
+            {
+              "@type": "string"
+            }
+          ],
+          "groupBy": 10
+        },
+        "Timeout": "string"
+      },
+      "DataSelector": {
+        "ClearInput": true,
+        "Collect": true,
+        "Description": "string",
+        "FanOutInput": true,
+        "Label": "string",
+        "Query": {
+          "Limit": "string",
+          "Offset": "string",
+          "Operation": "string",
+          "ResourcePolicyQuery": {
+            "Any": true,
+            "Empty": true,
+            "Subjects": [
+              "string"
+            ]
+          },
+          "SubQueries": [
+            {
+              "@type": "string"
+            }
+          ],
+          "groupBy": 10
+        },
+        "Timeout": "string"
+      },
       "DataSourceFilter": {
         "All": true,
         "ClearInput": true,
@@ -944,6 +1048,7 @@ Name | Description | Type | Required
         ]
       }
     },
+    "Metadata": {},
     "ModifiedAt": 10,
     "NodeEventFilter": {
       "All": true,
@@ -1049,6 +1154,58 @@ Name | Description | Type | Required
                   "groupBy": 10
                 },
                 "Type": "string"
+              },
+              "DataFilter": {
+                "ClearInput": true,
+                "Collect": true,
+                "Description": "string",
+                "FanOutInput": true,
+                "Label": "string",
+                "Query": {
+                  "Limit": "string",
+                  "Offset": "string",
+                  "Operation": "string",
+                  "ResourcePolicyQuery": {
+                    "Any": true,
+                    "Empty": true,
+                    "Subjects": [
+                      "string"
+                    ]
+                  },
+                  "SubQueries": [
+                    {
+                      "@type": "string"
+                    }
+                  ],
+                  "groupBy": 10
+                },
+                "Timeout": "string"
+              },
+              "DataSelector": {
+                "ClearInput": true,
+                "Collect": true,
+                "Description": "string",
+                "FanOutInput": true,
+                "Label": "string",
+                "Query": {
+                  "Limit": "string",
+                  "Offset": "string",
+                  "Operation": "string",
+                  "ResourcePolicyQuery": {
+                    "Any": true,
+                    "Empty": true,
+                    "Subjects": [
+                      "string"
+                    ]
+                  },
+                  "SubQueries": [
+                    {
+                      "@type": "string"
+                    }
+                  ],
+                  "groupBy": 10
+                },
+                "Timeout": "string"
               },
               "DataSourceFilter": {
                 "All": true,
@@ -2018,6 +2175,58 @@ Response Type /definitions/jobsPutJobResponse
           },
           "Type": "string"
         },
+        "DataFilter": {
+          "ClearInput": true,
+          "Collect": true,
+          "Description": "string",
+          "FanOutInput": true,
+          "Label": "string",
+          "Query": {
+            "Limit": "string",
+            "Offset": "string",
+            "Operation": "string",
+            "ResourcePolicyQuery": {
+              "Any": true,
+              "Empty": true,
+              "Subjects": [
+                "string"
+              ]
+            },
+            "SubQueries": [
+              {
+                "@type": "string"
+              }
+            ],
+            "groupBy": 10
+          },
+          "Timeout": "string"
+        },
+        "DataSelector": {
+          "ClearInput": true,
+          "Collect": true,
+          "Description": "string",
+          "FanOutInput": true,
+          "Label": "string",
+          "Query": {
+            "Limit": "string",
+            "Offset": "string",
+            "Operation": "string",
+            "ResourcePolicyQuery": {
+              "Any": true,
+              "Empty": true,
+              "Subjects": [
+                "string"
+              ]
+            },
+            "SubQueries": [
+              {
+                "@type": "string"
+              }
+            ],
+            "groupBy": 10
+          },
+          "Timeout": "string"
+        },
         "DataSourceFilter": {
           "All": true,
           "ClearInput": true,
@@ -2536,6 +2745,58 @@ Response Type /definitions/jobsPutJobResponse
         },
         "Type": "string"
       },
+      "DataFilter": {
+        "ClearInput": true,
+        "Collect": true,
+        "Description": "string",
+        "FanOutInput": true,
+        "Label": "string",
+        "Query": {
+          "Limit": "string",
+          "Offset": "string",
+          "Operation": "string",
+          "ResourcePolicyQuery": {
+            "Any": true,
+            "Empty": true,
+            "Subjects": [
+              "string"
+            ]
+          },
+          "SubQueries": [
+            {
+              "@type": "string"
+            }
+          ],
+          "groupBy": 10
+        },
+        "Timeout": "string"
+      },
+      "DataSelector": {
+        "ClearInput": true,
+        "Collect": true,
+        "Description": "string",
+        "FanOutInput": true,
+        "Label": "string",
+        "Query": {
+          "Limit": "string",
+          "Offset": "string",
+          "Operation": "string",
+          "ResourcePolicyQuery": {
+            "Any": true,
+            "Empty": true,
+            "Subjects": [
+              "string"
+            ]
+          },
+          "SubQueries": [
+            {
+              "@type": "string"
+            }
+          ],
+          "groupBy": 10
+        },
+        "Timeout": "string"
+      },
       "DataSourceFilter": {
         "All": true,
         "ClearInput": true,
@@ -2890,6 +3151,7 @@ Response Type /definitions/jobsPutJobResponse
         ]
       }
     },
+    "Metadata": {},
     "ModifiedAt": 10,
     "NodeEventFilter": {
       "All": true,
@@ -2995,6 +3257,58 @@ Response Type /definitions/jobsPutJobResponse
                   "groupBy": 10
                 },
                 "Type": "string"
+              },
+              "DataFilter": {
+                "ClearInput": true,
+                "Collect": true,
+                "Description": "string",
+                "FanOutInput": true,
+                "Label": "string",
+                "Query": {
+                  "Limit": "string",
+                  "Offset": "string",
+                  "Operation": "string",
+                  "ResourcePolicyQuery": {
+                    "Any": true,
+                    "Empty": true,
+                    "Subjects": [
+                      "string"
+                    ]
+                  },
+                  "SubQueries": [
+                    {
+                      "@type": "string"
+                    }
+                  ],
+                  "groupBy": 10
+                },
+                "Timeout": "string"
+              },
+              "DataSelector": {
+                "ClearInput": true,
+                "Collect": true,
+                "Description": "string",
+                "FanOutInput": true,
+                "Label": "string",
+                "Query": {
+                  "Limit": "string",
+                  "Offset": "string",
+                  "Operation": "string",
+                  "ResourcePolicyQuery": {
+                    "Any": true,
+                    "Empty": true,
+                    "Subjects": [
+                      "string"
+                    ]
+                  },
+                  "SubQueries": [
+                    {
+                      "@type": "string"
+                    }
+                  ],
+                  "groupBy": 10
+                },
+                "Timeout": "string"
               },
               "DataSourceFilter": {
                 "All": true,
@@ -3974,4 +4288,4 @@ Response Type /definitions/jobsPutJobResponse
 
 
 
-###### Auto generated by Pydio Cells Enterprise Distribution v4.3.0 on 10-Oct-2023
+###### Auto generated by Pydio Cells Enterprise Distribution v4.3.5 on 1-Feb-2024
