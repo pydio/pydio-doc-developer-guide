@@ -14,64 +14,73 @@ SYNTAX
    - d (--details) flag to display more information, 
    - r (--raw) flag to only list the paths of found files and folders
    - f (--exists) flag to only check if given path exists on the server.
+   - format flag with a valid go template to get a custom listing.
 
-  Note that you can only use *one* of the three above flags at a time.
+  Note that you can only use *one* of the above flags at a time.
+
+  As reference, known attributes for the Go templates are:
+   - Type: File, Folder or Workspace
+   - Uuid: the unique ID of the corresponding node in the Cells Server
+   - Name: name of the item
+   - Path: the path from the root of the server
+   - HumanSize: a human-friendly formatted size
+   - SizeBytes: the size of the object in bytes 
+   - TimeStamp: number of seconds since 1970 when the item was last modified 
+   - Date: a human-friendly date for the last modification
+
+Note that the last 4 meta-data are only indicative for folders: they might be out of date, if the listing happens shortly after a modification in the sub-tree.
 
 EXAMPLES
 
+ 1/ Listing the content of the personal-files workspace
+  
+  $ ./cec ls personal-files
+  +--------+--------------------------+
+  |  TYPE  |           NAME           |
+  +--------+--------------------------+
+  | Folder | .			      |
+  | File   | Cat.jpg                  |
+  | File   | Photo.png                |
+  | Folder | Others                   |
+  | File   | info.txt                 |
+  | Folder | recycle_bin              |
+  +--------+--------------------------+
+  
+ 2/ Showing details about a file
+  
+  $ ./cec ls personal-files/photo.jpg -d
+  Listing: 1 results for personal-files/photo.jpg
+  +------+--------------------------------------+-----------------------------+--------+------------+
+  | TYPE |                 UUID                 |            NAME             |  SIZE  |  MODIFIED  |
+  +------+--------------------------------------+-----------------------------+--------+------------+
+  | File | 98bbd86c-acb9-4b56-a6f3-837609155ba6 | personal-files/photo.jpg    | 3.1 MB | 5 days ago |
+  +------+--------------------------------------+-----------------------------+--------+------------+
+  
+  Will show the metadata for this node (uuid, size, modification date)
+  
+ 3/ Only listing files and folders, one per line.
+  
+  $ ./cec ls personal-files -r
+  Cat.jpg
+  info.txt
+  Huge Photo.jpg
+  ...
+  
+ 4/ Using a template:
 
-1/ Listing the content of the personal-files workspace
-
-$ ./cec ls personal-files
-+--------+--------------------------+
-|  TYPE  |           NAME           |
-+--------+--------------------------+
-| Folder | .			            |
-| File   | Huge Photo-1.jpg         |
-| File   | Huge Photo.jpg           |
-| File   | IMG_9723.JPG             |
-| File   | P5021040.jpg             |
-| Folder | UPLOAD                   |
-| File   | anothercopy              |
-| File   | cec22                    |
-| Folder | recycle_bin              |
-| File   | test_crud-1545206681.txt |
-| File   | test_crud-1545206846.txt |
-| File   | test_file2.txt           |
-+--------+--------------------------+
-
-2/ Showing details about a file
-
-$ ./cec ls personal-files/P5021040.jpg -d
-Listing: 1 results for personal-files/P5021040.jpg
-+------+--------------------------------------+-----------------------------+--------+------------+
-| TYPE |                 UUID                 |            NAME             |  SIZE  |  MODIFIED  |
-+------+--------------------------------------+-----------------------------+--------+------------+
-| File | 98bbd86c-acb9-4b56-a6f3-837609155ba6 | personal-files/P5021040.jpg | 3.1 MB | 5 days ago |
-+------+--------------------------------------+-----------------------------+--------+------------+
-
-
-Will show the metadata for this node (uuid, size, modification date)
-
-3/ Only listing files and folders, one per line.
-
-$ ./cec ls personal-files/P5021040.jpg -r
-personal-files/P5021040.jpg
-
-$ ./cec ls personal-files -r
-Huge Photo-1.jpg
-Huge Photo.jpg
-IMG_9723.JPG
-(...)
-
-4/ Check path existence.
-
-$ ./cec ls personal-files/P5021040.jpg -f
-true
-
-$ ./cec ls personal-files/P5021040-not-here -f
-false
-...
+  $ ./cec ls personal-files --format '"{{.Name}}";"{{.Type}}";"{{.Path}}";"{{.HumanSize}}";"{{.Date}}"' personal-files/
+  "Cat.jpg";"File";"personal-files/Cat.jpg";"1.3 MB";"2 months ago"
+  "Others";"Folder";"personal-files/Others";"12 MB";"11 minutes ago"
+  "Photo.png";"File";"personal-files/Photo.png";"8.1 MB";"3 minutes ago"
+  ...
+  
+ 5/ Check path existence.
+  
+  $ ./cec ls personal-files/info.txt -f
+  true
+  
+  $ ./cec ls personal-files/not-here -f
+  false
 
 
 
@@ -82,10 +91,11 @@ false
 ### Options
 
 ```
-  -d, --details   Show more information about retrieved objects
-  -f, --exists    Check if the passed path exists on the server and return non zero status code if not
-  -h, --help      help for ls
-  -r, --raw       List found paths (one per line) with no further info to be able to use returned results in later commands
+  -d, --details         Show more information about retrieved objects
+  -f, --exists          Check if the passed path exists on the server and return non zero status code if not
+      --format string   Use go template to format each line of the output listing
+  -h, --help            help for ls
+  -r, --raw             List found paths (one per line) with no further info to be able to use returned results in later commands
 ```
 
 ### Options inherited from parent commands
@@ -105,4 +115,4 @@ false
 
 * [./cec](./cec)	 - Connect to a Pydio Cells server using the command line
 
-###### Auto generated by Cells Client v4.1.0-alpha2 on 1-Feb-2024
+###### Auto generated by Cells Client v4.1.0-beta1 on 6-Feb-2024
