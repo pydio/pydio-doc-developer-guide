@@ -50,6 +50,8 @@ Response Type /definitions/entListActionTemplatesResponse
                 "string"
               ]
             },
+            "SortDesc": true,
+            "SortField": "string",
             "SubQueries": [
               {
                 "@type": "string"
@@ -63,6 +65,30 @@ Response Type /definitions/entListActionTemplatesResponse
         "ChainedActions": [
           "[Recursive structure]"
         ],
+        "ChatEventFilter": {
+          "Description": "string",
+          "Label": "string",
+          "Query": {
+            "Limit": "string",
+            "Offset": "string",
+            "Operation": "string",
+            "ResourcePolicyQuery": {
+              "Any": true,
+              "Empty": true,
+              "Subjects": [
+                "string"
+              ]
+            },
+            "SortDesc": true,
+            "SortField": "string",
+            "SubQueries": [
+              {
+                "@type": "string"
+              }
+            ],
+            "groupBy": 10
+          }
+        },
         "ContextMetaFilter": {
           "Description": "string",
           "Label": "string",
@@ -77,6 +103,8 @@ Response Type /definitions/entListActionTemplatesResponse
                 "string"
               ]
             },
+            "SortDesc": true,
+            "SortField": "string",
             "SubQueries": [
               {
                 "@type": "string"
@@ -103,6 +131,8 @@ Response Type /definitions/entListActionTemplatesResponse
                 "string"
               ]
             },
+            "SortDesc": true,
+            "SortField": "string",
             "SubQueries": [
               {
                 "@type": "string"
@@ -129,6 +159,8 @@ Response Type /definitions/entListActionTemplatesResponse
                 "string"
               ]
             },
+            "SortDesc": true,
+            "SortField": "string",
             "SubQueries": [
               {
                 "@type": "string"
@@ -156,6 +188,8 @@ Response Type /definitions/entListActionTemplatesResponse
                 "string"
               ]
             },
+            "SortDesc": true,
+            "SortField": "string",
             "SubQueries": [
               {
                 "@type": "string"
@@ -184,6 +218,8 @@ Response Type /definitions/entListActionTemplatesResponse
                 "string"
               ]
             },
+            "SortDesc": true,
+            "SortField": "string",
             "SubQueries": [
               {
                 "@type": "string"
@@ -217,12 +253,20 @@ Response Type /definitions/entListActionTemplatesResponse
                 "string"
               ]
             },
+            "SortDesc": true,
+            "SortField": "string",
             "SubQueries": [
               {
                 "@type": "string"
               }
             ],
             "groupBy": 10
+          },
+          "Range": {
+            "Limit": "string",
+            "Offset": "string",
+            "OrderBy": "string",
+            "OrderDir": "string"
           },
           "Timeout": "string",
           "Type": "string"
@@ -245,12 +289,20 @@ Response Type /definitions/entListActionTemplatesResponse
                 "string"
               ]
             },
+            "SortDesc": true,
+            "SortField": "string",
             "SubQueries": [
               {
                 "@type": "string"
               }
             ],
             "groupBy": 10
+          },
+          "Range": {
+            "Limit": "string",
+            "Offset": "string",
+            "OrderBy": "string",
+            "OrderDir": "string"
           },
           "Timeout": "string",
           "Type": "string"
@@ -278,12 +330,20 @@ Response Type /definitions/entListActionTemplatesResponse
                 "string"
               ]
             },
+            "SortDesc": true,
+            "SortField": "string",
             "SubQueries": [
               {
                 "@type": "string"
               }
             ],
             "groupBy": 10
+          },
+          "Range": {
+            "Limit": "string",
+            "Offset": "string",
+            "OrderBy": "string",
+            "OrderDir": "string"
           },
           "Timeout": "string"
         },
@@ -308,12 +368,20 @@ Response Type /definitions/entListActionTemplatesResponse
                 "string"
               ]
             },
+            "SortDesc": true,
+            "SortField": "string",
             "SubQueries": [
               {
                 "@type": "string"
               }
             ],
             "groupBy": 10
+          },
+          "Range": {
+            "Limit": "string",
+            "Offset": "string",
+            "OrderBy": "string",
+            "OrderDir": "string"
           },
           "Timeout": "string"
         },
@@ -333,6 +401,8 @@ Response Type /definitions/entListActionTemplatesResponse
                 "string"
               ]
             },
+            "SortDesc": true,
+            "SortField": "string",
             "SubQueries": [
               {
                 "@type": "string"
@@ -358,6 +428,8 @@ Response Type /definitions/entListActionTemplatesResponse
                 "string"
               ]
             },
+            "SortDesc": true,
+            "SortField": "string",
             "SubQueries": [
               {
                 "@type": "string"
@@ -433,6 +505,8 @@ Response Type /definitions/entListActionTemplatesResponse
                 "string"
               ]
             },
+            "SortDesc": true,
+            "SortField": "string",
             "SubQueries": [
               {
                 "@type": "string"
@@ -501,4 +575,4 @@ Response Type /definitions/entListActionTemplatesResponse
 
 
 
-###### Auto generated by Pydio Cells Enterprise Distribution v4.3.6 on 26-Feb-2024
+###### Auto generated by Pydio Cells Enterprise Distribution v4.4.0-alpha1 on 26-Feb-2024
