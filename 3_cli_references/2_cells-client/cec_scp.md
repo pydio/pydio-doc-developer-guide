@@ -11,27 +11,33 @@ DESCRIPTION
   For the time being, copy can only be performed from the client machine to the server or the other way round:
   it is not yet possible to directly transfer files from one Cells instance to another.
 
-SYNTAX
+  For convenience, if the *target* folder does not exist (but its parent does), we create it.
 
-  Note that you can rename the file or base folder that you upload/download if:  
-   - last part of the target path is a new name that *does not exist*,  
-   - parent path exists and is a folder at target location.
-
+  On the other hand, we check if an item with the same name already exists on the target side and abort the transfer with an error in such case. 
+  You might want to enable the "force" mode. 
+  Then, when 'old' (existing) and 'new' item have the same name, if:    
+    - 'old' and 'new' are both files: 'new' replaces 'old'
+    - 'old' and 'new' are of a different type: we first erase 'old' in the target and then copy (recursively) 'new'
+    - both folder: for each child of 'new' we try to copy in 'old'. If an item with same name already exists on the target side, we apply the rules recursively.
+  WARNING: this could lead to erasing data on the target side. Only use with extra care.
+  
 EXAMPLES
 
   1/ Uploading a file to the server:
-  $ ./cec scp ./README.md cells://common-files/
-  Copying ./README.md to cells://common-files/
+  $ ./cec scp ./README.md cells://common-files
+  Copying ./README.md to cells://common-files
   Waiting for file to be indexed...
   File correctly indexed
 
   2/ Download a file from server:
   $ ./cec scp cells://personal-files/funnyCat.jpg ./
-  Copying cells://personal-files/funnyCat.jpg to /home/pydio/downloads/
+  Copying cells://personal-files/funnyCat.jpg to /home/pydio/downloads
 
-  3/ Download a file changing its name - remember: this will fail if a 'cat2.jpg' file already exists: 
-  $ ./cec scp cells://personal-files/funnyCat.jpg ./cat2.jpg
-  Copying cells://personal-files/funnyCat.jpg to /home/pydio/downloads/	
+  3/ Download a folder to an existing target, using existing folders when they are already here but re-downloading files: 
+  $ ./cec scp --force cells//common-files/my-folder ./tests
+  Downloading cells://common-files/my-folder to /home/pydio/downloads/tests
+
+  Copying cells//common-files/my-folder to /home/pydio/tests	
 
 
 ```
@@ -41,29 +47,32 @@ EXAMPLES
 ### Options
 
 ```
-  -h, --help                       help for scp
-      --max_parts_number int       Maximum number of parts, S3 supports 10000 but some storage require less parts. (default 5000)
-      --multipart_threshold int    Files bigger than this size (in MB) will be uploaded using Multipart Upload. (default 100)
-  -n, --no_progress                Do not show progress bar. You can then fine tune the log level
-      --part_size int              Default part size (MB), must always be a multiple of 10MB. It will be recalculated based on the max-parts-number value. (default 50)
-      --parts_concurrency int      Number of concurrent part uploads. (default 3)
-  -q, --quiet                      Reduce refresh frequency of the progress bars, e.g when running cec in a bash script
-      --retry_max_attempts int     Limit the number of attempts before aborting. '0' allows the SDK to retry all retryable errors until the request succeeds, or a non-retryable error is thrown. (default 3)
-      --retry_max_backoff string   Maximum duration to wait after a part transfer fails, before trying again, expressed in Go duration format, e.g., '20s' or '3m'. (default "3s")
-      --skip_md5                   Do not compute md5 (for files bigger than 5GB, it is not computed by default for smaller files).
-  -v, --verbose                    Hide progress bar and rather display more log info during the transfers
-  -w, --very_verbose               Hide progress bar and rather print out a maximum of log info
+  -f, --force                          *DANGER* turns overwrite mode on: for a given item in the source tree, if a file or folder with same name already exists on the target side, it is merged or replaced.
+  -h, --help                           help for scp
+      --max-parts-number int           Maximum number of parts, S3 supports 10000 but some storage require less parts. (default 5000)
+      --multipart-debug-flags string   Define flags to fine tune debug messages emitted by the underlying AWS SDK during multi-part uploads
+      --multipart-threshold int        Files bigger than this size (in MB) will be uploaded using Multipart Upload. (default 100)
+  -n, --no-progress                    Do not show progress bar. You can then fine tune the log level
+      --part-size int                  Default part size (MB), must always be a multiple of 10MB. It will be recalculated based on the max-parts-number value. (default 50)
+      --parts-concurrency int          Number of concurrent part uploads. (default 3)
+  -q, --quiet                          Reduce refresh frequency of the progress bars, e.g when running cec in a bash script
+      --retry-max-attempts int         Limit the number of attempts before aborting. '0' allows the SDK to retry all retryable errors until the request succeeds, or a non-retryable error is thrown. (default 3)
+      --retry-max-backoff string       Maximum duration to wait after a part transfer fails, before trying again, expressed in Go duration format, e.g., '20s' or '3m'. (default "3s")
+      --skip-md5                       Do not compute md5 (for files bigger than 5GB, it is not computed by default for smaller files).
+  -v, --verbose                        Hide progress bar and rather display more log info during the transfers
+  -w, --very-verbose                   Hide progress bar and rather print out a maximum of log info
 ```
 
 ### Options inherited from parent commands
 
 ```
       --config string     Location of Cells Client's config files (default: /home/teamcity/.config/pydio/cells-client/config.json)
+      --log string        change log level (default: info) (default "info")
       --login string      The user login, for Client auth only
-      --no_cache          Force token refresh at each call. This might slow down scripts with many calls
+      --no-cache          Force token refresh at each call. This might slow down scripts with many calls
       --password string   The user password, for Client auth only
-      --skip_keyring      Explicitly tell the tool to *NOT* try to use a keyring, even if present. Warning: sensitive information will be stored in clear text
-      --skip_verify       By default the Cells Client verifies the validity of TLS certificates for each communication. This option skips TLS certificate verification
+      --skip-keyring      Explicitly tell the tool to *NOT* try to use a keyring, even if present. Warning: sensitive information will be stored in clear text
+      --skip-verify       By default the Cells Client verifies the validity of TLS certificates for each communication. This option skips TLS certificate verification
   -t, --token string      A valid Personal Access Token (PAT)
   -u, --url string        The full URL of the target server
 ```
@@ -72,4 +81,4 @@ EXAMPLES
 
 * [./cec](./cec)	 - Connect to a Pydio Cells server using the command line
 
-###### Auto generated by Cells Client v4.1.1-alpha2 on 23-May-2024
+###### Auto generated by Cells Client v4.2.0-alpha0 on 3-Jun-2024
