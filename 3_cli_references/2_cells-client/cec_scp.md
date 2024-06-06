@@ -5,22 +5,51 @@ Copy files from/to Cells
 
 DESCRIPTION
 
-  Copy files from the client machine to your Pydio Cells server instance (and vice versa).
+  scp copies files between your client machine and a Pydio Cells server.
 
-  To differentiate local from remote, prefix remote paths with 'cells://' or with 'cells//' (without the column) if you have installed the completion and intend to use it.
-  For the time being, copy can only be performed from the client machine to the server or the other way round:
-  it is not yet possible to directly transfer files from one Cells instance to another.
+  To distinguish between local and remote paths, prefix remote paths with 'cells://'
+  If you have installed the completion and intend to use it, remote prefix is 'cells//', without the colon.
 
-  For convenience, if the *target* folder does not exist (but its parent does), we create it.
+  Currently, copying can only be performed between the client machine and the server or vice versa.
+  Direct transfers between two Cells instances are not yet supported.
 
-  On the other hand, we check if an item with the same name already exists on the target side and abort the transfer with an error in such case. 
-  You might want to enable the "force" mode. 
-  Then, when 'old' (existing) and 'new' item have the same name, if:    
-    - 'old' and 'new' are both files: 'new' replaces 'old'
-    - 'old' and 'new' are of a different type: we first erase 'old' in the target and then copy (recursively) 'new'
-    - both folder: for each child of 'new' we try to copy in 'old'. If an item with same name already exists on the target side, we apply the rules recursively.
-  WARNING: this could lead to erasing data on the target side. Only use with extra care.
-  
+  For convenience:
+    - If the target folder does not exist (but its parent does), it will be created.
+    - If an item with the same name already exists on the target side, the transfer will abort with an error unless "force" mode is enabled.
+
+  When "force" mode is enabled:
+    - If both 'old' (existing) and 'new' items are files: 'new' replaces 'old'.
+    - If 'old' and 'new' are of different types: 'old' is erased on the target, then 'new' is copied (recursively).
+    - If both are folders: each child of 'new' is copied into 'old'. If an item with the same name already exists on the target side, the rules are applied recursively.
+
+  WARNING: This could lead to data loss on the target side. Use with caution.
+
+  Depending on your use-case, you might want to use the 'scp' command in interactive mode, with a progress bar, or with log messages, especially when launching from a script.
+
+TROUBLESHOOTING
+
+  If you encounter issues with transferring large files or extensive directory structures, we recommend using the 'scp' command with a PAT and the '--no-progress' flag set.
+
+  You can also adjust the log level, e.g., with '--log debug' and choose which events are logged by the AWS SDK that handles multipart uploads.
+
+  Known event types and corresponding AWS SDK log types:
+    - signing: aws.LogSigning
+    - retries: aws.LogRetries
+    - request: aws.LogRequest
+    - request_with_body: aws.LogRequestWithBody
+    - response: aws.LogResponse
+    - response_with_body: aws.LogResponseWithBody
+    - deprecated_usage: aws.LogDeprecatedUsage
+    - request_event_message: aws.LogRequestEventMessage
+    - response_event_message: aws.LogResponseEventMessage
+
+  Specify the desired mix of event types with, e.g., '--multipart-debug-flags="signing | retries"' (spaces are optional).
+
+  Convenience flags for retro-compatibility:
+    - '--verbose' is equivalent to '--no-progress --log info --multipart-debug-flags="signing | retries"'
+    - '--very-verbose' is equivalent to '--no-progress --log debug --multipart-debug-flags="request | response | signing | retries | deprecated_usage"'
+ 
+
 EXAMPLES
 
   1/ Uploading a file to the server:
@@ -59,8 +88,8 @@ EXAMPLES
       --retry-max-attempts int         Limit the number of attempts before aborting. '0' allows the SDK to retry all retryable errors until the request succeeds, or a non-retryable error is thrown. (default 3)
       --retry-max-backoff string       Maximum duration to wait after a part transfer fails, before trying again, expressed in Go duration format, e.g., '20s' or '3m'. (default "3s")
       --skip-md5                       Do not compute md5 (for files bigger than 5GB, it is not computed by default for smaller files).
-  -v, --verbose                        Hide progress bar and rather display more log info during the transfers
-  -w, --very-verbose                   Hide progress bar and rather print out a maximum of log info
+  -v, --verbose                        Alias for an opinionated debug configuration to investigate problematic uploads
+  -w, --very-verbose                   Alias that turns most of the debug options on when investigating problematic uploads
 ```
 
 ### Options inherited from parent commands
@@ -81,4 +110,4 @@ EXAMPLES
 
 * [./cec](./cec)	 - Connect to a Pydio Cells server using the command line
 
-###### Auto generated by Cells Client v4.2.0-alpha1 on 4-Jun-2024
+###### Auto generated by Cells Client v4.2.0-alpha2 on 6-Jun-2024
